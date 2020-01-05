@@ -1,0 +1,21 @@
+.navbar {
+    height: 2vh;
+    z-index: 1;
+}
+
+.navbar ul li {
+    display: inline;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-left: 2%;
+}
+
+.navbar ul li a {
+    color: #232323;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #6B6269;
+}

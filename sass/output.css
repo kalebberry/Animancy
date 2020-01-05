@@ -2942,8 +2942,102 @@ img.right.bottom {
   height: calc(var(--lineHeight)*40);
 }
 
-body {
-  padding: 0px;
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #ffb7b7;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #ffb7b7;
+  /* Gecko Browsers */
+}
+
+.hero {
+  background-color: F4F4F4;
+  width: 100vw;
+  height: 60vh;
+  position: absolute;
+  left: 5%;
+}
+
+.hero img {
+  width: 600px;
+  position: absolute;
+  z-index: 1;
+  left: 45%;
+  top: 0;
+}
+
+.hero-title h2 {
+  margin-left: 5%;
+  margin-top: 5%;
+  font-family: "Exo 2", sans-serif;
+  font-size: 3.875em;
+  line-height: 55px;
+  font-weight: 400;
+  color: #232323;
+}
+
+.hero-text p {
+  margin-left: 5%;
+  font-size: 2.25em;
+  font-family: "Exo 2", sans-serif;
+  line-height: 40px;
+  font-weight: 300;
+  color: #232323;
+}
+
+.hero-text {
+  margin-top: 5%;
+}
+
+.navbar {
+  height: 2vh;
+  z-index: 1;
+}
+
+.navbar ul li {
+  display: inline;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-left: 2%;
+}
+
+.navbar ul li a {
+  color: #232323;
+}
+
+.navbar ul li a:hover {
+  color: #6B6269;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  left: 20;
+}
+
+.sidebar ul li {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sidebar ul li a {
+  color: #232323;
+}
+
+.sidebar ul li a:hover {
+  color: #6B6269;
 }
 
 /*# sourceMappingURL=output.css.map */

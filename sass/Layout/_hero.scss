@@ -1,0 +1,39 @@
+.hero {
+    background-color: F4F4F4;
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    left: 5%;
+
+}
+
+.hero img {
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+    left: 45%;
+    top: 0;
+}
+
+.hero-title h2 {
+    margin-left: 5%;
+    margin-top: 5%;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3.875em;
+    line-height: 55px;
+    font-weight: 400;
+    color: #232323;
+}
+
+.hero-text p {
+    margin-left: 5%;
+    font-size: 2.250em;
+    font-family: 'Exo 2', sans-serif;
+    line-height: 40px;
+    font-weight: 300;
+    color: #232323;
+}
+
+.hero-text {
+    margin-top: 5%;
+}
