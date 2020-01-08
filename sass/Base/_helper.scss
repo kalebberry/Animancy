@@ -7,11 +7,14 @@ a {
 }
 
 ::selection {
-    background: #ffb7b7;
+    background: #6b6269;
+    color: #fff;
+
     /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    background: #ffb7b7;
+    background: #6b6269;
+    color: #fff;
     /* Gecko Browsers */
 }

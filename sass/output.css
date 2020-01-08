@@ -2951,12 +2951,14 @@ a {
 }
 
 ::selection {
-  background: #ffb7b7;
+  background: #6B6269;
+  color: #fff;
   /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: #ffb7b7;
+  background: #6B6269;
+  color: #fff;
   /* Gecko Browsers */
 }
 
@@ -3014,6 +3016,7 @@ a {
 
 .navbar ul li a {
   color: #232323;
+  text-decoration: none;
 }
 
 .navbar ul li a:hover {
