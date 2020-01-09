@@ -1,7 +1,7 @@
 .hero {
     background-color: F4F4F4;
     width: 100vw;
-    height: 60vh;
+    height: 55vh;
     position: absolute;
     left: 5%;
 
@@ -11,7 +11,7 @@
     width: 600px;
     position: absolute;
     z-index: 1;
-    left: 45%;
+    left: 50%;
     top: 0;
 }
 
@@ -19,7 +19,7 @@
     margin-left: 5%;
     margin-top: 5%;
     font-family: 'Exo 2', sans-serif;
-    font-size: 3.875em;
+    font-size: 3.250em;
     line-height: 55px;
     font-weight: 400;
     color: #232323;
@@ -39,4 +39,53 @@
 }
 
 
-@media only screen and (max-width:1400px) {}
+@media only screen and (max-width:1200px) {
+    .hero img {
+        width: 500px;
+    }
+}
+
+
+
+@media only screen and (max-width:1000px) {
+
+    .hero {
+        height: 45vh;
+    }
+
+    .hero img {
+        width: 450px;
+    }
+
+    .hero-title h2 {
+
+        font-size: 2.7em;
+    }
+
+    .hero-text p {
+        font-size: 1.8em;
+    }
+
+}
+
+
+@media only screen and (max-width:800px) {
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero img {
+        width: 350px;
+        top: 10%;
+    }
+
+    .hero-title h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+}
