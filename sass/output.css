@@ -3002,8 +3002,16 @@ a {
 }
 
 @media only screen and (max-width: 1200px) {
+  .hero {
+    height: 40vh;
+  }
+
   .hero img {
-    width: 500px;
+    width: 450px;
+  }
+
+  .hero-text p {
+    font-size: 1.5em;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -3025,20 +3033,22 @@ a {
 }
 @media only screen and (max-width: 800px) {
   .hero {
-    height: 40vh;
+    height: 32vh;
   }
 
   .hero img {
     width: 350px;
-    top: 10%;
+    top: 2%;
   }
 
   .hero-title h2 {
-    font-size: 2em;
+    font-size: 2.2em;
+    line-height: 35px;
   }
 
   .hero-text p {
-    font-size: 1em;
+    line-height: 25px;
+    font-size: 1.1em;
   }
 }
 .navbar {
@@ -3063,6 +3073,11 @@ a {
   color: #6B6269;
 }
 
+@media only screen and (max-width: 1400px) {
+  .navbar ul li {
+    font-size: 1.3em;
+  }
+}
 .sidebar {
   position: fixed;
   z-index: 1;
@@ -3081,6 +3096,27 @@ a {
 
 .sidebar ul li a:hover {
   color: #6B6269;
+}
+
+@media only screen and (max-width: 1400px) {
+  .sidebar {
+    left: 10px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    left: 8px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .sidebar {
+    left: 1px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sidebar {
+    left: -5px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

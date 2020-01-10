@@ -19,4 +19,26 @@
 }
 
 
-@media only screen and (max-width:1400px) {}
+@media only screen and (max-width:1400px) {
+    .sidebar {
+        left: 10px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .sidebar {
+        left: 8px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .sidebar {
+        left: 1px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .sidebar {
+        left: -5px;
+    }
+}
