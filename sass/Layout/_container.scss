@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo navigation navigation navigation navigation navigation navigation navigation"
+        "sidebar content content content content content content content"
+        "sidebar content content content content content content content"
+        "sidebar content content content content content content content"
+        "sidebar footer footer footer footer footer footer footer";
+}

@@ -1,0 +1,17 @@
+.logo {
+    grid-area: logo;
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.logo h3 a {
+    color: #232323;
+}

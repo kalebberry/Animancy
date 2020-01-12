@@ -1,28 +1,31 @@
-.navbar {
-    height: 2vh;
-    z-index: 1;
+.navigation {
+    grid-area: navigation;
+    grid-column: 2 / 8;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: fixed;
 }
 
-.navbar ul li {
-    display: inline;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-    margin-left: 2%;
-}
 
-.navbar ul li a {
-    color: #232323;
+.navigation ul {
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
-    color: #6B6269;
+.navigation ul li {
+    list-style-type: none;
+    display: inline-block;
 }
 
+.main-menu {
+    grid-column: end;
+    justify-content: center;
+    align-items: center;
+    grid-column: 6 / 8;
+}
 
-@media only screen and (max-width:1400px) {
-    .navbar ul li {
-        font-size: 1.3em;
-    }
+.main-menu ul li {
+    font-size: 1.25rem;
+    margin-left: 2%;
+
 }

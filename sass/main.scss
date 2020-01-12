@@ -1,7 +1,10 @@
 @import 'Vendors/normalize';
-@import 'Vendors/raster';
-@import 'Base/helper';
+@import 'Base/base';
 
-@import 'Layout/hero';
+
+@import 'Layout/container';
+@import 'Layout/logo';
 @import 'Layout/navbar';
 @import 'Layout/sidebar';
+@import 'Layout/content';
+@import 'Layout/footer';

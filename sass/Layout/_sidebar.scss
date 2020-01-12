@@ -1,44 +1,24 @@
 .sidebar {
+    grid-area: sidebar;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 100px;
     position: fixed;
-    z-index: 1;
-    left: 20;
+    top: 4.5%;
+    height: 100vh;
 }
 
-.sidebar ul li {
-    display: block;
+
+.social ul {
     text-decoration: none;
-    font-size: 20px;
 }
 
-.sidebar ul li a {
-    color: #232323;
+.social ul li {
+    list-style-type: none;
+    font-size: 1.875rem;
+    margin-top: 20%;
 }
 
-.sidebar ul li a:hover {
-    color: #6B6269;
-}
-
-
-@media only screen and (max-width:1400px) {
-    .sidebar {
-        left: 10px;
-    }
-}
-
-@media only screen and (max-width:1200px) {
-    .sidebar {
-        left: 8px;
-    }
-}
-
-@media only screen and (max-width:1000px) {
-    .sidebar {
-        left: 1px;
-    }
-}
-
-@media only screen and (max-width:800px) {
-    .sidebar {
-        left: -5px;
-    }
+.social ul li a {
+    margin-top: 2%;
 }

@@ -1,0 +1,46 @@
+.content {
+    grid-area: content;
+    grid-column: 2 / 8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.content .yasu {
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+}
+
+.intro {
+    grid-column: -1;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    background-color: #F4F4F4;
+    height: 65vh;
+
+}
+
+.intro-text {
+    grid-column: 1 / 4;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.intro-text h2 {
+    font-weight: 400;
+    font-size: 2.8375rem;
+    line-height: 60px;
+}
+
+.intro-text p {
+    font-size: 1.5875rem;
+    line-height: 40px;
+}
+
+
+.intro-img {
+    grid-column: 4/6;
+}
