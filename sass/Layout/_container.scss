@@ -1,5 +1,6 @@
 .container {
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "logo navigation navigation navigation navigation navigation navigation navigation"

@@ -3,7 +3,6 @@
     grid-column: 1;
     display: grid;
     grid-template-columns: 100px;
-    position: fixed;
     top: 4.5%;
     height: 100vh;
 }
@@ -11,6 +10,7 @@
 
 .social ul {
     text-decoration: none;
+    position: fixed;
 }
 
 .social ul li {

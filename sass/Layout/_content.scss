@@ -4,23 +4,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
+    width: 100vw;
 }
 
 .content .yasu {
     width: 600px;
     position: absolute;
     z-index: 1;
+
 }
 
 .intro {
     grid-column: -1;
+    border-radius: 5px;
     display: grid;
-    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     background-color: #F4F4F4;
     height: 65vh;
-
 }
 
 .intro-text {
@@ -31,7 +32,7 @@
 
 .intro-text h2 {
     font-weight: 400;
-    font-size: 2.8375rem;
+    font-size: 2.8rem;
     line-height: 60px;
 }
 
