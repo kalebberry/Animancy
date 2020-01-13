@@ -11,7 +11,6 @@
     width: 600px;
     position: absolute;
     z-index: 1;
-
 }
 
 .intro {
@@ -20,8 +19,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
-    background-color: #F4F4F4;
-    height: 65vh;
+    background-color: #f4f4f4;
+    height: 75%;
+    min-height: 75%;
+
 }
 
 .intro-text {
@@ -40,7 +41,6 @@
     font-size: 1.5875rem;
     line-height: 40px;
 }
-
 
 .intro-img {
     grid-column: 4/6;

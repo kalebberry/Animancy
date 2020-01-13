@@ -1,4 +1,4 @@
-@media (min-width: 1580px) {
+@media (min-width: 1580px) and (max-width: 1600px) {
     .container {
         display: grid;
         grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -8,10 +8,7 @@
     .intro-text h2 {
         font-size: 2.8rem;
     }
-
 }
-
-
 
 @media (min-width: 1480px) and (max-width: 1580px) {
     .container {
@@ -22,17 +19,13 @@
     .intro-text h2 {
         font-size: 2.4rem;
     }
-
 }
 
-
 @media (min-width: 1380px) and (max-width: 1479px) {
-
     .container {
         display: grid;
         grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-
 
     .content .yasu {
         width: 500px;
@@ -40,11 +33,9 @@
         z-index: 1;
     }
 
-
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        height: 55vh;
     }
 
     .intro-text {
@@ -58,10 +49,7 @@
     .intro-img {
         grid-column: 4/5;
     }
-
-
 }
-
 
 @media (min-width: 1280px) and (max-width: 1379px) {
     .container {
@@ -75,11 +63,9 @@
         z-index: 1;
     }
 
-
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        height: 55vh;
     }
 
     .intro-text {
@@ -95,5 +81,80 @@
     }
 }
 
+@media (min-width: 1200px) and (max-width: 1279px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+    }
 
-// @media (min-width: 1280px) and (max-width: 1379px) {}
+    .content .yasu {
+        width: 500px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .intro-text {
+        grid-column: 1 / 4;
+    }
+
+    .intro-text h2 {
+        font-size: 2.3rem;
+    }
+
+    .intro-img {
+        grid-column: 4/5;
+    }
+
+    .main-menu {
+        grid-column: end;
+        justify-content: center;
+        align-items: center;
+        grid-column: 5 / 8;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .content .yasu {
+        width: 400px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .intro-text {
+        grid-column: 1 / 4;
+    }
+
+    .intro-text h2 {
+        font-size: 2.1rem;
+    }
+
+    .intro-text p {
+        font-size: 2.1rem;
+    }
+
+    .intro-img {
+        grid-column: 4/5;
+    }
+
+    .main-menu {
+        grid-column: end;
+        justify-content: center;
+        align-items: center;
+        grid-column: 5 / 8;
+    }
+}
