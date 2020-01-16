@@ -6,7 +6,7 @@
     }
 
     .intro-text h2 {
-        font-size: 2.8rem;
+        font-size: 2.8em;
     }
 }
 
@@ -17,7 +17,7 @@
     }
 
     .intro-text h2 {
-        font-size: 2.4rem;
+        font-size: 2.4em;
     }
 }
 
@@ -36,6 +36,7 @@
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 35vw;
     }
 
     .intro-text {
@@ -43,7 +44,7 @@
     }
 
     .intro-text h2 {
-        font-size: 2.5rem;
+        font-size: 2.5em;
     }
 
     .intro-img {
@@ -66,6 +67,7 @@
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 35vw;
     }
 
     .intro-text {
@@ -73,7 +75,7 @@
     }
 
     .intro-text h2 {
-        font-size: 2.3rem;
+        font-size: 2.3em;
     }
 
     .intro-img {
@@ -96,6 +98,7 @@
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 40vw;
     }
 
     .intro-text {
@@ -133,6 +136,7 @@
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 70vw;
     }
 
     .intro-text {

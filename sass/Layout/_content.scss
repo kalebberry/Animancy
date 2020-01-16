@@ -20,9 +20,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     background-color: #f4f4f4;
-    height: 75%;
-    min-height: 75%;
-
+    height: 65vh;
 }
 
 .intro-text {
@@ -33,12 +31,12 @@
 
 .intro-text h2 {
     font-weight: 400;
-    font-size: 2.8rem;
+    font-size: 2.4vw;
     line-height: 60px;
 }
 
 .intro-text p {
-    font-size: 1.5875rem;
+    font-size: 1.5vw;
     line-height: 40px;
 }
 
