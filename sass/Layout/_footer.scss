@@ -1,4 +1,13 @@
-.footer {
-    grid-area: footer;
-    grid-column: 2 / 8;
+.foot {
+    grid-area: foot;
+    grid-column: 3;
+    text-align: center;
+}
+
+
+@media (min-width:1500px) {
+    .foot {
+
+        grid-column: 4;
+    }
 }

@@ -1,11 +1,37 @@
+// Mobile
+
 .container {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
     grid-template-areas:
-        "logo navigation navigation navigation navigation navigation navigation navigation"
-        "sidebar content content content content content content content"
-        "sidebar content content content content content content content"
-        "sidebar content content content content content content content"
-        "sidebar footer footer footer footer footer footer footer";
+        "nav nav nav nav"
+        "content content content content"
+        "content content content content"
+        "content content content content"
+        "content content content content"
+        "foot foot social social";
+}
+
+
+//  Desktop
+
+@media (min-width:1500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 200px repeat(3, 1fr);
+        grid-auto-rows: minmax(1fr, auto);
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-areas:
+            "social nav nav nav"
+            "social content content content"
+            "social content content content"
+            "social content content content"
+            "social content content content"
+            "foot foot foot foot";
+    }
 }

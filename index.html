@@ -1,37 +1,40 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Animancy Designs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./sass/output.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500&display=swap" rel="stylesheet" />
+    <script defer src="fontawesome/js/all.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Animancy Designs</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="./sass/output.css" />
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500&display=swap" rel="stylesheet" />
-  <script defer src="fontawesome/js/all.min.js"></script>
-</head>
+  <body>
+    <!-- Navigation Bar -->
 
-<body>
-  <!-- Navigation Bar -->
-
-  <div class="container">
-    <header class="logo">
-      <h3><a href="#">Animancy Designs</a></h3>
-    </header>
-
-    <nav class="navigation">
-      <div class="main-menu">
+    <div class="container">
+      <nav class="nav">
         <ul>
-          <li><a href="#">Designs</a></li>
-          <li><a href="#">Submit Project</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Animancy</a></li>
         </ul>
-      </div>
-    </nav>
 
-    <aside class="sidebar">
-      <div class="social">
+        <ul id="main-menu" class="main-menu">
+          <li><a href="#">Process</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li>
+            <a href="javascript:void(0);" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <aside class="social">
         <ul>
+          <li class="logo">
+            <h3><a href="#">Animancy</a></h3>
+          </li>
           <li>
             <a target="_blank" href="https://github.com/Sorumeiji"><i class="fab fa-github-square"></i></a>
           </li>
@@ -51,36 +54,44 @@
             <a target="_blank" href="https://www.twitch.tv/sorumeiji"><i class="fab fa-twitch"></i></a>
           </li>
         </ul>
-      </div>
-    </aside>
+      </aside>
 
-    <main class="content">
-      <div class="intro">
-        <div class="intro-text">
-          <h2>
-            The Creative Studio of Aesthetic Web Design & Development.
-          </h2>
+      <main class="content">
+        <div class="intro">
+          <div class="intro-text">
+            <h2>
+              The Creative Studio of Aesthetic Web Design & Development.
+            </h2>
 
-          <p>
-            We create the web for content creators and art creatives. Marketing, strategy, and branding is costly and
-            tough to figure out alone.
-          </p>
-          <p>
-            That is why we are here help you to take the first step to building an online presence that tells the world
-            about what you want to do.
-          </p>
+            <p>
+              We create the web for content creators and art creatives. Marketing, strategy, and branding is costly and tough to figure out alone.
+            </p>
+
+            <p>
+              We create the web for content creators and art creatives. Marketing, strategy, and branding is costly and tough to figure out alone.
+            </p>
+          </div>
+
+          <div class="intro-img">
+            <img class="yasu" src="img/04 TB 1000px.png" />
+          </div>
         </div>
+      </main>
 
-        <div class="intro-img">
-          <img class="yasu" src="img/04 TB 1000px.png" />
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <p>&copy; 2018 DemoSite. White&amp;Sons LLC. All rights (perhaps) reserved.</p>
-    </footer>
-  </div>
-</body>
-
+      <footer class="foot">
+        <p>&copy; 2020 Animancy. All rights reserved.</p>
+      </footer>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("main-menu");
+        console.log("activated " + x);
+        if (x.className === "main-menu") {
+          x.classList.add("responsive");
+        } else {
+          x.classList.remove("responsive");
+        }
+      }
+    </script>
+  </body>
 </html>
