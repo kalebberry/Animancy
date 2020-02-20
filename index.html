@@ -1,97 +1,105 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Animancy Designs</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./sass/output.css" />
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500&display=swap" rel="stylesheet" />
-    <script defer src="fontawesome/js/all.min.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <!-- Navigation Bar -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <div class="container">
-      <nav class="nav">
-        <ul>
-          <li><a href="#">Animancy</a></li>
-        </ul>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+  <title>Beautiful design with Soul</title>
+</head>
 
-        <ul id="main-menu" class="main-menu">
-          <li><a href="#">Process</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
-          <li>
-            <a href="javascript:void(0);" onclick="myFunction()"><i class="fas fa-bars"></i></a>
-          </li>
-        </ul>
-      </nav>
-
-      <aside class="social">
-        <ul>
-          <li class="logo">
-            <h3><a href="#">Animancy</a></h3>
-          </li>
-          <li>
-            <a target="_blank" href="https://github.com/Sorumeiji"><i class="fab fa-github-square"></i></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://codepen.io/Sorumeiji"><i class="fab fa-codepen"></i></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://medium.com/@sorumeiji"><i class="fab fa-medium"></i></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://discord.gg/FtyF5Sb"><i class="fab fa-discord"></i></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://twitter.com/sorumeiji"><i class="fab fa-twitter-square"></i></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.twitch.tv/sorumeiji"><i class="fab fa-twitch"></i></a>
-          </li>
-        </ul>
-      </aside>
-
-      <main class="content">
-        <div class="intro">
-          <div class="intro-text">
-            <h2>
-              The Creative Studio of Aesthetic Web Design & Development.
-            </h2>
-
-            <p>
-              We create the web for content creators and art creatives. Marketing, strategy, and branding is costly and tough to figure out alone.
-            </p>
-
-            <p>
-              We create the web for content creators and art creatives. Marketing, strategy, and branding is costly and tough to figure out alone.
-            </p>
-          </div>
-
-          <div class="intro-img">
-            <img class="yasu" src="img/04 TB 1000px.png" />
-          </div>
-        </div>
-      </main>
-
-      <footer class="foot">
-        <p>&copy; 2020 Animancy. All rights reserved.</p>
-      </footer>
+<body>
+  <div class="wrapper">
+    <div class="row hero">
+      <article class="col-1-3">
+        <h4>Design Version 0.1</h4>
+        <h1>Animancy Designs</h1>
+        <p>Animancy creates the web for content creators and art creatives. Marketing, strategy, and branding is costly
+          and tough to figure out alone.</p>
+        <p>That is why I am here help you to take the first step to building an online presence that tells the world
+          about what you want to do.</p>
+      </article>
+      <article class="col-3-5">
+        <picture class="YasuEien">
+          <source srcset="img/04 TB 1000px-min.png" media="(min-width: 1400px)" />
+          <img src="img/04 TB 1000px-min.png" />
+        </picture>
+      </article>
     </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("main-menu");
-        console.log("activated " + x);
-        if (x.className === "main-menu") {
-          x.classList.add("responsive");
-        } else {
-          x.classList.remove("responsive");
-        }
-      }
-    </script>
-  </body>
+
+    <div class="row process boxshadow">
+      <article class="col-1-3 process-dragongirl">
+        <picture>
+          <source srcset="img/DRAGONGIRL-min.png" media="(min-width: 1400px)" />
+          <img src="img/DRAGONGIRL-min.png" />
+        </picture>
+      </article>
+      <article class="col-3-5 process-text">
+        <h2>The Process</h2>
+        <h3>01. Planning</h3>
+        <p>
+          We want to make sure that your website markets to your brand, and target audience. Helping you to plan and
+          write the content, helps make some big design decisions before getting to any
+          visuals.
+        </p>
+        <h3>02. Layout Drafting</h3>
+        <p>
+          We will work with you to create a mockup that represent your idea. We know the first design will not always
+          be
+          the best, so we consistently provide updates and receive feedback, making
+          sure your target audience will love your design as much as you do.
+        </p>
+        <h3>03. Polish</h3>
+        <p>
+          Before launching your website we will, together, always make sure your website is ready to go and is
+          optimized. Our support is always ready and available any time you need us, for no cost.
+        </p>
+      </article>
+    </div>
+    <div class="row services boxshadow">
+      <article class="col-1-3 services-text-1">
+        <h2>Other Services.</h2>
+        <h3><i class="fas fa-database"></i> Data Intergration</h3>
+        <p>
+          If you want to display information, redeems, top cheer, etc. We can intergrate that data using various
+          API's such as Twitch, Streamlabs, Muxy, and StreamElements.
+        </p>
+        <h3><i class="fab fa-node-js"></i> Broadcast Graphics and Controls</h3>
+        <p>
+          We use <a href="https://nodecg.com/" target="_blank" >NodeCG</a> to create broadcast graphics. This services allows one to help run complicated parts of thier
+          stream smoothly, and create new ideas using the power of node.js and the browser.
+        </p>
+      </article>
+
+      <article class="col-3-5 services-text-2">
+        <h3><i class="fab fa-css3-alt"></i> Web Animation OBS</h3>
+        <p>
+          If you need to show a cool effect, or data during your stream, we can help. We create code that runs in the
+          Browser CLR tool in OBS that allows you to showcase various concepts and information to viewers.
+        </p>
+        <h3><i class="fas fa-envelope-open-text"></i> Available Support</h3>
+        <p>
+          If you need help setting up and broadcast graphics,website content, ot just a fix. You can contact us
+          anytime. Our goal is only to help you succeed.
+        </p>
+      </article>
+    </div>
+    <div class="row featured boxshadow">
+      <article class="col-4">
+
+      </article>
+
+      <article class="col-4">
+
+      </article>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
