@@ -1,0 +1,308 @@
+/* COLORS
+#666470
+#404040
+#C9A55C
+#DCDBD8
+#FE5974
+*/
+
+/* font-family: 'Exo 2', sans-serif; 
+Light - 300,
+Regular - 400,
+medium - 500,
+Bold - 700
+*/
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+body {
+  /* background-color: #474048; */
+  background-color: #424046;
+  font-size: 16px;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
+/* inherit border-box on all elements in the universe and before and after
+   */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: #ff4670;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #ff4670;
+  /* Gecko Browsers */
+}
+
+a {
+  color: #ff4670;
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  border-bottom: 2px #c9a55c solid;
+  transition: 0.5s ease;
+}
+
+.boxshadow {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+img {
+  width: 100%;
+}
+
+.fab {
+  color: #c9a55c;
+}
+
+.wrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+}
+
+[class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="fa-"] {
+  color: #c9a55c;
+  margin-right: 2%;
+}
+
+/* Base Styles for sections */
+
+/* HERO SECTION */
+.hero {
+  margin-top: 5%;
+  min-height: 100%;
+  font-family: "Exo 2", sans-serif;
+}
+
+.hero article h4 {
+  color: #c9a55c;
+  font-weight: 400;
+}
+
+.hero article h1 {
+  color: #c9a55c;
+  font-weight: 400;
+  font-size: 3.23em;
+}
+
+.hero article p {
+  color: #dcdbd8;
+  font-weight: 300;
+  font-size: 1.56em;
+  line-height: 35px;
+}
+
+.YasuEien {
+  position: absolute;
+  z-index: 999;
+  width: 700px;
+}
+
+/* PROCESS SECTION */
+.process {
+  /* background-color: #423b44; */
+  background-color: #404040;
+  font-family: "Exo 2", sans-serif;
+  margin-top: 25%;
+  min-height: 100%;
+}
+
+.process-text {
+  justify-content: center;
+  margin: 5%;
+  padding: 5%;
+  line-height: 25px;
+}
+
+.process-text h2 {
+  color: #c9a55c;
+  font-size: 1.226em;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.process-text h3 {
+  color: #dcdbd8;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+.process-text p {
+  font-weight: 300;
+  font-size: 1.226em;
+  line-height: 35px;
+  color: #dcdbd8;
+}
+
+.services-text-1 {
+  margin: 5%;
+  padding: 5%;
+  margin-top: 7%;
+}
+
+.services-text-2 {
+  margin: 20% 5% 5% 5%;
+  padding: 5%;
+}
+
+.services {
+  background-color: #dcdbd8;
+  height: 100vh;
+  min-height: 100%;
+  font-family: "Exo 2", sans-serif;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+}
+
+.services article p {
+  color: #404040;
+  font-weight: 300;
+  font-size: 1.226em;
+  line-height: 35px;
+}
+
+.services article h3 {
+  font-size: 1.226em;
+  line-height: 35px;
+  color: #404040;
+  font-weight: 400;
+}
+
+.services article h2 {
+  font-size: 1.426em;
+  line-height: 35px;
+  color: #404040;
+  font-weight: 500;
+}
+
+.featured {
+  background-color: #404040;
+  transform: translatey(-180px);
+  position: relative;
+  font-family: "Exo 2", sans-serif;
+  z-index: -1;
+}
+
+.featured article h2 {
+  font-size: 1.426em;
+  line-height: 35px;
+  color: #c9a55c;
+  font-weight: 500;
+}
+
+.featured article p {
+  color: #dcdbd8;
+  font-weight: 300;
+  font-size: 1.226em;
+  line-height: 35px;
+}
+
+/* mobile screen Sizes */
+@media only screen and (min-width: 480px) {}
+
+/* tablet sizes */
+@media only screen and (min-width: 760px) {}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1200px) {
+  /* Bases */
+
+  .col-4,
+  .col-1-4 {
+    flex: 0 0 100%;
+    grid-column: 1 / 5;
+  }
+
+  .col-1-3 {
+    grid-column: 1 / 3;
+    flex: 0 0 50%;
+  }
+
+  .col-3-5 {
+    flex: 0 0 50%;
+    grid-column: 3 / 5;
+  }
+
+  /* Hero */
+
+  /* Process*/
+  .process-dragongirl {
+    width: 600px;
+    justify-content: center;
+  }
+
+  /* Services */
+
+  /*  featured  */
+  .featured-introduction {
+    margin-top: 30%;
+    margin: 15% 5% 5% 5%;
+    padding: 5%;
+  }
+
+  .featured-cards {
+    flex-direction: row;
+    margin: 5%;
+    color: #dcdbd8;
+  }
+
+  .card {
+    height: 350px;
+    width: 350px;
+    background-color: ;
+    margin: 0% 5% 5% 0%;
+    align-self: center;
+    border-radius: 3px;
+    transition: 0.5s ease;
+    opacity: 1;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right bottom, rgba(254, 89, 116, 0.5), rgb(254, 89, 116, 0.8));
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: red;
+  }
+
+  .text {
+    color: white;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  .text h2 {
+    color: #dcdbd8;
+  }
+
+
+}
