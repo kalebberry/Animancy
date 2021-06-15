@@ -1,0 +1,23 @@
+{
+  "name": "animancy",
+  "version": "1.0.0",
+  "description": "Animancy Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sorumeiji/AnimancyDesigns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sorumeiji/AnimancyDesigns/issues"
+  },
+  "homepage": "https://github.com/Sorumeiji/AnimancyDesigns#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
