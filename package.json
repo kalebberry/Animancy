@@ -1,16 +1,20 @@
 {
-  "name": "animancy",
+  "name": "animancydesigns",
   "version": "1.0.0",
-  "description": "Animancy Website",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sorumeiji/AnimancyDesigns.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +22,19 @@
   },
   "homepage": "https://github.com/Sorumeiji/AnimancyDesigns#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.5"
+    "@astrojs/mdx": "^0.14.0",
+    "@astrojs/react": "^1.2.2",
+    "@astrojs/vercel": "^2.4.0",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "astro": "^1.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
