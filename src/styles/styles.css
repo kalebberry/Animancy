@@ -160,6 +160,27 @@ h6 {
   gap: var(--grid-gutter);
 }
 
+.daimond-hr {
+  --hrWidth: 20rem;
+  overflow: visible;
+  /* For IE */
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  max-width: var(--hrWidth);
+  font-size: 0.9rem;
+}
+
+.daimond-hr:after {
+  content: "◆";
+  display: inline-block;
+  position: relative;
+  margin-inline-start: 100%;
+  bottom: -0.65em;
+  background: transparent;
+}
+
 section[class=summary],
 section[class=selected-works],
 section[class=process],
@@ -167,33 +188,12 @@ section[class=services] {
   padding-block-start: var(--space-l);
 }
 
-.daimond-line {
-  max-width: 25em;
-}
-
 .hero {
   display: flex;
 }
 
-hr {
-  --hrWidth: 30rem;
-  overflow: visible;
-  /* For IE */
-  padding: 0;
-  border: none;
-  border-top: 1px solid var(--dark-color);
-  color: var(--dark-color);
-  width: var(--hrWidth);
-  font-size: 0.9rem;
-}
-
-hr:after {
-  content: "◆";
-  display: inline-block;
-  position: relative;
-  margin-left: 100%;
-  top: -0.61em;
-  background: transparent;
+.services .daimond-hr {
+  --hrWidth: 50rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

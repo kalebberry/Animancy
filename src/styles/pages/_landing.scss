@@ -5,29 +5,12 @@ section[class="services"] {
     padding-block-start: var(--space-l);
 }
 
-.daimond-line {
-    max-width: 25em;
-}
-
 .hero {
     display: flex;
 }
 
-hr {
-    --hrWidth: 30rem;
-    overflow: visible; /* For IE */
-    padding: 0;
-    border: none;
-    border-top: 1px solid var(--dark-color);
-    color: var(--dark-color);
-    width: var(--hrWidth);
-    font-size: 0.9rem;
-}
-hr:after {
-    content: "◆";
-    display: inline-block;
-    position: relative;
-    margin-left: 100%;
-    top: -0.61em;
-    background: transparent;
+.services {
+    & .daimond-hr {
+        --hrWidth: 50rem;
+    }
 }

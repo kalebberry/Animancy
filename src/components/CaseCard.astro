@@ -1,0 +1,33 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class='case-card flow'>
+	<header class='case-card__title'>
+		<h3>{title}</h3>
+	</header>
+	<summary>
+		<p>{body}</p>
+	</summary>
+	<a href={href}>View Case Study.</a>
+
+	<hr class='daimond-hr' />
+</div>
+
+<style>
+	.case-card {
+		border: 1px solid var(--dark-color);
+		padding: var(--space-m);
+	}
+
+	.case-card .daimond-hr {
+		--hrWidth: 10rem;
+		margin-inline-start: 90%;
+	}
+</style>

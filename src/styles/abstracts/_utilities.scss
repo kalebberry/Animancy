@@ -1,0 +1,18 @@
+.daimond-hr {
+    --hrWidth: 20rem;
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--dark-color);
+    color: var(--dark-color);
+    max-width: var(--hrWidth);
+    font-size: 0.9rem;
+}
+.daimond-hr:after {
+    content: "◆";
+    display: inline-block;
+    position: relative;
+    margin-inline-start: 100%;
+    bottom: -0.65em;
+    background: transparent;
+}
