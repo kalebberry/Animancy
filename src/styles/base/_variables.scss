@@ -1,6 +1,12 @@
 :root {
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.2,6,2,&s=0.75|0.5,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
+  // Typo
+  // ___________________________________________________________________
+
+  --header-font: "PT Serif", serif;
+  --text-font: "Fira Sans", sans-serif;
+
   --step--2: clamp(0.69rem, calc(0.63rem + 0.3vw), 0.87rem);
   --step--1: clamp(0.83rem, calc(0.76rem + 0.36vw), 1.04rem);
   --step-0: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
@@ -10,6 +16,9 @@
   --step-4: clamp(2.07rem, calc(1.89rem + 0.9vw), 2.59rem);
   --step-5: clamp(2.49rem, calc(2.27rem + 1.08vw), 3.11rem);
   --step-6: clamp(2.99rem, calc(2.73rem + 1.3vw), 3.73rem);
+
+  // Spacing
+  // ___________________________________________________________________
 
   /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.2,6,2,&s=0.75|0.5,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
@@ -33,4 +42,20 @@
 
   /* Custom pairs */
   --space-s-l: clamp(1rem, calc(0.48rem + 2.61vw), 2.5rem);
+
+  // Grid
+  // ___________________________________________________________________
+
+  --grid-max-width: 76.88rem;
+  --grid-gutter: var(--space-m-m, clamp(1.5rem, calc(1.37rem + 0.66vw), 1.88rem));
+  --grid-columns: 8;
+
+  // Colors
+  // ___________________________________________________________________
+
+  --dark-color: hsl(220, 4%, 17%);
+  --background-base-color: hsl(225, 40%, 96%);
+  --background-hero-color: hsl(220, 20%, 94%);
+  --background-card-color: hsl(90, 6%, 86%);
+  --background-footer-color: hsl(86, 9%, 84%);
 }

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Serif&display=swap");
+
+p,
+li,
+a {
+    font-family: var(--text-font);
+    font-size: var(--step-0);
+}
+
+h1 {
+    font-size: var(--step-6);
+    font-family: var(--header-font);
+}
+
+h2 {
+    font-size: var(--step-5);
+    font-family: var(--header-font);
+}
+
+h3 {
+    font-size: var(--step-3);
+    font-family: var(--header-font);
+}
+
+h4 {
+    font-size: var(--step-4);
+    font-family: var(--header-font);
+}
+
+h5 {
+    font-size: var(--step-5);
+    font-family: var(--header-font);
+}
+
+h6 {
+    font-size: var(--step-6);
+    font-family: var(--header-font);
+}
+
+.small {
+    font-size: var(--step--2);
+}
