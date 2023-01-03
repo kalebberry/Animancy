@@ -1,8 +1,7 @@
-@import "base/variables";
-@import "base/reset";
-@import "base/fonts";
-@import "base/grid";
-
-@import "abstracts/utilities";
-
-@import "pages/landing";
+@charset "UTF-8";
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/grid';
+@import 'abstracts/utilities';
+@import 'pages/landing';

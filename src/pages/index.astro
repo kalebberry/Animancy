@@ -4,122 +4,86 @@ import Navbar from '../components/Navbar.astro';
 import Card from '../components/CaseCard.astro';
 ---
 
-<Layout title='Animancy Designs.'>
-	<Navbar />
-	<main>
-		<header class='hero'>
-			<div class='u-container'>
-				<h1>Animancy Designs</h1>
-			</div>
-		</header>
+<Layout title="Animancy Designs.">
+  <Navbar />
+  <main>
+    <header class="hero">
+      <div class="u-container">
+        <h1>Animancy Designs</h1>
+      </div>
+    </header>
 
-		<section class='summary'>
-			<div class='u-container flow'>
-				<p>
-					Animancy creates the web for businesses, content creators, and art creatives. We are here
-					to help you take the first steps to building an online presence that tells the world about
-					your dream.
-				</p>
-				<hr class='daimond-hr' />
-			</div>
-		</section>
+    <section class="summary">
+      <div class="u-container flow">
+        <p>Animancy creates the web for businesses, content creators, and art creatives. We are here to help you take the first steps to building an online presence that tells the world about your dream.</p>
+        <hr class="daimond-hr" />
+      </div>
+    </section>
 
-		<section class='selected-works'>
-			<div class='u-container flow'>
-				<header>
-					<h2>Selected Works.</h2>
-				</header>
-				<article class='u-grid'>
-					<Card
-						title='Nyacchii'
-						body='A portfolio website for Nyacchii, an professional digital artist and Twitch partner. To help with commission pricing and information.'
-						href='#'
-					/>
-					<Card
-						title='Rockstar Renovations'
-						body="An fully insured business, both in general liability and workman's compensation. Renovations for the modern style."
-						href='#'
-					/>
-				</article>
-			</div>
-		</section>
+    <section class="selected-works">
+      <div class="u-container flow">
+        <header>
+          <h2>Selected Works.</h2>
+        </header>
+        <article class="u-grid">
+          <Card title="Nyacchii" body="A portfolio website for Nyacchii, an professional digital artist and Twitch partner. To help with commission pricing and information." href="#" />
+          <Card title="Rockstar Renovations" body="An fully insured business, both in general liability and workman's compensation. Renovations for the modern style." href="#" />
+        </article>
+      </div>
+    </section>
 
-		<section class='process'>
-			<div class='u-container flow'>
-				<header>
-					<h2>The Process.</h2>
-				</header>
-				<article class='process__content flow daimond-reverse-hr'>
-					<div class='card flow'>
-						<h3>01. Strategy</h3>
-						<p>
-							We first focus on getting to know about your dream and idea. Sitting with you, talking
-							about content helps us to make some bid design decisions before getting to the
-							visuals.
-						</p>
-					</div>
-					<div class='card flow'>
-						<h3>02. Design</h3>
-						<p>
-							After gathering the content, we form a design. We conduct research based on the
-							content and provide design mockups to narrow down the website you want.
-						</p>
-					</div>
-					<div class='card flow'>
-						<h3>03. Development</h3>
-						<p>
-							Upon choosing the design you love, we create your website and requested features, and
-							concepts.
-						</p>
-					</div>
-					<div class='card flow'>
-						<h3>04. Support & Assistance</h3>
-						<p>
-							Lastly, we sit down and talk about how to use your website, such as how to go about
-							updating the website, or helping to plan a launch date that works within your favor.
-						</p>
-					</div>
-				</article>
-			</div>
-		</section>
+    <section class="process">
+      <div class="u-container flow">
+        <header>
+          <h2>The Process.</h2>
+        </header>
+        <article class="process__content flow daimond-reverse-hr">
+          <div class="card flow">
+            <h3>01. Strategy</h3>
+            <p>We first focus on getting to know about your dream and idea. Sitting with you, talking about content helps us to make some bid design decisions before getting to the visuals.</p>
+          </div>
+          <div class="card flow">
+            <h3>02. Design</h3>
+            <p>After gathering the content, we form a design. We conduct research based on the content and provide design mockups to narrow down the website you want.</p>
+          </div>
+          <div class="card flow">
+            <h3>03. Development</h3>
+            <p>Upon choosing the design you love, we create your website and requested features, and concepts.</p>
+          </div>
+          <div class="card flow">
+            <h3>04. Support & Assistance</h3>
+            <p>Lastly, we sit down and talk about how to use your website, such as how to go about updating the website, or helping to plan a launch date that works within your favor.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-		<section class='services'>
-			<div class='u-container flow'>
-				<header>
-					<h2>Services.</h2>
-				</header>
-				<div class='detail flow'>
-					<header>
-						<h3>Web Design and Development</h3>
-					</header>
-					<p>
-						We create the web using the right tools for the right job. Let us create an online
-						presence for you, that will take you to the next level, allowing you to take your steps
-						with what you are passionate about.
-					</p>
-				</div>
-				<div class='detail flow'>
-					<header>
-						<p>Coming Soon</p>
-						<h3>OBS Graphics & Effects</h3>
-					</header>
-					<p>
-						We create the web using the right tools for the right job. Let us create an online
-						presence for you, that will take you to the next level, allowing you to take your steps
-						with what you are passionate about.
-					</p>
-				</div>
-				<div class='detail flow'>
-					<header>
-						<h3>Data Integration</h3>
-					</header>
-					<p>
-						If you want to display information, redeems, top cheer, etc. Animancy can integrate that
-						data using the Twitch API.
-					</p>
-				</div>
-				<hr class='daimond-hr' />
-			</div>
-		</section>
-	</main>
+    <section class="services">
+      <div class="u-container flow">
+        <header>
+          <h2>Services.</h2>
+        </header>
+        <div class="detail flow">
+          <header>
+            <h3>Web Design and Development</h3>
+          </header>
+          <p>We create the web using the right tools for the right job. Let us create an online presence for you, that will take you to the next level, allowing you to take your steps with what you are passionate about.</p>
+        </div>
+        <div class="detail flow">
+          <header>
+            <p>Coming Soon</p>
+            <h3>OBS Graphics & Effects</h3>
+          </header>
+          <p>We create the web using the right tools for the right job. Let us create an online presence for you, that will take you to the next level, allowing you to take your steps with what you are passionate about.</p>
+        </div>
+        <div class="detail flow">
+          <header>
+            <h3>Data Integration</h3>
+          </header>
+          <p>If you want to display information, redeems, top cheer, etc. Animancy can integrate that data using the Twitch API.</p>
+        </div>
+        <hr class="daimond-hr" />
+      </div>
+    </section>
+  </main>
 </Layout>
