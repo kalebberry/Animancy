@@ -8,9 +8,14 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: initial;
+}
+
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  height: auto;
 }
 
 body {
@@ -44,9 +49,34 @@ h6 {
   overflow-wrap: break-word;
 }
 
+ul {
+  padding: 0;
+}
+
 #root,
 #__next {
   isolation: isolate;
+}
+
+a {
+  color: var(--dark-color);
+}
+
+a:not([class]) {
+  color: currentColor;
+}
+
+:focus {
+  outline: 2px dashed;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+[href]:hover {
+  text-decoration: none;
 }
 
 .flow,
@@ -67,21 +97,4 @@ h6 {
 
 .flow-large > * + * {
   margin-block-start: var(--grid-gutter);
-}
-
-a:not([class]) {
-  color: currentColor;
-}
-
-:focus {
-  outline: 2px dashed;
-  outline-offset: 0.25rem;
-}
-
-main:focus {
-  outline: none;
-}
-
-[href]:hover {
-  text-decoration: none;
 }
