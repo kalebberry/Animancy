@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  line-height: 1.2;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -49,16 +49,39 @@ h6 {
   isolation: isolate;
 }
 
-.flow {
+.flow,
+.flow-large {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.flow > * {
+.flow,
+.flow-large > * {
   margin-block: 0;
 }
 
 .flow > * + * {
   margin-block-start: var(--space, 1.2rem);
+}
+
+.flow-large > * + * {
+  margin-block-start: var(--grid-gutter);
+}
+
+a:not([class]) {
+  color: currentColor;
+}
+
+:focus {
+  outline: 2px dashed;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+[href]:hover {
+  text-decoration: none;
 }

@@ -10,3 +10,10 @@
   display: grid;
   gap: var(--grid-gutter);
 }
+
+.u-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--grid-gutter);
+}

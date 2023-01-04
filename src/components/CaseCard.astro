@@ -24,10 +24,18 @@ const { href, title, body } = Astro.props;
 	.case-card {
 		border: 1px solid var(--dark-color);
 		padding: var(--space-m);
+		width: 100%;
+		max-width: 76.88em;
 	}
 
 	.case-card .daimond-hr {
 		--hrWidth: 10rem;
 		margin-inline-start: 90%;
+	}
+
+	@media (min-width: 76.88rem) {
+		.case-card {
+			max-width: 35em;
+		}
 	}
 </style>

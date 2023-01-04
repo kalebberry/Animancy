@@ -7,12 +7,13 @@
     color: var(--dark-color);
     max-width: var(--hrWidth);
     font-size: 0.9rem;
+    margin-block-start: 0;
 }
 .daimond-hr:after {
     content: "◆";
     display: inline-block;
     position: relative;
     margin-inline-start: 100%;
-    bottom: -0.65em;
+    bottom: -0.85em;
     background: transparent;
 }

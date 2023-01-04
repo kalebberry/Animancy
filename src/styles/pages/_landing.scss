@@ -2,15 +2,37 @@ section[class="summary"],
 section[class="selected-works"],
 section[class="process"],
 section[class="services"] {
-    padding-block-start: var(--space-l);
+    margin-block-start: var(--space-3xl);
 }
 
 .hero {
     display: flex;
 }
 
+.process {
+    .process__content {
+        .card {
+            width: 76.88rem;
+        }
+    }
+}
+
+.summary {
+    display: flex;
+}
+
 .services {
     & .daimond-hr {
         --hrWidth: 50rem;
+    }
+}
+
+@media (min-width: 76.88rem) {
+    .process {
+        .process__content {
+            .card {
+                max-width: 35em;
+            }
+        }
     }
 }
