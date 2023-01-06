@@ -3,52 +3,22 @@ import '../styles/styles.scss';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
-	title: string;
+  title: string;
 }
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-	<Footer />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+  <Footer />
 </html>
-
-<script src='https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js'></script>
-
-<!-- <script>
-	import Lenis from '@studio-freight/lenis';
-
-	const lenis = new Lenis({
-		duration: 1.2,
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-		direction: 'vertical', // vertical, horizontal
-		gestureDirection: 'vertical', // vertical, horizontal, both
-		smooth: true,
-		mouseMultiplier: 1,
-		smoothTouch: false,
-		touchMultiplier: 2,
-		infinite: false,
-	});
-
-	//get scroll value
-	lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-		console.log({ scroll, limit, velocity, direction, progress });
-	});
-
-	function raf(time) {
-		lenis.raf(time);
-		requestAnimationFrame(raf);
-	}
-
-	requestAnimationFrame(raf);
-</script> -->

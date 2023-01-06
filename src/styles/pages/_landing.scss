@@ -1,39 +1,42 @@
-section[class="summary"],
-section[class="selected-works"],
-section[class="process"],
-section[class="services"] {
-    margin-block-start: var(--space-3xl);
+section[class='summary'],
+section[class='selected-works'],
+section[class='process'],
+section[class='services'] {
+  margin-block-start: var(--space-3xl);
 }
 
 .hero {
-    display: flex;
-    padding-block: var(--space-2xl-3xl);
+  display: flex;
+  padding-block: var(--space-2xl-3xl);
+  background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .process {
-    .process__content {
-        .card {
-            width: 76.88rem;
-        }
+  .process__content {
+    .card {
+      width: 76.88rem;
     }
+  }
 }
 
 .summary {
-    display: flex;
+  display: flex;
 }
 
 .services {
-    & .daimond-hr {
-        --hrWidth: 50rem;
-    }
+  & .daimond-hr {
+    --hrWidth: 50rem;
+  }
 }
 
 @media (min-width: 76.88rem) {
-    .process {
-        .process__content {
-            .card {
-                max-width: 35em;
-            }
-        }
+  .process {
+    .process__content {
+      .card {
+        max-width: 35em;
+      }
     }
+  }
 }
