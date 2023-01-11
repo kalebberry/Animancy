@@ -25,12 +25,13 @@ const { href, title, body } = Astro.props;
     padding: var(--space-m);
     width: 100%;
     max-width: 76.88em;
-    background-color: hsl(90, 6%, 86%);
     transition: background 1s;
+    background: hsla(90deg, 6%, 86%, 20%);
 
-    // &:hover {
-    //   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    // }
+    &:hover {
+      // background: hsl(90deg, 6%, 86%);
+      background: hsl(42, 45%, 85%);
+    }
   }
 
   a {

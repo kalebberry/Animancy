@@ -32,7 +32,7 @@ section[class='services'] {
   background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: hsl(90, 6%, 86%);
+  background-color: hsla(90deg, 6%, 86%, 20%);
   padding-block: var(--space-2xl);
   & .daimond-hr {
     --hrWidth: 50rem;
@@ -42,6 +42,11 @@ section[class='services'] {
 @media (min-width: 76.88rem) {
   .hero {
     background-size: 60%;
+  }
+
+  .hero-image {
+    -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
+    mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
   }
 
   .services {
