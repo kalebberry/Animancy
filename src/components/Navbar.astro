@@ -58,8 +58,9 @@
 	.navigation {
 		display: flex;
 		align-items: center;
-		padding-block: var(--space-l);
+		padding-block: var(--space-s);
 		padding-inline: var(--space-m);
+		background-color: hsla(90deg, 6%, 86%, 0.2);
 	}
 
 	.filler {
@@ -69,7 +70,7 @@
 	.nav {
 		height: 0px;
 		position: absolute;
-		top: 150px;
+		top: 100px;
 		left: 0;
 		right: 0;
 		width: 100vw;
@@ -154,6 +155,12 @@
 
 			& li a {
 				color: var(--dark-color);
+				transition: 0.5s;
+				text-decoration: none;
+
+				&:hover {
+					color: #c4a174;
+				}
 			}
 
 			& li + li {
