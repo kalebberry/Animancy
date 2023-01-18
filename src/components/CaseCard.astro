@@ -1,53 +1,53 @@
 ---
 export interface Props {
-	title: string;
-	body: string;
-	catagory: string;
-	href: string;
+  title: string;
+  body: string;
+  catagory: string;
+  href: string;
 }
 
 const { href, title, body, catagory } = Astro.props;
 ---
 
-<div class='case-card flow'>
-	<header class='case-card__title'>
-		<p class='small'>{catagory}</p>
-		<h3>{title}</h3>
-	</header>
-	<summary>
-		<p>{body}</p>
-	</summary>
-	<a class='btn' href={href} aria-label='button'>View Case Study.</a>
+<div class="case-card flow">
+  <header class="case-card__title">
+    <p class="small">{catagory}</p>
+    <h3>{title}</h3>
+  </header>
+  <summary>
+    <p>{body}</p>
+  </summary>
+  <a class="btn" href={href} aria-label="button">View Case Study.</a>
 
-	<hr class='daimond-hr' />
+  <hr class="daimond-hr" />
 </div>
 
-<style lang='scss'>
-	.case-card {
-		padding: var(--space-m);
-		width: 100%;
-		max-width: 76.88em;
-		transition: background 1s;
-		background: hsla(90deg, 6%, 86%, 20%);
+<style lang="scss">
+  .case-card {
+    padding: var(--space-m);
+    width: 100%;
+    max-width: 76.88em;
+    transition: background 1s;
+    background: hsla(90deg, 6%, 86%, 20%);
 
-		&:hover {
-			// background: hsl(90deg, 6%, 86%);
-			background: hsl(42, 45%, 85%);
-		}
-	}
+    &:hover {
+      // background: hsl(90deg, 6%, 86%);
+      background: var(--gold-color);
+    }
+  }
 
-	a {
-		color: var(--dark-color);
-	}
+  a {
+    color: var(--dark-color);
+  }
 
-	.case-card .daimond-hr {
-		--hrWidth: 10rem;
-		margin-inline-start: 90%;
-	}
+  .case-card .daimond-hr {
+    --hrWidth: 10rem;
+    margin-inline-start: 90%;
+  }
 
-	@media (min-width: 76.88rem) {
-		.case-card {
-			max-width: 35em;
-		}
-	}
+  @media (min-width: 76.88rem) {
+    .case-card {
+      max-width: 35em;
+    }
+  }
 </style>
