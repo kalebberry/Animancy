@@ -1,20 +1,20 @@
-section[class="summary"],
-section[class="selected-works"],
-section[class="process"],
-section[class="services"] {
+section[class='summary'],
+section[class='selected-works'],
+section[class='process'],
+section[class='services'] {
   height: auto;
   margin-block-start: var(--space-3xl);
 }
 
 .hero {
   display: flex;
-  padding-block: 15rem;
+  padding-block: 10rem;
   background-color: hsl(60, 9%, 93%);
-  background-image: url("https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600");
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
+  // background-position: center center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 .process {
@@ -36,11 +36,11 @@ section[class="services"] {
 }
 
 .services {
-  background-image: url("https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600");
-  background-position: right center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
+  // background-position: right center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-repeat: no-repeat;
   background-color: hsl(60, 9%, 93%);
   padding-block: var(--space-2xl);
   & .daimond-hr {
