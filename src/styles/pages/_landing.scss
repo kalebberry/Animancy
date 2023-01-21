@@ -1,18 +1,16 @@
-section[class='summary'],
-section[class='selected-works'],
-section[class='process'],
-section[class='services'] {
-  height: auto;
-  margin-block-start: var(--space-3xl);
+section[class="summary"],
+section[class="selected-works"],
+section[class="process"],
+section[class="services"] {
+  margin-block-start: 10rem;
 }
 
 .hero {
   display: flex;
   padding-block: 10rem;
   background-color: hsl(60, 9%, 93%);
-  // background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
+  // background-image: url("https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600");
   // background-position: center center;
-  // background-attachment: fixed;
   // background-size: cover;
   // background-repeat: no-repeat;
 }
@@ -50,7 +48,7 @@ section[class='services'] {
 
 @media (min-width: 76.88rem) {
   .hero {
-    background-size: 60%;
+    background-size: 90%;
   }
 
   .hero-image {
