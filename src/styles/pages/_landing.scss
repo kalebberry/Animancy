@@ -1,18 +1,35 @@
-section[class="summary"],
-section[class="selected-works"],
-section[class="process"],
-section[class="services"] {
+section[class='summary'],
+section[class='selected-works'],
+section[class='process'],
+section[class='services'] {
   margin-block-start: 10rem;
 }
 
 .hero {
   display: flex;
-  padding-block: 10rem;
-  background-color: hsl(60, 9%, 93%);
+  flex-direction: column;
+  // background-color: rgb(82, 78, 126);
+  background: linear-gradient(0deg, rgba(82, 78, 126, 0.9), rgba(82, 78, 126, 0.993)), url(/public/img/landscape.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-block-end: var(--space-3xl);
+
+  // padding-block-end: 10rem;
   // background-image: url("https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600");
   // background-position: center center;
   // background-size: cover;
   // background-repeat: no-repeat;
+
+  .hero-logo {
+    padding-block: var(--space-xl);
+  }
+
+  .hero-cta {
+    text-align: center;
+    padding-block: var(--space-l);
+  }
 }
 
 .process {
@@ -34,11 +51,11 @@ section[class="services"] {
 }
 
 .services {
-  // background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
-  // background-position: right center;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  background-image: url('https://ik.imagekit.io/Animancy/DRAGONGIRL-min_3_zv1RQShJr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1673041956600');
+  background-position: right center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: hsl(60, 9%, 93%);
   padding-block: var(--space-2xl);
   & .daimond-hr {
@@ -47,10 +64,6 @@ section[class="services"] {
 }
 
 @media (min-width: 76.88rem) {
-  .hero {
-    background-size: 90%;
-  }
-
   .hero-image {
     -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
     mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));

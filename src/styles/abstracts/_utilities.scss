@@ -21,10 +21,22 @@
 .btn {
   text-decoration-line: underline;
   text-decoration-thickness: 0.2px;
-  border: medium double var(--dark-color);
+  border: solid 1px var(--dark-color);
   width: 9em;
   text-align: center;
   padding-block: 0.5rem;
   padding-inline: 0.25rem;
+  transition: background, 0.5s;
+}
+
+.btn-white {
+  text-decoration: none;
+  color: var(--background-base-color);
+  border: solid 1px var(--background-base-color);
+  width: 9em;
+  text-align: center;
+  padding-block: 0.9rem;
+  padding-inline: 1.5rem;
+  border-radius: 0.2em;
   transition: background, 0.5s;
 }
