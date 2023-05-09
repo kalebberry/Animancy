@@ -1,148 +1,148 @@
-<nav class="navigation">
-  <div class="logo">
-    <a href="/">
-      <img class="svg-logo" src="/public/img/logo.png" alt="Logo" />
-    </a>
-  </div>
-  <div class="hamburger">&#9776;</div>
-  <div class="nav">
-    <ul class="navigation-items">
-      <li><a href="/case-studies">Case Studies</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/articles">Articles</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="filler"></div>
+<nav class='navigation'>
+	<div class='logo'>
+		<a href='/'>
+			<img class='svg-logo' src='/img/logo.png' alt='Logo' />
+		</a>
+	</div>
+	<div class='hamburger'>&#9776;</div>
+	<div class='nav'>
+		<ul class='navigation-items'>
+			<li><a href='/case-studies'>Case Studies</a></li>
+			<li><a href='/services'>Services</a></li>
+			<li><a href='/about'>About</a></li>
+			<li><a href='/articles'>Articles</a></li>
+			<li><a href='/contact'>Contact</a></li>
+		</ul>
+	</div>
+	<div class='filler'></div>
 </nav>
-<style lang="scss">
-  .svg-logo {
-    max-width: 50px;
-    width: 100%;
-    border-radius: 5em;
-  }
+<style lang='scss'>
+	.svg-logo {
+		max-width: 50px;
+		width: 100%;
+		border-radius: 5em;
+	}
 
-  .navigation {
-    display: flex;
-    align-items: center;
-    padding-block: var(--space-s);
-    padding-inline: var(--space-m);
-    // background-color: hsl(60, 8%, 93%);
-  }
+	.navigation {
+		display: flex;
+		align-items: center;
+		padding-block: var(--space-s);
+		padding-inline: var(--space-m);
+		// background-color: hsl(60, 8%, 93%);
+	}
 
-  .filler {
-    display: none;
-  }
+	.filler {
+		display: none;
+	}
 
-  .nav {
-    height: 0px;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background-color: var(--dark-color);
-    transition: 0.5s;
-    overflow: hidden;
+	.nav {
+		height: 0px;
+		position: absolute;
+		top: 100px;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		background-color: var(--dark-color);
+		transition: 0.5s;
+		overflow: hidden;
 
-    &.active {
-      height: 450px;
-    }
-  }
+		&.active {
+			height: 450px;
+		}
+	}
 
-  .hamburger:hover {
-    cursor: pointer;
-  }
+	.hamburger:hover {
+		cursor: pointer;
+	}
 
-  .navigation-items {
-    display: block;
-    text-align: center;
-    width: fit-content;
-    margin-inline: auto;
-    margin-block: 80px auto;
-    transition: 0.5s;
-    opacity: 0;
+	.navigation-items {
+		display: block;
+		text-align: center;
+		width: fit-content;
+		margin-inline: auto;
+		margin-block: 80px auto;
+		transition: 0.5s;
+		opacity: 0;
 
-    & li {
-      list-style-type: none;
-    }
+		& li {
+			list-style-type: none;
+		}
 
-    & li + li {
-      margin-block-start: var(--space-s);
-    }
+		& li + li {
+			margin-block-start: var(--space-s);
+		}
 
-    & li a {
-      color: white;
-    }
+		& li a {
+			color: white;
+		}
 
-    & li a .active {
-      //   color: red;
-    }
-  }
+		& li a .active {
+			//   color: red;
+		}
+	}
 
-  .nav.active .navigation-items {
-    opacity: 1;
-  }
+	.nav.active .navigation-items {
+		opacity: 1;
+	}
 
-  .logo,
-  .filler {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
+	.logo,
+	.filler {
+		flex-grow: 1;
+		flex-basis: 0;
+	}
 
-  @media (min-width: 56.88rem) {
-    .nav,
-    .filler {
-      display: block;
-    }
+	@media (min-width: 56.88rem) {
+		.nav,
+		.filler {
+			display: block;
+		}
 
-    .hamburger {
-      display: none;
-    }
+		.hamburger {
+			display: none;
+		}
 
-    .nav {
-      height: auto;
-      position: relative;
-      top: 0;
-      width: auto;
-      background-color: transparent;
-      transition: 0.2s;
-      overflow: auto;
-    }
+		.nav {
+			height: auto;
+			position: relative;
+			top: 0;
+			width: auto;
+			background-color: transparent;
+			transition: 0.2s;
+			overflow: auto;
+		}
 
-    .navigation-items {
-      display: flex;
-      gap: max(calc(10vw - 70px), 16px);
-      margin: 0 4vw;
-      opacity: 1;
+		.navigation-items {
+			display: flex;
+			gap: max(calc(10vw - 70px), 16px);
+			margin: 0 4vw;
+			opacity: 1;
 
-      & li {
-        list-style-type: none;
-      }
+			& li {
+				list-style-type: none;
+			}
 
-      & li a {
-        color: var(--background-base-color);
-        transition: 0.5s ease-in-out;
-        text-decoration-line: none;
+			& li a {
+				color: var(--background-base-color);
+				transition: 0.5s ease-in-out;
+				text-decoration-line: none;
 
-        &:hover {
-          color: #c4a174;
-        }
-      }
+				&:hover {
+					color: #c4a174;
+				}
+			}
 
-      & li + li {
-        margin-inline-start: var(--space-m);
-        margin-block-start: 0;
-      }
-    }
-  }
+			& li + li {
+				margin-inline-start: var(--space-m);
+				margin-block-start: 0;
+			}
+		}
+	}
 </style>
 
 <script>
-  let hamburger: HTMLElement = document.querySelector('.hamburger');
-  hamburger.onclick = function () {
-    let navbar = document.querySelector('.nav');
-    navbar.classList.toggle('active');
-  };
+	let hamburger: HTMLElement = document.querySelector('.hamburger');
+	hamburger.onclick = function () {
+		let navbar = document.querySelector('.nav');
+		navbar.classList.toggle('active');
+	};
 </script>
