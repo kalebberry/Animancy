@@ -11,7 +11,7 @@ const { href, title, body, catagory } = Astro.props;
 
 <div class="case-card flow">
   <header class="case-card__title">
-    <p class="small">{catagory}</p>
+    <p class="small catagory">{catagory}</p>
     <h3>{title}</h3>
   </header>
   <summary>
@@ -28,16 +28,24 @@ const { href, title, body, catagory } = Astro.props;
     width: 100%;
     max-width: 76.88em;
     transition: background 1s;
-    background: #514d7d;
+    background-color: rgb(49, 43, 49);
+    background-image: url(../../public/img/logo_transparency_plus_B&W.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
     border-radius: 0.3em;
 
     p,
     h3 {
       color: var(--background-base-color);
+      text-wrap: balance;
+    }
+    .catagory {
+      color: #3c7da6;
     }
 
     &:hover {
-      background: #67538e;
+      background-color: rgb(45, 43, 49);
     }
   }
 
