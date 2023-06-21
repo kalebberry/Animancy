@@ -15,9 +15,10 @@ html {
 
 body {
   min-height: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   line-height: 1.5;
+  background-color: #f1f3f9;
   -webkit-font-smoothing: antialiased;
 }
 
