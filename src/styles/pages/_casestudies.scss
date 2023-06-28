@@ -1,0 +1,22 @@
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)), url(/img/21.jpg) no-repeat center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-block-end: var(--space-xl);
+
+  .hero-logo {
+    padding-block: var(--space-3xl);
+  }
+
+  .hero-cta {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-l);
+  }
+}
