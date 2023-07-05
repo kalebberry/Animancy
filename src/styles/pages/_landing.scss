@@ -1,78 +1,81 @@
-section[class='summary'],
-section[class='selected-works'],
-section[class='process'],
-section[class='services'] {
+section[class="summary"],
+section[class="selected-works"],
+section[class="process"],
+section[class="services"] {
   margin-block-start: 10rem;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)), url(/img/21.jpg) no-repeat center bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-block-end: var(--space-xl);
-
-  .hero-logo {
-    padding-block: var(--space-3xl);
-  }
-
-  .hero-cta {
+.landing {
+  .hero {
     display: flex;
-    justify-content: center;
-    padding-block: var(--space-l);
-  }
-}
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)),
+      url(/img/21.jpg) no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-block-end: var(--space-xl);
 
-.selected-works {
-  h1 {
-    color: rgb(49, 43, 49);
-  }
-}
+    .hero-logo {
+      padding-block: var(--space-3xl);
+    }
 
-.process {
-  h1 {
-    color: rgb(49, 43, 49);
-  }
-  .process__content {
-    .card {
-      width: 76.88rem;
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      padding-block: var(--space-l);
     }
   }
-}
 
-.summary {
-  display: grid;
-  place-content: center;
-
-  p {
-    font-size: var(--step-1);
-  }
-}
-
-.services {
-  padding-block: var(--space-2xl);
-  & .daimond-hr {
-    --hrWidth: 50rem;
-  }
-}
-
-@media (min-width: 76.88rem) {
-  .hero-image {
-    -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-    mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-  }
-
-  .services {
-    background-size: 50%;
+  .selected-works {
+    h1 {
+      color: rgb(49, 43, 49);
+    }
   }
 
   .process {
+    h1 {
+      color: rgb(49, 43, 49);
+    }
     .process__content {
       .card {
-        max-width: 35em;
+        width: 76.88rem;
+      }
+    }
+  }
+
+  .summary {
+    display: grid;
+    place-content: center;
+
+    p {
+      font-size: var(--step-1);
+    }
+  }
+
+  .services {
+    padding-block: var(--space-2xl);
+    & .daimond-hr {
+      --hrWidth: 50rem;
+    }
+  }
+
+  @media (min-width: 76.88rem) {
+    .hero-image {
+      -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
+      mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
+    }
+
+    .services {
+      background-size: 50%;
+    }
+
+    .process {
+      .process__content {
+        .card {
+          max-width: 35em;
+        }
       }
     }
   }

@@ -2,7 +2,6 @@
 export interface Props {
 	title: string;
 	body: string;
-	catagory: string;
 	href: string;
 }
 
@@ -17,9 +16,6 @@ const { href, title, body, catagory } = Astro.props;
 	<summary>
 		<p>{body}</p>
 	</summary>
-	<a class='btn-white' href={href} aria-label='button'>View Case Study.</a>
-
-	<hr class='daimond-hr' />
 </div>
 
 <style lang='scss'>
@@ -28,16 +24,17 @@ const { href, title, body, catagory } = Astro.props;
 		width: 100%;
 		max-width: 76.88em;
 		transition: background 1s;
-		background-color: rgb(49, 43, 49);
+		background-color: transparent;
 		background-image: url(/img/logo_transparency_plus_B&W.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: bottom right;
 		border-radius: 0.3em;
+		border: 1px solid var(--dark-color);
 
 		p,
 		h3 {
-			color: var(--background-base-color);
+			color: var(--dark-color);
 			text-wrap: balance;
 		}
 		.catagory {
@@ -45,7 +42,12 @@ const { href, title, body, catagory } = Astro.props;
 		}
 
 		&:hover {
-			background-color: rgb(45, 43, 49);
+			background-color: rgb(49, 43, 49);
+
+			p,
+			h3 {
+				color: var(--background-base-color);
+			}
 		}
 	}
 
@@ -58,7 +60,7 @@ const { href, title, body, catagory } = Astro.props;
 
 	@media (min-width: 76.88rem) {
 		.case-card {
-			max-width: 35em;
+			max-width: 20em;
 		}
 	}
 </style>

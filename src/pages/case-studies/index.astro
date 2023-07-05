@@ -1,14 +1,80 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
+import Card from '../../components/CaseCardSmall.astro';
 ---
 
-<Layout title="Case Studies">
-  <Navbar />
-  <main class="case-studies">
-    <header class="hero">
-      <Navbar />
-      <div class="u-container"></div>
-    </header>
-  </main>
+<Layout title='Case Studies'>
+	<main class='case-studies'>
+		<header class='hero'>
+			<Navbar />
+			<article class='u-container'>
+				<div class='content'>
+					<div class='left-border'>
+						<h1>Case Studies.</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+							ultricies lacus sed.
+						</p>
+					</div>
+				</div>
+			</article>
+		</header>
+
+		<section class='feature-1'>
+			<article class='flow-large u-container'>
+				<h1>Nyacchii</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies lacus sed.
+				</p>
+				<a class='btn' href='#' aria-label='button'>View Case Study.</a>
+			</article>
+		</section>
+
+		<section class='feature-2'>
+			<article class='flow-large u-container'>
+				<h1>Rockstar Renovations</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies lacus sed.
+				</p>
+				<a class='btn' href='#' aria-label='button'>View Case Study.</a>
+			</article>
+		</section>
+
+		<section class='feature-3'>
+			<article class='flow-large u-container'>
+				<h1>Fleet Vu</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies lacus sed.
+				</p>
+				<a class='btn' href='#' aria-label='button'>View Case Study.</a>
+			</article>
+		</section>
+
+		<section class='extra'>
+			<div class='u-container flow-large'>
+				<article class='selected-works__case-cards u-flex'>
+					<Card
+						title='Project'
+						body='A portfolio website for Nyacchii, an professional digital artist.'
+						href='/case-studies/nyacchii'
+					/>
+					<Card
+						title='Project'
+						body='A company website for Rockstar Renovations. An fully insured business.'
+						href='/case-studies/rockstar-renovations'
+					/>
+					<Card
+						title='Project'
+						body='A digital art portfolio for Noa, who is a professional illustrator.'
+						href='/case-studies/noasketch'
+					/>
+				</article>
+			</div>
+		</section>
+	</main>
 </Layout>
