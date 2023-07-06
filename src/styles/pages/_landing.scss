@@ -35,7 +35,8 @@ section[class="services"] {
   }
 
   .process {
-    h1 {
+    h1,
+    h3 {
       color: rgb(49, 43, 49);
     }
     .process__content {
@@ -46,6 +47,10 @@ section[class="services"] {
   }
 
   .summary {
+    h1,
+    h3 {
+      color: rgb(49, 43, 49);
+    }
     display: grid;
     place-content: center;
 
@@ -55,6 +60,10 @@ section[class="services"] {
   }
 
   .services {
+    h1,
+    h3 {
+      color: rgb(49, 43, 49);
+    }
     padding-block: var(--space-2xl);
     & .daimond-hr {
       --hrWidth: 50rem;

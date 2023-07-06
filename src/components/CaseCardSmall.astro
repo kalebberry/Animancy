@@ -5,35 +5,45 @@ export interface Props {
 	href: string;
 }
 
-const { href, title, body, catagory } = Astro.props;
+const { href, title, body } = Astro.props;
 ---
 
-<div class='case-card flow'>
+<a href={href} class='case-card flow'>
 	<header class='case-card__title'>
-		<p class='small catagory'>{catagory}</p>
-		<h3>{title}</h3>
+		<h2>{title}</h2>
 	</header>
 	<summary>
 		<p>{body}</p>
 	</summary>
-</div>
+	<div class='logo'>
+		<img src='/img/logo_B&W.png' />
+	</div>
+</a>
 
 <style lang='scss'>
 	.case-card {
 		padding: var(--space-m);
 		width: 100%;
+		display: block;
 		max-width: 76.88em;
 		transition: background 1s;
 		background-color: transparent;
-		background-image: url(/img/logo_transparency_plus_B&W.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: bottom right;
 		border-radius: 0.3em;
+		text-decoration: none;
 		border: 1px solid var(--dark-color);
 
+		.logo {
+			display: flex;
+			justify-content: flex-end;
+			img {
+				max-width: 20%;
+				border-radius: 5em;
+				opacity: 0.6;
+			}
+		}
+
 		p,
-		h3 {
+		h2 {
 			color: var(--dark-color);
 			text-wrap: balance;
 		}
@@ -42,10 +52,10 @@ const { href, title, body, catagory } = Astro.props;
 		}
 
 		&:hover {
+			cursor: pointer;
 			background-color: rgb(49, 43, 49);
-
 			p,
-			h3 {
+			h2 {
 				color: var(--background-base-color);
 			}
 		}
@@ -60,7 +70,7 @@ const { href, title, body, catagory } = Astro.props;
 
 	@media (min-width: 76.88rem) {
 		.case-card {
-			max-width: 20em;
+			max-width: 18em;
 		}
 	}
 </style>
