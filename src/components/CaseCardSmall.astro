@@ -2,42 +2,49 @@
 export interface Props {
 	title: string;
 	body: string;
-	catagory: string;
 	href: string;
 }
 
-const { href, title, body, catagory } = Astro.props;
+const { href, title, body } = Astro.props;
 ---
 
-<div class='case-card flow'>
+<a href={href} class='case-card flow'>
 	<header class='case-card__title'>
-		<p class='small catagory'>{catagory}</p>
-		<h3>{title}</h3>
+		<h2>{title}</h2>
 	</header>
 	<summary>
 		<p>{body}</p>
 	</summary>
-	<a class='btn-white' href={href} aria-label='button'>View Case Study.</a>
-
-	<hr class='daimond-hr' />
-</div>
+	<div class='logo'>
+		<img src='/img/logo_B&W.png' />
+	</div>
+</a>
 
 <style lang='scss'>
 	.case-card {
 		padding: var(--space-m);
 		width: 100%;
+		display: block;
 		max-width: 76.88em;
 		transition: background 1s;
-		background-color: rgb(49, 43, 49);
-		background-image: url(/img/logo_transparency_plus_B&W.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: bottom right;
+		background-color: transparent;
 		border-radius: 0.3em;
+		text-decoration: none;
+		border: 1px solid var(--dark-color);
+
+		.logo {
+			display: flex;
+			justify-content: flex-end;
+			img {
+				max-width: 20%;
+				border-radius: 5em;
+				opacity: 0.6;
+			}
+		}
 
 		p,
-		h3 {
-			color: var(--background-base-color);
+		h2 {
+			color: var(--dark-color);
 			text-wrap: balance;
 		}
 		.catagory {
@@ -45,7 +52,12 @@ const { href, title, body, catagory } = Astro.props;
 		}
 
 		&:hover {
-			background-color: rgb(45, 43, 49);
+			cursor: pointer;
+			background-color: rgb(49, 43, 49);
+			p,
+			h2 {
+				color: var(--background-base-color);
+			}
 		}
 	}
 
@@ -58,7 +70,7 @@ const { href, title, body, catagory } = Astro.props;
 
 	@media (min-width: 76.88rem) {
 		.case-card {
-			max-width: 35em;
+			max-width: 18em;
 		}
 	}
 </style>

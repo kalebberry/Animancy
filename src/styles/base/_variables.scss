@@ -1,8 +1,8 @@
 :root {
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.2,6,2,&s=0.75|0.5,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-  --header-font: 'PT Serif', serif;
-  --text-font: 'Fira Sans', sans-serif;
+  --header-font: "PT Serif", serif;
+  --text-font: "Fira Sans", sans-serif;
 
   --step--2: clamp(0.69rem, calc(0.63rem + 0.3vw), 0.87rem);
   --step--1: clamp(0.83rem, calc(0.76rem + 0.36vw), 1.04rem);
@@ -41,7 +41,7 @@
   --grid-gutter: var(--space-m-m, clamp(1.5rem, calc(1.37rem + 0.66vw), 1.88rem));
   --grid-columns: 8;
 
-  --dark-color: hsl(0, 0%, 33%);
+  --dark-color: hsl(300, 7%, 18%);
   --gold-color: hsl(42, 45%, 85%);
   --background-base-color: hsl(0, 0%, 95%);
   --background-hero-color: hsl(220, 20%, 94%);

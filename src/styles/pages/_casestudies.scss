@@ -1,22 +1,36 @@
+section[class="feature-1"],
+section[class="feature-2"],
+section[class="feature-3"],
+section[class="extra"] {
+  text-wrap: balance;
+  h1 {
+    color: rgb(49, 43, 49);
+  }
+  margin-block-start: 10rem;
+}
 
+.case-studies {
+  .hero {
+    background: linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)),
+      url(/img/6.jpg) no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-block-end: var(--space-xl);
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)), url(/img/21.jpg) no-repeat center bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-block-end: var(--space-xl);
+    .content {
+      padding-block: var(--space-3xl);
+      color: var(--background-base-color);
+    }
 
-  .hero-logo {
-    padding-block: var(--space-3xl);
+    .left-border {
+      border-left: 1px solid hsla(225, 40%, 96%, 0.2);
+      padding-inline-start: 1em;
+    }
   }
 
-  .hero-cta {
-    display: flex;
-    justify-content: center;
-    padding-block: var(--space-l);
+  .extra {
+    margin-block-end: 5rem;
   }
 }
