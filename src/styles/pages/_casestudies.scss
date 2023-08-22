@@ -3,10 +3,14 @@ section[class="feature-2"],
 section[class="feature-3"],
 section[class="extra"] {
   text-wrap: balance;
+  margin-block-start: 10rem;
   h1 {
     color: rgb(49, 43, 49);
   }
-  margin-block-start: 10rem;
+}
+
+section:last-child {
+  margin-block-end: 10rem;
 }
 
 .case-studies {

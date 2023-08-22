@@ -20,5 +20,28 @@ import Navbar from '../components/Navbar.astro';
 				</div>
 			</article>
 		</header>
+
+		<section class='contact-form'>
+			<article class='u-container flow'>
+				<header>
+					<h1>Send us a message.</h1>
+				</header>
+				<form>
+					<div>
+						<p><label for='name'>Name</label></p>
+						<p><input id='name' type='text' /></p>
+					</div>
+
+					<div>
+						<p><label for='email'>Email</label></p>
+						<p><input id='email' type='text' /></p>
+					</div>
+					<div>
+						<p><label for='project'>Project</label></p>
+						<p><textarea id='project' name='project' rows='4' cols='50'></textarea></p>
+					</div>
+				</form>
+			</article>
+		</section>
 	</main>
 </Layout>
