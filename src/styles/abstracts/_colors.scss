@@ -1,0 +1,33 @@
+$-clr-primary-100: #6d6075;
+$-clr-secondary-100: #b5a792;
+$-clr-accent-100: #667175;
+$-clr-light-100: #f9f4f1;
+$-clr-dark-100: #322e38;
+
+$colors: (
+    primary: (
+        light: hsl(0, 0%, 100%),
+        normal: hsl(0, 0%, 50%),
+        dark: hsl(0, 0%, 0%)
+    ),
+    secondary: (
+        light: hsl(195, 53%, 79%),
+        normal: hsl(240, 100%, 50%),
+        dark: hsl(240, 100%, 27%)
+    ),
+    accent: (
+        light: hsl(0, 0%, 100%),
+        normal: hsl(0, 0%, 50%),
+        dark: hsl(0, 0%, 0%)
+    ),
+    light: (
+        light: hsl(0, 0%, 100%),
+        normal: hsl(0, 0%, 50%),
+        dark: hsl(0, 0%, 0%)
+    ),
+    dark: (
+        light: hsl(0, 0%, 100%),
+        normal: hsl(0, 0%, 50%),
+        dark: hsl(0, 0%, 0%)
+    )
+);
