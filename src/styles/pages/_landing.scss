@@ -1,50 +1,7 @@
 section[class="summary"],
 section[class="selected-works"],
 section[class="process"],
-section[class="services"] {
+section[class="services"],
+section[class="demos"] {
   margin-block-start: 2rem;
-}
-
-.landing {
-  .process {
-    h1,
-    h3 {
-      color: rgb(49, 43, 49);
-    }
-    .process__content {
-      .card {
-        width: 76.88rem;
-      }
-    }
-  }
-
-  .services {
-    h1,
-    h3 {
-      color: rgb(49, 43, 49);
-    }
-
-    & .daimond-hr {
-      --hrWidth: 50rem;
-    }
-  }
-
-  @media (min-width: 76.88rem) {
-    .hero-image {
-      -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-      mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-    }
-
-    .services {
-      background-size: 50%;
-    }
-
-    .process {
-      .process__content {
-        .card {
-          max-width: 35em;
-        }
-      }
-    }
-  }
 }

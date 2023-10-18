@@ -1,14 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
-import Card from '../components/CaseCard.astro';
 ---
 
 <Layout title='Animancy Designs.'>
 	<main class='landing'>
 		<header class='hero'>
 			<Navbar />
-			<div class='u-container'>
+			<div class='u-container flow-large'>
 				<h1>Design with Soul.</h1>
 				<div>
 					<p>
@@ -26,7 +25,7 @@ import Card from '../components/CaseCard.astro';
 					<h1>How we work.</h1>
 				</header>
 				<article class='process__content u-flex'>
-					<div class='card flow'>
+					<div class='flow'>
 						<header>
 							<h3>01. Strategy</h3>
 						</header>
@@ -36,7 +35,7 @@ import Card from '../components/CaseCard.astro';
 							visuals.
 						</p>
 					</div>
-					<div class='card flow'>
+					<div class='flow'>
 						<header>
 							<h3>02. Design</h3>
 						</header>
@@ -45,7 +44,7 @@ import Card from '../components/CaseCard.astro';
 							content and provide design mockups to narrow down the website you want.
 						</p>
 					</div>
-					<div class='card flow'>
+					<div class='flow'>
 						<header>
 							<h3>03. Development</h3>
 						</header>
@@ -55,7 +54,7 @@ import Card from '../components/CaseCard.astro';
 							and ensure the highest quality and that your needs are fully met.
 						</p>
 					</div>
-					<div class='card flow'>
+					<div class='flow'>
 						<header>
 							<h3>04. Support & Assistance</h3>
 						</header>
@@ -106,8 +105,34 @@ import Card from '../components/CaseCard.astro';
 						</p>
 					</div>
 
+					<div class='detail flow'>
+						<a href='#'>Uncover More <i class='fa-solid fa-arrow-right'></i></a>
+					</div>
+
 					<hr class='daimond-hr' />
+
+					<p>
+						“ Strive for two things in design: simplicity and clarity. Great design is born of those
+						two things. “
+					</p>
 				</article>
+			</div>
+		</section>
+
+		<section id='demos' class='demos'>
+			<div class='u-container flow'>
+				<header>
+					<h2>Take a Look.</h2>
+				</header>
+				<div class='showcase'>
+					<div class='showcase__content'>
+						<!-- Showcase content -->
+					</div>
+				</div>
+
+				<div class='stack'></div>
+
+				<a href='#'>More Case Studies <i class='fa-solid fa-arrow-right'></i></a>
 			</div>
 		</section>
 	</main>
