@@ -1,17 +1,39 @@
-$ff-sans: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Serif&display=swap");
 
-$font-sizes: (
-    step--2: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem),
-    step--1: clamp(0.8rem, calc(0.78rem + 0.08vw), 0.84rem),
-    step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem),
-    step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem),
-    step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
-    step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
-    step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem),
-    step-5: clamp(3.05rem, calc(2.47rem + 2.93vw), 4.74rem)
+@import "/public/assets/fontawesome/scss/fontawesome.scss";
+@import "/public/assets/fontawesome/scss/brands.scss";
+@import "/public/assets/fontawesome/scss/duotone.scss";
+@import "/public/assets/fontawesome/scss/light.scss";
+@import "/public/assets/fontawesome/scss/solid.scss";
+@import "/public/assets/fontawesome/scss/thin.scss";
+@import "/public/assets/fontawesome/scss/regular.scss";
+
+$ff-pt-serif: "PT Serif", serif;
+$ff-fira-sans: "Fira Sans", sans-serif;
+
+$font-pt-serif-regular: 400;
+$font-fira-sans-light: 300;
+
+$type: (
+    size: (
+        m200: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem),
+        m100: clamp(0.8rem, calc(0.78rem + 0.08vw), 0.84rem),
+        0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem),
+        100: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem),
+        200: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
+        300: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
+        400: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem),
+        500: clamp(3.05rem, calc(2.47rem + 2.93vw), 4.74rem)
+    )
 );
-
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-$fw-400: 400;
-$fw-700: 700;
+// Contexual Tokens
+$type-size-m200: var(--type-size-m200);
+$type-size-m100: var(--type-size-m100);
+$type-size-0: var(--type-size-0);
+$type-size-100: var(--type-size-100);
+$type-size-200: var(--type-size-200);
+$type-size-300: var(--type-size-300);
+$type-size-400: var(--type-size-400);
+$type-size-500: var(--type-size-500);

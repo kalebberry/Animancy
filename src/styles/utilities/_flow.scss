@@ -1,5 +1,21 @@
+.flow,
+.flow-large {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flow,
+.flow-large > * {
+    margin-block: 0;
+}
+
 .flow > * + * {
-    margin-block-start: var(--flow-space, 1em);
+    margin-block-start: var(--space, 1rem);
+}
+
+.flow-large > * + * {
+    margin-block-start: var(--space, 2rem);
 }
 
 :is(h1, h2, h3, blockquote) {

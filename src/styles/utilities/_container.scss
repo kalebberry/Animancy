@@ -1,6 +1,22 @@
 @use "../abstracts" as *;
 
 .container {
-    width: min(100% - 2rem, breakpoint(large));
+    width: 100%;
     margin-inline: auto;
+
+    @media screen and (min-width: breakpoint(small)) {
+        width: min(100% - 2rem, breakpoint(small));
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+        width: min(100% - 2rem, breakpoint(medium));
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+        width: min(100% - 2rem, breakpoint(large));
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+        width: min(100% - 2rem, breakpoint(x-large));
+    }
 }
