@@ -1,0 +1,41 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// Layout
+$container-min-margin-inline: $space-size-8;
+$container-max-width-narrow: 45rem;
+$container-max-width: 65rem;
+$container-max-width-wide: 75rem;
+
+$section-padding-block: $space-size-48;
+
+// Colors
+$color-text-default: $color-dark-100;
+$color-text-header: $color-dark-100;
+$color-text-subtitle: $color-dark-100;
+$color-text-card: $color-light-200;
+
+$color-background-default: $color-light-100;
+$color-background-footer: $color-dark-100;
+$color-backgroun-card: $color-accent-100;
+
+$button-color-accent: $color-accent-100;
+$button-color-primary: $color-primary-100;
+
+$button-color-accent-hover: $color-accent-300;
+$button-color-accent-primary: $color-primary-300;
+
+$input-color: $color-primary-100;
+$input-focus-color: $color-accent-100;
+$input-user-input-color: $color-accent-300;
+
+$link-text-color: $color-dark-100;
+
+//body
+// $body-font-family:
+// $body-font-size:
+// $body-line-height: 1.5;
+// $body-font-weight:
+// $body-text-color:
+// $body-background-color:
