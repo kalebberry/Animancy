@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+body {
+    background-color: $body-background-color;
+    color: $body-text-color;
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-text-header;
+}
+
+a[class="event-link"] {
+    color: $link-color-default;
+    font-family: var(--header-font);
+    font-weight: 400;
+    text-decoration-line: none;
+    padding: 0 0.25rem;
+    margin: 0 -0.25rem;
+    box-shadow: inset 0 0 0 0 #c4a174;
+    transition:
+        color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: inset 100px 0 0 0 #c4a174;
+        color: white;
+    }
+}

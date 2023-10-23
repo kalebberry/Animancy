@@ -1,8 +1,10 @@
+@use "../abstracts" as *;
+
 section[class="summary"],
 section[class="selected-works"],
 section[class="process"],
 section[class="services"],
 section[class="demos"],
 section[class="conculsion"] {
-  margin-block-start: 2rem;
+  margin-block-start: $space-size-48;
 }

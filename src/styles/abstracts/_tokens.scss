@@ -32,10 +32,17 @@ $input-user-input-color: $color-accent-300;
 
 $link-text-color: $color-dark-100;
 
+// Fonts
+$font-text-default: $ff-fira-sans;
+$font-text-header: $ff-pt-serif;
+
 //body
-// $body-font-family:
-// $body-font-size:
-// $body-line-height: 1.5;
-// $body-font-weight:
-// $body-text-color:
-// $body-background-color:
+$body-font-family: $ff-fira-sans;
+$body-font-size: $font-size-0;
+$body-line-height: 1.5;
+$body-font-weight: $font-fira-sans-light;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+//Links
+$link-color-default: $color-dark-100;

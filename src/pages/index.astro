@@ -5,22 +5,24 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title='Animancy Designs.'>
 	<main class='landing'>
-		<header class='hero'>
-			<Navbar />
-			<div class='container flow-large'>
-				<h1>Design with Soul.</h1>
-				<div>
-					<p>
-						We Create the web for businesses, content creators, and art creatives. We are here to
-						help you take the first steps to building an online presence that tells the world about
-						your dream.
-					</p>
-				</div>
+		<section class='hero'>
+			<div data-type='wide' class='container flow-large'>
+				<Navbar />
+				<header class='flow'>
+					<h1>Design with Soul.</h1>
+					<div>
+						<p>
+							We Create the web for businesses, content creators, and art creatives. We are here to
+							help you take the first steps to building an online presence that tells the world
+							about your dream.
+						</p>
+					</div>
+				</header>
 			</div>
-		</header>
+		</section>
 
 		<section class='process'>
-			<div class='container flow-large'>
+			<div data-type='wide' class='container flow-large'>
 				<header>
 					<h1>How we work.</h1>
 				</header>
@@ -68,7 +70,7 @@ import Navbar from '../components/Navbar.astro';
 		</section>
 
 		<section id='services' class='services'>
-			<div class='container flow-large'>
+			<div data-type='wide' class='container flow-large'>
 				<header>
 					<h1>What we can do.</h1>
 				</header>
@@ -120,7 +122,7 @@ import Navbar from '../components/Navbar.astro';
 		</section>
 
 		<section id='demos' class='demos'>
-			<div class='container flow'>
+			<div data-type='wide' class='container flow'>
 				<header>
 					<h2>Take a Look.</h2>
 				</header>
@@ -159,7 +161,7 @@ import Navbar from '../components/Navbar.astro';
 		</section>
 
 		<section class='conculsion'>
-			<div class='container flow'>
+			<div data-type='wide' class='container flow'>
 				<div class='conculsion__image'>
 					<div><!-- Image --></div>
 					<div><!-- Image --></div>

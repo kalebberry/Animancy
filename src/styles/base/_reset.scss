@@ -17,8 +17,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 1.5;
-  background-color: #f1f3f9;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -56,27 +54,6 @@ ul {
 #root,
 #__next {
   isolation: isolate;
-}
-
-a {
-  color: var(--dark-color);
-}
-
-.event-link {
-  font-family: var(--header-font);
-  font-weight: 400;
-  text-decoration-line: none;
-  padding: 0 0.25rem;
-  margin: 0 -0.25rem;
-  box-shadow: inset 0 0 0 0 #c4a174;
-  transition:
-    color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: inset 100px 0 0 0 #c4a174;
-    color: white;
-  }
 }
 
 a:not([class]) {
