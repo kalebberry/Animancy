@@ -1,10 +1,52 @@
 @use "../abstracts" as *;
 
-section[class="summary"],
-section[class="selected-works"],
-section[class="process"],
-section[class="services"],
-section[class="demos"],
-section[class="conculsion"] {
-  margin-block-start: $space-size-48;
+.hero {
+  background-image: url("/img/background.svg");
+  background-size: contain;
+
+  header h1 {
+    text-align: center;
+    padding-block: $space-size-16;
+  }
+
+  .summary {
+    padding-block: $space-size-16;
+  }
+
+  .svg-images {
+    display: none;
+  }
+
+  @media screen and (min-width: breakpoint(medium)) {
+    .svg-images {
+      padding-block: $space-size-16;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: breakpoint(large)) {
+  }
+
+  @media screen and (min-width: breakpoint(x-large)) {
+  }
+}
+
+.conculsion {
+  .conculsion__images {
+    display: none;
+  }
+
+  @media screen and (min-width: breakpoint(medium)) {
+    .conculsion__images {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: breakpoint(large)) {
+  }
+
+  @media screen and (min-width: breakpoint(x-large)) {
+  }
 }
