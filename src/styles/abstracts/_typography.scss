@@ -9,7 +9,10 @@ $font-fira-sans-light: 300;
 $font-sizes: (
     "small": (
         100: clamp(0.8rem, calc(0.78rem + 0.08vw), 0.84rem),
-        200: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem)
+        200: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem),
+        300: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
+        400: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
+        500: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem)
     ),
     "large": (
         0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem),

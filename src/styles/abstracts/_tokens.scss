@@ -35,6 +35,10 @@ $link-text-color: $color-dark-100;
 // Fonts
 $font-text-default: $ff-fira-sans;
 $font-text-header: $ff-pt-serif;
+$font-text-weight-default: 300;
+$font-text-weight-header: 400;
+
+$font-text-width-default: 60ch;
 
 //body
 $body-font-family: $ff-fira-sans;
@@ -46,3 +50,11 @@ $body-background-color: $color-background-default;
 
 //Links
 $link-color-default: $color-dark-100;
+
+//header-text
+$header-text-size-1: $font-size-500;
+$header-text-size-2: $font-size-400;
+$header-text-size-3: $font-size-300;
+$header-text-size-4: $font-size-200;
+$header-text-size-5: $font-size-100;
+$header-text-size-6: $font-size-0;

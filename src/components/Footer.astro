@@ -1,133 +1,147 @@
-<footer class="footer">
-  <div class="u-container">
-    <article class="top-footer">
-      <div class="logo">
-        <a href="/">
-          <img class="svg-logo" src="/img/logo.png" alt="Logo" />
-        </a>
-      </div>
+<footer class='footer'>
+	<div data-type='wide' class='container'>
+		<article class='top-footer'>
+			<div class='logo'>
+				<a href='/'>
+					<img class='svg-logo' src='/img/logo.png' alt='Logo' />
+				</a>
+			</div>
 
-      <div class="termsandservices">
-        <ul class="termsandservices-items">
-          <li><a href="/case-studies">Case Studies</a></li>
-          <li><a href="/articles">Articles</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
+			<div class='termsandservices'>
+				<ul class='termsandservices-items'>
+					<li><a href='/case-studies'>Case Studies</a></li>
+					<li><a href='/articles'>Articles</a></li>
+					<li><a href='/contact'>Contact</a></li>
+				</ul>
+			</div>
 
-      <div class="socials">
-        <ul class="socials-items">
-          <li><a href="https://twitter.com/AnimancyDesigns" target="_blank">Twitter</a></li>
-          <li><a href="https://github.com/Sorumeiji" target="_blank">Github</a></li>
-          <li><a href="https://codepen.io/Animancy" target="_blank">Codepen</a></li>
-        </ul>
-      </div>
-    </article>
-    <hr />
-    <article class="bottom-footer">
-      <p>Copyright 2022, Animancy. All rights reserved.</p>
-      <ul class="copy-items">
-        <li>
-          <a href="policies/privacy">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="policies/terms">Terms of Service</a>
-        </li>
-      </ul>
-    </article>
-  </div>
+			<div class='socials'>
+				<ul class='socials-items'>
+					<li>
+						<a href='https://twitter.com/AnimancyDesigns' target='_blank'>
+							<i class='fa-brands fa-xl fa-square-x-twitter'></i>
+						</a>
+					</li>
+					<li>
+						<a href='https://github.com/Sorumeiji' target='_blank'>
+							<i class='fa-brands fa-xl fa-square-github'></i>
+						</a>
+					</li>
+					<li>
+						<a href='https://codepen.io/Animancy' target='_blank'>
+							<i class='fa-brands fa-xl fa-dev'></i>
+						</a>
+					</li>
+					<li><a href='#'><i class='fa-brands fa-xl fa-discord'></i></a></li>
+				</ul>
+			</div>
+		</article>
+
+		<article class='bottom-footer'>
+			<p>Copyright 2022, Animancy. All rights reserved.</p>
+			<ul class='copy-items'>
+				<li>
+					<a href='policies/privacy'>Privacy Policy</a>
+				</li>
+				<li>
+					<a href='policies/terms'>Terms of Service</a>
+				</li>
+			</ul>
+		</article>
+	</div>
 </footer>
 
-<style lang="scss">
-  .svg-logo {
-    max-width: 50px;
-    width: 100%;
-    border-radius: 5em;
-  }
+<style lang='scss'>
+	.svg-logo {
+		max-width: 50px;
+		width: 100%;
+		border-radius: 5em;
+	}
 
-  hr {
-    border: 0;
-    height: 1px;
-    background: var(--dark-color);
-  }
+	hr {
+		border: 0;
+		height: 1px;
+		background: var(--dark-100);
+	}
 
-  .footer {
-    margin-top: auto;
-    background-color: hsl(60, 8%, 93%);
-    padding-block: var(--space-xl);
-    ul {
-      display: flex;
-      flex-direction: column;
-      & li {
-        list-style-type: none;
-      }
+	.footer {
+		margin-top: auto;
+		background-color: var(--dark-100);
+		padding-block: clamp(3rem, calc(2.74rem + 1.3vw), 3.75rem);
 
-      & li a {
-        color: var(--dark-color);
-        text-decoration: none;
-        transition: 0.5s ease-in-out;
+		p {
+			color: var(--light-100);
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			& li {
+				list-style-type: none;
+			}
 
-        &:hover {
-          color: #c4a174;
-        }
-      }
-    }
+			& li a {
+				color: var(--light-100);
+				text-decoration: none;
+				transition: 0.5s ease-in-out;
 
-    hr {
-      margin-block: var(--space-s);
-    }
-  }
+				&:hover {
+					color: #c4a174;
+				}
+			}
+		}
+	}
 
-  .top-footer {
-    display: flex;
-    flex-direction: column;
+	.top-footer {
+		display: flex;
+		flex-direction: column;
+		margin-block-end: clamp(3rem, calc(2.74rem + 1.3vw), 3.75rem);
 
-    ul li + li {
-      margin-block-start: var(--space-s);
-    }
-  }
+		ul li + li {
+			margin-block-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+		}
+	}
 
-  .top-footer > * + * {
-    margin-block-start: var(--space-s);
-  }
+	.top-footer > * + * {
+		margin-block-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+	}
 
-  .bottom-footer > * + * {
-    margin-block-start: var(--space-s);
-  }
+	.bottom-footer > * + * {
+		margin-block-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+	}
 
-  .copy-items li + li {
-    margin-block-start: var(--space-s);
-  }
+	.copy-items li + li {
+		margin-block-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+	}
 
-  @media (min-width: 76.88rem) {
-    .footer {
-      ul {
-        flex-direction: row;
-      }
-    }
+	@media (min-width: 76.88rem) {
+		.footer {
+			ul {
+				flex-direction: row;
+			}
+		}
 
-    .top-footer {
-      flex-direction: row;
-      justify-content: space-between;
+		.top-footer {
+			flex-direction: row;
+			justify-content: space-between;
 
-      ul li + li {
-        margin-block-start: 0;
-        margin-inline-start: var(--space-s);
-      }
-    }
-    .bottom-footer {
-      display: flex;
-      justify-content: space-between;
-    }
+			ul li + li {
+				margin-block-start: 0;
+				margin-inline-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+			}
+		}
+		.bottom-footer {
+			display: flex;
+			justify-content: space-between;
+		}
 
-    .bottom-footer > * + * {
-      margin-block-start: 0;
-      margin-inline-start: var(--space-s);
-    }
+		.bottom-footer > * + * {
+			margin-block-start: 0;
+			margin-inline-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+		}
 
-    .copy-items li + li {
-      margin-block-start: 0;
-      margin-inline-start: var(--space-s);
-    }
-  }
+		.copy-items li + li {
+			margin-block-start: 0;
+			margin-inline-start: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+		}
+	}
 </style>

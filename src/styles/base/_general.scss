@@ -14,13 +14,25 @@ h2,
 h3,
 h4,
 h5 {
+    font-weight: $font-text-weight-header;
     font-family: $font-text-header;
 }
 
-a[class="event-link"] {
+p {
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    color: $body-text-color;
+    text-wrap: balance;
+    max-width: $font-text-width-default;
+}
+
+a {
     color: $link-color-default;
-    font-family: var(--header-font);
-    font-weight: 400;
+    font-size: $body-font-size;
+    font-family: $font-text-default;
+}
+
+a[class="event-link"] {
     text-decoration-line: none;
     padding: 0 0.25rem;
     margin: 0 -0.25rem;
