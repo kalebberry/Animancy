@@ -5,61 +5,61 @@ h2,
 h3,
 h4,
 h5 {
-    max-width: $header-max-text-width;
+  max-width: $header-max-text-width;
 }
 
 h1 {
-    font-size: $header-text-size-1;
+  font-size: $header-text-size-1;
 }
 
 h2 {
-    font-size: $header-text-size-2;
+  font-size: $header-text-size-2;
 }
 
 h3 {
-    font-size: $header-text-size-3;
+  font-size: $header-text-size-3;
 }
 
 h4 {
-    font-size: $header-text-size-2;
+  font-size: $header-text-size-2;
 }
 
 h5 {
-    font-size: $header-text-size-1;
+  font-size: $header-text-size-1;
 }
 
 .header-w-line {
-    @media screen and (min-width: breakpoint(large)) {
-        position: relative;
-        max-width: 95%;
+  @media screen and (min-width: breakpoint(large)) {
+    position: relative;
+    max-width: 95%;
 
-        &::after {
-            content: "";
-            height: 1px;
-            width: 50%;
-            max-width: 6em;
-            background: $hr-line-color;
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-        }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 50%;
+      max-width: 6em;
+      background: $hr-line-color;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
     }
+  }
 
-    @media screen and (min-width: breakpoint(x-large)) {
-        position: relative;
-        max-width: 100%;
+  @media screen and (min-width: breakpoint(x-large)) {
+    position: relative;
+    max-width: 100%;
 
-        &::after {
-            content: "";
-            height: 1px;
-            width: 50%;
-            max-width: 8em;
-            background: $hr-line-color;
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-        }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 50%;
+      max-width: 8em;
+      background: $hr-line-color;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
     }
+  }
 }

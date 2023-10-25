@@ -55,18 +55,44 @@
 }
 
 .services {
+  padding-block: $space-size-16;
+
   @media screen and (min-width: breakpoint(medium)) {
     .services__content {
       --min: 50ch;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
-      gap: $space-size-16;
+      gap: $gap-width-default;
 
       & > * {
         flex: 1 1 var(--min);
       }
     }
+  }
+
+  @media screen and (min-width: breakpoint(large)) {
+  }
+
+  @media screen and (min-width: breakpoint(x-large)) {
+  }
+}
+
+.demos {
+  .lang-stack {
+    display: flex;
+    gap: $gap-width-default;
+    padding-block: $space-size-16;
+  }
+
+  .showcase__content {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap-width-default;
+    padding-block: $space-size-16;
+  }
+
+  @media screen and (min-width: breakpoint(medium)) {
   }
 
   @media screen and (min-width: breakpoint(large)) {
@@ -83,7 +109,8 @@
 
   @media screen and (min-width: breakpoint(medium)) {
     .conculsion__images {
-      display: none;
+      display: flex;
+      gap: $gap-width-default;
     }
   }
 

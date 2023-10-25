@@ -5,17 +5,17 @@
 @use "breakpoints" as *;
 
 @function breakpoint($breakpoint) {
-    @if map.has-key($breakpoints, $breakpoint) {
-        @return map.get($breakpoints, $breakpoint);
-    } @else {
-        @error '$sizes does not have that size!';
-    }
+  @if map.has-key($breakpoints, $breakpoint) {
+    @return map.get($breakpoints, $breakpoint);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
 }
 
 @function size($size) {
-    @if map.has-key($sizes, $size) {
-        @return map.get($sizes, $size);
-    } @else {
-        @error '$sizes does not have that size!';
-    }
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
 }

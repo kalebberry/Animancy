@@ -10,6 +10,8 @@ $container-max-width-wide: 75rem;
 
 $section-padding-block: $space-size-48;
 
+$gap-width-default: $space-size-16;
+
 // Colors
 $color-text-default: $color-dark-100;
 $color-text-header: $color-dark-100;
@@ -32,7 +34,7 @@ $input-user-input-color: $color-accent-300;
 
 $link-text-color: $color-dark-100;
 
-// Fonts
+// fonts
 $font-text-default: $ff-fira-sans;
 $font-text-header: $ff-pt-serif;
 $font-text-weight-default: 300;

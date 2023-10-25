@@ -1,15 +1,15 @@
 @use "../abstracts" as *;
 
 .daimond-hr {
-    // --hrWidth: 20rem;
-    overflow: visible; /* For IE */
-    padding: 0;
-    border: none;
-    border-bottom: 1px solid $hr-line-color;
-    color: $color-dark-100;
-    max-width: 30rem;
-    font-size: 0.9rem;
-    margin-block-start: 0;
+  // --hrWidth: 20rem;
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid $hr-line-color;
+  color: $color-dark-100;
+  max-width: 50rem;
+  font-size: 0.9rem;
+  margin-block-start: 0;
 }
 
 // .daimond-hr:after {

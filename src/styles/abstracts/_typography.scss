@@ -7,21 +7,21 @@ $font-pt-serif-regular: 400;
 $font-fira-sans-light: 300;
 
 $font-sizes: (
-    "small": (
-        100: clamp(0.8rem, calc(0.78rem + 0.08vw), 0.84rem),
-        200: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem),
-        300: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
-        400: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
-        500: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem)
-    ),
-    "large": (
-        0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem),
-        100: clamp(1.25rem, 1.1633rem + 0.4337vw, 1.4994rem),
-        200: clamp(1.5625rem, 1.4108rem + 0.7587vw, 1.9988rem),
-        300: clamp(1.9531rem, 1.7057rem + 1.237vw, 2.6644rem),
-        400: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem),
-        500: clamp(4.7681rem, 3.5003rem + 6.3391vw, 8.4131rem)
-    )
+  "small": (
+    100: clamp(0.8rem, calc(0.78rem + 0.08vw), 0.84rem),
+    200: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem),
+    300: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
+    400: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
+    500: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem),
+  ),
+  "large": (
+    0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem),
+    100: clamp(1.25rem, 1.1633rem + 0.4337vw, 1.4994rem),
+    200: clamp(1.5625rem, 1.4108rem + 0.7587vw, 1.9988rem),
+    300: clamp(1.9531rem, 1.7057rem + 1.237vw, 2.6644rem),
+    400: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem),
+    500: clamp(4.7681rem, 3.5003rem + 6.3391vw, 8.4131rem),
+  ),
 );
 
 $font-size-0: var(--fs-0);

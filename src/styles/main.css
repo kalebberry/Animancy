@@ -111,7 +111,9 @@ a {
   padding: 0 0.25rem;
   margin: 0 -0.25rem;
   box-shadow: inset 0 0 0 0 #c4a174;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 .event-link:hover {
   box-shadow: inset 100px 0 0 0 #c4a174;
@@ -135,12 +137,12 @@ main:focus {
   text-decoration: none;
 }
 
-section[class=summary],
-section[class=selected-works],
-section[class=process],
-section[class=services],
-section[class=demos],
-section[class=conculsion] {
+section[class="summary"],
+section[class="selected-works"],
+section[class="process"],
+section[class="services"],
+section[class="demos"],
+section[class="conculsion"] {
   margin-block-start: 2rem;
 }
 
@@ -460,7 +462,10 @@ section[class=conculsion] {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+  animation-timing-function: var(
+    --fa-animation-timing,
+    cubic-bezier(0.28, 0.84, 0.42, 1)
+  );
 }
 
 .fa-fade {
@@ -469,7 +474,10 @@ section[class=conculsion] {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  animation-timing-function: var(
+    --fa-animation-timing,
+    cubic-bezier(0.4, 0, 0.6, 1)
+  );
 }
 
 .fa-beat-fade {
@@ -478,7 +486,10 @@ section[class=conculsion] {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  animation-timing-function: var(
+    --fa-animation-timing,
+    cubic-bezier(0.4, 0, 0.6, 1)
+  );
 }
 
 .fa-flip {
@@ -539,7 +550,8 @@ section[class=conculsion] {
   }
 }
 @keyframes fa-beat {
-  0%, 90% {
+  0%,
+  90% {
     transform: scale(1);
   }
   45% {
@@ -551,13 +563,25 @@ section[class=conculsion] {
     transform: scale(1, 1) translateY(0);
   }
   10% {
-    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    transform: scale(
+        var(--fa-bounce-start-scale-x, 1.1),
+        var(--fa-bounce-start-scale-y, 0.9)
+      )
+      translateY(0);
   }
   30% {
-    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    transform: scale(
+        var(--fa-bounce-jump-scale-x, 0.9),
+        var(--fa-bounce-jump-scale-y, 1.1)
+      )
+      translateY(var(--fa-bounce-height, -0.5em));
   }
   50% {
-    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    transform: scale(
+        var(--fa-bounce-land-scale-x, 1.05),
+        var(--fa-bounce-land-scale-y, 0.95)
+      )
+      translateY(0);
   }
   57% {
     transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
@@ -575,7 +599,8 @@ section[class=conculsion] {
   }
 }
 @keyframes fa-beat-fade {
-  0%, 100% {
+  0%,
+  100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
     transform: scale(1);
   }
@@ -586,7 +611,12 @@ section[class=conculsion] {
 }
 @keyframes fa-flip {
   50% {
-    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    transform: rotate3d(
+      var(--fa-flip-x, 0),
+      var(--fa-flip-y, 1),
+      var(--fa-flip-z, 0),
+      var(--fa-flip-angle, -180deg)
+    );
   }
 }
 @keyframes fa-shake {
@@ -596,10 +626,12 @@ section[class=conculsion] {
   4% {
     transform: rotate(15deg);
   }
-  8%, 24% {
+  8%,
+  24% {
     transform: rotate(-18deg);
   }
-  12%, 28% {
+  12%,
+  28% {
     transform: rotate(18deg);
   }
   16% {
@@ -614,7 +646,8 @@ section[class=conculsion] {
   36% {
     transform: rotate(12deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotate(0deg);
   }
 }
@@ -4876,7 +4909,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-apostrophe::before {
-  content: "\'";
+  content: "'";
 }
 
 .fa-fire-hydrant::before {
@@ -15548,7 +15581,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-ditto::before {
-  content: "\"";
+  content: '"';
 }
 
 .fa-person-seat::before {
@@ -17510,7 +17543,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-brands: "Font Awesome 6 Brands";
   --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
 }
@@ -17520,7 +17554,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-brands-400.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-brands-400.ttf") format("truetype");
 }
 .fab,
 .fa-brands {
@@ -19560,7 +19596,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-duotone: "Font Awesome 6 Duotone";
   --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
 }
@@ -19570,7 +19607,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-duotone-900.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-duotone-900.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-duotone-900.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-duotone-900.ttf") format("truetype");
 }
 .fad,
 .fa-duotone {
@@ -19611,8 +19650,10 @@ readers do not read off random characters that represent icons */
   color: var(--fa-inverse, #fff);
 }
 
-.fad.fa-stack-1x, .fad.fa-stack-2x,
-.fa-duotone.fa-stack-1x, .fa-duotone.fa-stack-2x {
+.fad.fa-stack-1x,
+.fad.fa-stack-2x,
+.fa-duotone.fa-stack-1x,
+.fa-duotone.fa-stack-2x {
   position: absolute;
 }
 
@@ -19621,7 +19662,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-classic: "Font Awesome 6 Pro";
   --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
 }
@@ -19631,7 +19673,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-light-300.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-light-300.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-light-300.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-light-300.ttf") format("truetype");
 }
 .fal,
 .fa-light {
@@ -19643,7 +19687,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-classic: "Font Awesome 6 Pro";
   --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Pro";
 }
@@ -19653,7 +19698,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
 }
 .fas,
 .fa-solid {
@@ -19665,7 +19712,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-classic: "Font Awesome 6 Pro";
   --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
 }
@@ -19675,7 +19723,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-thin-100.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-thin-100.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-thin-100.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-thin-100.ttf") format("truetype");
 }
 .fat,
 .fa-thin {
@@ -19687,7 +19737,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-classic: "Font Awesome 6 Pro";
   --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Pro";
 }
@@ -19697,7 +19748,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/assets/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"), url("/assets/fontawesome/webfonts/fa-regular-400.ttf") format("truetype");
+  src:
+    url("/assets/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"),
+    url("/assets/fontawesome/webfonts/fa-regular-400.ttf") format("truetype");
 }
 .far,
 .fa-regular {
