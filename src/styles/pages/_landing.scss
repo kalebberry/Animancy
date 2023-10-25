@@ -1,143 +1,145 @@
 @use "../abstracts" as *;
 
-.hero {
-  background-image: url("/img/background.svg");
-  background-size: contain;
+.landing {
+  .hero {
+    background-image: url("/img/background.svg");
+    background-size: contain;
 
-  header h1 {
-    text-align: center;
-    padding-block: $space-size-16;
-  }
-
-  .summary {
-    padding-block: $space-size-16;
-  }
-
-  .svg-images {
-    display: none;
-  }
-
-  @media screen and (min-width: breakpoint(medium)) {
-    .svg-images {
+    header h1 {
+      text-align: center;
       padding-block: $space-size-16;
+    }
+
+    .summary {
+      padding-block: $space-size-16;
+    }
+
+    .svg-images {
+      display: none;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .svg-images {
+        padding-block: $space-size-16;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .process {
+    .process {
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .process {
+        margin-top: 0;
+      }
+
+      .process__content {
+        --min: 50ch;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-size-16;
+
+        & > * {
+          flex: 1 1 var(--min);
+        }
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .services {
+    padding-block: $space-size-16;
+
+    .detail {
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .detail {
+        margin-top: 0;
+      }
+
+      .services__content {
+        --min: 50ch;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: $gap-width-default;
+
+        & > * {
+          flex: 1 1 var(--min);
+        }
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .demos {
+    .lang-stack {
+      display: flex;
+      gap: $gap-width-default;
+      padding-block: $space-size-16;
+    }
+
+    .showcase__content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  @media screen and (min-width: breakpoint(large)) {
-  }
-
-  @media screen and (min-width: breakpoint(x-large)) {
-  }
-}
-
-.process {
-  .process {
-    margin-top: 1em;
-  }
-
-  @media screen and (min-width: breakpoint(medium)) {
-    .process {
-      margin-top: 0;
-    }
-
-    .process__content {
-      --min: 50ch;
-      display: flex;
-      flex-wrap: wrap;
-      gap: $space-size-16;
-
-      & > * {
-        flex: 1 1 var(--min);
-      }
-    }
-  }
-
-  @media screen and (min-width: breakpoint(large)) {
-  }
-
-  @media screen and (min-width: breakpoint(x-large)) {
-  }
-}
-
-.services {
-  padding-block: $space-size-16;
-
-  .detail {
-    margin-top: 1em;
-  }
-
-  @media screen and (min-width: breakpoint(medium)) {
-    .detail {
-      margin-top: 0;
-    }
-
-    .services__content {
-      --min: 50ch;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      gap: $gap-width-default;
-
-      & > * {
-        flex: 1 1 var(--min);
-      }
-    }
-  }
-
-  @media screen and (min-width: breakpoint(large)) {
-  }
-
-  @media screen and (min-width: breakpoint(x-large)) {
-  }
-}
-
-.demos {
-  .lang-stack {
-    display: flex;
-    gap: $gap-width-default;
-    padding-block: $space-size-16;
-  }
-
-  .showcase__content {
-    display: flex;
-    justify-content: space-between;
-    gap: $gap-width-default;
-    padding-block: $space-size-16;
-  }
-
-  @media screen and (min-width: breakpoint(medium)) {
-  }
-
-  @media screen and (min-width: breakpoint(large)) {
-  }
-
-  @media screen and (min-width: breakpoint(x-large)) {
-  }
-}
-
-.conculsion {
-  .conculsion__images {
-    display: none;
-  }
-
-  .content {
-    padding-block: $space-size-16;
-  }
-
-  @media screen and (min-width: breakpoint(medium)) {
-    .conculsion__images {
-      display: flex;
       gap: $gap-width-default;
       padding-block: $space-size-16;
     }
+
+    @media screen and (min-width: breakpoint(medium)) {
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
   }
 
-  @media screen and (min-width: breakpoint(large)) {
-  }
+  .conculsion {
+    .conculsion__images {
+      display: none;
+    }
 
-  @media screen and (min-width: breakpoint(x-large)) {
+    .content {
+      padding-block: $space-size-16;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .conculsion__images {
+        display: flex;
+        gap: $gap-width-default;
+        padding-block: $space-size-16;
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
   }
 }
