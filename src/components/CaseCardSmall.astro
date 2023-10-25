@@ -1,76 +1,76 @@
 ---
 export interface Props {
-	title: string;
-	body: string;
-	href: string;
+  title: string;
+  body: string;
+  href: string;
 }
 
 const { href, title, body } = Astro.props;
 ---
 
-<a href={href} class='case-card flow'>
-	<header class='case-card__title'>
-		<h2>{title}</h2>
-	</header>
-	<summary>
-		<p>{body}</p>
-	</summary>
-	<div class='logo'>
-		<img src='/img/logo_B&W.png' />
-	</div>
+<a href={href} class="case-card flow">
+  <header class="case-card__title">
+    <h2>{title}</h2>
+  </header>
+  <summary>
+    <p>{body}</p>
+  </summary>
+  <div class="logo">
+    <img src="/img/logo_B&W.png" />
+  </div>
 </a>
 
-<style lang='scss'>
-	.case-card {
-		padding: var(--space-m);
-		width: 100%;
-		display: block;
-		max-width: 76.88em;
-		transition: background 1s;
-		background-color: transparent;
-		border-radius: 0.3em;
-		text-decoration: none;
-		border: 1px solid var(--dark-color);
+<style lang="scss">
+  .case-card {
+    padding: var(--space-m);
+    width: 100%;
+    display: block;
+    max-width: 76.88em;
+    transition: background 1s;
+    background-color: transparent;
+    border-radius: 0.3em;
+    text-decoration: none;
+    border: 1px solid var(--dark-color);
 
-		.logo {
-			display: flex;
-			justify-content: flex-end;
-			img {
-				max-width: 20%;
-				border-radius: 5em;
-				opacity: 0.6;
-			}
-		}
+    .logo {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        max-width: 20%;
+        border-radius: 5em;
+        opacity: 0.6;
+      }
+    }
 
-		p,
-		h2 {
-			color: var(--dark-color);
-			text-wrap: balance;
-		}
-		.catagory {
-			color: #3c7da6;
-		}
+    p,
+    h2 {
+      color: var(--dark-color);
+      text-wrap: balance;
+    }
+    .catagory {
+      color: #3c7da6;
+    }
 
-		&:hover {
-			cursor: pointer;
-			background-color: rgb(49, 43, 49);
-			p,
-			h2 {
-				color: var(--background-base-color);
-			}
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(49, 43, 49);
+      p,
+      h2 {
+        color: var(--background-base-color);
+      }
+    }
+  }
 
-	.case-card .daimond-hr {
-		--hrWidth: 10rem;
-		margin-inline-start: 90%;
-		color: var(--background-base-color);
-		border-bottom: 1px solid var(--background-base-color);
-	}
+  .case-card .daimond-hr {
+    --hrWidth: 10rem;
+    margin-inline-start: 90%;
+    color: var(--background-base-color);
+    border-bottom: 1px solid var(--background-base-color);
+  }
 
-	@media (min-width: 76.88rem) {
-		.case-card {
-			max-width: 18em;
-		}
-	}
+  @media (min-width: 76.88rem) {
+    .case-card {
+      max-width: 18em;
+    }
+  }
 </style>

@@ -1,29 +1,17 @@
-@mixin btn {
-  width: 9em;
-  display: block;
-  text-align: center;
-  padding-block: 0.5rem;
-  padding-inline: 0.25rem;
-  border-radius: 0.1em;
-  text-decoration: none;
-  transition: background, 0.5s;
+@use "../abstracts" as *;
+
+a[type="button"] {
+  padding-block: $button-padding;
+  border-radius: $button-border-radius;
+  text-decoration: underline;
+  transition:
+    color 0.3s ease-in,
+    padding-inline 0.3s ease-in,
+    background-color 0.3s ease-in;
 
   &:hover {
-    background: #3c7da6;
-    border: 1px solid #3686b8;
-    color: var(--background-base-color);
-    transition: all, 0.5s;
+    background: $button-color-accent;
+    padding-inline: $button-padding;
+    color: $color-light-100;
   }
-}
-
-.btn {
-  @include btn;
-  color: var(--dark-color);
-  border: solid 1px var(--dark-color);
-}
-
-.btn-white {
-  @include btn;
-  color: var(--background-base-color);
-  border: solid 1px var(--background-base-color);
 }

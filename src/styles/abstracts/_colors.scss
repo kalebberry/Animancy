@@ -28,7 +28,7 @@ $-clr-dark-charcoal-300: hsl(293, 11%, 15%);
 $-clr-dark-charcoal-400: hsl(300, 11%, 12%);
 $-clr-dark-charcoal-500: hsl(312, 10%, 10%);
 
-$colors: (
+$light: (
   primary: (
     100: $-clr-old-lavender-100,
     200: $-clr-old-lavender-200,
@@ -59,6 +59,44 @@ $colors: (
   ),
   dark: (
     100: $-clr-dark-charcoal-100,
+    200: $-clr-dark-charcoal-200,
+    300: $-clr-dark-charcoal-300,
+    400: $-clr-dark-charcoal-400,
+    500: $-clr-dark-charcoal-500,
+  ),
+);
+
+$dark: (
+  primary: (
+    100: $-clr-old-lavender-100,
+    200: $-clr-old-lavender-200,
+    300: $-clr-old-lavender-300,
+    400: $-clr-old-lavender-400,
+    500: $-clr-old-lavender-500,
+  ),
+  secondary: (
+    100: $-clr-khaki-100,
+    200: $-clr-khaki-200,
+    300: $-clr-khaki-300,
+    400: $-clr-khaki-400,
+    500: $-clr-khaki-500,
+  ),
+  accent: (
+    100: $-clr-cultured-100,
+    200: $-clr-nickel-200,
+    300: $-clr-nickel-300,
+    400: $-clr-nickel-400,
+    500: $-clr-nickel-500,
+  ),
+  light: (
+    100: $-clr-nickel-300,
+    200: $-clr-cultured-200,
+    300: $-clr-cultured-300,
+    400: $-clr-cultured-400,
+    500: $-clr-cultured-500,
+  ),
+  dark: (
+    100: $-clr-cultured-100,
     200: $-clr-dark-charcoal-200,
     300: $-clr-dark-charcoal-300,
     400: $-clr-dark-charcoal-400,
