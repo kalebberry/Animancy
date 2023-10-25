@@ -123,10 +123,15 @@
     display: none;
   }
 
+  .content {
+    padding-block: $space-size-16;
+  }
+
   @media screen and (min-width: breakpoint(medium)) {
     .conculsion__images {
       display: flex;
       gap: $gap-width-default;
+      padding-block: $space-size-16;
     }
   }
 
