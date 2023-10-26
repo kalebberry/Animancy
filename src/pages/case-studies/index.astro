@@ -6,27 +6,50 @@ import CaseCard from '../../components/CaseCard.astro';
 
 <Layout title='Case Study - Noasketch'>
 	<main class='case-studies'>
-		<section>
+		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
 				<header class='flow'>
 					<h1>Case Studies.</h1>
 				</header>
-				<div class='summary'>
+				<article class='summary'>
 					<p>
 						Showcases successful projects completed by Animancy Studios for various clients. Each
 						case study provides an overview of the project, including the website's purpose, design,
 						and results.
 					</p>
-				</div>
+				</article>
 			</div>
 		</section>
 
-		<section>
+		<section class='work'>
 			<div data-type='wide' class='container flow-large'>
 				<header>
-					<h2 class='header-w-line'>How we work.</h2>
+					<h2 class='header-w-line'>Our Works.</h2>
 				</header>
+
+				<article class='studies'>
+					<CaseCard
+						href='/case-studies/nyacchii'
+						title='Nyacchii'
+						catagory='Art Portfolio'
+						body='Full-Time Creative Streamer and Twitch Partner from Mexico. Expertise in digital and traditional art.'
+					/>
+					<CaseCard
+						href='/case-studies/rockstar-renovations'
+						title='Rockstar Renovations'
+						catagory='Company Website'
+						body='A fully insured business, both in general liability and workmans compensation. Renovations for the modern style.'
+					/>
+				</article>
+
+				<div class='flow ending-quote'>
+					<hr class='daimond-hr' />
+					<p>
+						“ Strive for two things in design: simplicity and clarity. Great design is born of those
+						two things. “
+					</p>
+				</div>
 			</div>
 		</section>
 	</main>
