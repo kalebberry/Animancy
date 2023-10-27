@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+
+.contact {
+    .hero {
+        background-image: url("/img/background.svg");
+        background-size: contain;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .form-content {
+        .form-group {
+            --min: 50ch;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $space-size-16;
+            padding-block: $space-size-8;
+
+            & > * {
+                flex: 1 1 var(--min);
+            }
+        }
+
+        .input-group,
+        .form-message {
+            width: 100%;
+        }
+
+        .form-message {
+            padding-block: $space-size-16;
+        }
+
+        input[type="text"],
+        input,
+        select {
+            display: block;
+            width: 100%;
+            border-radius: 0.3em;
+            outline: none;
+            border: none;
+            padding: 0.6em;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+            border-radius: 0.3em;
+            outline: none;
+            border: none;
+            padding: 0.6em;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        @media screen and (min-width: breakpoint(large)) {
+            .input-group {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: breakpoint(x-large)) {
+        }
+    }
+}

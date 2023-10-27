@@ -15,3 +15,24 @@ a[type="button"] {
     color: $color-light-100;
   }
 }
+
+button {
+  padding-block: $button-padding;
+  padding-inline: $button-padding;
+  border-radius: $button-border-radius;
+  outline: none;
+  border: transparent;
+  background: $button-color-accent;
+  color: $color-light-100;
+  transition:
+    color 0.3s ease-in,
+    padding-inline 0.3s ease-in,
+    background-color 0.3s ease-in;
+
+  &:hover {
+    background: $color-primary-100;
+    padding-inline: $button-padding;
+    color: $color-light-100;
+    cursor: pointer;
+  }
+}
