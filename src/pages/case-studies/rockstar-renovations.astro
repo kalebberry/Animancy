@@ -1,9 +1,132 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/Navbar.astro";
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
 ---
 
-<Layout title="Case Study - Rockstar Renovations">
-  <Navbar />
-  <main></main>
+<Layout title='Case Study - Rockstar Renovations'>
+	<main class='case-study'>
+		<section class='hero'>
+			<div data-type='wide' class='container flow-large'>
+				<Navbar />
+				<header>
+					<p>Case Study - Company</p>
+					<h1>Rockstar Renovations</h1>
+				</header>
+				<div class='summary'>
+					<p>
+						A fully insured business, both in general liability and workman's compensation.
+						Renovations for the modern style.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class='overview'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Overview.</h2>
+				</header>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+						ultricies lacus sed.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class='design'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Design.</h2>
+				</header>
+				<div class='summary'>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+						ultricies lacus sed.
+					</p>
+				</div>
+				<div class='design__images'>
+					<img src='https://placehold.co/300x200' />
+					<img src='https://placehold.co/300x200' />
+					<img src='https://placehold.co/300x200' />
+				</div>
+			</div>
+		</section>
+
+		<section class='development'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Development.</h2>
+				</header>
+				<div class='summary'>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+						ultricies lacus sed.
+					</p>
+				</div>
+
+				<div class='lang-stack'>
+					<div>
+						<i class='fa-brands fa-xl fa-html5'></i>
+					</div>
+					<div>
+						<i class='fa-brands fa-xl fa-sass'></i>
+					</div>
+					<div>
+						<i class='fa-brands fa-xl fa-js'></i>
+					</div>
+					<div>
+						<i class='fa-brands fa-xl fa-react'></i>
+					</div>
+					<div>
+						<i class='fa-brands fa-xl fa-figma'></i>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class='results'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Results.</h2>
+				</header>
+				<div class='summary'>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+						ultricies lacus sed.
+					</p>
+				</div>
+				<div class='design__images'>
+					<img src='https://placehold.co/300x200' />
+					<img src='https://placehold.co/300x200' />
+					<img src='https://placehold.co/300x200' />
+				</div>
+			</div>
+		</section>
+
+		<section class='conculsion'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Conculsion.</h2>
+				</header>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
+						ultricies lacus sed.
+					</p>
+				</div>
+				<div>
+					<a type='button' href='/case-studies'>
+						<i class='fa-solid fa-arrow-left'></i> More case studies
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
