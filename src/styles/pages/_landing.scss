@@ -4,6 +4,7 @@
   .hero {
     background-image: url("/img/background.svg");
     background-size: contain;
+    background-attachment: fixed;
 
     header h1 {
       text-align: center;
