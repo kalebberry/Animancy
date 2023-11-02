@@ -9,7 +9,6 @@
 		<ul class='navigation-items'>
 			<li><a href='/'>Home</a></li>
 			<li><a href='/case-studies'>Case Studies</a></li>
-			<!-- <li><a href='/services'>Services</a></li> -->
 			<li><a href='/contact'>Contact</a></li>
 		</ul>
 	</div>
@@ -20,6 +19,12 @@
 		max-width: 50px;
 		width: 100%;
 		border-radius: 5em;
+		filter: grayscale(100%);
+		transition: filter 0.7s;
+
+		&:hover {
+			filter: grayscale(0%);
+		}
 	}
 
 	.navigation {
