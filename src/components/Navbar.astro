@@ -7,9 +7,10 @@
 	<div class='hamburger'>&#9776;</div>
 	<div class='nav'>
 		<ul class='navigation-items'>
+			<li><a href='/'>Home</a></li>
 			<li><a href='/case-studies'>Case Studies</a></li>
-			<li><a href='/about'>About</a></li>
-			<li><a target='_blank' href='https://rhr64q1n4dj.typeform.com/to/KqtBiF70'>Contact</a></li>
+			<!-- <li><a href='/services'>Services</a></li> -->
+			<li><a href='/contact'>Contact</a></li>
 		</ul>
 	</div>
 	<div class='filler'></div>
@@ -24,8 +25,8 @@
 	.navigation {
 		display: flex;
 		align-items: center;
-		padding-block: var(--space-s);
-		padding-inline: var(--space-m);
+		padding-block: clamp(0.5rem, calc(0.46rem + 0.22vw), 0.63rem);
+		padding-inline: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
 	}
 
 	.filler {
@@ -39,7 +40,7 @@
 		left: 0;
 		right: 0;
 		width: 100vw;
-		background-color: var(--dark-color);
+		background-color: var(--dark-100);
 		transition: 0.5s;
 		overflow: hidden;
 
@@ -66,15 +67,21 @@
 		}
 
 		& li + li {
-			margin-block-start: var(--space-s);
+			margin-block-start: clamp(0.5rem, calc(0.46rem + 0.22vw), 0.63rem);
 		}
 
 		& li a {
+<<<<<<< HEAD
 			color: black;
+=======
+			color: var(--light-100);
+			font-family: 'Fira Sans', sans-serif;
+			font-size: clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem);
+>>>>>>> staging
 		}
 
 		& li a .active {
-			//   color: red;
+			color: red;
 		}
 	}
 
@@ -115,7 +122,11 @@
 		.navigation-items {
 			display: flex;
 			gap: max(calc(2vw - 70px), 16px);
+<<<<<<< HEAD
 			margin: 0 4vw;
+=======
+			margin: 0 0vw;
+>>>>>>> staging
 			opacity: 1;
 
 			& li {
@@ -123,12 +134,16 @@
 			}
 
 			& li a {
+<<<<<<< HEAD
 				color: black;
+=======
+				color: var(--dark-100);
+>>>>>>> staging
 				transition: 0.5s ease-in-out;
 				text-decoration-line: none;
 
 				&:hover {
-					color: #c4a174;
+					color: var(--secondary-100);
 				}
 			}
 

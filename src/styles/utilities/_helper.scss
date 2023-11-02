@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.display-inline {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ending-quote {
+  padding-block: $space-size-48 $space-size-16;
+}

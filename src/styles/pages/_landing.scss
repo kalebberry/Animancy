@@ -1,50 +1,162 @@
-section[class="summary"],
-section[class="selected-works"],
-section[class="process"],
-section[class="services"] {
-  margin-block-start: 2rem;
-}
+@use "../abstracts" as *;
 
 .landing {
-  .process {
-    h1,
-    h3 {
-      color: rgb(49, 43, 49);
-    }
-    .process__content {
-      .card {
-        width: 76.88rem;
+  .hero {
+    background-image: url("/img/background.svg");
+    background-size: contain;
+    background-attachment: fixed;
+
+    header {
+      margin-inline: auto;
+      padding-block: $space-size-24;
+      h1 {
+        padding-block: $space-size-16;
+        line-height: 0.5;
       }
+
+      p {
+        line-height: 1;
+      }
+    }
+
+    .summary {
+      padding-block: $space-size-16;
+    }
+
+    .svg-images {
+      display: none;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .svg-images {
+        padding-block: $space-size-16;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .process {
+    .process {
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .process {
+        margin-top: 0;
+      }
+
+      .process__content {
+        --min: 50ch;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-size-16;
+
+        & > * {
+          flex: 1 1 var(--min);
+        }
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
     }
   }
 
   .services {
-    h1,
-    h3 {
-      color: rgb(49, 43, 49);
+    padding-block: $space-size-16;
+
+    .detail {
+      margin-top: 1em;
     }
 
-    & .daimond-hr {
-      --hrWidth: 50rem;
+    @media screen and (min-width: breakpoint(medium)) {
+      .detail {
+        margin-top: 0;
+      }
+
+      .services__content {
+        --min: 50ch;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: $gap-width-default;
+
+        & > * {
+          flex: 1 1 var(--min);
+        }
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
     }
   }
 
-  @media (min-width: 76.88rem) {
-    .hero-image {
-      -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-      mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
+  .demos {
+    .lang-stack {
+      display: flex;
+      gap: $gap-width-default;
+      padding-block: $space-size-16;
     }
 
-    .services {
-      background-size: 50%;
-    }
+    .showcase__content {
+      --min: 20ch;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-size-16;
 
-    .process {
-      .process__content {
-        .card {
-          max-width: 35em;
-        }
+      & > * {
+        flex: 1 1 var(--min);
       }
+
+      img {
+        border-radius: 0.3em;
+      }
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .conculsion {
+    .conculsion__images {
+      display: none;
+    }
+
+    .content {
+      padding-block: $space-size-16;
+    }
+
+    @media screen and (min-width: breakpoint(medium)) {
+      .conculsion__images {
+        display: flex;
+        gap: $gap-width-default;
+        padding-block: $space-size-16;
+      }
+    }
+
+    @media screen and (min-width: breakpoint(large)) {
+    }
+
+    @media screen and (min-width: breakpoint(x-large)) {
     }
   }
 }

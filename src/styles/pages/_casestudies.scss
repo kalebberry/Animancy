@@ -1,41 +1,24 @@
-section[class="feature-1"],
-section[class="feature-2"],
-section[class="feature-3"],
-section[class="extra"] {
-  text-wrap: balance;
-  margin-block-start: 10rem;
-  h1 {
-    color: rgb(49, 43, 49);
-  }
-}
-
-section:last-child {
-  margin-block-end: 10rem;
-}
+@use "../abstracts" as *;
 
 .case-studies {
-  .hero {
-    background:
-      linear-gradient(0deg, rgba(49, 43, 49, 0.9), rgba(49, 43, 49, 0.9)),
-      url(/img/6.jpg) no-repeat center bottom;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-block-end: var(--space-xl);
+    .hero {
+        background-image: url("/img/background.svg");
+        background-size: contain;
+        background-attachment: fixed;
 
-    .content {
-      padding-block: var(--space-3xl);
-      color: var(--background-base-color);
+        h1 {
+            text-align: center;
+        }
     }
 
-    .left-border {
-      border-left: 1px solid hsla(225, 40%, 96%, 0.2);
-      padding-inline-start: 2em;
-    }
-  }
+    .studies {
+        --min: 50ch;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-size-16;
 
-  .extra {
-    margin-block-end: 5rem;
-  }
+        & > * {
+            flex: 1 1 var(--min);
+        }
+    }
 }

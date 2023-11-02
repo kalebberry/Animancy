@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.case-study {
+    .hero {
+        background-image: url("/img/background.svg");
+        background-size: contain;
+        background-attachment: fixed;
+
+        header {
+            margin-inline: auto;
+            padding-block: $space-size-16;
+            h1 {
+                line-height: 0.9;
+            }
+        }
+
+        .summary {
+            padding-block-start: $space-size-24;
+        }
+    }
+
+    .design {
+        &__images {
+            --min: 10ch;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $space-size-16;
+
+            & > * {
+                flex: 1 1 var(--min);
+            }
+
+            img {
+                border-radius: 0.3em;
+            }
+        }
+    }
+
+    .development {
+        .lang-stack {
+            display: flex;
+            gap: $gap-width-default;
+            padding-block: $space-size-16;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// Color Tokens
+$active-theme: $light;
+
+$color-text-default: $color-dark-100;
+$color-text-header: $color-dark-100;
+$color-text-subtitle: $color-dark-100;
+$color-text-card: $color-light-200;
+
+$color-background-default: $color-light-100;
+$color-background-footer: $color-dark-100;
+$color-background-card: $color-accent-100;
+
+$button-color-accent: $color-accent-100;
+$button-color-primary: $color-primary-100;
+$button-color-accent-hover: $color-accent-300;
+$button-color-accent-primary: $color-primary-300;
+
+$input-color: $color-primary-100;
+$input-focus-color: $color-accent-100;
+$input-user-input-color: $color-accent-300;
+
+$link-text-color: $color-dark-100;
+
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+$link-color-default: $color-dark-100;
+
+$hr-line-color: $color-light-200;
+
+// Layout Tokens
+$container-min-margin-inline: $space-size-8;
+$container-max-width-narrow: 45rem;
+$container-max-width: 65rem;
+$container-max-width-wide: 75rem;
+
+$section-padding-block: $space-size-48;
+$gap-width-default: $space-size-16;
+
+$button-border-radius: 0.3em;
+$button-padding: 0.8em;
+
+$font-text-default: $ff-fira-sans;
+$font-text-header: $ff-pt-serif;
+$font-text-weight-default: 300;
+$font-text-weight-header: 400;
+
+$font-text-width-default: 60ch;
+
+$body-font-family: $ff-fira-sans;
+$body-font-size: $font-size-0;
+$body-line-height: 1.5;
+$body-font-weight: $font-fira-sans-light;
+
+$header-text-size-1: $font-size-500;
+$header-text-size-2: $font-size-400;
+$header-text-size-3: $font-size-300;
+$header-text-size-4: $font-size-200;
+$header-text-size-5: $font-size-100;
+$header-text-size-6: $font-size-0;
+$header-max-text-width: 25ch;

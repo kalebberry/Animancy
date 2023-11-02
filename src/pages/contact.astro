@@ -5,43 +5,90 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title='Contact Us'>
 	<main class='contact'>
-		<header class='hero'>
-			<Navbar />
-			<article class='u-container'>
-				<div class='content'>
-					<div class='left-border'>
-						<h1>Let's Stay in Touch.</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis
-							ultricies lacus sed.
-						</p>
-					</div>
-				</div>
-			</article>
-		</header>
-
-		<section class='contact-form'>
-			<article class='u-container flow'>
+		<section class='hero'>
+			<div data-type='wide' class='container flow-large'>
+				<Navbar />
 				<header>
-					<h1>Send us a message.</h1>
+					<h1>Contact Us.</h1>
 				</header>
-				<form>
-					<div>
-						<p><label for='name'>Name</label></p>
-						<p><input id='name' type='text' /></p>
+				<div class='summary'>
+					<p>
+						Ready to Elevate Your Online Presence? Drop us a line and let's discuss how we can take
+						your website to the next level.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class='reach-out'>
+			<div data-type='wide' class='container flow-large'>
+				<form
+					class='form-content'
+					id='form-content'
+					target='_blank'
+					action='https://formsubmit.co/animancydesigns@gmail.com'
+					method='POST'
+				>
+					<header>
+						<h2 class='header-w-line'>About You.</h2>
+					</header>
+
+					<div class='form-group'>
+						<div class='input-group'>
+							<input type='text' name='name' placeholder='Your Name' required />
+						</div>
+
+						<div class='input-group'>
+							<input type='email' name='email' placeholder='Email Address' required />
+						</div>
 					</div>
 
-					<div>
-						<p><label for='email'>Email</label></p>
-						<p><input id='email' type='text' /></p>
+					<div class='form-group'>
+						<div class='input-group'>
+							<input type='text' name='website' placeholder='Website / Company Name' required />
+						</div>
+
+						<div class='input-group'>
+							<input type='url' name='twitter' placeholder='Twitter URL' required />
+						</div>
 					</div>
-					<div>
-						<p><label for='project'>Project</label></p>
-						<p><textarea id='project' name='project' rows='4' cols='50'></textarea></p>
+
+					<header>
+						<h2 class='header-w-line'>Your Project</h2>
+					</header>
+
+					<div class='form-group'>
+						<div class='input-group'>
+							<input type='text' name='start-month' placeholder='Start Month' required />
+						</div>
+
+						<div class='input-group'>
+							<input type='text' name='start-year' placeholder='Start Year' required />
+						</div>
 					</div>
+
+					<div class='form-group'>
+						<div class='input-group'>
+							<input type='text' name='launch-month' placeholder='Launch Month' required />
+						</div>
+
+						<div class='input-group'>
+							<input type='text' name='launch-year' placeholder='Launch Year' required />
+						</div>
+					</div>
+
+					<div class='form-message'>
+						<textarea placeholder='Tell me more...' name='message' rows='10' required></textarea>
+					</div>
+
+					<input type='hidden' name='_captcha' value='false' />
+					<input type='hidden' name='_next' value='https://staging.animancy.com/thanks' />
+
+					<button type='submit' onclick='
+					resetForm()
+					'>Submit Project Request</button>
 				</form>
-			</article>
+			</div>
 		</section>
 	</main>
 </Layout>
