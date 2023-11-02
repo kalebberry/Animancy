@@ -1,7 +1,13 @@
 @use "../abstracts" as *;
 
-body {
+main {
+  border-radius: 2em;
+  margin: 1rem;
   background-color: $body-background-color;
+}
+
+body {
+  background-color: #fff;
   color: $body-text-color;
   font-family: $body-font-family;
   font-size: $body-font-size;
