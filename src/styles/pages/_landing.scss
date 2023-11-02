@@ -5,9 +5,17 @@
     background-image: url("/img/background.svg");
     background-size: contain;
 
-    header h1 {
-      text-align: center;
-      padding-block: $space-size-16;
+    header {
+      margin-inline: auto;
+      padding-block: $space-size-24;
+      h1 {
+        padding-block: $space-size-16;
+        line-height: 0.5;
+      }
+
+      p {
+        line-height: 1;
+      }
     }
 
     .summary {
