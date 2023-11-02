@@ -4,6 +4,7 @@
   .hero {
     background-image: url("/img/background.svg");
     background-size: contain;
+    background-attachment: fixed;
 
     header {
       margin-inline: auto;
