@@ -1,13 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import { getCollection } from 'astro:content';
+
+const blogPosts = await getCollection('posts');
 ---
 
 <Layout title='Blog'>
-	<main>
+	<main class='blog'>
 		<section class='hero'>
-			<div data-type='wide' class='container flow-large'>
+			<div data-type='wide' class='container flow -large'>
 				<Navbar />
+				<header>
+					<h1>Beyond Pixels</h1>
+					<p>A Visual Journey into Design and Creativity</p>
+				</header>
+				<div class='summary'>
+					<p>
+						Ready to Elevate Your Online Presence? Drop us a line and let's discuss how we can take
+						your website to the next level.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class='blog-posts'>
+			<div data-type='wide' class='container flow-large'>
+				<header>
+					<h2 class='header-w-line'>Latest Posts.</h2>
+				</header>
+				{
+					blogPosts.map((post) => {
+						return (
+							<>
+								<div class='post'>
+									<a href={`/blog/${post.slug}`}>
+										<h4>{post.data.title}</h4>
+										<time datetime={post.data.posted.toISOString()}>
+											{post.data.posted.toDateString()}
+										</time>
+									</a>
+								</div>
+							</>
+						);
+					})
+				}
 			</div>
 		</section>
 	</main>

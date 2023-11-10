@@ -16,7 +16,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "media",
       publicFolder: "public",
     },
   },
@@ -25,7 +25,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/content/posts",
         fields: [
           {
             type: "string",
@@ -35,10 +35,25 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "slug",
+            label: "Slug",
+            required: true,
+          },
+          {
             type: "datetime",
             name: "posted",
             label: "Date Posted",
             required: true,
+            ui: {
+                dateFormat: 'YY-MM-DD',
+                parse: (value) => value && value.format('YY-MM-DD'),
+                }
+          },
+          {
+            type: 'image',
+            label: 'Hero image',
+            name: 'imgSrc',
           },
           {
             type: "rich-text",
