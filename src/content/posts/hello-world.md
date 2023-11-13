@@ -1,10 +1,8 @@
 ---
-title: 'Building Responsive Layouts with Ease'
+title: Building Responsive Layouts with Ease
 slug: Hello-world-sample
-posted: 2023-09-20
+posted: 2023-09-20T00:00:00.000Z
 ---
-
-## Hello World!
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non lorem diam. Quisque vulputate nibh sodales eros pretium tincidunt. Aenean porttitor efficitur convallis. Nulla sagittis finibus convallis. Phasellus in fermentum quam, eu egestas tortor. Maecenas ac mollis leo. Integer maximus eu nisl vel sagittis
 

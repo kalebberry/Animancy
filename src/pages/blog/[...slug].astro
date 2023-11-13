@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import { useTina } from 'tinacms/dist/react'
+import Navbar from '../../components/Navbar.astro';
+import Layout from '../../layouts/Layout.astro';
+
+
+export async function getStaticPaths() {
+	const blogPosts = await getCollection('posts');
+
+	return blogPosts.map((post) => {
+		return {
+			params: { slug: post.data.slug },
+			props: { post },
+		};
+	});
+}
+
+
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.slug}>
+	<main class='blog-post'>
+		<section class='hero'>
+			<div data-type='wide' class='container flow-large'>
+				<Navbar />
+				<header>
+					<h1>{post.data.title}</h1>
+				</header>
+			</div>
+		</section>
+
+		<section class="prose">
+			<div data-type='wide' class='container flow-large'>
+			<Content />
+		    </div>
+		</section>
+	</main>
+</Layout>

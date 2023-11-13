@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tinacms dev -c \"astro dev\"",
-    "start": "astro dev",
+    "start": "tinacms build && astro build",
     "build": "tinacms build && astro build",
     "preview": "astro preview"
   },
