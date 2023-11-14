@@ -63,11 +63,6 @@ a:not([class]) {
   color: currentColor;
 }
 
-// :focus {
-//   outline: 2px dashed;
-//   outline-offset: 0.25rem;
-// }
-
 main:focus {
   outline: none;
 }
