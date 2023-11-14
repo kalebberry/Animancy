@@ -1,9 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import { useTina } from 'tinacms/dist/react'
+import { useTina } from 'tinacms/dist/react';
 import Navbar from '../../components/Navbar.astro';
 import Layout from '../../layouts/Layout.astro';
-
 
 export async function getStaticPaths() {
 	const blogPosts = await getCollection('posts');
@@ -15,8 +14,6 @@ export async function getStaticPaths() {
 		};
 	});
 }
-
-
 
 const { post } = Astro.props;
 const { Content } = await post.render();
@@ -33,10 +30,10 @@ const { Content } = await post.render();
 			</div>
 		</section>
 
-		<section class="prose">
+		<section class='prose'>
 			<div data-type='wide' class='container flow-large'>
-			<Content />
-		    </div>
+				<Content />
+			</div>
 		</section>
 	</main>
 </Layout>

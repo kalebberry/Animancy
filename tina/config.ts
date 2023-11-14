@@ -4,6 +4,7 @@ import { defineConfig } from "tinacms";
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 const tina_clientID = process.env.PUBLIC_TINA_CLIENT_ID;
 const tina_token = process.env.PUBLIC_TINA_TOKEN;
+const tina_search = process.env.PUBLIC_TINA_SEARCH;
 
 export default defineConfig({
   branch,
@@ -45,10 +46,6 @@ export default defineConfig({
             name: "posted",
             label: "Date Posted",
             required: true,
-            ui: {
-                dateFormat: 'YY-MM-DD',
-                parse: (value) => value && value.format('YY-MM-DD'),
-                }
           },
           {
             type: 'image',
@@ -65,4 +62,12 @@ export default defineConfig({
       },
     ],
   },
+    search: {
+    tina: {
+      indexerToken: tina_search,
+      stopwordLanguages: ['eng']
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100
+  }
 });
