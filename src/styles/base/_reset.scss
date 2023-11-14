@@ -25,8 +25,12 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
   max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75em;
+  height: auto;
+  vertical-align: middle;
 }
 
 input,
