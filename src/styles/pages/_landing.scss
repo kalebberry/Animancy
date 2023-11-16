@@ -54,7 +54,7 @@
       }
 
       .process__content {
-        --min: 50ch;
+        --min: 40ch;
         display: flex;
         flex-wrap: wrap;
         gap: $space-size-16;
@@ -85,7 +85,7 @@
       }
 
       .services__content {
-        --min: 50ch;
+        --min: 40ch;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
@@ -123,6 +123,7 @@
 
       img {
         border-radius: 0.3em;
+        object-fit: cover;
       }
     }
 
@@ -133,6 +134,11 @@
     }
 
     @media screen and (min-width: breakpoint(x-large)) {
+      .showcase__content {
+        img {
+          height: 273px;
+        }
+      }
     }
   }
 
