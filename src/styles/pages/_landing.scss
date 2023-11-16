@@ -8,9 +8,9 @@
 
     header {
       margin-inline: auto;
-      padding-block: $space-size-24;
+      padding-block: $space-size-32;
       h1 {
-        padding-block: $space-size-16;
+        padding-block: $space-size-32;
         line-height: 0.5;
       }
 
@@ -40,6 +40,13 @@
     }
 
     @media screen and (min-width: breakpoint(x-large)) {
+    }
+  }
+
+  .statement {
+    .summary {
+      margin-inline: auto;
+      text-align: center;
     }
   }
 
