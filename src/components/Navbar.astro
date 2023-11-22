@@ -1,3 +1,8 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
 <nav class='navigation'>
 	<div class='logo'>
 		<a href='/'>
@@ -7,11 +12,15 @@
 	<div class='hamburger'>&#9776;</div>
 	<div class='nav'>
 		<ul class='navigation-items'>
-			<li><a href='/'>Home</a></li>
-			<li><a href='/case-studies'>Case Studies</a></li>
-			<!-- <li><a href='/blog'>Blog</a></li> -->
-			<!-- <li><a href='/resources'>Resources</a></li> -->
-			<li><a href='/contact'>Contact</a></li>
+			<li><a class={currentPath === '' ? 'active-link' : ''} href='/'>Home</a></li>
+			<li>
+				<a class={currentPath === 'case-studies' ? 'active-link' : ''} href='/case-studies'>
+					Case Studies
+				</a>
+			</li>
+			<li>
+				<a class={currentPath === 'contact' ? 'active-link' : ''} href='/contact'>Contact</a>
+			</li>
 		</ul>
 	</div>
 	<div class='filler'></div>
@@ -82,10 +91,6 @@
 			font-family: 'Fira Sans', sans-serif;
 			font-size: clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem);
 		}
-
-		& li a .active {
-			color: red;
-		}
 	}
 
 	.nav.active .navigation-items {
@@ -128,6 +133,10 @@
 			margin: 0 0vw;
 			opacity: 1;
 
+			.active-link {
+				background-color: hsla(37, 20%, 64%, 0.5);
+			}
+
 			& li {
 				list-style-type: none;
 			}
@@ -141,7 +150,7 @@
 				border-radius: 0.2em;
 
 				&:hover {
-					background-color: hsla(37, 20%, 64%, 0.50)%);
+					background-color: hsla(37, 20%, 64%, 0.5);
 				}
 			}
 
