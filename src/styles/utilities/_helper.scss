@@ -11,3 +11,9 @@
 .ending-quote {
   padding-block: $space-size-48 $space-size-16;
 }
+
+.content-block {
+  p {
+    max-width: 100%;
+  }
+}
