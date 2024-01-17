@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-import swup from '@swup/astro';
+// import swup from '@swup/astro';
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -10,5 +10,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx(), swup()],
+  integrations: [react(), mdx()],
+  // swup()
 });

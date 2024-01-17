@@ -48,7 +48,7 @@ const { title } = Astro.props;
 			requestAnimationFrame(raf);
 		</script>
 
-		<!-- <script type='text/javascript'>
+		<script type='text/javascript'>
 			const themeSwitcher = document.querySelector('.theme-switcher');
 			let activeTheme = localStorage.getItem('theme');
 
@@ -84,9 +84,11 @@ const { title } = Astro.props;
 				if (activeTheme) {
 					document.getElementById(activeTheme).checked = true;
 					changeTheme(activeTheme);
+				} else {
+					localStorage.setItem('theme', 'light');
 				}
 			};
-		</script> -->
+		</script>
 
 		<script type='text/javascript'>
 			function resetForm() {
