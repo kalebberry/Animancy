@@ -1,7 +1,6 @@
 ---
 import '../styles/main.scss';
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	title: string;
@@ -16,7 +15,6 @@ const { title } = Astro.props;
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -37,11 +35,6 @@ const { title } = Astro.props;
 				infinite: false,
 			});
 
-			//get scroll value test
-			lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-				console.log({ scroll, limit, velocity, direction, progress });
-			});
-
 			function raf(time) {
 				lenis.raf(time);
 				requestAnimationFrame(raf);
@@ -50,7 +43,7 @@ const { title } = Astro.props;
 			requestAnimationFrame(raf);
 		</script>
 
-		<script type='text/javascript'>
+		<!-- <script type='text/javascript'>
 			const themeSwitcher = document.querySelector('.theme-switcher');
 			let activeTheme = localStorage.getItem('theme');
 
@@ -90,7 +83,7 @@ const { title } = Astro.props;
 					localStorage.setItem('theme', 'light');
 				}
 			};
-		</script>
+		</script> -->
 
 		<script type='text/javascript'>
 			function resetForm() {
