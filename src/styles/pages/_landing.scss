@@ -1,189 +1,158 @@
 @use "../abstracts" as *;
 
 .landing {
-  .landing-fade {
-    img {
-      opacity: 0.3;
-      position: absolute;
-      width: 100%;
-      height: 50%;
-      object-fit: cover;
-      object-position: bottom;
-      inset: 0;
-      -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-      mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-    }
-  }
+    .hero {
+        background-color: hsl(200, 7%, 92%);
 
-  .hero {
-    background-image: url("/img/background.svg");
-    background-size: contain;
-    position: relative;
+        header {
+            h1 {
+                line-height: 1;
+            }
+            padding-block-start: $space-size-48;
+        }
 
-    header {
-      margin-inline: auto;
-      padding-block: $space-size-32;
-      h1 {
-        padding-block: $space-size-32;
-        line-height: 0.5;
-      }
+        &-summary {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      p {
-        line-height: 1;
-      }
-    }
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-    .summary {
-      padding-block: $space-size-16;
+            .ctas {
+                align-self: flex-end;
+            }
+
+            .definition p {
+                font-size: 1rem;
+            }
+        }
     }
 
-    .svg-images {
-      display: none;
-    }
-
-    @media screen and (min-width: breakpoint(medium)) {
-      .svg-images {
-        padding-block: $space-size-16;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    @media screen and (min-width: breakpoint(large)) {
-    }
-
-    @media screen and (min-width: breakpoint(x-large)) {
-    }
-  }
-
-  .statement {
-    .summary {
-      margin-inline: auto;
-      text-align: center;
-    }
-  }
-
-  .process {
     .process {
-      margin-top: 1em;
-    }
+        background-color: hsl(216, 4%, 26%);
 
-    @media screen and (min-width: breakpoint(medium)) {
-      .process {
-        margin-top: 0;
-      }
-
-      .process__content {
-        --min: 40ch;
-        display: flex;
-        flex-wrap: wrap;
-        gap: $space-size-16;
-
-        & > * {
-          flex: 1 1 var(--min);
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-      }
-    }
 
-    @media screen and (min-width: breakpoint(large)) {
-    }
-
-    @media screen and (min-width: breakpoint(x-large)) {
-    }
-  }
-
-  .services {
-    padding-block: $space-size-16;
-
-    .detail {
-      margin-top: 1em;
-    }
-
-    @media screen and (min-width: breakpoint(medium)) {
-      .detail {
-        margin-top: 0;
-      }
-
-      .services__content {
-        --min: 40ch;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        gap: $gap-width-default;
-
-        & > * {
-          flex: 1 1 var(--min);
+        h2 {
+            color: hsl(320, 43%, 99%);
         }
-      }
-    }
-
-    @media screen and (min-width: breakpoint(large)) {
-    }
-
-    @media screen and (min-width: breakpoint(x-large)) {
-    }
-  }
-
-  .demos {
-    .lang-stack {
-      display: flex;
-      gap: $gap-width-default;
-      padding-block: $space-size-16;
-    }
-
-    .showcase__content {
-      --min: 20ch;
-      display: flex;
-      flex-wrap: wrap;
-      gap: $space-size-16;
-
-      & > * {
-        flex: 1 1 var(--min);
-      }
-
-      img {
-        border-radius: 0.3em;
-        object-fit: cover;
-      }
-    }
-
-    @media screen and (min-width: breakpoint(medium)) {
-    }
-
-    @media screen and (min-width: breakpoint(large)) {
-    }
-
-    @media screen and (min-width: breakpoint(x-large)) {
-      .showcase__content {
-        img {
-          height: 273px;
+        h3,
+        p {
+            color: hsl(320, 43%, 99%);
         }
-      }
-    }
-  }
 
-  .conculsion {
-    .conculsion__images {
-      display: none;
-    }
+        .process__content {
+            --min: 40ch;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $space-size-32;
 
-    .content {
-      padding-block: $space-size-16;
-    }
-
-    @media screen and (min-width: breakpoint(medium)) {
-      .conculsion__images {
-        display: flex;
-        gap: $gap-width-default;
-        padding-block: $space-size-16;
-      }
+            & > * {
+                flex: 1 1 var(--min);
+            }
+        }
     }
 
-    @media screen and (min-width: breakpoint(large)) {
+    .services {
+        background: hsl(320, 43%, 99%);
+        &__content {
+            display: flex;
+            justify-content: space-between;
+
+            .services__content-decor {
+                display: none;
+
+                @media screen and (min-width: breakpoint(large)) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .decor__logo {
+                        margin-block-start: 2rem;
+                    }
+
+                    .decor__number {
+                        display: none;
+                    }
+
+                    @media screen and (min-width: breakpoint(x-large)) {
+                        .decor__number {
+                            display: block;
+
+                            h2 {
+                                position: relative;
+                                max-width: 100%;
+                            }
+
+                            h2:after {
+                                content: "";
+                                height: 1px;
+                                width: 3em;
+                                max-width: 100%;
+                                background: black;
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                left: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    @media screen and (min-width: breakpoint(x-large)) {
+    .case-studies {
+        position: relative;
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content__summary {
+            padding-block-end: 3rem;
+        }
+
+        video {
+            border-radius: 0.3em;
+            width: 640px;
+            height: 360px;
+        }
     }
-  }
+
+    .conculsion {
+        background-color: hsl(216, 4%, 26%);
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h2 {
+            color: hsl(320, 43%, 99%);
+        }
+        p {
+            color: #bbbab5;
+        }
+
+        video {
+            border-radius: 0.3em;
+            width: 640px;
+            height: 360px;
+        }
+    }
 }

@@ -5,24 +5,64 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title='Animancy Designs.'>
 	<main class='landing'>
-		<div class='landing-fade'><img src='/img/6.jpg' /></div>
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
-				<header class='flow'>
-					<h1>Animancy</h1>
-					<p class='clr-secondary-100'>A Web Design Studio.</p>
+				<header>
+					<h1>Studio <span class='pt-bold'>Eien</span></h1>
+					<p>By Kaleb Berry</p>
 				</header>
+				<article class='hero-summary'>
+					<p>
+						We Create the web for businesses, content creators, and art creatives. We are here to
+						help you take the first steps to building an online presence that tells the world about
+						your dream.
+					</p>
+				</article>
+				<article class='flow-large hero-content'>
+					<div class='flow-inline ctas'>
+						<button>読み出す</button>
+						<button class='button-outline'>愛デザイン</button>
+					</div>
+					<div class='flow definition'>
+						<p>永遠 Eternity</p>
+						<p>
+							Noun, Noun which may take the genitive case particle 'no', Na-adjective (keiyodoshi).
+							Eternity; perpetuity; permanence; immortality.
+						</p>
+					</div>
+				</article>
 			</div>
 		</section>
 
 		<section class='process'>
-			<div data-type='wide' class='container flow'>
+			<div data-type='wide' class='container flow-large'>
 				<header>
-					<h2 class='header-w-line'>How we work.</h2>
+					<h2>The <span class='pt-bold'>Foundation.</span></h2>
+					<div>
+						<svg
+							class='mini-logo'
+							xmlns='http://www.w3.org/2000/svg'
+							width='41'
+							height='40'
+							fill='none'
+							viewBox='0 0 41 40'
+						>
+							<path
+								fill='#fff'
+								d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
+							>
+							</path>
+							<path
+								stroke='#fff'
+								d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
+							>
+							</path>
+						</svg>
+					</div>
 				</header>
 				<article class='process__content'>
-					<div class='process flow'>
+					<div class='process__coontent-item flow'>
 						<header>
 							<h3>01. Strategy</h3>
 						</header>
@@ -32,7 +72,7 @@ import Navbar from '../components/Navbar.astro';
 							visuals.
 						</p>
 					</div>
-					<div class='process flow'>
+					<div class='process__coontent-item flow'>
 						<header>
 							<h3>02. Design</h3>
 						</header>
@@ -41,7 +81,7 @@ import Navbar from '../components/Navbar.astro';
 							content and provide design mockups to narrow down the website you want.
 						</p>
 					</div>
-					<div class='process flow'>
+					<div class='process__coontent-item flow'>
 						<header>
 							<h3>03. Development</h3>
 						</header>
@@ -51,7 +91,7 @@ import Navbar from '../components/Navbar.astro';
 							and ensure the highest quality.
 						</p>
 					</div>
-					<div class='process flow'>
+					<div class='process__coontent-item flow'>
 						<header>
 							<h3>04. Support & Assistance</h3>
 						</header>
@@ -65,139 +105,139 @@ import Navbar from '../components/Navbar.astro';
 		</section>
 
 		<section id='services' class='services'>
-			<div data-type='wide' class='container flow'>
-				<header>
-					<h2>What we can do.</h2>
-				</header>
+			<div data-type='wide' class='container flow-large'>
 				<article class='services__content'>
-					<div class='detail flow'>
-						<header>
-							<h3>Web Design & Development</h3>
-						</header>
-						<p>
-							We create the web using the right tools for the right job. Let us create an online
-							presence for you, that will take you to the next level, allowing you to take your
-							steps with what you are passionate about.
-						</p>
+					<div class='services__content-decor'>
+						<div class='decor__logo'>
+							<svg
+								class='mini-logo'
+								xmlns='http://www.w3.org/2000/svg'
+								width='51'
+								height='50'
+								fill='none'
+								viewBox='0 0 41 40'
+							>
+								<path
+									fill='#000'
+									d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
+								>
+								</path>
+								<path
+									stroke='#000'
+									d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
+								>
+								</path>
+							</svg>
+						</div>
+						<div class='decor__number'>
+							<h2>01</h2>
+						</div>
 					</div>
-					<div class='detail flow'>
+					<div class='services__content-details flow-large'>
 						<header>
-							<h3>OBS Graphics & Effects</h3>
+							<h2><span class='pt-bold'>Front-End</span> Brilliance.</h2>
 						</header>
-						<p>
-							We use <a class='event-link' href='https://www.nodecg.dev/' target='_blank'>NodeCG</a>
-							 to create broadcast graphics. This service allows one to run complicated parts of
-							their stream smoothly, and we also can provide subtle animations for sub alerts, and
-							social media callouts.
-						</p>
-					</div>
+						<article class='flow-large'>
+							<div class='detail flow'>
+								<header>
+									<h3>Web Design & Development</h3>
+								</header>
+								<p>
+									We create the web using the right tools for the right job. Let us create an online
+									presence for you, that will take you to the next level, allowing you to take your
+									steps with what you are passionate about.
+								</p>
+							</div>
+							<div class='detail flow'>
+								<header>
+									<h3>OBS Graphics & Effects</h3>
+								</header>
+								<p>
+									We use <a class='event-link' href='https://www.nodecg.dev/' target='_blank'>
+										NodeCG
+									</a>
+									 to create broadcast graphics. This service allows one to run complicated parts of
+									their stream smoothly, and we also can provide subtle animations for sub alerts,
+									and social media callouts.
+								</p>
+							</div>
 
-					<div class='detail flow'>
-						<header>
-							<h3>UI/UX Design</h3>
-						</header>
-						<p>
-							We can help you design user interfaces that are intuitive and visually engaging. Focus
-							on usablity and accessiblity, improving user experience. Last, conduct research,
-							create wireframes and prototypes.
-						</p>
-					</div>
+							<div class='detail flow'>
+								<header>
+									<h3>UI/UX Design</h3>
+								</header>
+								<p>
+									We can help you design user interfaces that are intuitive and visually engaging.
+									Focus on usablity and accessiblity, improving user experience. Last, conduct
+									research, create wireframes and prototypes.
+								</p>
+							</div>
 
-					<div class='detail flow'>
-						<header>
-							<h3>Custom Development</h3>
-						</header>
-						<p>
-							We can help you design user interfaces that are intuitive and visually engaging. Focus
-							on usablity and accessiblity, improving user experience. Last, conduct research,
-							create wireframes and prototypes.
-						</p>
+							<div class='detail flow'>
+								<header>
+									<h3>Custom Development</h3>
+								</header>
+								<p>
+									We can help you design user interfaces that are intuitive and visually engaging.
+									Focus on usablity and accessiblity, improving user experience. Last, conduct
+									research, create wireframes and prototypes.
+								</p>
+							</div>
+						</article>
 					</div>
 				</article>
-
-				<div class='margin-block-start-24'>
-					<a type='button' href='#'>Uncover More <i class='fa-solid fa-arrow-right'></i></a>
-				</div>
 			</div>
 		</section>
 
-		<!-- <section id='demos' class='demos'>
-			<div data-type='wide' class='container flow'>
-				<header>
-					<h2 class='header-w-line'>Case Studies</h2>
-				</header>
+		<section class='case-studies'>
+			<div class='container' data-type='wide'>
+				<article class='content'>
+					<div class='content__summary flow-large'>
+						<header>
+							<h2><span class='pt-bold'>Design</span> Journeys.</h2>
+						</header>
+						<p>
+							Dive into the heart of our design journey, showcasing projects that have left a
+							lasting impact. Explore client success stories to witness firsthand how Animancy
+							brings visions to life through innovative and soulful web design.
+						</p>
 
-				<article class='showcase'>
-					<div class='showcase__content'>
-						<div class='showcase__img'>
-							<img src='/img/6.jpg' />
+						<div class='margin-block-start-24'>
+							<button>読み出す</button>
 						</div>
-						<div class='showcase__img'>
-							<img src='/img/10.jpg' />
-						</div>
-						<div class='showcase__img'>
-							<img src='/img/16.jpg' />
-						</div>
-						<div class='showcase__img'>
-							<img src='/img/20.jpg' />
-						</div>
+					</div>
+
+					<div class='content__image'>
+						<video autoplay='true' muted loop='true'>
+							<source src='/video/land9.mp4' type='video/mp4' />
+						</video>
 					</div>
 				</article>
-
-				<article class='lang-stack'>
-					<div>
-						<i class='fa-brands fa-xl fa-html5'></i>
-					</div>
-					<div>
-						<i class='fa-brands fa-xl fa-sass'></i>
-					</div>
-					<div>
-						<i class='fa-brands fa-xl fa-js'></i>
-					</div>
-					<div>
-						<i class='fa-brands fa-xl fa-react'></i>
-					</div>
-					<div>
-						<i class='fa-brands fa-xl fa-figma'></i>
-					</div>
-				</article>
-
-				<div class='margin-block-start-24'>
-					<a type='button' href='/case-studies'>
-						See Case Studies <i class='fa-solid fa-arrow-right'></i>
-					</a>
-				</div>
 			</div>
-		</section> -->
+		</section>
 
 		<section class='conculsion'>
-			<div data-type='wide' class='container flow'>
+			<div data-type='wide' class='container flow-large'>
 				<header>
-					<h2>Let's get started.</h2>
+					<h2>Start your <span class='pt-bold'>story.</span></h2>
 				</header>
 
-				<div class='content'>
-					<p>
-						We strive to create an online presence that reflects your unique vision and speaks to
-						your target audience. We understand that every business is different, and we are
-						dedicated to helping you create an online presence that is tailored to your individual
-						needs.
-					</p>
-				</div>
-				<div class='margin-block-start-24'>
-					<a type='button' href='/contact'>
-						Request a Project <i class='fa-solid fa-arrow-right'></i>
-					</a>
-				</div>
-				<div class='flow ending-quote'>
-					<hr class='daimond-hr' />
-					<p>
-						<i>
-							Strive for two things in design: simplicity and clarity. Great design is born of those
-							two things.
-						</i>
-					</p>
-				</div>
+				<article class='content'>
+					<video class='video' autoplay='true' muted loop='true'>
+						<source src='/video/land7.mp4' type='video/mp4' />
+					</video>
+					<div>
+						<p>
+							We strive to create an online presence that reflects your unique vision and speaks to
+							your target audience. We understand that every business is different, and we are
+							dedicated to helping you create an online presence that is tailored to your individual
+							needs.
+						</p>
+						<div class='margin-block-start-24'>
+							<button class='button-outline-white'>読み出す</button>
+						</div>
+					</div>
+				</article>
 			</div>
 		</section>
 	</main>

@@ -3,15 +3,15 @@
 @use "sizes" as *;
 
 // Color Tokens
-$active-theme: $dark;
+$active-theme: $light;
 
 $color-text-default: $color-dark-100;
 $color-text-header: $color-dark-100;
 $color-text-subtitle: $color-dark-100;
 $color-text-card: $color-light-200;
 
-$color-background-default: $color-light-100;
-$color-background-footer: $color-dark-100;
+$color-background-default: hsl(320, 43%, 99%);
+$color-background-footer: hsl(200, 5%, 13%);
 $color-background-card: $color-accent-100;
 
 $button-color-accent: $color-accent-100;
@@ -36,13 +36,14 @@ $hr-line-color: $color-light-200;
 $container-min-margin-inline: $space-size-8;
 $container-max-width-narrow: 45rem;
 $container-max-width: 65rem;
-$container-max-width-wide: 75rem;
+$container-max-width-wide: 100rem;
 
 $section-padding-block: $space-size-48;
 $gap-width-default: $space-size-16;
 
 $button-border-radius: 0.3em;
-$button-padding: 0.8em;
+$button-padding-inline: 1.5rem;
+$button-padding-block: 0.5rem;
 $font-text-default: $ff-fira-sans;
 $font-text-header: $ff-pt-serif;
 $font-text-weight-default: 300;

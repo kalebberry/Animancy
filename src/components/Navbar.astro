@@ -19,6 +19,12 @@ const currentPath = pathname.slice(1);
 				</a>
 			</li>
 			<li>
+				<a class={currentPath === 'projects' ? 'active-link' : ''} href='/projects'>Projects</a>
+			</li>
+			<li>
+				<a class={currentPath === 'resources' ? 'active-link' : ''} href='/resources'>Resources</a>
+			</li>
+			<li>
 				<a class={currentPath === 'contact' ? 'active-link' : ''} href='/contact'>Contact</a>
 			</li>
 		</ul>
@@ -134,7 +140,7 @@ const currentPath = pathname.slice(1);
 			opacity: 1;
 
 			.active-link {
-				background-color: hsla(37, 20%, 64%, 0.5);
+				background-color: hsl(199.53deg 5.11% 69.59% / 37%);
 			}
 
 			& li {
@@ -150,7 +156,7 @@ const currentPath = pathname.slice(1);
 				border-radius: 0.2em;
 
 				&:hover {
-					background-color: hsla(37, 20%, 64%, 0.5);
+					background-color: hsl(199.53deg 5.11% 69.59% / 37%);
 				}
 			}
 

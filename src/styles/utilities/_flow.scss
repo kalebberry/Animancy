@@ -1,13 +1,10 @@
 .flow,
-.flow-large {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.flow,
 .flow-large > * {
   margin-block: 0;
+}
+
+.flow-inline > * + * {
+  margin-inline-start: var(--space, 1rem);
 }
 
 .flow > * + * {

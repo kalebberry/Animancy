@@ -19,6 +19,18 @@
   --max-width: 100%;
 }
 
+.container[data-type="full-bleed-split-screen"] {
+  --max-width: 100%;
+  --padding: 0;
+
+  @media screen and (min-width: breakpoint(large)) {
+    display: grid;
+    grid-template-columns: minmax(0, 50%) 1fr;
+    margin-inline: 0;
+    padding-inline: 1em 0;
+  }
+}
+
 // @media screen and (min-width: breakpoint(small)) {
 // }
 

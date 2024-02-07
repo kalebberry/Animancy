@@ -1,38 +1,85 @@
 @use "../abstracts" as *;
 
 a[type="button"] {
-  padding-block: $button-padding;
+  padding-block: $button-padding-block;
   border-radius: $button-border-radius;
   text-decoration: underline;
-  transition:
-    color 0.3s ease-in,
-    padding-inline 0.3s ease-in,
-    background-color 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 
   &:hover {
-    background: $button-color-accent;
-    padding-inline: $button-padding;
-    color: $color-light-100;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+a[type="button-outline"] {
+  padding-block: $button-padding-block;
+  border-radius: $button-border-radius;
+  text-decoration: underline;
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+a[type="button-outline-white"] {
+  padding-block: $button-padding-block;
+  border-radius: $button-border-radius;
+  text-decoration: underline;
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
   }
 }
 
 button {
-  padding-block: $button-padding;
-  padding-inline: $button-padding;
+  padding-block: $button-padding-block;
+  padding-inline: $button-padding-inline;
   border-radius: $button-border-radius;
   outline: none;
   border: transparent;
-  background: $button-color-accent;
+  background: hsl(216, 4%, 26%);
   color: $color-light-100;
-  transition:
-    color 0.3s ease-in,
-    padding-inline 0.3s ease-in,
-    background-color 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 
   &:hover {
-    background: $color-primary-100;
-    padding-inline: $button-padding;
-    color: $color-light-100;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.button-outline {
+  padding-block: $button-padding-block;
+  padding-inline: $button-padding-inline;
+  border-radius: $button-border-radius;
+  outline: none;
+  border: 1px solid hsl(216, 4%, 26%);
+  background: transparent;
+  color: hsl(216, 4%, 26%);
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.button-outline-white {
+  padding-block: $button-padding-block;
+  padding-inline: $button-padding-inline;
+  border-radius: $button-border-radius;
+  outline: none;
+  border: 1px solid hsl(320, 43%, 99%);
+  background: transparent;
+  color: hsl(320, 43%, 99%);
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.8;
     cursor: pointer;
   }
 }
