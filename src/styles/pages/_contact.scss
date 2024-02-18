@@ -1,83 +1,71 @@
 @use "../abstracts" as *;
 
 .contact {
-    .contact-fade {
-        img {
-            opacity: 0.3;
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            object-fit: cover;
-            object-position: bottom;
-            inset: 0;
-            -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-            mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.5) 30%, rgb(0 0 0 / 0));
-        }
-    }
-
     .hero {
-        background-image: url("/img/background.svg");
-        background-size: contain;
-        position: relative;
-
-        h1 {
-            text-align: center;
-        }
+        background-color: hsl(200, 7%, 92%);
     }
 
-    .form-content {
-        .form-group {
-            --min: 40ch;
-            display: flex;
-            flex-wrap: wrap;
-            gap: $space-size-16;
-            padding-block: $space-size-8;
+    .reach-out {
+        background-color: hsl(216, 4%, 26%);
 
-            & > * {
-                flex: 1 1 var(--min);
+        h2 {
+            color: hsl(200, 7%, 92%);
+        }
+
+        .form-content {
+            .form-group {
+                --min: 40ch;
+                display: flex;
+                flex-wrap: wrap;
+                gap: $space-size-16;
+                padding-block: $space-size-8;
+
+                & > * {
+                    flex: 1 1 var(--min);
+                }
             }
-        }
 
-        .input-group,
-        .form-message {
-            width: 100%;
-        }
-
-        .form-message {
-            padding-block: $space-size-16;
-        }
-
-        input[type="text"],
-        input,
-        select {
-            display: block;
-            width: 100%;
-            border-radius: 0.3em;
-            outline: none;
-            border: none;
-            padding: 0.6em;
-            box-sizing: border-box;
-            resize: vertical;
-        }
-
-        textarea {
-            display: block;
-            width: 100%;
-            border-radius: 0.3em;
-            outline: none;
-            border: none;
-            padding: 0.6em;
-            box-sizing: border-box;
-            resize: vertical;
-        }
-
-        @media screen and (min-width: breakpoint(large)) {
-            .input-group {
-                width: 50%;
+            .input-group,
+            .form-message {
+                width: 100%;
             }
-        }
 
-        @media screen and (min-width: breakpoint(x-large)) {
+            .form-message {
+                padding-block: $space-size-16;
+            }
+
+            input[type="text"],
+            input,
+            select {
+                display: block;
+                width: 100%;
+                border-radius: 0.3em;
+                outline: none;
+                border: none;
+                padding: 0.6em;
+                box-sizing: border-box;
+                resize: vertical;
+            }
+
+            textarea {
+                display: block;
+                width: 100%;
+                border-radius: 0.3em;
+                outline: none;
+                border: none;
+                padding: 0.6em;
+                box-sizing: border-box;
+                resize: vertical;
+            }
+
+            @media screen and (min-width: breakpoint(large)) {
+                .input-group {
+                    width: 50%;
+                }
+            }
+
+            @media screen and (min-width: breakpoint(x-large)) {
+            }
         }
     }
 }

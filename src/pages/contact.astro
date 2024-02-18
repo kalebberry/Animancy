@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title='Contact Us'>
 	<main class='contact'>
-		<div class='contact-fade'><img src='/img/20.jpg' /></div>
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
@@ -17,6 +16,10 @@ import Navbar from '../components/Navbar.astro';
 						Ready to Elevate Your Online Presence? Drop us a line and let's discuss how we can take
 						your website to the next level.
 					</p>
+				</div>
+				<div class='flow-inline ctas'>
+					<button>Let's Begin</button>
+					<button class='button-outline'>Read Studies</button>
 				</div>
 			</div>
 		</section>
@@ -31,7 +34,7 @@ import Navbar from '../components/Navbar.astro';
 					method='POST'
 				>
 					<header>
-						<h2 class='header-w-line'>About You.</h2>
+						<h2>About You.</h2>
 					</header>
 
 					<div class='form-group'>
@@ -128,9 +131,11 @@ import Navbar from '../components/Navbar.astro';
 					/>
 
 					<div class='margin-block-start-24'>
-						<button type='submit' onclick='
+						<button class='button-outline-white' type='submit' onclick='
 					resetForm()
-					'>Submit Project Request</button>
+					'>
+							Submit Project Request
+						</button>
 					</div>
 				</form>
 			</div>

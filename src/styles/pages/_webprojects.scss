@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.web-projects {
+    .hero {
+        background-color: hsl(200, 7%, 92%);
+
+        header {
+            h2 {
+                line-height: 0.9;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-block-start: $space-size-32;
+
+            video {
+                width: 45%;
+                border-radius: 0.3em;
+            }
+
+            img {
+                max-width: 45%;
+                border-radius: 0.3em;
+                border: none;
+            }
+        }
+    }
+
+    .projects {
+        .preview {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.3rem;
+
+            img {
+                border-radius: 0.3em;
+            }
+
+            &-large {
+            }
+
+            &-mini {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 1.3rem;
+
+                &-row {
+                    display: flex;
+                    gap: 1.3rem;
+                }
+            }
+        }
+    }
+}

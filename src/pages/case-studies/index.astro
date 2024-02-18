@@ -6,53 +6,83 @@ import CaseCard from '../../components/CaseCard.astro';
 
 <Layout title='Case Studies'>
 	<main class='case-studies'>
-		<div class='case-studies-fade'><img src='/img/21.jpg' /></div>
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
-				<header class='flow'>
-					<h1>Case Studies.</h1>
-				</header>
-				<article class='summary'>
-					<p>
-						Showcases successful projects completed by Animancy Studios for various clients. Each
-						case study provides an overview of the project, including the website's purpose, design,
-						and results.
-					</p>
+				<article class='hero-content'>
+					<div class='flow-large'>
+						<header>
+							<div>
+								<h2><span class='pt-bold'>Design</span> Journeys.</h2>
+							</div>
+						</header>
+						<article class='summary'>
+							<p>
+								Showcases successful projects completed by Studio Eien for various clients. Each
+								case study provides an overview of the project, including the website's purpose,
+								design, and results.
+							</p>
+						</article>
+
+						<article class='flow-inline ctas'>
+							<button>Our Work</button>
+						</article>
+					</div>
+					<video class='video' autoplay='true' muted loop='true'>
+						<source src='/video/land7.mp4' type='video/mp4' />
+					</video>
 				</article>
 			</div>
 		</section>
 
 		<section class='work'>
 			<div data-type='wide' class='container flow-large'>
-				<header>
-					<h2 class='header-w-line'>Our Works.</h2>
-				</header>
-
-				<article class='studies'>
-					<CaseCard
-						href='/case-studies/nyacchii'
-						title='Nyacchii'
-						catagory='Art Portfolio'
-						body='Full-Time Creative Streamer and Twitch Partner from Mexico. Expertise in digital and traditional art.'
-					/>
-					<CaseCard
-						href='/case-studies/rockstar-renovations'
-						title='Rockstar Renovations'
-						catagory='Company Website'
-						body='A fully insured business, both in general liability and workmans compensation. Renovations for the modern style.'
-					/>
+				<article class='work__item'>
+					<img src='/img/nyacchii_demo_test.png' />
+					<div class='flow'>
+						<header>
+							<p>Art Portfolio</p>
+							<h2>Nyacchii</h2>
+						</header>
+						<p>
+							Full-Time Creative Streamer and Twitch Partner from Mexico. Expertise in digital and
+							traditional art.
+						</p>
+						<button>Read Case Study</button>
+					</div>
 				</article>
 
-				<div class='flow ending-quote'>
-					<hr class='daimond-hr' />
-					<p>
-						<i>
-							Strive for two things in design: simplicity and clarity. Great design is born of those
-							two things.
-						</i>
-					</p>
-				</div>
+				<article class='work__item'>
+					<img src='/img/rs_demo_test.png' />
+
+					<div class='flow-large'>
+						<header>
+							<p>Company Website</p>
+							<h2>Rockstar Renovations</h2>
+						</header>
+						<p>
+							A fully insured business, both in general liability and workman's compensation.
+							Renovations for the modern style.
+						</p>
+						<button>Read Case Study</button>
+					</div>
+				</article>
+
+				<article class='work__item'>
+					<img src='/img/fv_demo_test.png' />
+
+					<div class='flow-large'>
+						<header>
+							<p>Web Application</p>
+							<h2>FleetVu</h2>
+						</header>
+						<p>
+							Complete front and back end solution for body cams, in-car video systems, data
+							solutions and support for Law Enforcement.
+						</p>
+						<button>Read Case Study</button>
+					</div>
+				</article>
 			</div>
 		</section>
 	</main>

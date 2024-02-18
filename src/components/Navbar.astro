@@ -22,7 +22,7 @@ const currentPath = pathname.slice(1);
 				<a class={currentPath === 'projects' ? 'active-link' : ''} href='/projects'>Projects</a>
 			</li>
 			<li>
-				<a class={currentPath === 'resources' ? 'active-link' : ''} href='/resources'>Resources</a>
+				<a target='_blank' href='https://studioeien.gumroad.com/'>Resources</a>
 			</li>
 			<li>
 				<a class={currentPath === 'contact' ? 'active-link' : ''} href='/contact'>Contact</a>
@@ -47,8 +47,8 @@ const currentPath = pathname.slice(1);
 	.navigation {
 		display: flex;
 		align-items: center;
-		padding-block: clamp(0.5rem, calc(0.46rem + 0.22vw), 0.63rem);
-		padding-inline: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+		// padding-block: clamp(0.5rem, calc(0.46rem + 0.22vw), 0.63rem);
+		// padding-inline: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
 	}
 
 	.filler {

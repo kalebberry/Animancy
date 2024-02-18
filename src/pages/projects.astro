@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title='Web Projects'>
+	<main class='web-projects'>
+		<section class='hero'>
+			<div data-type='wide' class='container flow-large'>
+				<Navbar />
+				<article class='hero-content'>
+					<div class='flow-large'>
+						<header>
+							<h2>Web <span class='pt-bold'>Projects</span></h2>
+						</header>
+						<div class='summary'>
+							<p>
+								Showcases successful projects completed by Animancy Studios for various clients.
+								Each case study provides an overview of the project, including the website's
+								purpose, design, and results.
+							</p>
+						</div>
+
+						<article class='flow-inline ctas'>
+							<button>Read Study</button>
+							<button class='button-outline'>View Project</button>
+						</article>
+					</div>
+					<img src='https://picsum.photos/id/60/700/400' />
+				</article>
+			</div>
+		</section>
+
+		<section class='projects'>
+			<div data-type='wide' class='container flow-large'>
+				<article class='preview'>
+					<div class='preview-large'>
+						<img src='https://picsum.photos/id/60/700/520' />
+					</div>
+					<div class='preview-mini'>
+						<div class='preview-mini-row'>
+							<img src='https://picsum.photos/id/60/350/250' />
+							<img src='https://picsum.photos/id/60/350/250' />
+						</div>
+
+						<div class='preview-mini-row'>
+							<img src='https://picsum.photos/id/60/350/250' />
+							<img src='https://picsum.photos/id/60/350/250' />
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+</Layout>
