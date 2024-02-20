@@ -2,7 +2,33 @@
 
 .case-studies {
     .hero {
-        background-color: hsl(200, 7%, 92%);
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_4_dH8fH1X7Q.png?updatedAt=1708435705516")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
 
         .hero-content {
             .header {
@@ -28,12 +54,16 @@
     }
 
     .work {
-        background-color: hsl(216, 4%, 26%);
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
 
         .work__item {
             --min: 40ch;
             padding-block: $space-size-48;
             align-items: center;
+            padding-inline: 3rem;
+            border-radius: 0.3em;
+            background: #1c1c1f;
 
             h2,
             p {

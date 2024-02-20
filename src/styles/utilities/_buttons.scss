@@ -42,7 +42,8 @@ button {
   border-radius: $button-border-radius;
   outline: none;
   border: transparent;
-  background: hsl(216, 4%, 26%);
+  --opacity: 1;
+  background-color: rgb(24 24 27 / var(--opacity));
   color: $color-light-100;
   transition: opacity 0.3s ease-in;
 
@@ -53,13 +54,14 @@ button {
 }
 
 .button-outline {
+  --opacity: 1;
   padding-block: $button-padding-block;
   padding-inline: $button-padding-inline;
   border-radius: $button-border-radius;
   outline: none;
-  border: 1px solid hsl(216, 4%, 26%);
+  border: 1px solid rgb(24 24 27 / var(--opacity));
   background: transparent;
-  color: hsl(216, 4%, 26%);
+  color: rgb(24 24 27 / var(--opacity));
   transition: opacity 0.3s ease-in;
 
   &:hover {

@@ -2,12 +2,32 @@
 
 .landing {
     .hero {
-        background-color: hsl(200, 7%, 92%);
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_3_0dGemsLN_.png?updatedAt=1708435689994")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
 
-        header {
-            h1 {
-                line-height: 1;
-            }
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
         }
 
         &-summary {
@@ -33,19 +53,19 @@
     }
 
     .process {
-        background-color: hsl(216, 4%, 26%);
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // margin-block-end: $space-size-32;
         }
 
         h1 {
             color: hsl(320, 43%, 99%);
         }
-        h2,
+        h3,
         p {
             color: hsl(320, 43%, 99%);
         }
@@ -63,7 +83,7 @@
     }
 
     .services {
-        background: hsl(320, 43%, 99%);
+        background-color: hsl(200, 7%, 92%);
         &__content {
             display: flex;
             justify-content: space-between;
@@ -113,6 +133,7 @@
     }
 
     .case-studies {
+        background-color: hsl(200, 7%, 92%);
         position: relative;
 
         .content {
@@ -133,7 +154,8 @@
     }
 
     .conculsion {
-        background-color: hsl(216, 4%, 26%);
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
 
         .content {
             display: flex;

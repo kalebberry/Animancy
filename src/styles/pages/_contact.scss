@@ -2,15 +2,63 @@
 
 .contact {
     .hero {
-        background-color: hsl(200, 7%, 92%);
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_6_pl5KrIjUA.png?updatedAt=1708435691450")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
 
         header {
             padding-block-start: $space-size-48;
         }
+
+        .socials {
+            .social-items {
+                display: flex;
+
+                & li {
+                    list-style-type: none;
+                }
+
+                & li a {
+                    color: var(--light-100);
+                    text-decoration: none;
+                    transition: 0.5s ease-in-out;
+                    font-size: clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem);
+
+                    &:hover {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
     }
 
     .reach-out {
-        background-color: hsl(216, 4%, 26%);
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
 
         h2 {
             color: hsl(200, 7%, 92%);

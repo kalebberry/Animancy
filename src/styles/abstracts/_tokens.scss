@@ -5,13 +5,13 @@
 // Color Tokens
 $active-theme: $light;
 
-$color-text-default: $color-dark-100;
+$color-text-default: rgb(24 24 27 / 1);
 $color-text-header: $color-dark-100;
 $color-text-subtitle: $color-dark-100;
 $color-text-card: $color-light-200;
 
 $color-background-default: hsl(320, 43%, 99%);
-$color-background-footer: hsl(200, 5%, 13%);
+$color-background-footer: rgb(24 24 27 / 1);
 $color-background-card: $color-accent-100;
 
 $button-color-accent: $color-accent-100;

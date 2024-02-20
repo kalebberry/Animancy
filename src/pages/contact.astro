@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar.astro';
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
 				<header>
-					<h1 class='text-step-6'>Contact <span class='pt-bold'>Us</span></h1>
+					<h1 class='text-step-6'>Let's Get to <span class='pt-bold'>Work.</span></h1>
 				</header>
 				<div class='summary'>
 					<p>
@@ -17,9 +17,25 @@ import Navbar from '../components/Navbar.astro';
 						your website to the next level.
 					</p>
 				</div>
-				<div class='flow-inline ctas'>
-					<button>Let's Begin</button>
-					<button class='button-outline'>Read Studies</button>
+				<div class='socials'>
+					<ul class='social-items flow-inline'>
+						<li>
+							<a href='https://twitter.com/AnimancyDesigns' target='_blank'>
+								<i class='fa-brands fa-l fa-square-x-twitter'></i>
+							</a>
+						</li>
+						<li>
+							<a href='https://github.com/Sorumeiji' target='_blank'>
+								<i class='fa-brands fa-l fa-square-github'></i>
+							</a>
+						</li>
+						<li>
+							<a href='https://codepen.io/Animancy' target='_blank'>
+								<i class='fa-brands fa-l fa-dev'></i>
+							</a>
+						</li>
+						<li><a href='#'><i class='fa-brands fa-l fa-discord'></i></a></li>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -34,7 +50,9 @@ import Navbar from '../components/Navbar.astro';
 					method='POST'
 				>
 					<header>
-						<h2>About You</h2>
+						<h2>
+							Contact <span class='pt-bold'>Form</span>
+						</h2>
 					</header>
 					<div class='form-group'>
 						<div class='input-group'>
@@ -62,49 +80,7 @@ import Navbar from '../components/Navbar.astro';
 								autocomplete='off'
 								type='url'
 								name='twitter'
-								placeholder='Twitter URL'
-								required
-							/>
-						</div>
-					</div>
-
-					<header>
-						<h2>Your Project</h2>
-					</header>
-
-					<div class='form-group'>
-						<div class='input-group'>
-							<input
-								autocomplete='off'
-								type='text'
-								name='start-month'
-								placeholder='Start Month'
-								required
-							/>
-						</div>
-
-						<div class='input-group'>
-							<input type='text' name='start-year' placeholder='Start Year' required />
-						</div>
-					</div>
-
-					<div class='form-group'>
-						<div class='input-group'>
-							<input
-								autocomplete='off'
-								type='text'
-								name='launch-month'
-								placeholder='Launch Month'
-								required
-							/>
-						</div>
-
-						<div class='input-group'>
-							<input
-								autocomplete='off'
-								type='text'
-								name='launch-year'
-								placeholder='Launch Year'
+								placeholder='Social Media'
 								required
 							/>
 						</div>

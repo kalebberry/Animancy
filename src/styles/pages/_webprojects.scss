@@ -2,7 +2,33 @@
 
 .web-projects {
     .hero {
-        background-color: hsl(200, 7%, 92%);
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
 
         .hero-content {
             display: flex;
@@ -27,6 +53,7 @@
     }
 
     .projects {
+        background-color: hsl(200, 7%, 92%);
         .preview {
             display: grid;
             grid-gap: 1rem;
