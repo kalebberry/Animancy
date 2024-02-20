@@ -5,7 +5,20 @@ h2,
 h3,
 h4,
 h5 {
+  line-height: 1.1;
   max-width: $header-max-text-width;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+p,
+li {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.text-step-6 {
+  font-size: $text-step-6;
 }
 
 h1 {
@@ -26,40 +39,4 @@ h4 {
 
 h5 {
   font-size: $header-text-size-5;
-}
-
-.header-w-line {
-  @media screen and (min-width: breakpoint(large)) {
-    position: relative;
-    max-width: 95%;
-
-    &::after {
-      content: "";
-      height: 1px;
-      width: 50%;
-      max-width: 6em;
-      background: $hr-line-color;
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-    }
-  }
-
-  @media screen and (min-width: breakpoint(x-large)) {
-    position: relative;
-    max-width: 100%;
-
-    &::after {
-      content: "";
-      height: 1px;
-      width: 50%;
-      max-width: 8em;
-      background: $hr-line-color;
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-    }
-  }
 }

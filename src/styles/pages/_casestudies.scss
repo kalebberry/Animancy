@@ -3,50 +3,53 @@
 .case-studies {
     .hero {
         background-color: hsl(200, 7%, 92%);
-        .hero-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding-block-start: $space-size-32;
 
-            video {
-                width: 45%;
-                border-radius: 0.3em;
+        .hero-content {
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
-            img {
-                max-width: 45%;
+            video {
+                width: auto;
                 border-radius: 0.3em;
-                border: none;
+            }
+        }
+
+        @media screen and (min-width: breakpoint(x-large)) {
+            .hero-content {
+                video {
+                    width: 640px;
+                    border-radius: 0.3em;
+                }
             }
         }
     }
 
     .work {
-        .work__item {
-            padding-block: $space-size-48;
+        background-color: hsl(216, 4%, 26%);
 
-            h2 {
-                line-height: 1;
+        .work__item {
+            --min: 40ch;
+            padding-block: $space-size-48;
+            align-items: center;
+
+            h2,
+            p {
+                color: hsl(200, 7%, 92%);
             }
 
             img {
                 border-radius: 0.3em;
-                width: 40%;
+                width: 300px;
                 border: none;
             }
 
             video {
-                width: 40%;
+                width: 640px;
                 border-radius: 0.3em;
             }
-
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            align-items: center;
-            justify-content: space-between;
         }
     }
 }

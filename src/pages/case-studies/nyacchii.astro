@@ -8,11 +8,11 @@ import Navbar from '../../components/Navbar.astro';
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
 				<Navbar />
-				<article class='hero-content'>
-					<div class='flow-large'>
+				<article class='smol-flexbox-grid flow-large hero-content padding-block-start-32'>
+					<div class='flow-large header'>
 						<header>
 							<p>Case Study - Art Portfolio</p>
-							<h2 class='pt-bold'>Nyacchii</h2>
+							<h1 class='pt-bold'>Nyacchii</h1>
 						</header>
 						<div class='summary'>
 							<p>
@@ -41,37 +41,39 @@ import Navbar from '../../components/Navbar.astro';
 
 		<section class='study'>
 			<div data-type='wide' class='container flow-large'>
-				<header class='study__header'>
+				<header class='study__header padding-block-end-32'>
+					<div>
+						<svg
+							class='mini-logo'
+							xmlns='http://www.w3.org/2000/svg'
+							width='41'
+							height='40'
+							fill='none'
+							viewBox='0 0 41 40'
+						>
+							<path
+								fill='#fff'
+								d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
+							>
+							</path>
+							<path
+								stroke='#fff'
+								d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
+							>
+							</path>
+						</svg>
+					</div>
 					<div>
 						<p>
 							The summary portion of the case study is the shortest, but it’s often the hardest to
-							write. It’s the essence of the project: only the most vital information belongs here.
+							write. It's the essence of the project: only the most vital information belongs here.
 						</p>
 					</div>
-					<svg
-						class='mini-logo'
-						xmlns='http://www.w3.org/2000/svg'
-						width='61'
-						height='60'
-						fill='none'
-						viewBox='0 0 41 40'
-					>
-						<path
-							fill='#fff'
-							d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
-						>
-						</path>
-						<path
-							stroke='#fff'
-							d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
-						>
-						</path>
-					</svg>
 				</header>
 
 				<article class='study__item'>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>The Mission</h2>
 							<p>
 								High-performing sales teams need more than training. They need a combination of
@@ -82,7 +84,7 @@ import Navbar from '../../components/Navbar.astro';
 						</header>
 					</div>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>Services</h2>
 							<ul>
 								<li>Brand Strategy Identity</li>
@@ -97,7 +99,7 @@ import Navbar from '../../components/Navbar.astro';
 
 				<article class='study__item'>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>The Outcome</h2>
 							<p>
 								We designed the SalesHood visual identity from the ground up, capturing the new
@@ -107,7 +109,7 @@ import Navbar from '../../components/Navbar.astro';
 						</header>
 					</div>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>Stack</h2>
 							<ul>
 								<li>HTML</li>
@@ -122,7 +124,7 @@ import Navbar from '../../components/Navbar.astro';
 
 				<article class='study__item'>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>The Impact</h2>
 							<p>
 								Since the website launch, bounce rates dropped, conversion rates have more than
@@ -132,7 +134,7 @@ import Navbar from '../../components/Navbar.astro';
 						</header>
 					</div>
 					<div>
-						<header>
+						<header class='flow'>
 							<h2>Press</h2>
 							<ul>
 								<li>Brand Strategy Identity</li>

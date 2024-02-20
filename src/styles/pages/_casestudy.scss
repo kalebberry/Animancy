@@ -4,28 +4,30 @@
     .hero {
         background-color: hsl(200, 7%, 92%);
 
-        header {
-            h2 {
-                line-height: 0.9;
+        .hero-content {
+            --min: 40ch;
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            video {
+                width: auto;
+                border-radius: 0.3em;
+            }
+            img {
+                width: 640px;
+                border-radius: 0.3em;
+                border: none;
             }
         }
 
-        .hero-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding-block-start: $space-size-32;
-
-            video {
-                width: 45%;
-                border-radius: 0.3em;
-            }
-
-            img {
-                max-width: 45%;
-                border-radius: 0.3em;
-                border: none;
+        @media screen and (min-width: breakpoint(x-large)) {
+            .hero-content {
+                img {
+                    width: 640px;
+                    border-radius: 0.3em;
+                }
             }
         }
     }
@@ -50,19 +52,24 @@
 
         .study__header {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            column-gap: 10rem;
+            row-gap: 5em;
 
-            div:first-child {
-                flex-basis: 80%;
+            & > * {
+                flex-wrap: 1 1 10ch;
             }
         }
 
         .study__item {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 1rem;
 
-            div:first-child {
-                flex-basis: 80%;
+            & > * {
+                flex: 1 1 50ch;
             }
 
             ul li {

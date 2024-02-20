@@ -3,6 +3,10 @@
 .contact {
     .hero {
         background-color: hsl(200, 7%, 92%);
+
+        header {
+            padding-block-start: $space-size-48;
+        }
     }
 
     .reach-out {

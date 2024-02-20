@@ -52,14 +52,15 @@ $font-text-weight-header: 400;
 $font-text-width-default: 60ch;
 
 $body-font-family: $ff-fira-sans;
-$body-font-size: $font-size-100;
+$body-font-size: $font-size-step-0;
 $body-line-height: 1.7;
 $body-font-weight: $font-fira-sans-light;
 
-$header-text-size-1: $font-size-500;
-$header-text-size-2: $font-size-400;
-$header-text-size-3: $font-size-300;
-$header-text-size-4: $font-size-200;
-$header-text-size-5: $font-size-100;
-$header-text-size-6: $font-size-0;
+$text-step-6: $font-size-step-6;
+$header-text-size-1: $font-size-step-5;
+$header-text-size-2: $font-size-step-4;
+$header-text-size-3: $font-size-step-3;
+$header-text-size-4: $font-size-step-2;
+$header-text-size-5: $font-size-step-1;
+
 $header-max-text-width: 25ch;

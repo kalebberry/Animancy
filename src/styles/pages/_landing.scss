@@ -8,7 +8,6 @@
             h1 {
                 line-height: 1;
             }
-            padding-block-start: $space-size-48;
         }
 
         &-summary {
@@ -40,18 +39,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            // margin-block-end: $space-size-32;
         }
 
-        h2 {
+        h1 {
             color: hsl(320, 43%, 99%);
         }
-        h3,
+        h2,
         p {
             color: hsl(320, 43%, 99%);
         }
 
         .process__content {
-            --min: 40ch;
+            --min: 50ch;
             display: flex;
             flex-wrap: wrap;
             gap: $space-size-32;
@@ -129,7 +129,6 @@
         video {
             border-radius: 0.3em;
             width: 640px;
-            height: 360px;
         }
     }
 
@@ -142,17 +141,14 @@
             justify-content: space-between;
             align-items: center;
         }
-        h2 {
-            color: hsl(320, 43%, 99%);
-        }
+        h1,
         p {
-            color: #bbbab5;
+            color: hsl(320, 43%, 99%);
         }
 
         video {
             border-radius: 0.3em;
             width: 640px;
-            height: 360px;
         }
     }
 }

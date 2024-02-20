@@ -9,25 +9,41 @@ $font-fira-sans-light: 300;
 
 $font-sizes: (
   "small": (
-    100: clamp(1.25rem, 1.1633rem + 0.4337vw, 1.4994rem),
-    200: clamp(1.5625rem, 1.4108rem + 0.7587vw, 1.9988rem),
-    300: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem),
-    400: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem),
-    500: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem)
+    step--1: clamp(0.8rem, 0.7847rem + 0.0765vi, 0.844rem),
+    step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem),
+    step-1: clamp(1.25rem, 1.1632rem + 0.4341vi, 1.4996rem),
+    step-2: clamp(1.5625rem, 1.4107rem + 0.7591vi, 1.999rem),
+    step-3: clamp(1.9531rem, 1.7056rem + 1.2375vi, 2.6647rem),
+    step-4: clamp(2.4414rem, 2.0551rem + 1.9315vi, 3.552rem),
+    step-5: clamp(3.0518rem, 2.4663rem + 2.9271vi, 4.7348rem),
+    step-6: clamp(3.8147rem, 2.9462rem + 4.3423vi, 6.3115rem)
+  ),
+  "medium": (
+    step--1: clamp(0.8rem, 0.7847rem + 0.0765vi, 0.844rem),
+    step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem),
+    step-1: clamp(1.25rem, 1.1632rem + 0.4341vi, 1.4996rem),
+    step-2: clamp(1.5625rem, 1.4107rem + 0.7591vi, 1.999rem),
+    step-3: clamp(1.9531rem, 1.7056rem + 1.2375vi, 2.6647rem),
+    step-4: clamp(2.4414rem, 2.0551rem + 1.9315vi, 3.552rem),
+    step-5: clamp(3.0518rem, 2.4663rem + 2.9271vi, 4.7348rem),
+    step-6: clamp(3.8147rem, 2.9462rem + 4.3423vi, 6.3115rem)
   ),
   "large": (
-    0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem),
-    100: clamp(1.25rem, 1.1633rem + 0.4337vw, 1.4994rem),
-    200: clamp(1.5625rem, 1.4108rem + 0.7587vw, 1.9988rem),
-    300: clamp(1.9531rem, 1.7057rem + 1.237vw, 2.6644rem),
-    400: clamp(3.0519rem, 2.4664rem + 2.9272vw, 4.735rem),
-    500: clamp(4.7681rem, 3.5003rem + 6.3391vw, 8.4131rem)
+    step--1: clamp(0.8rem, 0.7847rem + 0.0765vi, 0.844rem),
+    step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem),
+    step-1: clamp(1.25rem, 1.1632rem + 0.4341vi, 1.4996rem),
+    step-2: clamp(1.5625rem, 1.4107rem + 0.7591vi, 1.999rem),
+    step-3: clamp(1.9531rem, 1.7056rem + 1.2375vi, 2.6647rem),
+    step-4: clamp(2.4414rem, 2.0551rem + 1.9315vi, 3.552rem),
+    step-5: clamp(3.0518rem, 2.4663rem + 2.9271vi, 4.7348rem),
+    step-6: clamp(3.8147rem, 2.9462rem + 4.3423vi, 6.3115rem)
   )
 );
 
-$font-size-0: var(--fs-0);
-$font-size-100: var(--fs-100);
-$font-size-200: var(--fs-200);
-$font-size-300: var(--fs-300);
-$font-size-400: var(--fs-400);
-$font-size-500: var(--fs-500);
+$font-size-step-0: var(--fs-step-0);
+$font-size-step-1: var(--fs-step-1);
+$font-size-step-2: var(--fs-step-2);
+$font-size-step-3: var(--fs-step-3);
+$font-size-step-4: var(--fs-step-4);
+$font-size-step-5: var(--fs-step-5);
+$font-size-step-6: var(--fs-step-6);
