@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar.astro';
 				<Navbar />
 				<header class='padding-block-start-32'>
 					<h1 class='text-step-6'>Studio <span class='pt-bold'>Eien</span></h1>
-					<p>Web Design Angency</p>
+					<p>By Kaleb Berry</p>
 				</header>
 				<article class='hero-summary'>
 					<p>
@@ -21,8 +21,8 @@ import Navbar from '../components/Navbar.astro';
 				</article>
 				<article class='flow-large hero-content'>
 					<div class='flow-inline ctas'>
-						<button>Let's Begin</button>
-						<button class='button-outline-white'>Read Studies</button>
+						<a href='#process' type='button'>Let's Begin</a>
+						<a href='/case-studies' type='button-outline-white'>Read Studies</a>
 					</div>
 					<div class='flow definition'>
 						<p>永遠 Eternity</p>
@@ -35,7 +35,7 @@ import Navbar from '../components/Navbar.astro';
 			</div>
 		</section>
 
-		<section class='process'>
+		<section class='process' id='process'>
 			<div data-type='wide' class='container'>
 				<header class='padding-block-end-32'>
 					<h1>The <span class='pt-bold'>Foundation.</span></h1>
@@ -43,18 +43,20 @@ import Navbar from '../components/Navbar.astro';
 						<svg
 							class='mini-logo'
 							xmlns='http://www.w3.org/2000/svg'
-							width='61'
-							height='60'
+							width='41'
+							height='40'
 							fill='none'
 							viewBox='0 0 41 40'
 						>
 							<path
 								fill='#fff'
+								fill-opacity='0.5'
 								d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
 							>
 							</path>
 							<path
 								stroke='#fff'
+								stroke-opacity='0.5'
 								d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
 							>
 							</path>
@@ -112,18 +114,20 @@ import Navbar from '../components/Navbar.astro';
 							<svg
 								class='mini-logo'
 								xmlns='http://www.w3.org/2000/svg'
-								width='51'
-								height='50'
+								width='41'
+								height='40'
 								fill='none'
 								viewBox='0 0 41 40'
 							>
 								<path
 									fill='#000'
+									fill-opacity='0.5'
 									d='M20.32 32.384 8.224 20.312 20.32 8.216l12.072 12.096L20.32 32.384Zm0-2.184 9.888-9.888L20.32 10.4l-9.888 9.912L20.32 30.2Zm0-4.872-5.04-5.016 5.04-5.04 5.04 5.04-5.04 5.016Z'
 								>
 								</path>
 								<path
 									stroke='#000'
+									stroke-opacity='0.5'
 									d='M37 .5H4A3.5 3.5 0 0 0 .5 4v32A3.5 3.5 0 0 0 4 39.5h33a3.5 3.5 0 0 0 3.5-3.5V4A3.5 3.5 0 0 0 37 .5Z'
 								>
 								</path>
@@ -203,7 +207,7 @@ import Navbar from '../components/Navbar.astro';
 						</p>
 
 						<div>
-							<button>Explore Client Impacts</button>
+							<a href='/case-studies' type='button'>Explore Client Impacts</a>
 						</div>
 					</div>
 
@@ -234,7 +238,7 @@ import Navbar from '../components/Navbar.astro';
 							needs.
 						</p>
 						<div>
-							<button class='button-outline-white'>Create Your Journey</button>
+							<a href='/contact' type='button-outline-white'>Create Your Journey</a>
 						</div>
 					</div>
 				</article>
