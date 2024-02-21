@@ -2,7 +2,33 @@
 
 .case-study {
     .hero {
-        background-color: hsl(200, 7%, 92%);
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/manga_beautiful_7qMh10Vza.png?updatedAt=1708505549765")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
 
         .hero-content {
             --min: 40ch;
@@ -12,7 +38,7 @@
                 justify-content: center;
             }
             video {
-                width: auto;
+                width: 640px;
                 border-radius: 0.3em;
             }
             img {

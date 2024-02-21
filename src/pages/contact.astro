@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 ---
 
-<Layout title='Contact Us'>
+<Layout title='Contact Us' description='Contact page for Studio Eien, reach out to us'>
 	<main class='contact'>
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
@@ -21,20 +21,28 @@ import Navbar from '../components/Navbar.astro';
 					<ul class='social-items flow-inline'>
 						<li>
 							<a href='https://twitter.com/AnimancyDesigns' target='_blank'>
-								<i class='fa-brands fa-l fa-square-x-twitter'></i>
+								<i aria-hidden='true' class='fa-brands fa-l fa-square-x-twitter'></i>
+								<span class='fa-sr-only'>Studio Eien's X account</span>
 							</a>
 						</li>
 						<li>
 							<a href='https://github.com/Sorumeiji' target='_blank'>
-								<i class='fa-brands fa-l fa-square-github'></i>
+								<i aria-hidden='true' class='fa-brands fa-l fa-square-github'></i>
+								<span class='fa-sr-only'>Studio Eien's github account</span>
 							</a>
 						</li>
 						<li>
 							<a href='https://codepen.io/Animancy' target='_blank'>
-								<i class='fa-brands fa-l fa-dev'></i>
+								<i aria-hidden='true' class='fa-brands fa-l fa-codepen'></i>
+								<span class='fa-sr-only'>Studio Eien's codepen account</span>
 							</a>
 						</li>
-						<li><a href='#'><i class='fa-brands fa-l fa-discord'></i></a></li>
+						<li>
+							<a href='https://discord.gg/CP4bmCpqzZ' target='_blank'>
+								<i aria-hidden='true' class='fa-brands fa-l fa-discord'></i>
+								<span class='fa-sr-only'>Studio Eien's discord</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -54,6 +62,7 @@ import Navbar from '../components/Navbar.astro';
 							Contact <span class='pt-bold'>Form</span>
 						</h2>
 					</header>
+
 					<div class='form-group'>
 						<div class='input-group'>
 							<input autocomplete='off' type='text' name='name' placeholder='Your Name' required />
@@ -93,7 +102,8 @@ import Navbar from '../components/Navbar.astro';
 							name='message'
 							rows='10'
 							required
-						></textarea>
+						>
+						</textarea>
 					</div>
 
 					<input type='hidden' autocomplete='off' name='_captcha' value='false' />

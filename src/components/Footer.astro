@@ -10,7 +10,7 @@
 			<div class='termsandservices'>
 				<ul class='termsandservices-items'>
 					<li><a href='/case-studies'>Case Studies</a></li>
-					<li><a target='_blank' href='https://dev.to/animancy'>Articles</a></li>
+					<li><a target='_blank' href='https://medium.com/@StuidoEien'>Articles</a></li>
 					<li><a href='/contact'>Contact</a></li>
 				</ul>
 			</div>
@@ -19,20 +19,28 @@
 				<ul class='socials-items'>
 					<li>
 						<a href='https://twitter.com/AnimancyDesigns' target='_blank'>
-							<i class='fa-brands fa-xl fa-square-x-twitter'></i>
+							<i aria-hidden='true' class='fa-brands fa-xl fa-square-x-twitter'></i>
+							<span class='fa-sr-only'>Studio Eien's X account</span>
 						</a>
 					</li>
 					<li>
 						<a href='https://github.com/Sorumeiji' target='_blank'>
-							<i class='fa-brands fa-xl fa-square-github'></i>
+							<i aria-hidden='true' class='fa-brands fa-xl fa-square-github'></i>
+							<span class='fa-sr-only'>Studio Eien's github account</span>
 						</a>
 					</li>
 					<li>
 						<a href='https://codepen.io/Animancy' target='_blank'>
-							<i class='fa-brands fa-xl fa-dev'></i>
+							<i aria-hidden='true' class='fa-brands fa-xl fa-codepen'></i>
+							<span class='fa-sr-only'>Studio Eien's codepen account</span>
 						</a>
 					</li>
-					<li><a href='#'><i class='fa-brands fa-xl fa-discord'></i></a></li>
+					<li>
+						<a href='https://discord.gg/CP4bmCpqzZ' target='_blank'>
+							<i aria-hidden='true' class='fa-brands fa-xl fa-discord'></i>
+							<span class='fa-sr-only'>Studio Eien's discord</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</article>
@@ -56,6 +64,12 @@
 		max-width: 50px;
 		width: 100%;
 		border-radius: 5em;
+		filter: grayscale(100%);
+		transition: filter 0.7s;
+
+		&:hover {
+			filter: grayscale(0%);
+		}
 	}
 
 	hr {
@@ -86,7 +100,7 @@
 				font-size: clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem);
 
 				&:hover {
-					color: #c4a174;
+					opacity: 0.5;
 				}
 			}
 		}

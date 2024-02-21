@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 ---
 
-<Layout title='Case Study - Nyacchii'>
+<Layout title='Case Study - Nyacchii' description='Studio Eien case study page for Nyacchii'>
 	<main class='case-study'>
 		<section class='hero'>
 			<div data-type='wide' class='container flow-large'>
@@ -22,11 +22,18 @@ import Navbar from '../../components/Navbar.astro';
 						</div>
 
 						<article class='flow-inline ctas'>
-							<button>Read Study</button>
-							<button class='button-outline'>View Project</button>
+							<a href='#study' type='button'>Read Study</a>
+							<a href='https://www.nyacchii.com/' target='_blank' type='button-outline-white'>
+								View Project
+							</a>
 						</article>
 					</div>
-					<img src='https://picsum.photos/id/60/700/400' />
+					<video class='video' autoplay='true' muted loop='true'>
+						<source
+							src='https://ik.imagekit.io/sorudev/Studio%20Eien/Videos/nyacchii_demo_8SF1YEFSh.mp4'
+							type='video/mp4'
+						/>
+					</video>
 				</article>
 			</div>
 		</section>
@@ -39,7 +46,7 @@ import Navbar from '../../components/Navbar.astro';
 			</div>
 		</section>
 
-		<section class='study'>
+		<section class='study' id='study'>
 			<div data-type='wide' class='container flow-large'>
 				<header class='study__header padding-block-end-32'>
 					<div>
