@@ -1,0 +1,129 @@
+@use "../abstracts" as *;
+
+.personal-portfolio {
+    .hero {
+        background: url("https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_7_t_qgqY_Em.png?updatedAt=1709008986039")
+            no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: 0;
+            opacity: 0.9;
+            position: absolute;
+            inset: 0;
+            --opacity: 1;
+            background-color: rgb(24 24 27 / var(--opacity));
+        }
+
+        .container {
+            z-index: 999;
+            position: relative;
+        }
+
+        h1,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
+
+        .hero-content {
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            video {
+                width: auto;
+                border-radius: 0.3em;
+            }
+        }
+
+        @media screen and (min-width: breakpoint(x-large)) {
+            .hero-content {
+                video {
+                    width: 640px;
+                    border-radius: 0.3em;
+                }
+            }
+        }
+    }
+
+    .experience {
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
+
+        h1,
+        h3,
+        h4,
+        p {
+            color: hsl(200, 7%, 92%);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .experience-cards {
+            display: flex;
+
+            .experience-card {
+                --min: 40ch;
+                border: 1px solid;
+                border-radius: 0.5em;
+                border-color: rgb(48 48 54 / 1);
+                padding: 1em;
+            }
+        }
+
+        .stack {
+            img {
+                height: 32px;
+            }
+
+            svg {
+                height: 32px;
+                padding: 0.2em;
+            }
+        }
+    }
+
+    .work {
+        --opacity: 1;
+        background-color: rgb(24 24 27 / var(--opacity));
+
+        h1 {
+            color: hsl(200, 7%, 92%);
+        }
+
+        .work__item {
+            --min: 40ch;
+            padding-block: $space-size-48;
+            align-items: center;
+            padding-inline: 3rem;
+            border-radius: 0.3em;
+            // background: #1c1c1f;
+
+            h2,
+            p {
+                color: hsl(200, 7%, 92%);
+            }
+
+            img {
+                border-radius: 0.3em;
+                width: 300px;
+                border: none;
+            }
+
+            video {
+                width: 640px;
+                border-radius: 0.3em;
+            }
+        }
+    }
+}
