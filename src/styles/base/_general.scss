@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 body {
+  --swup-fade-theme-color: #2d2e82;
   background-color: $body-background-color;
   color: $body-text-color;
   font-family: $body-font-family;
@@ -35,6 +36,7 @@ a {
 
 a[class="event-link"] {
   font-weight: bold;
+  color: white;
   text-decoration-line: underline;
   padding: 0 0.25rem;
   margin: 0 -0.25rem;
