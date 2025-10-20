@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flexbox Grid Demo · SCSS-Powered Layout</title>
+
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="/src/styles/grid-demo.css" />
+  </head>
+  <body>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark and light theme">
+      <span id="themeIcon" class="icon" aria-hidden="true">🌙</span>
+      <span id="themeText">Dark</span>
+    </button>
+
+    <div class="wrap">
+      <header>
+        <h1>Flexbox Grid Demo</h1>
+        <p class="lead">
+          A modern, media-query-free grid built with Flexbox, <code>gap</code>, and a scalable SCSS loop. Great for 1-D wrapping layouts.
+        </p>
+      </header>
+
+      <!-- Controls -->
+      <section class="panel" aria-labelledby="controls-title">
+        <h2 id="controls-title" style="margin:0 0 .25rem; font-size:1.1rem">Playground Controls</h2>
+        <div class="controls">
+          <div class="control">
+            <label for="gutter">Gutter (gap)</label>
+            <input id="gutter" type="range" min="0" max="40" step="2" value="16" />
+            <div class="hint">
+              <code>gap</code> in px (current: <span id="gutterOut">16</span>px)
+            </div>
+          </div>
+          <div class="control">
+            <label for="minsize">Min item size</label>
+            <input id="minsize" type="range" min="140" max="420" step="10" value="260" />
+            <div class="hint">
+              <code>min-width</code> in px (current: <span id="minOut">260</span>px)
+            </div>
+          </div>
+          <div class="control">
+            <label for="basis">Flex Basis</label>
+            <input id="basis" type="range" min="10" max="100" step="1" value="30" />
+            <div class="hint">Ideal width % (current: <span id="basisOut">30</span>%)</div>
+          </div>
+          <div class="control">
+            <label for="containerWidth">Container width</label>
+            <input id="containerWidth" type="range" min="400" max="1400" step="10" value="1400" />
+            <div class="hint">Resize container (<span id="widthOut">1400</span>px)</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="demo-container" style="max-width: 1400px;">
+        <main class="flow-large">
+          <!-- 1. Flexbox Playground -->
+          <section class="flow-large">
+            <h2 class="section-title">1. Flexbox Playground</h2>
+            <div id="playground" class="flex-grid flex-grid--playground" style="--gutter:1rem; --min-width:16rem; --flex-basis:30%">
+              <!-- 12 demo cards with varied content length -->
+              <article class="card"><h3>Card 1</h3><p>Short and sweet.</p></article>
+              <article class="card">
+                <h3>Card 2</h3><p>Medium copy length to show equal height not required.</p>
+              </article>
+              <article class="card">
+                <h3>Card 3</h3><p>Sometimes a card has a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis.</p>
+              </article>
+              <article class="card"><h3>Card 4</h3><p>Compact.</p></article>
+              <article class="card">
+                <h3>Card 5</h3><p>Another medium block of text to add variety and demonstrate wrapping.</p>
+              </article>
+              <article class="card"><h3>Card 6</h3><p>Short.</p></article>
+              <article class="card">
+                <h3>Card 7</h3><p>With a little more content to force different heights so you can see the flow.</p>
+              </article>
+              <article class="card"><h3>Card 8</h3><p>Short.</p></article>
+              <article class="card"><h3>Card 9</h3><p>Short.</p></article>
+              <article class="card"><h3>Card 10</h3><p>Short.</p></article>
+              <article class="card"><h3>Card 11</h3><p>Medium.</p></article>
+              <article class="card">
+                <h3>Card 12</h3><p>Longer content helps visualize how Flexbox handles wrapping and growing items.</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- 2. Column Count Presets -->
+          <section class="flow-large">
+            <header>
+              <h2 class="section-title">2. Column Count Presets</h2>
+              <p class="lead" style="margin-block-start:0">
+                Use <code>data-cols</code> for quick, breakpoint-free columns that adapt to space.
+              </p>
+            </header>
+
+            <section class="flow-large">
+              <h3 style="margin:.5rem 0 0">2 columns</h3>
+              <div class="flex-grid" data-cols="2">
+                <article class="card"><h3>A</h3><p>Two-up layout.</p></article>
+                <article class="card"><h3>B</h3><p>Scales without media queries.</p></article>
+                <article class="card"><h3>C</h3><p>Third card wraps neatly.</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <header><h3>3 columns</h3></header>
+              <div class="flex-grid" data-cols="3">
+                <article class="card"><h3>1</h3><p>Three-up layout.</p></article>
+                <article class="card"><h3>2</h3><p>Min size prevents squish.</p></article>
+                <article class="card"><h3>3</h3><p>Items grow to fill space.</p></article>
+                <article class="card"><h3>4</h3><p>Wraps as needed.</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <header><h3>4–6 columns</h3></header>
+              <div class="flex-grid" data-cols="4">
+                <article class="card"><h3>One</h3><p>Four-up baseline.</p></article>
+                <article class="card"><h3>Two</h3><p>…</p></article>
+                <article class="card"><h3>Three</h3><p>…</p></article>
+                <article class="card"><h3>Four</h3><p>…</p></article>
+                <article class="card"><h3>Five</h3><p>Wraps cleanly.</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <div class="flex-grid" data-cols="5">
+                <article class="card"><h3>1</h3><p>Five-up.</p></article>
+                <article class="card"><h3>2</h3><p>…</p></article>
+                <article class="card"><h3>3</h3><p>…</p></article>
+                <article class="card"><h3>4</h3><p>…</p></article>
+                <article class="card"><h3>5</h3><p>…</p></article>
+                <article class="card"><h3>6</h3><p>Wraps.</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <div class="flex-grid" data-cols="6">
+                <article class="card"><h3>I</h3><p>Six-up.</p></article>
+                <article class="card"><h3>II</h3><p>…</p></article>
+                <article class="card"><h3>III</h3><p>…</p></article>
+                <article class="card"><h3>IV</h3><p>…</p></article>
+                <article class="card"><h3>V</h3><p>…</p></article>
+                <article class="card"><h3>VI</h3><p>…</p></article>
+                <article class="card"><h3>VII</h3><p>Wraps.</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <h3>7–12 columns</h3>
+              <div class="flex-grid" data-cols="7">
+                <article class="card"><h3>1</h3><p>7-up</p></article>
+                <article class="card"><h3>2</h3><p>…</p></article>
+                <article class="card"><h3>3</h3><p>…</p></article>
+                <article class="card"><h3>4</h3><p>…</p></article>
+                <article class="card"><h3>5</h3><p>…</p></article>
+                <article class="card"><h3>6</h3><p>…</p></article>
+                <article class="card"><h3>7</h3><p>…</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <div class="flex-grid" data-cols="8">
+                <article class="card"><h3>1</h3><p>8-up</p></article>
+                <article class="card"><h3>2</h3><p>…</p></article>
+                <article class="card"><h3>3</h3><p>…</p></article>
+                <article class="card"><h3>4</h3><p>…</p></article>
+                <article class="card"><h3>5</h3><p>…</p></article>
+                <article class="card"><h3>6</h3><p>…</p></article>
+                <article class="card"><h3>7</h3><p>…</p></article>
+                <article class="card"><h3>8</h3><p>…</p></article>
+              </div>
+            </section>
+
+            <section class="flow-large">
+              <div class="flex-grid" data-cols="12">
+                <article class="card"><h3>1</h3><p>12-up</p></article>
+                <article class="card"><h3>2</h3><p>…</p></article>
+                <article class="card"><h3>3</h3><p>…</p></article>
+                <article class="card"><h3>4</h3><p>…</p></article>
+                <article class="card"><h3>5</h3><p>…</p></article>
+                <article class="card"><h3>6</h3><p>…</p></article>
+                <article class="card"><h3>7</h3><p>…</p></article>
+                <article class="card"><h3>8</h3><p>…</p></article>
+                <article class="card"><h3>9</h3><p>…</p></article>
+                <article class="card"><h3>10</h3><p>…</p></article>
+                <article class="card"><h3>11</h3><p>…</p></article>
+                <article class="card"><h3>12</h3><p>…</p></article>
+              </div>
+            </section>
+          </section>
+
+          <!-- 3. Masonry (CSS Columns) -->
+          <section class="flow-large">
+            <h2 class="section-title">3. Masonry Layout (CSS Columns)</h2>
+            <p class="lead" style="margin-block-start:0">
+              A true masonry effect using <code>column-count</code>. Item order flows vertically down each column.
+            </p>
+
+            <div class="masonry__container" style="max-width: 1400px;">
+              <div class="masonry-grid" style="--masonry-cols: 4; --gutter: 1rem;">
+                <article class="card"><h3>1</h3><p>This is the first item.</p></article>
+                <article class="card"><h3>2</h3><p>A slightly taller item…</p></article>
+                <article class="card"><h3>3</h3><p>Short.</p></article>
+                <article class="card"><h3>4</h3><p>Another item.</p></article>
+                <article class="card"><h3>5</h3><p>This one is also a bit longer…</p></article>
+                <article class="card"><h3>6</h3><p>Item six.</p></article>
+                <article class="card"><h3>7</h3><p>A very short one.</p></article>
+                <article class="card">
+                  <h3>8</h3><p>The final item in this demonstration.</p>
+                </article>
+                <article class="card"><h3>9</h3><p>Item nine.</p></article>
+                <article class="card"><h3>10</h3><p>Item ten.</p></article>
+                <article class="card">
+                  <h3>11</h3><p>A very tall item to show off the effect…</p>
+                </article>
+                <article class="card"><h3>12</h3><p>Last one.</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="flow-large">
+            <footer style="margin-block: var(--space-xl); color: var(--muted);">Built with Flexbox, custom properties, and a scalable SCSS loop.</footer>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // --- Theme toggle
+      (function () {
+        const root = document.documentElement;
+        const btn = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+        const text = document.getElementById("themeText");
+
+        const getOSPref = () => (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        const saved = localStorage.getItem("theme");
+        const initial = saved || getOSPref();
+        root.setAttribute("data-theme", initial);
+
+        function render(theme) {
+          const isLight = theme === "light";
+          btn.setAttribute("aria-pressed", String(isLight));
+          icon.textContent = isLight ? "☀️" : "🌙";
+          text.textContent = isLight ? "Light" : "Dark";
+        }
+
+        render(initial);
+
+        btn.addEventListener("click", () => {
+          const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+          const next = current === "light" ? "dark" : "light";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          render(next);
+        });
+
+        if (!saved && window.matchMedia) {
+          window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+            const theme = e.matches ? "light" : "dark";
+            root.setAttribute("data-theme", theme);
+            render(theme);
+          });
+        }
+      })();
+
+      // --- Playground controls
+      const demoContainer = document.querySelector(".demo-container");
+      const playground = document.getElementById("playground");
+
+      const gutter = document.getElementById("gutter");
+      const minsize = document.getElementById("minsize");
+      const basis = document.getElementById("basis");
+      const gutterOut = document.getElementById("gutterOut");
+      const minOut = document.getElementById("minOut");
+      const basisOut = document.getElementById("basisOut");
+
+      gutter.addEventListener("input", (e) => {
+        const px = `${e.target.value}px`;
+        playground.style.setProperty("--gutter", px);
+        gutterOut.textContent = e.target.value;
+      });
+      minsize.addEventListener("input", (e) => {
+        const px = `${e.target.value}px`;
+        playground.style.setProperty("--min-width", px);
+        minOut.textContent = e.target.value;
+      });
+      basis.addEventListener("input", (e) => {
+        const percent = `${e.target.value}%`;
+        playground.style.setProperty("--flex-basis", percent);
+        basisOut.textContent = e.target.value;
+      });
+
+      // --- Container width controller (for the entire demo area)
+      const containerWidth = document.getElementById("containerWidth");
+      const widthOut = document.getElementById("widthOut");
+      containerWidth.addEventListener("input", (e) => {
+        const px = `${e.target.value}px`;
+        demoContainer.style.maxWidth = px;
+        widthOut.textContent = e.target.value;
+      });
+    </script>
+  </body>
+</html>

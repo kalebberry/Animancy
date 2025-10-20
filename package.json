@@ -1,42 +1,24 @@
 {
-  "name": "animancydesigns",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sorumeiji/AnimancyDesigns.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sorumeiji/AnimancyDesigns/issues"
-  },
-  "homepage": "https://github.com/Sorumeiji/AnimancyDesigns#readme",
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/react": "^4.3.0",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.10",
-    "astro": "^5.9.3",
-    "gsap": "^3.13.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.1",
-    "sass": "^1.89.2",
-    "stylelint": "^14.16.0",
-    "stylelint-config-recommended-scss": "^8.0.0",
-    "stylelint-config-standard": "^29.0.0"
-  }
+	"name": "studio-eien-design-system",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "npm run tokens && astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"tokens": "node src/convert-tokens.js",
+		"scss": "sass src/styles/main.scss src/styles/main.css",
+		"scss:watch": "sass --watch src/styles/main.scss src/styles/main.css"
+	},
+	"dependencies": {
+		"@astrojs/vue": "^5.1.0",
+		"astro": "^5.13.2",
+		"gsap": "^3.13.0",
+		"pinia": "^3.0.3",
+		"vue": "^3.5.17"
+	},
+	"devDependencies": {
+		"sass": "^1.89.2"
+	}
 }

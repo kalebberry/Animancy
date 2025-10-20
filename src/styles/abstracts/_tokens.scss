@@ -1,45 +1,21 @@
+@use "sass:map";
 @use "colors" as *;
 @use "typography" as *;
-@use "sizes" as *;
+@use "font-sizes" as *;
+@use "space-sizes" as *;
 
-// Color Tokens
+/* Themne */
 $active-theme: $light;
 
-$color-text-default: rgb(24 24 27 / 1);
-$color-text-header: $color-dark-100;
-$color-text-subtitle: $color-dark-100;
-$color-text-card: $color-light-200;
+/* Layout Tokens */
 
-$color-background-default: hsl(320, 43%, 99%);
-$color-background-footer: rgb(24 24 27 / 1);
-$color-background-card: $color-accent-100;
-
-$button-color-accent: $color-accent-100;
-$button-color-primary: $color-primary-100;
-$button-color-accent-hover: $color-accent-300;
-$button-color-accent-primary: $color-primary-300;
-
-$input-color: $color-primary-100;
-$input-focus-color: $color-accent-100;
-$input-user-input-color: $color-accent-300;
-
-$link-text-color: $color-dark-100;
-
-$body-text-color: $color-text-default;
-$body-background-color: $color-background-default;
-
-$link-color-default: $color-dark-100;
-
-$hr-line-color: $color-light-200;
-
-// Layout Tokens
-$container-min-margin-inline: $space-size-8;
+$container-min-margin-inline: map.get($space, 8);
 $container-max-width-narrow: 45rem;
 $container-max-width: 65rem;
 $container-max-width-wide: 100rem;
 
-$section-padding-block: $space-size-48;
-$gap-width-default: $space-size-16;
+$section-padding-block: map.get($space, 48);
+$gap-width-default: map.get($space, 16);
 
 $button-border-radius: 0.3em;
 $button-padding-inline: 1.875rem;
@@ -52,15 +28,7 @@ $font-text-weight-header: 400;
 $font-text-width-default: 60ch;
 
 $body-font-family: $ff-fira-sans;
-$body-font-size: $font-size-step-0;
 $body-line-height: 1.7;
 $body-font-weight: $font-fira-sans-light;
-
-$text-step-6: $font-size-step-6;
-$header-text-size-1: $font-size-step-5;
-$header-text-size-2: $font-size-step-4;
-$header-text-size-3: $font-size-step-3;
-$header-text-size-4: $font-size-step-2;
-$header-text-size-5: $font-size-step-1;
 
 $header-max-text-width: 25ch;

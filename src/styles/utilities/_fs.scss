@@ -1,0 +1,14 @@
+@use "../abstracts/typography" as tt;
+
+/* Flat utilities: .fs-step-0, .fs-step-1, … */
+@include tt.fs-emit-classes("fs");
+
+/* Optional responsive: .sm:fs-step-2, .md:fs-step-4, … */
+@include tt.fs-emit-responsive-classes(
+    "fs",
+    (
+        sm: 40rem,
+        md: 64rem,
+        lg: 80rem
+    )
+);

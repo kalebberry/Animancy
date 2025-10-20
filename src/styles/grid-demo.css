@@ -1,0 +1,205 @@
+/* Global box-sizing so padding/border don't break track math */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* --- Base tokens ----------------------------------------------------- */
+:root {
+	--bg: #0b0c0f;
+	--panel: #0f1117;
+	--text: #e6e6e6;
+	--muted: #a3a3a3;
+	--brand: #7c8aff;
+
+	--space-2xs: 0.25rem;
+	--space-xs: 0.5rem;
+	--space-s: 0.75rem;
+	--space-m: 1rem;
+	--space-l: 1.5rem;
+	--space-xl: 2rem;
+
+	--radius: 14px;
+	--shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+	/* demo scaffolding */
+	--wrap-max: 1400px;
+	--content-max: 1200px;
+}
+
+/* Explicit theme tokens (override defaults when set) */
+:root[data-theme='dark'] {
+	--bg: #0b0c0f;
+	--panel: #0f1117;
+	--text: #e6e6e6;
+	--muted: #a3a3a3;
+	--brand: #7c8aff;
+}
+:root[data-theme='light'] {
+	--bg: #f7f7fc;
+	--panel: #fff;
+	--text: #121212;
+	--muted: #5a5a5a;
+	--brand: #3b63ff;
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+		'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+	color: var(--text);
+	background: var(--bg);
+}
+
+/* --- Page chrome ----------------------------------------------------- */
+.wrap {
+	max-width: var(--wrap-max);
+	margin-inline: auto;
+	padding: var(--space-xl) var(--space-l);
+}
+
+/* container query hooks for the new grid system */
+.grid-container,
+.sidebar-grid__container,
+.masonry__container,
+.demo-container {
+	container-type: inline-size;
+}
+.demo-container {
+	max-width: var(--content-max);
+	margin-inline: auto;
+}
+
+/* Low-specificity header block */
+:where(header) {
+	display: grid;
+	gap: var(--space-m);
+	margin-block-end: var(--space-xl);
+}
+h1 {
+	margin: 0;
+	letter-spacing: 0.2px;
+}
+.lead {
+	color: var(--muted);
+	max-width: 70ch;
+}
+
+/* Section rhythm */
+.flow-large > * + * {
+	margin-block-start: var(--space-l);
+}
+.section-title {
+	margin: 0;
+}
+
+/* --- Control panel --------------------------------------------------- */
+.panel {
+	background: var(--panel);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	padding: var(--space-l);
+	display: grid;
+	gap: var(--space-m);
+	margin-block: var(--space-l);
+	border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+}
+.controls {
+	display: grid;
+	gap: var(--space-m);
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.control {
+	display: grid;
+	gap: 0.35rem;
+}
+.control label {
+	font-weight: 600;
+}
+.control .hint {
+	color: var(--muted);
+}
+input[type='range'] {
+	inline-size: 100%;
+}
+select,
+input[type='range'] {
+	accent-color: var(--brand);
+}
+
+/* --- Cards ----------------------------------------------------------- */
+.card {
+	background: color-mix(in oklab, var(--panel) 94%, var(--brand) 6%);
+	border: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+	border-radius: var(--radius);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+	padding: var(--space-m);
+	display: grid;
+	gap: 0.5rem;
+	min-inline-size: 0; /* allow contents to shrink in flex/grid */
+}
+.card h3 {
+	margin: 0;
+}
+.card p {
+	margin: 0;
+	color: var(--muted);
+}
+
+/* subtle hover/focus for interactive cards, without motion overdose */
+@media (hover: hover) {
+	.card:is(a, button, [tabindex]):hover {
+		border-color: color-mix(in oklab, var(--brand) 50%, transparent);
+	}
+}
+.card:focus-visible {
+	outline: 2px solid var(--brand);
+	outline-offset: 2px;
+}
+
+/* --- Theme toggle button -------------------------------------------- */
+.theme-toggle {
+	position: fixed;
+	inset-block-start: 0.75rem;
+	inset-inline-end: 0.75rem;
+	z-index: 100;
+	border-radius: 999px;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid color-mix(in oklab, var(--text) 15%, transparent);
+	background: var(--panel);
+	color: var(--text);
+	box-shadow: var(--shadow);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+.theme-toggle:focus-visible {
+	outline: 2px solid var(--brand);
+	outline-offset: 2px;
+}
+.theme-toggle .icon {
+	inline-size: 1rem;
+	block-size: 1rem;
+	display: inline-grid;
+	place-items: center;
+}
+
+/* --- Demo-specific helpers (optional) -------------------------------- */
+/* tighter monospace code inside paragraphs for tokens */
+code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+	font-size: 0.925em;
+}
+
+/* a light divider for big demo blocks */
+.hr {
+	border: 0;
+	border-block-start: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+	margin-block: var(--space-l);
+}

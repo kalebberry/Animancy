@@ -1,50 +1,26 @@
-@use "../abstracts" as *;
+@use "../abstracts/space-sizes" as *;
 
-@each $size-name, $size-value in $space {
-    .margin {
-        &-#{$size-name} {
-            margin: $size-value;
-        }
-        &-block-start-#{$size-name} {
-            margin-block-start: $size-value;
-        }
-        &-block-end-#{$size-name} {
-            margin-block-end: $size-value;
-        }
-        &-block-#{$size-name} {
-            margin-block: $size-value;
-        }
-        &-inline-start-#{$size-name} {
-            margin-inline-start: $size-value;
-        }
-        &-inline-end-#{$size-name} {
-            margin-inline-end: $size-value;
-        }
-        &-inline-#{$size-name} {
-            margin-inline: $size-value;
-        }
-    }
-    .padding {
-        &-#{$size-name} {
-            padding: $size-value;
-        }
-        &-block-start-#{$size-name} {
-            padding-block-start: $size-value;
-        }
-        &-block-end-#{$size-name} {
-            padding-block-end: $size-value;
-        }
-        &-block-#{$size-name} {
-            padding-block: $size-value;
-        }
-        &-inline-start-#{$size-name} {
-            padding-inline-start: $size-value;
-        }
-        &-inline-end-#{$size-name} {
-            padding-inline-end: $size-value;
-        }
-        &-inline-#{$size-name} {
-            padding-inline: $size-value;
+$properties: (
+    "margin": "margin",
+    "margin-block": "margin-block",
+    "margin-inline": "margin-inline",
+    "margin-block-start": "margin-block-start",
+    "margin-block-end": "margin-block-end",
+    "margin-inline-start": "margin-inline-start",
+    "margin-inline-end": "margin-inline-end",
+    "padding": "padding",
+    "padding-block": "padding-block",
+    "padding-inline": "padding-inline",
+    "padding-block-start": "padding-block-start",
+    "padding-block-end": "padding-block-end",
+    "padding-inline-start": "padding-inline-start",
+    "padding-inline-end": "padding-inline-end"
+);
+
+@each $prop-prefix, $css-property in $properties {
+    @each $size-name, $size-value in $space {
+        .#{$prop-prefix}-#{$size-name} {
+            #{$css-property}: #{$size-value};
         }
     }
 }
