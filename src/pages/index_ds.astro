@@ -1,0 +1,360 @@
+---
+import Layout from '@/Layouts/DefaultLayout.astro';
+import tokens from '../design-tokens/tokens.json';
+
+const title = 'Studio Eien — Web Design';
+const description = 'A clean, black‑and‑white anime landing page built with your CSS grid system.';
+
+// Dynamically generate the type scale steps from the single source of truth: tokens.json
+const typeScaleSteps = Object.keys(tokens.size.font)
+	.map((key) => key.replace('step-', '')) // Remove the 'step-' prefix
+	.sort((a, b) => {
+		// Custom sort to handle numeric and '00'/'000' steps correctly
+		const valA = a.startsWith('0') ? -a.length : parseInt(a, 10);
+		const valB = b.startsWith('0') ? -b.length : parseInt(b, 10);
+		return valB - valA; // Sort in descending order
+	});
+
+const spacingSteps = ['8', '12', '16', '24', '32', '48', '64', '96']; // An array of the spacing steps to demonstrate
+
+// Dynamically get the color tokens to demonstrate
+const colorTokens = Object.keys(tokens.color.light);
+const baseColors = tokens.color.base;
+---
+
+<style>
+	.type-demo {
+		display: grid;
+		grid-template-columns: 10ch 1fr;
+		align-items: baseline;
+		gap: var(--gutter, 1rem);
+		padding-block: 0.5rem;
+		border-bottom: 1px solid var(--border-weak);
+	}
+	.type-demo code {
+		color: var(--muted);
+	}
+	.type-demo p {
+		line-height: 1;
+	}
+
+	.spacing-demo-margin {
+		padding-block: 1rem;
+		border-bottom: 1px solid var(--border-weak);
+	}
+
+	.spacing-demo-margin__label {
+		color: var(--muted);
+		padding-block-end: 0.5rem;
+	}
+
+	.color-swatch {
+		display: grid;
+		grid-template-columns: 4rem 1fr;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+	}
+
+	.color-swatch__preview {
+		block-size: 4rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--border-weak);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+</style>
+<Layout title={title} description={description}>
+	<main class='flow-large' style='--space:4rem'>
+		<!-- HERO -->
+		<section class='container hero--bw' data-type='full-bleed'>
+			<div class='container flow-large'>
+				<div class='flow' style='--space:1rem'>
+					<h1 class='fs-step-8' style='margin:0'>The Eien Framework</h1>
+					<p class='fs-step-1' style='max-inline-size: 55ch'>
+						A showcase for a web design system built around a calm, monochrome aesthetic that lets
+						the work speak for itself. Inspired by the clarity of manga and inkwork, this system
+						provides a foundation for creating clean, content-focused web experiences.
+					</p>
+					<nav class='cluster' style='--gutter:.75rem' aria-label='Primary'>
+						<a href='#featured' class='btn btn--primary'>Browse Collection</a>
+						<a href='#articles' class='btn'>Read Essays</a>
+						<a href='#newsletter' class='btn btn--ghost'>Subscribe</a>
+					</nav>
+				</div>
+				<div
+					class='poster-grid grid grid--fit'
+					data-cols='2'
+					style='--gutter:1rem; --grid-min-item-size:10rem'
+				>
+					{
+						['NEON', 'BLADE', 'SPIRIT', 'EDEN'].map((label, i) => (
+							<figure class='poster card--bw' aria-label={label}>
+								<div class='poster__art' role='img' aria-hidden='true' />
+								<figcaption class='fs-step-00'>{label}</figcaption>
+							</figure>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- FEATURED SERIES -->
+		<section id='featured' class='container flow'>
+			<div class='repel' style='--gutter:1rem'>
+				<h2 class='fs-step-6'>Featured series</h2>
+				<div class='cluster' style='--gutter:.5rem'>
+					<button class='tag' aria-pressed='true'>All</button>
+					<button class='tag'>Action</button>
+					<button class='tag'>Sci‑Fi</button>
+					<button class='tag'>Drama</button>
+				</div>
+			</div>
+			<div class='grid grid--dense' data-cols='3' style='--gutter:1rem; --grid-min-item-size:16rem'>
+				{
+					Array.from({ length: 6 }).map((_, i) => (
+						<article
+							class='card--bw grid--subgrid-rows'
+							style='display:grid; grid-row: span 4; padding:1rem'>
+							<div class='thumb' aria-hidden='true' />
+							<header class='flow' style='--space:.25rem; margin-top: 0.5rem;'>
+								<h3 class='fs-step-1' style='margin:0'>
+									Series {i === 1 ? 'Title That is Much Longer and Wraps' : `Title ${i + 1}`}
+								</h3>
+								<p class='fs-step-00' style='opacity:.75'>
+									12 eps · sub & dub
+								</p>
+							</header>
+							<p class='fs-step-0' style='align-self: start;'>
+								A brief, spoiler‑free description to tease tone, themes, and vibes.
+							</p>
+							<div class='cluster' style='--gutter:.5rem; align-self: end;'>
+								<a href='#' class='btn btn--sm'>
+									Details
+								</a>
+								<a href='#' class='btn btn--sm btn--ghost'>
+									Add to list
+								</a>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		<!-- COLLECTIONS / SIDEBAR -->
+		<section id='collections' class='container flow'>
+			<h2 class='fs-step-6'>Collections</h2>
+			<div
+				class='sidebar'
+				style='--gutter:1rem; --sidebar-target-width:18rem; --sidebar-content-min-width:55%'
+			>
+				<aside class='card--bw flow' style='--space:.5rem; padding:1rem'>
+					<h3 class='fs-step-1'>Filters</h3>
+					<div class='flow' style='--space:.5rem'>
+						<label class='cluster' style='--gutter:.5rem'>
+							<input type='checkbox' checked hidden /><span class='tag' aria-pressed='true'>
+								Completed
+							</span>
+						</label>
+						<label class='cluster' style='--gutter:.5rem'>
+							<input type='checkbox' hidden /><span class='tag'>Ongoing</span>
+						</label>
+						<label class='cluster' style='--gutter:.5rem'>
+							<input type='checkbox' hidden /><span class='tag'>Movie</span>
+						</label>
+						<label class='cluster' style='--gutter:.5rem'>
+							<input type='checkbox' hidden /><span class='tag'>OVA</span>
+						</label>
+					</div>
+				</aside>
+				<div class='grid' data-cols='3' style='--gutter:1rem; --grid-min-item-size:12rem'>
+					{
+						Array.from({ length: 9 }).map((_, i) => (
+							<article class='card--bw flow' style='--space:.5rem; padding:1rem'>
+								<div class='thumb' aria-hidden='true' />
+								<h3 class='fs-step-1' style='margin:0'>
+									Collection {i + 1}
+								</h3>
+								<p class='fs-step-00' style='opacity:.75'>
+									Curated picks • 6 titles
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+		<!-- GALLERY / MASONRY -->
+		<section id='gallery' class='container flow'>
+			<h2 class='fs-step-6'>Gallery</h2>
+			<div class='masonry__container'>
+				<div class='masonry-grid' style='--gutter:1rem; --masonry-cols:3'>
+					{
+						Array.from({ length: 12 }).map((_, i) => (
+							<figure
+								class={`tile--bw ${['tone--dots', 'tone--hatch', 'tone--lines', 'tone--cross'][i % 4]} ${['tile--h1', 'tile--h2', 'tile--h3'][i % 3]}`}>
+								<figcaption class='fs-step-00'>Panel {i + 1}</figcaption>
+							</figure>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- ARTICLES / SWITCHER -->
+		<section id='articles' class='container flow'>
+			<header>
+				<h2 class='fs-step-6'>Articles & essays</h2>
+			</header>
+			<div class='switcher' style='--gutter:1rem; --switcher-target-container-width: 60rem'>
+				<article class='card--bw flow' style='--space:.5rem; padding:1rem'>
+					<h3 class='fs-step-1' style='margin:0'>The elegance of limited palettes</h3>
+					<p class='fs-step-0'>
+						How black & white art direction sharpens tone, silhouette, and rhythm — with examples
+						from classics.
+					</p>
+					<a class='btn btn--sm' href='#'>Read</a>
+				</article>
+				<article class='card--bw flow' style='--space:.5rem; padding:1rem'>
+					<h3 class='fs-step-1' style='margin:0'>Motion as storytelling</h3>
+					<p class='fs-step-0'>Why restrained animation can be more expressive than maximalism.</p>
+					<a class='btn btn--sm' href='#'>Read</a>
+				</article>
+				<article class='card--bw flow' style='--space:.5rem; padding:1rem'>
+					<h3 class='fs-step-1' style='margin:0'>From ink to pixels</h3>
+					<p class='fs-step-0'>Translating manga panel composition into screen language.</p>
+					<a class='btn btn--sm' href='#'>Read</a>
+				</article>
+			</div>
+		</section>
+
+		<!-- FLEXBOX GRID DEMO -->
+		<section id='flex-demo' class='container flow'>
+			<header class='flow' style='--space: 1rem;'>
+				<h2 class='fs-step-6'>Flexbox Grid</h2>
+				<p class='fs-step-1' style='max-inline-size: 60ch;'>
+					The <code>.flex-grid</code> provides a simpler, one-dimensional layout for items that should
+					wrap into rows. Use <code>data-cols</code> to set a target column count and
+					<code>data-span</code> to create wider, featured items.
+				</p>
+			</header>
+			<div class='flex-grid' data-cols='4' style='--gutter: 1rem;'>
+				<article class='card--bw padding-16 flow' data-span='2'>
+					<h3 class='fs-step-2'>Item A</h3>
+					<p class='fs-step-0'>This item has <code>data-span="2"</code>.</p>
+				</article>
+				<article class='card--bw padding-16 flow'>
+					<h3 class='fs-step-2'>Item B</h3>
+					<p class='fs-step-0'>A standard item.</p>
+				</article>
+				<article class='card--bw padding-16 flow'>
+					<h3 class='fs-step-2'>Item C</h3>
+					<p class='fs-step-0'>Another standard item.</p>
+				</article>
+			</div>
+		</section>
+
+		<!-- TYPE SCALE DEMO -->
+		<section id='typescale' class='container flow'>
+			<header class='flow' style='--space: 1rem;'>
+				<h2 class='fs-step-6'>Typography Scale</h2>
+				<p class='fs-step-1' style='max-inline-size: 60ch;'>
+					The fluid typography scale provides a range of harmonious font sizes that adapt to the
+					viewport. Below is a demonstration of each available step from the design token system.
+				</p>
+			</header>
+			<div class='flow' style='--space: 0;'>
+				{
+					typeScaleSteps.map((step) => (
+						<div class='type-demo'>
+							<code>.fs-step-{step}</code>
+							<p class:list={[`fs-step-${step}`]}>Aa</p>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<!-- SPACING DEMO -->
+		<section id='spacing' class='container flow'>
+			<header class='flow' style='--space: 1rem;'>
+				<h2 class='fs-step-6'>Spacing System</h2>
+				<p class='fs-step-1' style='max-inline-size: 60ch;'>
+					A fluid spacing scale provides consistent <code>padding</code> and <code>margin</code> utilities.
+					The values scale with the viewport for responsive design.
+				</p>
+			</header>
+
+			<div class='flow'>
+				<h3 class='fs-step-2'>Padding</h3>
+				<div class='grid'>
+					{
+						spacingSteps.map((step) => (
+							<div class:list={[`padding-${step}`, 'card--bw']}>
+								<div style='background: var(--muted); border-radius: 0.25rem; padding: 0.5rem; color: var(--background);'>
+									<code>.padding-{step}</code>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+
+			<div class='flow'>
+				<h3 class='fs-step-2'>Margin</h3>
+				<div class='flow' style='--space: 0;'>
+					{
+						spacingSteps.map((step) => (
+							<div class='spacing-demo-margin'>
+								<p class='spacing-demo-margin__label fs-step-00'>
+									<code>.margin-block-start-{step}</code>
+								</p>
+								<div
+									class:list={[`margin-block-start-${step}`, 'card--bw']}
+									style='padding: 0.5rem;'
+								/>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- COLOR PALETTE DEMO -->
+		<section id='colors' class='container flow'>
+			<header class='flow' style='--space: 1rem;'>
+				<h2 class='fs-step-6'>Color System</h2>
+				<p class='fs-step-1' style='max-inline-size: 60ch;'>
+					The color system is defined by semantic tokens that automatically adapt to light and dark
+					modes.
+				</p>
+			</header>
+			<div class='grid' data-cols='3' style='--grid-min-item-size: 14rem;'>
+				{
+					colorTokens.map((token) => (
+						<div class='color-swatch card--bw'>
+							<div class='color-swatch__preview' style={`background-color: var(--${token})`} />
+							<div class='flow' style='--space: 0.25rem;'>
+								<p class='fs-step-0' style='font-weight: 700;'>
+									{token}
+								</p>
+								<code>var(--{token})</code>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<!-- Optional Vue mount for interactivity demos -->
+		<section class='container flow'>
+			<div id='interactive-counter' class='card--bw' style='padding:1rem'>
+				<p class='fs-step-00' style='opacity:.75; margin:0'>
+					Vue mount ready: <code>#interactive-counter</code>
+				</p>
+			</div>
+		</section>
+		<!-- Your existing Vue bundle can be hooked here if needed -->
+		<script type='module' src='/src/hydrate/landing.ts'></script>
+	</main>
+</Layout>
