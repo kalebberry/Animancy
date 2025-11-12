@@ -1,18 +1,11 @@
 ---
 import Layout from "../Layouts/DefaultLayout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Studio Eien" description="Welcome to Studio Eien">
   <main>
-    <nav>
-      <ul>
-        <li><a href="/">Logo</a></li>
-        <li><a href="/about">Case Studies</a></li>
-        <li><a href="/portfolio">Studio</a></li>
-        <li><a href="/contact">Reach out</a></li>
-      </ul>
-    </nav>
-
+    <Navbar />
     <section>
       <header>
         <h1>STUDIO EIEN</h1>
@@ -29,23 +22,26 @@ import Layout from "../Layouts/DefaultLayout.astro";
       <header>
         <h2>HOW WE WORK</h2>
       </header>
+
       <article>
         <h3>01. Strategy</h3>
         <p>Every great creation begins with understanding.</p>
         <p>We start by diving deep into goals, values, and audience. Through open conversation, we gather the insights that shape a thoughtful, informed strategy before any pixels are drawn.</p>
       </article>
+
       <article>
         <div>
           <h3>02. Design</h3>
           <p>⟡⟡⟡</p>
         </div>
+
         <div>
           <h3>03. Code</h3>
           <p>⟡⟡⟡</p>
         </div>
       </article>
       <div>
-        <p>Line here to animate with gsap moving parts</p>
+        <p>Line here to animate with GSAP moving parts</p>
       </div>
     </section>
   </main>

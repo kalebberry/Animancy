@@ -29,6 +29,15 @@
   --border-weak: #d9d9d9;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0b0b0b;
+    --text: #efefef;
+    --muted: #a0a0a0;
+    --border: #efefef;
+    --border-weak: #2a2a2a;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0b0b0b;
@@ -66,8 +75,10 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -147,6 +158,18 @@ p,
 li {
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+.navbar {
+  padding-block: var(--space-16);
+}
+.navbar__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-32);
+}
+.navbar__links a {
+  text-decoration: none;
 }
 
 /*
