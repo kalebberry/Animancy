@@ -5,8 +5,15 @@ import Navbar from "../components/Navbar.astro";
 
 <Layout title="Studio Eien" description="Welcome to Studio Eien">
   <main>
-    <Navbar />
-    <section>
+    <nav class="navbar">
+      <ul role="list" class="navbar__links">
+        <li><a href="/">Logo</a></li>
+        <li><a href="/about">Case Studies</a></li>
+        <li><a href="/portfolio">Studio</a></li>
+        <li><a href="/contact">Reach out</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
       <header>
         <h1>STUDIO EIEN</h1>
         <p>We craft timeless digital ⟡ experiences for businesses, content creators, and artists. Studio Eien helps you take the first steps toward building an online presence that embodies your vision. The presence that tells the world what you stand for.</p>
@@ -18,7 +25,7 @@ import Navbar from "../components/Navbar.astro";
       </div>
     </section>
 
-    <section>
+    <section class="work">
       <header>
         <h2>HOW WE WORK</h2>
       </header>
@@ -44,5 +51,9 @@ import Navbar from "../components/Navbar.astro";
         <p>Line here to animate with GSAP moving parts</p>
       </div>
     </section>
+
+    <section class="services"></section>
+
+    <section class="conversion"></section>
   </main>
 </Layout>
