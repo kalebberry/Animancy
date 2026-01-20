@@ -1,59 +1,83 @@
 ---
-import Layout from "../Layouts/DefaultLayout.astro";
-import Navbar from "../components/Navbar.astro";
+import Layout from '../Layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
-<Layout title="Studio Eien" description="Welcome to Studio Eien">
-  <main>
-    <nav class="navbar">
-      <ul role="list" class="navbar__links">
-        <li><a href="/">Logo</a></li>
-        <li><a href="/about">Case Studies</a></li>
-        <li><a href="/portfolio">Studio</a></li>
-        <li><a href="/contact">Reach out</a></li>
-      </ul>
-    </nav>
-    <section class="hero">
-      <header>
-        <h1>STUDIO EIEN</h1>
-        <p>We craft timeless digital ⟡ experiences for businesses, content creators, and artists. Studio Eien helps you take the first steps toward building an online presence that embodies your vision. The presence that tells the world what you stand for.</p>
-      </header>
-      <div>
-        <hr />
-        <p>Grid System V.03</p>
-        <p>VERSION: 03.2025 ⟡ PLATFORM: DIGITAL EXPERIENCE</p>
-      </div>
-    </section>
+<Layout title='Studio Eien' description='Welcome to Studio Eien'>
+	<main>
+		<nav class='navbar'>
+			<ul role='list' class='navbar__links'>
+				<li><a href='/'>Logo</a></li>
+				<li><a href='/about'>Case Studies</a></li>
+				<li><a href='/portfolio'>Studio</a></li>
+				<li><a href='/contact'>Reach out</a></li>
+			</ul>
+		</nav>
+		<section class='hero'>
+			<header>
+				<div class='hero__title'>
+					<span>エターニティー</span>
+					<h1>STUDIO EIEN</h1>
+				</div>
+				<p>
+					We craft timeless digital ⟡ experiences for businesses, content creators, and artists.
+					Studio Eien helps you take the first steps toward building an online presence that
+					embodies your vision. The presence that tells the world what you stand for.
+				</p>
+			</header>
+			<div>
+				<hr />
+				<p>Grid System V.03</p>
+				<p>VERSION: 03.2025 ⟡ PLATFORM: DIGITAL EXPERIENCE</p>
+			</div>
+		</section>
 
-    <section class="work">
-      <header>
-        <h2>HOW WE WORK</h2>
-      </header>
+		<section class='process'>
+			<header>
+				<div class='process__title'>
+					<span>プロセス</span>
+					<h2>PROCESS</h2>
+				</div>
+			</header>
 
-      <article>
-        <h3>01. Strategy</h3>
-        <p>Every great creation begins with understanding.</p>
-        <p>We start by diving deep into goals, values, and audience. Through open conversation, we gather the insights that shape a thoughtful, informed strategy before any pixels are drawn.</p>
-      </article>
+			<div>
+				<article>
+					<h3>01. Strategy</h3>
+					<p>Understanding shapes direction.</p>
+					<p>
+						We start by diving deep into goals, values, and audience. Through open conversation, we
+						gather the insights that shape a thoughtful, informed strategy before any pixels are
+						drawn.
+					</p>
+				</article>
 
-      <article>
-        <div>
-          <h3>02. Design</h3>
-          <p>⟡⟡⟡</p>
-        </div>
+				<article>
+					<h3>02. Design</h3>
+					<p>Purpose guides beauty.</p>
+					<p>
+						We translate your content and story into visual concepts that speak your brand’s
+						language. Every layout, color, and interaction is intentional; designed to align beauty
+						with usability.
+					</p>
+				</article>
 
-        <div>
-          <h3>03. Code</h3>
-          <p>⟡⟡⟡</p>
-        </div>
-      </article>
-      <div>
-        <p>Line here to animate with GSAP moving parts</p>
-      </div>
-    </section>
+				<article>
+					<h3>03. Code</h3>
+					<p>Precision becomes experience.</p>
+					<p>
+						We build using modern frameworks and clean and scalable code. Ensuring, your website is
+						fast, accessible, and ready. Every feature and detail is crafted with precision.
+					</p>
+				</article>
+			</div>
+			<div>
+				<hr />
+				<p>SECTION: PROCESS ⟡ METHOD SIGNATURE: V.01</p>
+			</div>
+		</section>
+	</main>
 
-    <section class="services"></section>
+	<section class='services'></section>
 
-    <section class="conversion"></section>
-  </main>
+	<section class='conversion'></section>
 </Layout>
