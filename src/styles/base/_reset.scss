@@ -12,10 +12,6 @@
   text-size-adjust: none;
 }
 
-:where(html) {
-  scrollbar-gutter: stable;
-}
-
 /* Remove default margin in favour of better control in authored CSS */
 
 body,
