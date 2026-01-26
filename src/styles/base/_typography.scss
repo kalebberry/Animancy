@@ -1,9 +1,15 @@
 @use "../abstracts" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&family=WDXL+Lubrifont+JP+N&display=swap");
+
 :is(h1, h2, h3, h4) {
   /* Use a semantic variable with a sensible fallback */
   line-height: var(--leading-tight, 1.1);
   text-wrap: balance;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 
 :is(h4, h5, h6) {
@@ -24,9 +30,14 @@ h3 {
 
 p,
 li {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-size: var(--fs-step-3);
-  max-width: 60.5ch;
-  overflow-wrap: break-word;
+  max-width: 50ch;
+  word-break: auto-phrase;
+  text-wrap: pretty;
   hyphens: auto;
 }
 
@@ -38,4 +49,24 @@ li {
   p {
     font-size: var(--fs-step-2);
   }
+}
+
+.jp-text {
+  font-family: "WDXL Lubrifont JP N", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.regular-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-text {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
