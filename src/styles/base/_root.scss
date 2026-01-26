@@ -6,4 +6,8 @@
       --#{$color}-#{$shade}: #{$value};
     }
   }
+
+  @each $size, $value in $space {
+    --space-#{$size}: #{$value};
+  }
 }

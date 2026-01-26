@@ -10,8 +10,32 @@
   font-size: var(--fs-step-3);
 }
 
+h1 {
+  font-size: var(--fs-step-11);
+}
+
+h2 {
+  font-size: var(--fs-step-9);
+}
+
+h3 {
+  font-size: var(--fs-step-6);
+}
+
 p,
 li {
+  font-size: var(--fs-step-3);
+  max-width: 60.5ch;
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--fs-step-10);
+  }
+
+  p {
+    font-size: var(--fs-step-2);
+  }
 }
