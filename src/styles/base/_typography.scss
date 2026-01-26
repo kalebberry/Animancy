@@ -34,11 +34,10 @@ li {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: var(--fs-step-3);
+  font-size: var(--fs-step-2);
   max-width: 50ch;
   word-break: auto-phrase;
-  text-wrap: pretty;
-  hyphens: auto;
+  text-wrap: balace;
 }
 
 @media (max-width: 768px) {
