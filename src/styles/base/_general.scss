@@ -1,1 +1,33 @@
 @use "../abstracts" as *;
+
+.cta__link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  &:hover,
+  &.active {
+    color: #555;
+    &::after {
+      width: 100%;
+    }
+  }
+}
