@@ -1,11 +1,27 @@
 @use "../abstracts" as *;
 
-.hero {
-  padding-block: $space-stack-lg;
+.testtest {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.25); // Glass tint
 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -20px; // Extend edges to hide blur fade
+    z-index: -1;
+    background: url(https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/noTextMagazineBG_If0QcKQLa.png) no-repeat
+      center center fixed;
+    background-size: cover;
+    filter: blur(12px);
+  }
   & header {
     margin-inline: auto;
   }
+}
+
+.hero {
+  padding-block: $space-stack-lg;
 
   &__title {
     max-width: max-content;
