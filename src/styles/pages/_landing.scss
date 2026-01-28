@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .hero {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-lg;
 
   & header {
     margin-inline: auto;
@@ -23,14 +23,14 @@
 }
 
 .featured {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-lg;
   img {
     border-radius: 0.6rem;
   }
 }
 
 .decoration {
-  padding-block-end: $spacing-96;
+  padding-block-end: $space-stack-md;
 
   hr {
     background-color: lch(36.15% 0.01 296.81);
@@ -51,7 +51,7 @@
   .decoration__text__end {
     display: flex;
     justify-content: end;
-    color: #555;
+    color: lab(28.39% -3.25 -7.96);
     opacity: 40%;
 
     p {
@@ -74,7 +74,7 @@
 }
 
 .process {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-lg;
 
   & header {
     margin-inline: auto;
@@ -115,7 +115,7 @@
 }
 
 .quote {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-xl;
 }
 
 .quote .container {
@@ -131,7 +131,7 @@
 }
 
 .services {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-lg;
 
   & header {
     margin-inline: auto;
@@ -172,7 +172,7 @@
 }
 
 .conversion {
-  padding-block: $spacing-96;
+  padding-block: $space-stack-lg;
 
   & header {
     margin-inline: auto;

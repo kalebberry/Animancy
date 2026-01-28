@@ -2,6 +2,7 @@
 import Layout from '../Layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
+import ExpandingCard from '../components/astro/expandingCard.astro';
 ---
 
 <Layout title='Studio Eien' description='Welcome to Studio Eien'>
@@ -32,12 +33,7 @@ import Footer from '../components/astro/Footer.astro';
 		</div>
 
 		<section class='featured cq-card'>
-			<div class='container cq-card__content' data-type='full-bleed'>
-				<div><img src='https://picsum.photos/id/1/400' width='400px' /></div>
-				<div><img src='https://picsum.photos/id/13/400' width='400px' /></div>
-				<div><img src='https://picsum.photos/id/15/400' width='400px' /></div>
-				<div><img src='https://picsum.photos/id/4/400' width='400px' /></div>
-			</div>
+			<ExpandingCard />
 		</section>
 
 		<section class='process'>

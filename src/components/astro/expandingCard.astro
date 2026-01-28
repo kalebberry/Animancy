@@ -1,0 +1,292 @@
+---
+type Panel = {
+	label: string;
+	name: string;
+	title: string;
+	quote: string;
+	image: string;
+};
+
+const panels: Panel[] = [
+	{
+		label: 'Exilium',
+		name: 'Exilium',
+		title: 'Art Direction',
+		quote: 'A tactical RPG interface design focusing on clarity and atmosphere.',
+		image:
+			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056',
+	},
+	{
+		label: 'Kitsune',
+		name: 'Kitsune',
+		title: 'Character Design',
+		quote: 'Modern aesthetics meeting traditional folklore in this character showcase.',
+		image:
+			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457',
+	},
+	{
+		label: 'Craft',
+		name: 'Craft',
+		title: 'Web Development',
+		quote: 'Minimalist portfolio template designed for digital craftsmen.',
+		image:
+			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_6_pl5KrIjUA.png?updatedAt=1708435691450',
+	},
+	{
+		label: 'Bunny',
+		name: 'Bunny',
+		title: 'Illustration',
+		quote: 'Playful mascot design and branding for a local cafe.',
+		image:
+			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/manga_beautiful_7qMh10Vza.png?updatedAt=1708505549765',
+	},
+];
+---
+
+<section class='xp' aria-label='Expanding testimonials'>
+	<div class='xp__row' data-xp>
+		{
+			panels.map((p, i) => (
+				<article
+					class={`xp__panel ${i === 0 ? 'is-active' : ''}`}
+					data-panel
+					data-index={i}
+					role='button'
+					tabindex='0'
+					aria-expanded={i === 0 ? 'true' : 'false'}>
+					<div class='xp__bg' style={`background-image: url(${p.image})`} />
+					<div class='xp__overlay' />
+
+					{/* Skinny state */}
+					<div class='xp__rail'>
+						<span class='xp__num'>{p.label}</span>
+					</div>
+
+					{/* Expanded state */}
+					<div class='xp__content'>
+						<span class='xp__label-expanded'>{p.label}</span>
+						<header class='xp__header'>
+							<h3 class='xp__name'>{p.name}</h3>
+							<p class='xp__title'>{p.title}</p>
+						</header>
+						<p class='xp__quote'>{p.quote}</p>
+					</div>
+				</article>
+			))
+		}
+	</div>
+
+	<script>
+		const rows = document.querySelectorAll('[data-xp]');
+
+		rows.forEach((root) => {
+			const panels = Array.from(root.querySelectorAll('[data-panel]'));
+
+			function setActive(nextIndex) {
+				panels.forEach((p) => {
+					const isActive = Number(p.dataset.index) === nextIndex;
+					p.classList.toggle('is-active', isActive);
+					p.setAttribute('aria-expanded', String(isActive));
+				});
+			}
+
+			panels.forEach((p) => {
+				p.addEventListener('click', () => setActive(Number(p.dataset.index)));
+				p.addEventListener('keydown', (e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						setActive(Number(p.dataset.index));
+					}
+				});
+			});
+		});
+	</script>
+</section>
+
+<style lang='scss'>
+	@use 'sass:map';
+	@use '../../styles/abstracts/' as *;
+
+	.xp {
+		padding: map.get($space, 24);
+		border-radius: 14px;
+	}
+
+	.xp__row {
+		display: flex;
+		gap: map.get($space, 16);
+		min-height: 400px;
+		align-items: stretch;
+	}
+
+	.xp__panel {
+		flex: 1;
+		min-width: 60px;
+		border-radius: 12px;
+		background: #000;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+
+		/* smooth expand */
+		transition:
+			flex 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+			background 250ms ease;
+		outline: none;
+
+		&:focus-visible {
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.18);
+		}
+	}
+
+	.xp__bg {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+		opacity: 0.5;
+		transition: opacity 0.6s ease;
+	}
+
+	.xp__overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(0px);
+		transition:
+			backdrop-filter 0.6s ease,
+			background 0.6s ease;
+	}
+
+	/* expanded card */
+	.xp__panel.is-active {
+		flex: 5;
+		border-color: rgba(255, 255, 255, 0.08);
+
+		.xp__bg {
+			opacity: 1;
+		}
+		.xp__overlay {
+			background: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(10px);
+		}
+	}
+
+	/* skinny rail */
+	.xp__rail {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-content: center;
+		place-items: start center;
+		padding-top: map.get($space, 24);
+		opacity: 1;
+		z-index: 2;
+		transition: opacity 180ms ease;
+	}
+
+	.xp__num {
+		font-size: 1.5rem;
+		color: white;
+		font-family: 'Familjen Grotesk', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: bold;
+		font-style: normal;
+		// opacity: 0.85;
+	}
+
+	/* content only visible when active */
+	.xp__content {
+		height: 100%;
+		display: grid;
+		align-content: center;
+		text-align: center;
+		padding: map.get($space, 32);
+		opacity: 0;
+		z-index: 2;
+		transform: translateY(10px);
+		transition:
+			opacity 0s,
+			transform 0s;
+		pointer-events: none; /* prevents selecting hidden content */
+	}
+
+	.xp__panel.is-active .xp__rail {
+		opacity: 0; /* hide number when expanded */
+	}
+
+	.xp__panel.is-active .xp__content {
+		opacity: 1;
+		transform: translateY(0);
+		transition:
+			opacity 400ms ease 200ms,
+			transform 400ms ease 200ms;
+		pointer-events: auto;
+	}
+
+	.xp__label-expanded {
+		position: absolute;
+		top: map.get($space, 24);
+		right: map.get($space, 24);
+		font-size: 1rem;
+		color: rgba(255, 255, 255, 0.6);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-family: 'Familjen Grotesk', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.xp__name {
+		margin: 0;
+		color: #fff;
+		font-size: clamp(1.9006rem, 1.387rem + 2.1915vi, 3.3594rem);
+		letter-spacing: -0.02em;
+		font-family: 'Familjen Grotesk', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.xp__title {
+		margin-inline: auto;
+		padding-block: $spacing-8;
+		color: rgba(255, 255, 255, 0.7);
+		font-size: clamp(0.8331rem, 0.7964rem + 0.1568vi, 0.9375rem);
+	}
+
+	.xp__quote {
+		margin: map.get($space, 24) auto 0;
+		max-width: 60ch;
+		color: rgba(255, 255, 255, 0.85);
+		line-height: 1.7;
+		font-size: clamp(0.9375rem, 0.8715rem + 0.2817vi, 1.125rem);
+	}
+
+	/* mobile: stack */
+	@media (max-width: 900px) {
+		.xp__row {
+			flex-direction: column;
+			min-height: auto;
+		}
+		.xp__panel {
+			min-height: 80px;
+			flex: 0 0 auto;
+		}
+		.xp__panel.is-active {
+			flex: 1 1 auto;
+			min-height: 300px;
+		}
+	}
+
+	/* respect reduced motion */
+	@media (prefers-reduced-motion: reduce) {
+		.xp__panel,
+		.xp__content,
+		.xp__rail {
+			transition: none !important;
+		}
+	}
+</style>

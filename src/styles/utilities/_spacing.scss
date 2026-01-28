@@ -24,3 +24,12 @@ $properties: (
         }
     }
 }
+
+// New stack utilities (vh-based) — names won’t collide
+@each $prop-prefix, $css-property in $properties {
+    @each $size-name, $size-value in $space-stack {
+        .#{$prop-prefix}-stack-#{$size-name} {
+            #{$css-property}: #{$size-value};
+        }
+    }
+}
