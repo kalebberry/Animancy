@@ -7,6 +7,10 @@
 /* Themne */
 $active-theme: $light;
 
+/* Brand Colors */
+$color-paper: #faf9f6; // Warm, natural paper white
+$color-accent: #cd2b2b; // Vermilion / Hanko Red
+
 /* Layout Tokens */
 
 $container-min-margin-inline: map.get($space, 8);
