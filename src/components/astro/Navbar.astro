@@ -1,176 +1,174 @@
 ---
 const links = [
-	{ label: 'Work', href: '/work' },
-	{ label: 'Studio', href: '/studio' },
-	{ label: 'Reach Out', href: '/contact' },
+  { label: "Work", href: "/work" },
+  { label: "Studio", href: "/studio" },
+  { label: "Reach Out", href: "/contact" },
 ];
 
-const logo = '/assets/img/sample_logo.png';
+const logo = "/assets/img/sample_logo.png";
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class='nav' aria-label='Primary'>
-	<div class='brand'>
-		<a href='/' aria-label='Home'>
-			<img class='brand__img' src={logo} alt='' />
-			<!-- <span class='brand__name'>Studio Eien</span> -->
-		</a>
-	</div>
+<nav class="nav" aria-label="Primary">
+  <div class="brand">
+    <a href="/" aria-label="Home">
+      <img class="brand__img" src={logo} alt="" />
+      <!-- <span class='brand__name'>Studio Eien</span> -->
+    </a>
+  </div>
 
-	<button class='mobile-toggle' aria-expanded='false' aria-label='Toggle navigation'>
-		<span class='bar'></span>
-		<span class='bar'></span>
-		<span class='bar'></span>
-	</button>
+  <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-	<!-- Desktop links -->
-	<ul class='links' aria-label='Primary links'>
-		{
-			links.map((l) => (
-				<li>
-					<a
-						class={`link ${
-							currentPath === l.href || (l.href !== '/' && currentPath.startsWith(l.href))
-								? 'active'
-								: ''
-						}`}
-						href={l.href}>
-						{l.label}
-					</a>
-				</li>
-			))
-		}
-	</ul>
+  <!-- Desktop links -->
+  <ul class="links" aria-label="Primary links">
+    {
+      links.map((l) => (
+        <li>
+          <a
+            class={`link ${
+              currentPath === l.href || (l.href !== "/" && currentPath.startsWith(l.href)) ? "active" : ""
+            }`}
+            href={l.href}>
+            {l.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </nav>
 
 <script>
-	const navToggle = document.querySelector('.mobile-toggle');
-	const navLinks = document.querySelector('.links');
+  const navToggle = document.querySelector(".mobile-toggle");
+  const navLinks = document.querySelector(".links");
 
-	// Mobile Menu Logic
-	if (navToggle && navLinks) {
-		navToggle.addEventListener('click', () => {
-			const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-			navToggle.setAttribute('aria-expanded', (!isExpanded).toString());
-			navToggle.classList.toggle('is-active');
-			navLinks.classList.toggle('is-open');
-		});
-	}
+  // Mobile Menu Logic
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+      navToggle.classList.toggle("is-active");
+      navLinks.classList.toggle("is-open");
+    });
+  }
 </script>
 
-<style lang='scss'>
-	.nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-inline: clamp(3em, 5vw, 4em);
-		padding-block: 1rem;
-		position: sticky;
-		top: 0;
-		z-index: 100;
-		background: rgb(250, 249, 246, 0.25);
-		backdrop-filter: blur(10px);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-		.brand {
-			display: flex;
-			align-items: center;
-			gap: 1rem;
+<style lang="scss">
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: clamp(3em, 5vw, 4em);
+    padding-block: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgb(250, 249, 246, 0.25);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-			.brand__img {
-				width: 75px;
-				height: 75px;
-			}
-		}
+      .brand__img {
+        width: 50px;
+        height: 50px;
+      }
+    }
 
-		.mobile-toggle {
-			display: none;
-			flex-direction: column;
-			gap: 4px;
-			background: none;
-			border: none;
-			cursor: pointer;
-			padding: 0.5rem;
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
 
-			.bar {
-				width: 24px;
-				height: 2px;
-				background-color: black;
-				transition: all 0.3s ease;
-			}
+      .bar {
+        width: 24px;
+        height: 2px;
+        background-color: black;
+        transition: all 0.3s ease;
+      }
 
-			&.is-active {
-				.bar:nth-child(1) {
-					transform: translateY(6px) rotate(45deg);
-				}
-				.bar:nth-child(2) {
-					opacity: 0;
-				}
-				.bar:nth-child(3) {
-					transform: translateY(-6px) rotate(-45deg);
-				}
-			}
-		}
+      &.is-active {
+        .bar:nth-child(1) {
+          transform: translateY(6px) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-6px) rotate(-45deg);
+        }
+      }
+    }
 
-		.links {
-			display: flex;
-			gap: 2rem;
-			list-style: none;
+    .links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
 
-			.link {
-				text-decoration: none;
-				font-size: 1.2rem;
-				font-weight: 500;
-				color: lab(28.39% -3.25 -7.96);
-				font-weight: bold;
-				text-transform: uppercase;
-				font-size: 1rem;
-				display: inline-block;
-				position: relative;
-				transition: color 0.3s ease;
+      .link {
+        text-decoration: none;
+        font-size: 1.3rem !important;
+        font-weight: 500;
+        color: lab(28.39% -3.25 -7.96);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s ease;
 
-				&::after {
-					content: '';
-					position: absolute;
-					bottom: -2px;
-					left: 0;
-					width: 0;
-					height: 1px;
-					background-color: currentColor;
-					transition: width 0.3s ease;
-				}
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: currentColor;
+          transition: width 0.3s ease;
+        }
 
-				&:hover,
-				&.active {
-					color: #555;
-					&::after {
-						width: 100%;
-					}
-				}
-			}
-		}
+        &:hover,
+        &.active {
+          color: #555;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
 
-		@media (max-width: 768px) {
-			.mobile-toggle {
-				display: flex;
-			}
+    @media (max-width: 768px) {
+      .mobile-toggle {
+        display: flex;
+      }
 
-			.links {
-				position: absolute;
-				top: 100%;
-				left: 0;
-				right: 0;
-				flex-direction: column;
-				background: rgb(250, 249, 246, 0.9);
-				padding: 2rem;
-				gap: 1.5rem;
-				text-align: center;
-				display: none;
-				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgb(250, 249, 246, 0.9);
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+        display: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-				&.is-open {
-					display: flex;
-				}
-			}
-		}
-	}
+        &.is-open {
+          display: flex;
+        }
+      }
+    }
+  }
 </style>
