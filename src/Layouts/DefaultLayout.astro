@@ -33,15 +33,49 @@ const { description } = Astro.props;
 			const hero = document.querySelector('.hero');
 			if (hero) {
 				const heroTl = gsap.timeline({
-					defaults: { duration: 1.5, ease: 'power3.out', opacity: 0, y: 40 },
+					// 'expo.out' provides a quick start and a long, elegant settle, typical of Japanese minimalism
+					defaults: { duration: 2.2, ease: 'expo.out' },
 				});
 
-				// Select elements that actually exist in your index.astro
 				const title = hero.querySelector('h1');
 				const subtitle = hero.querySelector('p');
-				const nav = document.querySelector('nav'); // Nav is outside the hero
+				const jpText = hero.querySelector('.text-accent');
+				const nav = document.querySelector('nav');
 
-				heroTl.from(title, {}).from(subtitle, { y: 20 }, '-=1.2').from(nav, { y: -20 }, '-=1.3');
+				// 1. Japanese Text: "Ink Blur" effect (fades in from blur)
+				if (jpText) {
+					heroTl.from(jpText, {
+						opacity: 0,
+						filter: 'blur(15px)', // Mimics ink spreading/focusing
+						y: -10,
+						duration: 2.5,
+						ease: 'power2.out',
+					});
+				}
+
+				// 2. Main Title: Rises up with a slight skew (Calligraphic stroke feel)
+				if (title) {
+					heroTl.from(
+						title,
+						{
+							y: 60,
+							opacity: 0,
+							skewY: 2,
+							transformOrigin: 'left bottom',
+						},
+						'-=2.2', // Significant overlap for fluid motion
+					);
+				}
+
+				// 3. Subtitle: Gentle rise
+				if (subtitle) {
+					heroTl.from(subtitle, { y: 30, opacity: 0 }, '-=1.8');
+				}
+
+				// 4. Nav: Fades in softly from top
+				if (nav) {
+					heroTl.from(nav, { y: -20, opacity: 0, duration: 1.5 }, '-=2.0');
+				}
 			}
 
 			// --- 2. Staggered Animation for All Content Sections on Scroll ---
@@ -53,10 +87,10 @@ const { description } = Astro.props;
 				if (section.children.length === 0) return;
 
 				gsap.from(section.children, {
-					y: 30, // Reduced distance for subtlety
+					y: 40,
 					opacity: 0,
-					duration: 1.2, // Slower duration for elegance
-					ease: 'power3.out',
+					duration: 1.8,
+					ease: 'expo.out',
 					stagger: 0.15, // Stagger the children
 					scrollTrigger: {
 						trigger: section,

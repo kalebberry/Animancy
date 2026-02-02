@@ -2,6 +2,7 @@
 import Layout from '../Layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
+import Button from '@/components/astro/button.astro';
 import ExpandingCard from '../components/astro/expandingCard.astro';
 ---
 
@@ -113,16 +114,15 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 					</div>
 				</header>
 				<article class='services__content'>
-					<div class='services__content__card'>
+					<div class='services__content__card flow'>
 						<h3>01. Web Design</h3>
-
 						<p>
 							We use the right tools for the right job, blending design and engineering to create
 							online experiences that empower your next move. Let’s build something that reflects
 							your passion and ambition.
 						</p>
 					</div>
-					<div class='services__content__card'>
+					<div class='services__content__card flow'>
 						<h3>02. Broadcast Graphics</h3>
 
 						<p>
@@ -131,7 +131,7 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 							with professional polish.
 						</p>
 					</div>
-					<div class='services__content__card'>
+					<div class='services__content__card flow'>
 						<h3>03. UX / UI</h3>
 
 						<p>
@@ -140,7 +140,7 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 							memorable.
 						</p>
 					</div>
-					<div class='services__content__card'>
+					<div class='services__content__card flow'>
 						<h3>04. Fluid Development</h3>
 
 						<p>
@@ -161,7 +161,7 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 		</div>
 
 		<section class='conversion container' data-type='wide'>
-			<header>
+			<header class='flow'>
 				<div class='conversion__title'>
 					<span>サービス</span>
 					<h2>START YOUR STORY</h2>
@@ -170,6 +170,7 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 					Step into our creative process, where ideas become impact. Explore client case studies and
 					see how Studio Eien transforms visions into soulful, strategic web design.
 				</p>
+				<Button />
 			</header>
 		</section>
 		<div class='decoration'>

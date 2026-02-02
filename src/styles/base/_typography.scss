@@ -29,7 +29,8 @@ h3 {
 }
 
 p,
-li {
+li,
+.btn {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -68,4 +69,12 @@ li {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+
+.btn {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: capitalize;
 }
