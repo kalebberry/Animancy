@@ -2,6 +2,7 @@
 import Layout from '../Layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
+import WorkGallery from '../components/astro/WorkGallery.astro';
 ---
 
 <Layout title='Studio Eien' description='Work'>
@@ -14,16 +15,27 @@ import Footer from '../components/astro/Footer.astro';
 						<span class='text-accent'>エターニティー</span>
 						<h1>WORK</h1>
 					</div>
+
 					<p>
-						We craft timeless digital experiences for businesses, content creators, and artists.
-						Studio Eien helps you take the first steps toward building an online presence that
-						embodies your vision. The presence that tells the world what you stand for.
+						A selection of digital experiences shaped by strategy, restraint, and purpose. We design
+						and build systems that balance clarity and expression. Each project guided by the needs
+						of its audience and the values of its creator.
 					</p>
 				</header>
 			</div>
 		</section>
-		<Footer />
-	</main>
-</Layout>
 
-<style lang='scss'></style>
+		<section class='work-statement'>
+			<div class='container flow' data-type='wide'></div>
+
+			<section class='work-gallery'>
+				<div class='container' data-type='wide'>
+					<WorkGallery />
+				</div>
+			</section>
+			<Footer />
+		</section>
+	</main>
+
+	<style lang='scss'></style>
+</Layout>
