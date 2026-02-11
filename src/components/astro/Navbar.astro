@@ -1,19 +1,21 @@
 ---
+import Logo from '../../../public/assets/logo.astro';
+
 const links = [
 	{ label: 'Work', href: '/work' },
 	{ label: 'Studio', href: '/studio' },
 	{ label: 'Reach Out', href: '/contact' },
 ];
 
-const logo = '/assets/img/LOGO vector-01.svg';
 const currentPath = Astro.url.pathname;
 ---
 
 <nav class='nav' aria-label='Primary'>
 	<div class='brand'>
 		<a href='/' aria-label='Home'>
-			<img class='brand__img' src={logo} alt='' />
-			<!-- <span class='brand__name'>Studio Eien</span> -->
+			<div class='brand__logo'>
+				<Logo />
+			</div>
 		</a>
 	</div>
 
@@ -77,9 +79,15 @@ const currentPath = Astro.url.pathname;
 			align-items: center;
 			gap: 1rem;
 
-			.brand__img {
+			.brand__logo {
 				width: 50px;
 				height: auto;
+
+				:global(svg) {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
 			}
 		}
 
