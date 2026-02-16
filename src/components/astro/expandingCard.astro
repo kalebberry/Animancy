@@ -5,6 +5,7 @@ type Panel = {
 	title: string;
 	quote: string;
 	image: string;
+	href: string;
 };
 
 const panels: Panel[] = [
@@ -15,6 +16,7 @@ const panels: Panel[] = [
 		quote: 'A tactical RPG interface design focusing on clarity and atmosphere.',
 		image:
 			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056',
+		href: '/work/exilium',
 	},
 	{
 		label: 'Kitsune',
@@ -23,6 +25,7 @@ const panels: Panel[] = [
 		quote: 'Modern aesthetics meeting traditional folklore in this character showcase.',
 		image:
 			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457',
+		href: '/work/kitsune',
 	},
 	{
 		label: 'Craft',
@@ -31,6 +34,7 @@ const panels: Panel[] = [
 		quote: 'Minimalist portfolio template designed for digital craftsmen.',
 		image:
 			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_6_pl5KrIjUA.png?updatedAt=1708435691450',
+		href: '/work/craft',
 	},
 	{
 		label: 'Bunny',
@@ -39,6 +43,7 @@ const panels: Panel[] = [
 		quote: 'Playful mascot design and branding for a local cafe.',
 		image:
 			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/manga_beautiful_7qMh10Vza.png?updatedAt=1708505549765',
+		href: '/work/bunny',
 	},
 ];
 ---
@@ -70,6 +75,9 @@ const panels: Panel[] = [
 							<p class='xp__title'>{p.title}</p>
 						</header>
 						<p class='xp__quote'>{p.quote}</p>
+						<a href={p.href} class='xp__btn'>
+							View Case Study
+						</a>
 					</div>
 				</article>
 			))
@@ -91,9 +99,23 @@ const panels: Panel[] = [
 			}
 
 			panels.forEach((p) => {
-				p.addEventListener('click', () => setActive(Number(p.dataset.index)));
+				p.addEventListener('click', (e) => {
+					if (e.target.closest('a')) {
+						return;
+					}
+					setActive(Number(p.dataset.index));
+				});
 				p.addEventListener('keydown', (e) => {
 					if (e.key === 'Enter' || e.key === ' ') {
+						if (e.target.closest('a')) {
+							// Let the link handle the event
+							// For space, we need to trigger a click
+							if (e.key === ' ') {
+								e.preventDefault(); // prevent scrolling
+								e.target.closest('a').click();
+							}
+							return;
+						}
 						e.preventDefault();
 						setActive(Number(p.dataset.index));
 					}
@@ -199,6 +221,7 @@ const panels: Panel[] = [
 	/* content only visible when active */
 	.xp__content {
 		height: 100%;
+		position: relative;
 		display: grid;
 		align-content: center;
 		justify-items: center;
@@ -215,6 +238,7 @@ const panels: Panel[] = [
 
 	.xp__panel.is-active .xp__rail {
 		opacity: 0; /* hide number when expanded */
+		pointer-events: none;
 	}
 
 	.xp__panel.is-active .xp__content {
@@ -266,6 +290,33 @@ const panels: Panel[] = [
 		color: rgba(255, 255, 255, 0.85);
 		line-height: 1.7;
 		font-size: clamp(0.9375rem, 0.8715rem + 0.2817vi, 1.125rem);
+	}
+
+	.xp__btn {
+		display: inline-block;
+		margin-top: map.get($space, 24);
+		padding: 0.5rem 1rem;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		background-color: transparent;
+		border-radius: 4px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 0.875rem;
+		letter-spacing: 0.02em;
+		transition: all 0.2s ease;
+
+		&:hover {
+			background: #fff;
+			color: #000;
+			border-color: #fff;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		}
+
+		&:active {
+			transform: translateY(0);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
 	}
 
 	/* mobile: stack */

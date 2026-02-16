@@ -1,0 +1,23 @@
+---
+import Layout from '../Layouts/DefaultLayout.astro';
+import Navbar from '../components/astro/Navbar.astro';
+import Footer from '../components/astro/Footer.astro';
+
+const email = 'Kaleb.Berry@outlook.com';
+const subject = encodeURIComponent('Studio Eien — Project Inquiry');
+const body = encodeURIComponent(
+	`Hi Kaleb,\n\nI’d like to discuss a website project.\n\nProject / Brand:\nGoals:\nTimeline:\nBudget Range (optional):\nLinks / References:\n\nThanks!\n`,
+);
+
+const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
+---
+
+<Layout title='Contact — Studio Eien' description='Reach out to Studio Eien to start your project'>
+	<main>
+		<Navbar />
+
+		<section>Hellow there</section>
+
+		<Footer />
+	</main>
+</Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from '../Layouts/DefaultLayout.astro';
+import Navbar from '../components/astro/Navbar.astro';
+import Footer from '../components/astro/Footer.astro';
+import WorkGallery from '../components/astro/WorkGallery.astro';
+---
+
+<Layout title='Studio Eien' description='Studio'>
+	<main>
+		<Navbar />
+		<section class='hero hero-content'>
+			<div class='container' data-type='wide'>
+				<header>
+					<div class='hero__title'>
+						<span class='text-accent'>スタジオ</span>
+						<h1>Our Studio</h1>
+					</div>
+
+					<p>
+						Studio Eien is a frontend-focused design practice dedicated to building thoughtful
+						digital experiences. We work with businesses, creators, and artists to transform ideas
+						into structured, scalable websites that feel intentional and refined.
+					</p>
+				</header>
+			</div>
+		</section>
+
+		<section class='Philosophy'>
+			<div class='container flow' data-type='wide'>
+				<div class='process__title'>
+					<span>フィロソフィー</span>
+					<h2>PHILOSOPHY</h2>
+				</div>
+				<div>
+					<p>永遠 Eternity.</p>
+				</div>
+				<div class='flow'>
+					<p>Good design endures.</p>
+					<p>Not because it chases trends, but because it is built on structure.</p>
+				</div>
+				<div>
+					<p>Structure before style.</p>
+					<p>Systems over one-offs.</p>
+					<p>Performance as a foundation.</p>
+				</div>
+				<div class='flow'>
+					<p>
+						Design and development evolve together — forming digital architecture meant to last.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style lang='scss'></style>

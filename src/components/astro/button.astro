@@ -1,27 +1,36 @@
 ---
 export interface Props {
-  content: string;
-  description: string;
+	content: string;
+	href?: string;
+	theme?: 'primary' | 'light';
 }
-const { content } = Astro.props;
+const { content, href = '#', theme = 'primary' } = Astro.props;
 ---
 
 <div>
-  <a href="#" class="btn btn-primary" role="button" aria-label="button">{content}</a>
+	<a href={href} class={`btn btn-${theme}`} role='button' aria-label='button'>{content}</a>
 </div>
 
-<style lang="scss">
-  @use "sass:map";
-  @use "../../styles/abstracts/" as *;
+<style lang='scss'>
+	@use 'sass:map';
+	@use '../../styles/abstracts/' as *;
 
-  .btn {
-    display: block;
-    max-width: fit-content;
-    border: 1px solid black;
-    padding: 0.8rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: $font-color-default;
-    font-size: var(--);
-  }
+	.btn {
+		display: block;
+		max-width: fit-content;
+		padding: 0.8rem 1rem;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: var(--);
+	}
+
+	.btn-primary {
+		border: 1px solid black;
+		color: $font-color-default;
+	}
+
+	.btn-light {
+		border: 1px solid white;
+		color: white;
+	}
 </style>

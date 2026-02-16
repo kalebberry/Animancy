@@ -2,6 +2,7 @@
 import Layout from '../Layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
+import Button from '@/components/astro/button.astro';
 import WorkGallery from '../components/astro/WorkGallery.astro';
 ---
 
@@ -25,10 +26,42 @@ import WorkGallery from '../components/astro/WorkGallery.astro';
 			</div>
 		</section>
 
+		<div class='decoration' data-type='full-bleed'>
+			<div class='container' data-type='full-bleed'>
+				<hr />
+				<div class='decoration__text__end'>
+					<p>SECTION: PROCESS ⟡ METHOD SIGNATURE: V.01</p>
+				</div>
+			</div>
+		</div>
+
 		<section class='work-statement'>
 			<div class='container flow' data-type='wide'>
 				<WorkGallery />
 			</div>
+		</section>
+
+		<div class='decoration'>
+			<div class='container' data-type='full-bleed'>
+				<hr />
+				<div class='decoration__text__end'>
+					<p>SECTION:YOUR STORY ⟡ METHOD SIGNATURE: V.03</p>
+				</div>
+			</div>
+		</div>
+
+		<section class='conversion container' data-type='wide'>
+			<header class='flow'>
+				<div class='conversion__title'>
+					<span>サービス</span>
+					<h2>START YOUR STORY</h2>
+				</div>
+				<p>
+					Step into our creative process, where ideas become impact. Explore client case studies and
+					see how Studio Eien transforms visions into soulful, strategic web design.
+				</p>
+				<Button content='Lets Work Together' />
+			</header>
 		</section>
 		<div class='decoration'>
 			<div class='container' data-type='full-bleed'>
