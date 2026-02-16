@@ -153,7 +153,7 @@ const panels: Panel[] = [
 
 		/* smooth expand */
 		transition:
-			flex 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+			flex 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
 			background 250ms ease;
 		outline: none;
 
@@ -167,8 +167,10 @@ const panels: Panel[] = [
 		inset: 0;
 		background-size: cover;
 		background-position: center;
-		opacity: 0.5;
-		transition: opacity 0.6s ease;
+		opacity: 0.35;
+		transition:
+			opacity 0.4s ease,
+			transform 0.4s ease;
 	}
 
 	.xp__overlay {
@@ -177,8 +179,8 @@ const panels: Panel[] = [
 		background: rgba(0, 0, 0, 0.4);
 		backdrop-filter: blur(0px);
 		transition:
-			backdrop-filter 0.6s ease,
-			background 0.6s ease;
+			backdrop-filter 0.4s ease,
+			background 0.4s ease;
 	}
 
 	/* expanded card */
@@ -192,6 +194,17 @@ const panels: Panel[] = [
 		.xp__overlay {
 			background: rgba(0, 0, 0, 0.6);
 			backdrop-filter: blur(10px);
+		}
+	}
+
+	/* hover state for collapsed panels */
+	.xp__panel:not(.is-active):hover {
+		.xp__bg {
+			opacity: 0.7;
+			transform: scale(1.03);
+		}
+		.xp__overlay {
+			background: rgba(0, 0, 0, 0.2);
 		}
 	}
 
@@ -300,6 +313,7 @@ const panels: Panel[] = [
 		background-color: transparent;
 		border-radius: 4px;
 		color: #fff;
+		font-family: 'Familjen Grotesk', sans-serif;
 		text-decoration: none;
 		font-size: 0.875rem;
 		letter-spacing: 0.02em;

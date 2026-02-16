@@ -42,51 +42,6 @@
   }
 }
 
-.decoration {
-  padding-block-end: $space-stack-md;
-
-  hr {
-    background-color: lch(36.15% 0.01 296.81);
-    margin: 0;
-    opacity: 40%;
-  }
-  .decoration__text {
-    display: flex;
-    justify-content: space-between;
-    color: #555;
-    opacity: 40%;
-
-    p {
-      text-transform: uppercase;
-      font-size: var(--fs-step-0);
-    }
-  }
-
-  .decoration__text__end {
-    display: flex;
-    justify-content: end;
-    color: lab(28.39% -3.25 -7.96);
-    opacity: 40%;
-
-    p {
-      text-transform: uppercase;
-      font-size: var(--fs-step-0);
-    }
-  }
-
-  .decoration__text__start {
-    display: flex;
-    justify-content: flex-start;
-    color: #555;
-    opacity: 40%;
-
-    p {
-      text-transform: uppercase;
-      font-size: var(--fs-step-0);
-    }
-  }
-}
-
 .process {
   padding-block: $space-stack-lg;
 
@@ -109,16 +64,24 @@
   }
 
   &__content {
-    --min: 65ch;
+    --min: 50ch;
     --gap: 1rem;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: var(--gap);
 
     &__card {
+      display: flex;
+      gap: 2rem;
+      align-items: start;
       h3,
       p {
         padding-block-end: $spacing-32;
+      }
+
+      &__num {
+        font-size: var(--fs-step-6);
       }
     }
   }
@@ -203,6 +166,51 @@
       font-family: "WDXL Lubrifont JP N", sans-serif;
       font-weight: 400;
       font-style: normal;
+    }
+  }
+}
+
+.decoration {
+  padding-block-end: $space-stack-md;
+
+  hr {
+    background-color: lch(36.15% 0.01 296.81);
+    margin: 0;
+    opacity: 40%;
+  }
+  .decoration__text {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    opacity: 40%;
+
+    p {
+      text-transform: uppercase;
+      font-size: var(--fs-step-0);
+    }
+  }
+
+  .decoration__text__end {
+    display: flex;
+    justify-content: end;
+    color: lab(28.39% -3.25 -7.96);
+    opacity: 40%;
+
+    p {
+      text-transform: uppercase;
+      font-size: var(--fs-step-0);
+    }
+  }
+
+  .decoration__text__start {
+    display: flex;
+    justify-content: flex-start;
+    color: #555;
+    opacity: 40%;
+
+    p {
+      text-transform: uppercase;
+      font-size: var(--fs-step-0);
     }
   }
 }
