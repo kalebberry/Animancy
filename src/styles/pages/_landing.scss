@@ -25,6 +25,21 @@
   img {
     border-radius: 0.6rem;
   }
+
+  &__title {
+    max-width: max-content;
+    margin-block-end: $spacing-32;
+
+    span {
+      display: flex;
+      justify-content: end;
+      font-size: var(--fs-step-2);
+      font-family: "WDXL Lubrifont JP N", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+    }
+  }
 }
 
 .decoration {
