@@ -75,6 +75,11 @@
       display: flex;
       gap: 2rem;
       padding-block: $spacing-32;
+      transition: all 0.3s ease;
+      &:hover {
+        padding-inline: 2rem;
+      }
+
       h3,
       p {
         padding-block-end: $spacing-32;
