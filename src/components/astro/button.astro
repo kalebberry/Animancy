@@ -7,7 +7,7 @@ export interface Props {
 const { content, href = '#', theme = 'primary' } = Astro.props;
 ---
 
-<div>
+<div class='btn-wrapper'>
 	<a href={href} class={`btn btn-${theme}`} role='button' aria-label='button'>{content}</a>
 </div>
 
@@ -15,18 +15,28 @@ const { content, href = '#', theme = 'primary' } = Astro.props;
 	@use 'sass:map';
 	@use '../../styles/abstracts/' as *;
 
+	.btn-wrapper {
+		margin-top: 2rem;
+	}
+
 	.btn {
 		display: block;
 		max-width: fit-content;
 		padding: 0.8rem 1rem;
 		border-radius: 5px;
 		text-decoration: none;
-		font-size: var(--);
+		font-size: var(--font-size-default);
 	}
 
 	.btn-primary {
-		border: 1px solid black;
+		border: 1px solid $color-characol;
 		color: $font-color-default;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: $color-characol;
+			color: $color-paper;
+		}
 	}
 
 	.btn-light {

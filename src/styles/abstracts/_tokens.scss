@@ -8,9 +8,10 @@
 $active-theme: $light;
 
 /* Brand Colors */
-$color-paper: rgb(250, 249, 246); // Warm, natural paper white
-$color-accent: #cd2b2b; // Vermilion / Hanko Red
-$font-color-default: lch(12.23% 2.14 0.27);
+$color-paper: hsl(45, 29%, 97%); // Warm, natural paper white
+$color-characol: hsl(345, 6%, 13%);
+$color-accent: hsl(0, 65%, 49%); // Vermilion / Hanko Red
+$font-color-default: hsl(345, 6%, 13%);
 
 /* Layout Tokens */
 

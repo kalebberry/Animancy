@@ -74,7 +74,7 @@
     &__card {
       display: flex;
       gap: 2rem;
-      align-items: start;
+      padding-block: $spacing-32;
       h3,
       p {
         padding-block-end: $spacing-32;
@@ -82,6 +82,8 @@
 
       &__num {
         font-size: var(--fs-step-6);
+        opacity: 0.3;
+        color: #555;
       }
     }
   }
@@ -131,14 +133,23 @@
   &__content {
     --min: 65ch;
     --gap: 1rem;
-    display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
 
     &__card {
+      display: flex;
+      gap: 2rem;
+      align-items: start;
+      padding-block: $spacing-32;
       h3,
       p {
         padding-block-end: $spacing-32;
+      }
+
+      &__num {
+        font-size: var(--fs-step-6);
+        opacity: 0.3;
+        color: #555;
       }
     }
   }
