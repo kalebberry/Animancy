@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 
 body {
-  background-color: $color-paper;
+  // background-color: $color-paper;
+  background: radial-gradient(circle at center, #ffffff 12%, #f4f0f2 50%, #faf8f5 80%);
   margin: 0;
   overflow-x: hidden;
   color: $font-color-default;

@@ -137,7 +137,7 @@ const panels: Panel[] = [
 	.xp__row {
 		display: flex;
 		gap: map.get($space, 16);
-		min-height: 480px;
+		min-height: 580px;
 		align-items: stretch;
 	}
 
@@ -146,7 +146,6 @@ const panels: Panel[] = [
 		min-width: 60px;
 		border-radius: 12px;
 		background: #000;
-		border: 1px solid rgba(0, 0, 0, 0.06);
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
@@ -185,7 +184,7 @@ const panels: Panel[] = [
 
 	/* expanded card */
 	.xp__panel.is-active {
-		flex: 5;
+		flex: 3;
 		border-color: rgba(255, 255, 255, 0.08);
 
 		.xp__bg {
