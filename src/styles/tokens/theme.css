@@ -2,16 +2,19 @@
 
 :root {
   color-scheme: light;
-  --background-light: #FFFFFF;
+  --background-light: hsl(45, 29%, 97%);
   --background-dark: #0B0B0B;
   --background: var(--background-light);
-  --text-light: #111111;
+  --text-light: hsl(345, 6%, 13%);
   --text-dark: #EFEFEF;
   --text: var(--text-light);
+  --accent-light: hsl(0, 65%, 49%);
+  --accent-dark: hsl(0, 65%, 49%);
+  --accent: var(--accent-light);
   --muted-light: #6F6F6F;
   --muted-dark: #A0A0A0;
   --muted: var(--muted-light);
-  --border-light: #111111;
+  --border-light: hsl(345, 6%, 13%);
   --border-dark: #EFEFEF;
   --border: var(--border-light);
   --border-weak-light: #D9D9D9;
@@ -23,6 +26,7 @@
   color-scheme: dark;
   --background: var(--background-dark);
   --text: var(--text-dark);
+  --accent: var(--accent-dark);
   --muted: var(--muted-dark);
   --border: var(--border-dark);
   --border-weak: var(--border-weak-dark);
@@ -32,6 +36,7 @@
   color-scheme: light;
   --background: var(--background-light);
   --text: var(--text-light);
+  --accent: var(--accent-light);
   --muted: var(--muted-light);
   --border: var(--border-light);
   --border-weak: var(--border-weak-light);
