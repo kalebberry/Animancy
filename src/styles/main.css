@@ -4,31 +4,14 @@
 @layer reset, base, compositions, components, pages, utilities;
 
 /* 2. Global Tokens & Custom Properties (Unlayered Root Context) */
-@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fira+Sans:wght@300;400;500;700&family=PT+Serif:wght@400;700&family=Space+Grotesk:wght@300..700&family=WDXL+Lubrifont+JP+N&display=swap");
-@import "./tokens/font-sizes.css";
-@import "./tokens/theme.css";
-@import "./tokens/space-sizes.css";
-@import "./tokens/tokens.css";
-@import "./tokens/typography.css";
+@import "./tokens/index.css";
 
 /* 3. Layered Stylesheets */
 @import "./base/reset.css" layer(reset);
 @import "./base/general.css" layer(base);
 @import "./base/typography.css" layer(base);
 
-@import "./compositions/cluster.css" layer(compositions);
-@import "./compositions/container.css" layer(compositions);
-@import "./compositions/flow.css" layer(compositions);
-@import "./compositions/grid.css" layer(compositions);
-@import "./compositions/repel.css" layer(compositions);
-@import "./compositions/sidebar.css" layer(compositions);
-@import "./compositions/switcher.css" layer(compositions);
-
-@import "./components/navbar.css" layer(components);
-
-@import "./pages/landing.css" layer(pages);
-@import "./pages/work.css" layer(pages);
-
-@import "./utilities/fs.css" layer(utilities);
-@import "./utilities/spacing.css" layer(utilities);
-@import "./utilities/tone-lines.css" layer(utilities);
+@import "./compositions/index.css" layer(compositions);
+@import "./components/index.css" layer(components);
+@import "./pages/index.css" layer(pages);
+@import "./utilities/index.css" layer(utilities);
