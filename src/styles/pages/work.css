@@ -1,0 +1,5 @@
+@layer pages {
+  .work-statement {
+    padding-block: var(--space-stack-md, 2rem) var(--space-stack-lg, 4rem);
+  }
+}

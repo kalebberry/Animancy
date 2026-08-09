@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Auto‑Grid Demo · CSS Grid + Custom Properties</title>
     <link rel="stylesheet" href="/src/styles/main.css" />
-    <link rel="stylesheet" href="/src/styles/grid-demo.css" />
   </head>
 </html>
 <body>
-  <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark and light theme">
+  <button
+    id="themeToggle"
+    class="theme-toggle"
+    type="button"
+    aria-pressed="false"
+    aria-label="Toggle dark and light theme"
+  >
     <span id="themeIcon" class="icon" aria-hidden="true">🌙</span>
     <span id="themeText">Dark</span>
   </button>
   <div class="wrap flow-large">
     <nav>
-      <a href="flex-grid-demo.html" class="back-link" aria-label="Back to component navigation">Flexbox Grid Demo</a>
+      <a
+        href="flex-grid-demo.html"
+        class="back-link"
+        aria-label="Back to component navigation">Flexbox Grid Demo</a
+      >
     </nav>
     <header>
       <h1>Auto-Grid Demo</h1>
       <p class="lead">
-        A modern, media-query-free grid built with CSS Grid + custom properties. Inspired by Every Layout and intrinsic design. Use the controls to see how
+        A modern, media-query-free grid built with CSS Grid + custom properties.
+        Inspired by Every Layout and intrinsic design. Use the controls to see
+        how
         <code>auto-fit</code>
         /
         <code>auto-fill</code>
@@ -30,20 +41,33 @@
 
     <!-- Controls -->
     <section class="panel" aria-labelledby="controls-title">
-      <h2 id="controls-title" style="margin: 0 0 0.25rem; font-size: 1.1rem">Playground Controls</h2>
+      <h2 id="controls-title" style="margin: 0 0 0.25rem; font-size: 1.1rem">
+        Playground Controls
+      </h2>
       <div class="controls">
         <div class="control">
           <label for="placement">Grid placement</label>
           <select id="placement" aria-label="Grid placement">
-            <option value="auto-fit" selected>auto-fit (collapse empty tracks)</option>
+            <option value="auto-fit" selected
+              >auto-fit (collapse empty tracks)</option
+            >
             <option value="auto-fill">auto-fill (keep phantom tracks)</option>
           </select>
-          <div class="hint">Controls how extra tracks behave when the row isn’t full.</div>
+          <div class="hint">
+            Controls how extra tracks behave when the row isn’t full.
+          </div>
         </div>
 
         <div class="control">
           <label for="gutter">Gutter (gap)</label>
-          <input id="gutter" type="range" min="0" max="40" step="2" value="16" />
+          <input
+            id="gutter"
+            type="range"
+            min="0"
+            max="40"
+            step="2"
+            value="16"
+          />
           <div class="hint">
             <code>gap</code>
             in pixels
@@ -56,7 +80,14 @@
 
         <div class="control">
           <label for="minsize">Min item size</label>
-          <input id="minsize" type="range" min="140" max="420" step="10" value="260" />
+          <input
+            id="minsize"
+            type="range"
+            min="140"
+            max="420"
+            step="10"
+            value="260"
+          />
           <div class="hint">
             Minimum preferred card width in pixels (current:
             <span id="minOut">260</span>
@@ -66,7 +97,14 @@
 
         <div class="control">
           <label for="containerWidth">Container width</label>
-          <input id="containerWidth" type="range" min="400" max="1400" step="10" value="1400" />
+          <input
+            id="containerWidth"
+            type="range"
+            min="400"
+            max="1400"
+            step="10"
+            value="1400"
+          />
           <div class="hint">
             Resize the container to see the grid adapt (
             <span id="widthOut">1400</span>
@@ -84,7 +122,11 @@
             <h2 class="section-title">1. Auto-Grid Playground</h2>
           </header>
 
-          <div id="playground" class="grid grid--fit gap-4" style="--grid-min-item-size: 16rem">
+          <div
+            id="playground"
+            class="grid grid--fit gap-4"
+            style="--grid-min-item-size: 16rem"
+          >
             <!-- 12 demo cards with varied content length -->
             <article class="card">
               <h3>Card 1</h3>
@@ -96,7 +138,10 @@
             </article>
             <article class="card">
               <h3>Card 3</h3>
-              <p>Sometimes a card has a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis.</p>
+              <p>
+                Sometimes a card has a longer paragraph. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Aenean quis.
+              </p>
             </article>
             <article class="card">
               <h3>Card 4</h3>
@@ -104,7 +149,10 @@
             </article>
             <article class="card">
               <h3>Card 5</h3>
-              <p>Another medium block of text to add variety and demonstrate wrapping.</p>
+              <p>
+                Another medium block of text to add variety and demonstrate
+                wrapping.
+              </p>
             </article>
             <article class="card">
               <h3>Card 6</h3>
@@ -112,7 +160,10 @@
             </article>
             <article class="card">
               <h3>Card 7</h3>
-              <p>With a little more content to force different heights so you can see the flow.</p>
+              <p>
+                With a little more content to force different heights so you can
+                see the flow.
+              </p>
             </article>
             <article class="card">
               <h3>Card 8</h3>
@@ -132,7 +183,10 @@
             </article>
             <article class="card">
               <h3>Card 12</h3>
-              <p>Longer content helps visualize how CSS Grid handles masonry-ish flows without hacks.</p>
+              <p>
+                Longer content helps visualize how CSS Grid handles masonry-ish
+                flows without hacks.
+              </p>
             </article>
           </div>
         </section>
@@ -446,7 +500,10 @@
           </div>
 
           <h2 class="section-title">4. Sidebar Layout (Explicit Grid)</h2>
-          <p class="lead" style="margin-block-start: 0">For page shells, use an explicit two-column grid—content + sidebar—that still collapses gracefully.</p>
+          <p class="lead" style="margin-block-start: 0">
+            For page shells, use an explicit two-column grid—content +
+            sidebar—that still collapses gracefully.
+          </p>
 
           <section class="sidebar-grid__container">
             <div class="sidebar-grid gap-6">
@@ -454,7 +511,10 @@
                 <h3>Main Content</h3>
                 <p>
                   Uses
-                  <code>grid-template-columns: minmax(16rem, 3fr) minmax(12rem, 1fr)</code>
+                  <code
+                    >grid-template-columns: minmax(16rem, 3fr) minmax(12rem,
+                    1fr)</code
+                  >
                   so the main area grows faster than the sidebar.
                 </p>
               </article>
@@ -469,12 +529,16 @@
           <section class="flow-large">
             <h2 class="section-title">5. Subgrid</h2>
             <p class="lead" style="margin-block-start: 0">
-              Use <code>subgrid</code> to align nested grid items with the parent grid's tracks, perfect for keeping complex card layouts consistent.
+              Use <code>subgrid</code> to align nested grid items with the parent
+              grid's tracks, perfect for keeping complex card layouts consistent.
             </p>
             <div class="grid gap-4" data-cols="3">
               <article class="card">
                 <h3>Standard Card</h3>
-                <p>This is a standard card in the parent grid for alignment comparison.</p>
+                <p>
+                  This is a standard card in the parent grid for alignment
+                  comparison.
+                </p>
               </article>
               <article class="card subgrid-card" data-span="2">
                 <h3 class="subgrid-title">Subgrid Card (Spans 2)</h3>
@@ -493,8 +557,17 @@
           <!-- 7) Container Queries -->
           <section class="flow-large">
             <h2 class="section-title">6. Container Queries</h2>
-            <p class="lead" style="margin-block-start: 0">Style elements based on their container's size, not just the viewport. The card below changes its internal layout from vertical to horizontal when its container has enough inline space.</p>
-            <div class="container grid gap-4" data-type="narrow" data-cols="1" style="margin-bottom: 1rem">
+            <p class="lead" style="margin-block-start: 0">
+              Style elements based on their container's size, not just the
+              viewport. The card below changes its internal layout from vertical
+              to horizontal when its container has enough inline space.
+            </p>
+            <div
+              class="container grid gap-4"
+              data-type="narrow"
+              data-cols="1"
+              style="margin-bottom: 1rem"
+            >
               <div class="cq-card card">
                 <div class="cq-card__content">
                   <h3 style="margin: 0">Narrow Container</h3>
@@ -506,13 +579,18 @@
               <div class="cq-card card">
                 <div class="cq-card__content">
                   <h3 style="margin: 0">Wider Container</h3>
-                  <p style="margin: 0">Here, I have more room and switch to a horizontal layout.</p>
+                  <p style="margin: 0">
+                    Here, I have more room and switch to a horizontal layout.
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
-          <footer style="margin-block: var(--space-xl); color: var(--muted)">Built with pure CSS Grid, custom properties, and a sprinkle of progressive enhancement. No media queries required.</footer>
+          <footer style="margin-block: var(--space-xl); color: var(--muted)">
+            Built with pure CSS Grid, custom properties, and a sprinkle of
+            progressive enhancement. No media queries required.
+          </footer>
         </section>
       </main>
     </div>
@@ -525,7 +603,11 @@
       const icon = document.getElementById("themeIcon");
       const text = document.getElementById("themeText");
 
-      const getOSPref = () => (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      const getOSPref = () =>
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
       const saved = localStorage.getItem("theme");
       const initial = saved || getOSPref();
       root.setAttribute("data-theme", initial);
@@ -540,7 +622,8 @@
       render(initial);
 
       btn.addEventListener("click", () => {
-        const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+        const current =
+          root.getAttribute("data-theme") === "light" ? "light" : "dark";
         const next = current === "light" ? "dark" : "light";
         root.setAttribute("data-theme", next);
         localStorage.setItem("theme", next);
@@ -548,11 +631,13 @@
       });
 
       if (!saved && window.matchMedia) {
-        window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-          const theme = e.matches ? "light" : "dark";
-          root.setAttribute("data-theme", theme);
-          render(theme);
-        });
+        window
+          .matchMedia("(prefers-color-scheme: light)")
+          .addEventListener("change", (e) => {
+            const theme = e.matches ? "light" : "dark";
+            root.setAttribute("data-theme", theme);
+            render(theme);
+          });
       }
     })();
     // Playground controllers

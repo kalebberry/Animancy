@@ -38,9 +38,12 @@ const { content, href = '#', theme = 'primary' } = Astro.props;
 	</a>
 </div>
 
-<style lang='scss'>
-	@use 'sass:map';
-	@use '../../styles/abstracts/' as *;
+<style>
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
 
 	.btn-wrapper {
 		margin-top: 2rem;
@@ -53,45 +56,41 @@ const { content, href = '#', theme = 'primary' } = Astro.props;
 		padding: 0.8rem 1rem;
 		border-radius: 5px;
 		text-decoration: none;
-		font-size: var(--font-size-default);
+		font-size: var(--fs-step-0);
 
 		svg {
 			width: 0;
 			opacity: 0;
 			margin-left: 0;
-			overflow: hidden;
+			overflow: visible;
 			transition: all 0.3s ease;
 			transform: translateY(1px);
-		}
-
-		@keyframes draw {
-			to {
-				stroke-dashoffset: 0;
-			}
 		}
 
 		&:hover svg {
 			width: 1em;
 			opacity: 1;
 			margin-left: 0.5rem;
+		}
 
-			.path-box {
-				animation: draw 0.6s forwards;
-			}
-			.path-arrow {
-				animation: draw 0.3s 0.6s forwards;
-			}
+		&:hover .path-box {
+			animation: draw 0.6s forwards;
+		}
+
+		&:hover .path-arrow {
+			animation: draw 0.3s 0.6s forwards;
 		}
 	}
 
 	.btn-primary {
-		border: 1px solid $color-characol;
-		color: $font-color-default;
+		border: 1px solid var(--text);
+		color: var(--text);
+		background: transparent;
 		transition: all 0.3s ease;
 
 		&:hover {
-			background: $color-characol;
-			color: $color-paper;
+			background: var(--text);
+			color: var(--background);
 		}
 	}
 

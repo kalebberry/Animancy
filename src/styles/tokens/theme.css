@@ -1,0 +1,38 @@
+/* This file is auto-generated. Do not edit. */
+
+:root {
+  color-scheme: light;
+  --background-light: #FFFFFF;
+  --background-dark: #0B0B0B;
+  --background: var(--background-light);
+  --text-light: #111111;
+  --text-dark: #EFEFEF;
+  --text: var(--text-light);
+  --muted-light: #6F6F6F;
+  --muted-dark: #A0A0A0;
+  --muted: var(--muted-light);
+  --border-light: #111111;
+  --border-dark: #EFEFEF;
+  --border: var(--border-light);
+  --border-weak-light: #D9D9D9;
+  --border-weak-dark: #2A2A2A;
+  --border-weak: var(--border-weak-light);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --muted: var(--muted-dark);
+  --border: var(--border-dark);
+  --border-weak: var(--border-weak-dark);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --muted: var(--muted-light);
+  --border: var(--border-light);
+  --border-weak: var(--border-weak-light);
+}

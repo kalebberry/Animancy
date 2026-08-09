@@ -1,0 +1,31 @@
+:root {
+  --color-paper: oklch(0.97 0.01 75);
+  --color-charcoal: oklch(0.22 0.01 345);
+  --color-accent: oklch(0.55 0.22 25);
+  --font-color-default: var(--color-charcoal);
+
+  --container-min-margin-inline: var(--spacing-8);
+  --container-max-width-narrow: 45rem;
+  --container-max-width: 65rem;
+  --container-max-width-wide: 85rem;
+
+  --section-padding-block: var(--spacing-48);
+  --gap-width-default: var(--spacing-16);
+
+  --button-border-radius: 0.3em;
+  --button-padding-inline: 1.875rem;
+  --button-padding-block: 0.688rem;
+
+  --font-text-default: var(--ff-fira-sans);
+  --font-text-header: var(--ff-pt-serif);
+  --font-text-weight-default: 300;
+  --font-text-weight-header: 400;
+
+  --font-text-width-default: 60ch;
+
+  --body-font-family: var(--ff-fira-sans);
+  --body-line-height: 1.7;
+  --body-font-weight: var(--font-fira-sans-light);
+
+  --header-max-text-width: 25ch;
+}

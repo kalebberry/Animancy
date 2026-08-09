@@ -135,27 +135,24 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 	});
 </script>
 
-<style lang='scss'>
-	@use 'sass:map';
-	@use '../../styles/abstracts/' as *;
-
+<style>
 	.gallery-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: map.get($space, 24);
+		gap: var(--spacing-24, 1.5rem);
 	}
 
 	.filter-bar {
 		display: flex;
 		flex-wrap: wrap;
-		gap: map.get($space, 16);
-		padding-bottom: map.get($space, 16);
+		gap: var(--spacing-16, 1rem);
+		padding-bottom: var(--spacing-16, 1rem);
 	}
 
 	.filter-btn {
 		background: transparent;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: $font-color-default;
+		border: 1px solid color-mix(in oklch, var(--text) 20%, transparent);
+		color: var(--text);
 		padding: 8px 16px;
 		border-radius: 100px;
 		cursor: pointer;
@@ -164,21 +161,21 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 		transition: all 0.3s ease;
 
 		&:hover {
-			border-color: rgba(255, 255, 255, 0.5);
-			color: $font-color-default;
+			border-color: color-mix(in oklch, var(--text) 50%, transparent);
+			color: var(--text);
 		}
 
 		&.active {
-			background: #fff;
-			border-color: #fff;
-			color: #000;
+			background: var(--text);
+			border-color: var(--text);
+			color: var(--background);
 		}
 	}
 
 	.work-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		gap: map.get($space, 24);
+		gap: var(--spacing-24, 1.5rem);
 	}
 
 	.work-card {
@@ -244,7 +241,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 	.work-card__content {
 		position: absolute;
 		inset: 0;
-		padding: map.get($space, 24);
+		padding: var(--spacing-24, 1.5rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -273,7 +270,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 
 	.work-card__main {
 		margin-top: auto;
-		margin-bottom: map.get($space, 16);
+		margin-bottom: var(--spacing-16, 1rem);
 	}
 
 	.work-card__client {

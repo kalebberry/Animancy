@@ -1,0 +1,9 @@
+@layer layout {
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter, var(--spacing-16, 1rem));
+    justify-content: var(--cluster-horizontal-alignment, flex-start);
+    align-items: var(--cluster-vertical-alignment, center);
+  }
+}

@@ -1,0 +1,172 @@
+@layer layout {
+  /* --- Utilities ------------------------------------------------------- */
+  .gap-0 { --gutter: 0; }
+  .gap-2 { --gutter: 0.5rem; }
+  .gap-4 { --gutter: 1rem; }
+  .gap-6 { --gutter: 1.5rem; }
+
+  .grid--fill { --grid-placement: auto-fill; }
+  .grid--fit { --grid-placement: auto-fit; }
+
+  /* Spans */
+  [data-span="1"] { grid-column: span 1; }
+  [data-span="2"] { grid-column: span 2; }
+  [data-span="3"] { grid-column: span 3; }
+  [data-span="4"] { grid-column: span 4; }
+  [data-span="5"] { grid-column: span 5; }
+  [data-span="6"] { grid-column: span 6; }
+  [data-span="7"] { grid-column: span 7; }
+  [data-span="8"] { grid-column: span 8; }
+  [data-span="9"] { grid-column: span 9; }
+  [data-span="10"] { grid-column: span 10; }
+  [data-span="11"] { grid-column: span 11; }
+  [data-span="12"] { grid-column: span 12; }
+
+  [data-row-span="1"] { grid-row: span 1; }
+  [data-row-span="2"] { grid-row: span 2; }
+  [data-row-span="3"] { grid-row: span 3; }
+  [data-row-span="4"] { grid-row: span 4; }
+  [data-row-span="5"] { grid-row: span 5; }
+  [data-row-span="6"] { grid-row: span 6; }
+
+  /* Grid Presets */
+  :where(.grid) {
+    display: grid;
+    grid-template-columns: var(
+      --grid-cols,
+      repeat(var(--grid-placement, auto-fit), minmax(var(--grid-min-item-size, 16rem), 1fr))
+    );
+    gap: var(--gutter, 1rem);
+    grid-auto-rows: minmax(min-content, auto);
+  }
+
+  .grid {
+    &[data-cols],
+    &[data-layout] {
+      --grid-placement: auto-fit;
+    }
+
+    &[data-cols="1"] { --grid-min-item-size: 100%; }
+    &[data-cols="2"] { --grid-min-item-size: max(16rem, calc((100% - var(--gutter, 1rem)) / 2)); }
+    &[data-cols="3"] { --grid-min-item-size: max(15rem, calc((100% - (var(--gutter, 1rem) * 2)) / 3)); }
+    &[data-cols="4"] { --grid-min-item-size: max(14rem, calc((100% - (var(--gutter, 1rem) * 3)) / 4)); }
+    &[data-cols="5"] { --grid-min-item-size: max(13rem, calc((100% - (var(--gutter, 1rem) * 4)) / 5)); }
+    &[data-cols="6"] { --grid-min-item-size: max(12rem, calc((100% - (var(--gutter, 1rem) * 5)) / 6)); }
+
+    &.grid--dense {
+      grid-auto-flow: dense;
+    }
+
+    &.grid--subgrid-rows {
+      grid-template-rows: subgrid;
+    }
+  }
+
+  .subgrid-card {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  .grid-container {
+    container-type: inline-size;
+
+    @container (max-width: 50rem) {
+      .grid {
+        --grid-min-item-size: 14rem;
+      }
+    }
+
+    @container (max-width: 30rem) {
+      .grid [data-span],
+      .grid [data-row-span] {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+
+  /* Component Container Query Card */
+  .cq-card {
+    container-type: inline-size;
+    container-name: card;
+  }
+
+  .cq-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @container card (min-width: 25rem) {
+    .cq-card__content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  /* Sidebar Grid */
+  .sidebar-grid {
+    display: grid;
+    gap: var(--gutter, 1rem);
+    grid-template-columns: minmax(16rem, 3fr) minmax(12rem, 1fr);
+  }
+
+  .sidebar-grid__container {
+    container-type: inline-size;
+
+    @container (max-width: 48rem) {
+      .sidebar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  /* Flexbox Grid */
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: var(--gutter, 1rem);
+
+    > * {
+      flex-grow: 1;
+      min-inline-size: 0;
+    }
+
+    &.flex-grid--playground > * {
+      min-width: var(--min-width, 16rem);
+      flex-basis: var(--flex-basis, 30%);
+    }
+  }
+
+  /* Masonry Grid */
+  .masonry-grid {
+    column-count: var(--masonry-cols, 3);
+    column-gap: var(--gutter, 1rem);
+
+    > * {
+      break-inside: avoid;
+      margin-bottom: var(--gutter, 1rem);
+    }
+  }
+
+  .masonry__container {
+    container-type: inline-size;
+
+    @container (max-width: 40rem) {
+      .masonry-grid {
+        --masonry-cols: 1;
+      }
+    }
+    @container (40rem <= width <= 70rem) {
+      .masonry-grid {
+        --masonry-cols: 2;
+      }
+    }
+    @container (min-width: 70rem) {
+      .masonry-grid {
+        --masonry-cols: 3;
+      }
+    }
+  }
+}

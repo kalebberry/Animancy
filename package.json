@@ -7,9 +7,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"tokens": "node src/convert-tokens.js",
-		"scss": "sass src/styles/main.scss src/styles/main.css",
-		"scss:watch": "sass --watch src/styles/main.scss src/styles/main.css"
+		"tokens": "node src/convert-tokens.js"
 	},
 	"dependencies": {
 		"@astrojs/vue": "^5.1.0",
@@ -17,8 +15,5 @@
 		"gsap": "^3.13.0",
 		"pinia": "^3.0.3",
 		"vue": "^3.5.17"
-	},
-	"devDependencies": {
-		"sass": "^1.89.2"
 	}
 }

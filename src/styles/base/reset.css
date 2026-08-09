@@ -1,0 +1,131 @@
+@layer reset {
+  /* Enable intrinsic keyword size transitions (e.g., height: auto) */
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  /* Box sizing rules */
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  /* Prevent font size inflation */
+  :where(html) {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Modern scrollbar styling */
+  html {
+    scrollbar-color: var(--border-weak) transparent;
+  }
+
+  @supports not (scrollbar-color: auto) {
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-weak);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  /* Remove default margin in favour of better control in authored CSS */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* Set shorter line heights on headings and interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Balance text wrapping on headings & widow prevention on paragraphs */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Anchor element defaults */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+  /* Responsive media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Textarea default height */
+  textarea:not([rows]) {
+    min-height: 10em;
+  }
+
+  /* Anchored element target scroll margin */
+  :target {
+    scroll-margin-block: 5ex;
+  }
+}

@@ -1,0 +1,17 @@
+@layer utilities {
+  .fs-step-000 { font-size: var(--fs-step-000); }
+  .fs-step-00 { font-size: var(--fs-step-00); }
+  .fs-step-0 { font-size: var(--fs-step-0); }
+  .fs-step-1 { font-size: var(--fs-step-1); }
+  .fs-step-2 { font-size: var(--fs-step-2); }
+  .fs-step-3 { font-size: var(--fs-step-3); }
+  .fs-step-4 { font-size: var(--fs-step-4); }
+  .fs-step-5 { font-size: var(--fs-step-5); }
+  .fs-step-6 { font-size: var(--fs-step-6); }
+  .fs-step-7 { font-size: var(--fs-step-7); }
+  .fs-step-8 { font-size: var(--fs-step-8); }
+  .fs-step-9 { font-size: var(--fs-step-9); }
+  .fs-step-10 { font-size: var(--fs-step-10); }
+  .fs-step-11 { font-size: var(--fs-step-11); }
+  .fs-step-12 { font-size: var(--fs-step-12); }
+}
