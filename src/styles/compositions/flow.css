@@ -1,26 +1,26 @@
 @layer layout {
-  .flow,
-  .flow-large > * {
-    margin-block: 0;
-  }
+	.flow,
+	.flow-large > * {
+		margin-block: 0;
+	}
 
-  .flow-inline > * + * {
-    margin-inline-start: var(--space, 1rem);
-  }
+	.flow-inline > * + * {
+		margin-inline-start: var(--space, 1rem);
+	}
 
-  .flow > * + * {
-    margin-block-start: var(--space, 1rem);
-  }
+	.flow > * + * {
+		margin-block-start: var(--space, 1rem);
+	}
 
-  .flow-large > * + * {
-    margin-block-start: var(--space, 2rem);
-  }
+	.flow-large > * + * {
+		margin-block-start: var(--space, 2rem);
+	}
 
-  :is(h1, h2, h3, blockquote) {
-    --flow-space: 1.5em;
-  }
+	:is(h1, h2, h3, blockquote) {
+		--space: 1.5em;
+	}
 
-  :is(h1, h2, h3) + * {
-    --flow-space: 0.5em;
-  }
+	:is(h1, h2, h3) + * {
+		--space: 0.5em;
+	}
 }

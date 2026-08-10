@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <style>
+    .line {
+      fill: none;
+      stroke: #8f8373;
+      stroke-width: 1.35;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .dot { fill: #8f8373; }
+    .seal-text {
+      fill: #8f8373;
+      font-family: serif;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Seigaiha-inspired wave -->
+  <g class="line" transform="translate(58 58)">
+    <path d="M0 18a18 18 0 0 1 36 0"/>
+    <path d="M6 18a12 12 0 0 1 24 0"/>
+    <path d="M12 18a6 6 0 0 1 12 0"/>
+    <path d="M18 18a18 18 0 0 1 36 0"/>
+    <path d="M24 18a12 12 0 0 1 24 0"/>
+    <path d="M30 18a6 6 0 0 1 12 0"/>
+    <path d="M9 30a18 18 0 0 1 36 0"/>
+    <path d="M15 30a12 12 0 0 1 24 0"/>
+    <path d="M21 30a6 6 0 0 1 12 0"/>
+  </g>
+
+  <!-- Nagare / mist -->
+  <g class="line" transform="translate(334 72)">
+    <path d="M0 0h34c8 0 8 10 0 10H16c-8 0-8 10 0 10h58"/>
+    <path d="M8 32h38c8 0 8 10 0 10H26"/>
+  </g>
+
+  <!-- Three-dot mitsudomoe-like accent -->
+  <g transform="translate(244 45)">
+    <circle class="dot" cx="0" cy="5" r="2.4"/>
+    <circle class="dot" cx="-5" cy="13" r="2.4"/>
+    <circle class="dot" cx="5" cy="13" r="2.4"/>
+  </g>
+
+  <!-- Studio Eien seal -->
+  <g transform="translate(170 205)">
+    <circle class="line" r="39"/>
+    <circle class="line" r="32" opacity=".35"/>
+    <text class="seal-text" x="0" y="-2" font-size="18">永</text>
+    <text class="seal-text" x="0" y="19" font-size="18">遠</text>
+    <path class="line" d="M-22 -29a36 36 0 0 1 44 0" opacity=".55"/>
+  </g>
+
+  <!-- Secondary wave -->
+  <g class="line" transform="translate(354 252)">
+    <path d="M0 18a18 18 0 0 1 36 0"/>
+    <path d="M6 18a12 12 0 0 1 24 0"/>
+    <path d="M12 18a6 6 0 0 1 12 0"/>
+    <path d="M18 18a18 18 0 0 1 36 0"/>
+    <path d="M24 18a12 12 0 0 1 24 0"/>
+    <path d="M9 30a18 18 0 0 1 36 0"/>
+    <path d="M15 30a12 12 0 0 1 24 0"/>
+  </g>
+
+  <!-- Secondary mist -->
+  <g class="line" transform="translate(72 350)">
+    <path d="M0 0h42c8 0 8 10 0 10H24c-8 0-8 10 0 10h52"/>
+    <path d="M20 32h42c8 0 8 10 0 10H42"/>
+  </g>
+
+  <!-- Accent clusters -->
+  <g transform="translate(302 384)">
+    <circle class="dot" cx="0" cy="5" r="2.4"/>
+    <circle class="dot" cx="-5" cy="13" r="2.4"/>
+    <circle class="dot" cx="5" cy="13" r="2.4"/>
+  </g>
+  <g transform="translate(462 160)">
+    <circle class="dot" cx="0" cy="5" r="2.4"/>
+    <circle class="dot" cx="-5" cy="13" r="2.4"/>
+    <circle class="dot" cx="5" cy="13" r="2.4"/>
+  </g>
+
+  <!-- Edge-crossing motifs make the repeat less grid-like -->
+  <g class="line" transform="translate(-24 452)">
+    <path d="M0 18a18 18 0 0 1 36 0"/>
+    <path d="M18 18a18 18 0 0 1 36 0"/>
+    <path d="M9 30a18 18 0 0 1 36 0"/>
+  </g>
+  <g class="line" transform="translate(488 452)">
+    <path d="M0 18a18 18 0 0 1 36 0"/>
+    <path d="M9 30a18 18 0 0 1 36 0"/>
+  </g>
+</svg>

@@ -1,263 +1,263 @@
 @layer pages {
-  .hero {
-    padding-block: var(--space-stack-lg, 6rem);
+	.hero {
+		padding-block: var(--space-stack-lg, 6rem);
 
-    .hero__title {
-      max-width: max-content;
-      margin-block-end: var(--spacing-32, 2rem);
+		.hero__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-32, 2rem);
 
-      span {
-        display: flex;
-        justify-content: flex-end;
-        font-size: var(--fs-step-2);
-        font-family: "WDXL Lubrifont JP N", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
-  }
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
+	}
 
-  .featured {
-    padding-block: var(--space-stack-lg, 6rem);
-    img {
-      border-radius: 0.6rem;
-      content-visibility: auto;
-    }
+	.featured {
+		padding-block: var(--space-stack-lg, 6rem);
+		img {
+			border-radius: 0.6rem;
+			content-visibility: auto;
+		}
 
-    .featured__title {
-      max-width: max-content;
-      margin-block-end: var(--spacing-32, 2rem);
+		.featured__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-32, 2rem);
 
-      span {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1rem;
-        font-family: "WDXL Lubrifont JP N", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
-  }
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
+	}
 
-  .process {
-    padding-block: var(--space-stack-lg, 6rem);
+	.process {
+		padding-block: var(--space-stack-lg, 6rem);
 
-    header {
-      margin-inline: auto;
-    }
+		header {
+			margin-inline: auto;
+		}
 
-    .process__title {
-      max-width: max-content;
-      margin-block-end: var(--spacing-64, 4rem);
+		.process__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-64, 4rem);
 
-      span {
-        display: flex;
-        justify-content: flex-end;
-        font-size: var(--fs-step-2);
-        font-family: "WDXL Lubrifont JP N", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
 
-    .process__content {
-      margin-block-start: var(--spacing-48, 3rem);
-      --min: 50ch;
-      --gap: 1rem;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: var(--gap);
-      container-type: inline-size;
+		.process__content {
+			margin-block-start: var(--spacing-48, 3rem);
+			--min: 50ch;
+			--gap: 1rem;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: var(--gap);
+			container-type: inline-size;
 
-      .process__content__card {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding-block: var(--spacing-32, 2rem);
-        padding-inline: 1rem;
-        border-radius: 0.5rem;
-        transition: padding-inline 0.3s ease;
+			.process__content__card {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				padding-block: var(--spacing-32, 2rem);
+				padding-inline: 1rem;
+				border-radius: 0.5rem;
+				transition: padding-inline 0.3s ease;
 
-        @container (min-width: 40rem) {
-          flex-direction: row;
-          gap: 2rem;
-        }
+				@container (min-width: 40rem) {
+					flex-direction: row;
+					gap: 2rem;
+				}
 
-        &:hover {
-          padding-inline: 2rem;
-        }
+				&:hover {
+					padding-inline: 2rem;
+				}
 
-        h3,
-        p {
-          padding-block-end: var(--spacing-32, 2rem);
-        }
+				h3,
+				p {
+					padding-block-end: var(--spacing-32, 2rem);
+				}
 
-        .process__content__card__num {
-          font-size: var(--fs-step-6);
-          opacity: 0.3;
-          color: #555;
-          font-variant-numeric: tabular-nums;
-        }
-      }
-    }
+				.process__content__card__num {
+					font-size: var(--fs-step-6);
+					opacity: 0.3;
+					color: #555;
+					font-variant-numeric: tabular-nums;
+				}
+			}
+		}
 
-    .process__content > * {
-      flex: 1 1 var(--min);
-    }
-  }
+		.process__content > * {
+			flex: 1 1 var(--min);
+		}
+	}
 
-  .quote {
-    padding-block: var(--space-stack-xl, 8rem);
+	.quote {
+		padding-block: var(--space-stack-xl, 8rem);
 
-    .container {
-      display: flex;
-      justify-content: center;
-      text-align: left;
+		.container {
+			display: flex;
+			justify-content: center;
+			text-align: left;
 
-      h4,
-      p {
-        margin-block-start: var(--spacing-12, 0.75rem);
-        font-size: var(--fs-step-2);
-        color: #555;
-        opacity: 0.4;
-      }
-    }
-  }
+			h4,
+			p {
+				margin-block-start: var(--spacing-12, 0.75rem);
+				font-size: var(--fs-step-2);
+				color: #555;
+				opacity: 0.4;
+			}
+		}
+	}
 
-  .services {
-    padding-block: var(--space-stack-lg, 6rem);
+	.services {
+		padding-block: var(--space-stack-lg, 6rem);
 
-    header {
-      margin-inline: auto;
-    }
+		header {
+			margin-inline: auto;
+		}
 
-    .services__title {
-      max-width: max-content;
-      margin-block-end: var(--spacing-64, 4rem);
+		.services__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-64, 4rem);
 
-      span {
-        display: flex;
-        justify-content: flex-end;
-        font-size: var(--fs-step-2);
-        font-family: "WDXL Lubrifont JP N", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
 
-    .services__content {
-      --min: 65ch;
-      --gap: 1rem;
-      flex-wrap: wrap;
-      gap: var(--gap);
-      container-type: inline-size;
+		.services__content {
+			--min: 65ch;
+			--gap: 1rem;
+			flex-wrap: wrap;
+			gap: var(--gap);
+			container-type: inline-size;
 
-      .services__content__card {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: flex-start;
-        padding-block: var(--spacing-32, 2rem);
-        padding-inline: 1rem;
-        border-radius: 0.5rem;
-        transition: padding-inline 0.3s ease;
+			.services__content__card {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				align-items: flex-start;
+				padding-block: var(--spacing-32, 2rem);
+				padding-inline: 1rem;
+				border-radius: 0.5rem;
+				transition: padding-inline 0.3s ease;
 
-        @container (min-width: 40rem) {
-          flex-direction: row;
-          gap: 2rem;
-        }
+				@container (min-width: 40rem) {
+					flex-direction: row;
+					gap: 2rem;
+				}
 
-        &:hover {
-          padding-inline: 2rem;
-        }
+				&:hover {
+					padding-inline: 2rem;
+				}
 
-        h3,
-        p {
-          padding-block-end: var(--spacing-32, 2rem);
-        }
+				h3,
+				p {
+					padding-block-end: var(--spacing-32, 2rem);
+				}
 
-        .services__content__card__num {
-          font-size: var(--fs-step-6);
-          opacity: 0.3;
-          color: #555;
-          font-variant-numeric: tabular-nums;
-        }
-      }
-    }
+				.services__content__card__num {
+					font-size: var(--fs-step-6);
+					opacity: 0.3;
+					color: #555;
+					font-variant-numeric: tabular-nums;
+				}
+			}
+		}
 
-    .services__content > * {
-      flex: 1 1 var(--min);
-    }
-  }
+		.services__content > * {
+			flex: 1 1 var(--min);
+		}
+	}
 
-  .conversion {
-    padding-block: var(--space-stack-lg, 6rem);
+	.conversion {
+		padding-block: var(--space-stack-lg, 6rem);
 
-    header {
-      margin-inline: auto;
-    }
+		header {
+			margin-inline: auto;
+		}
 
-    .conversion__title {
-      max-width: max-content;
-      margin-block-end: var(--spacing-64, 4rem);
+		.conversion__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-64, 4rem);
 
-      span {
-        display: flex;
-        justify-content: flex-end;
-        font-size: var(--fs-step-2);
-        font-family: "WDXL Lubrifont JP N", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
-  }
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
+	}
 
-  .decoration {
-    padding-block-end: var(--space-stack-md, 4rem);
+	.decoration {
+		padding-block-end: var(--space-stack-md, 4rem);
 
-    hr {
-      background-color: oklch(0.42 0.01 296.81);
-      border: 0;
-      height: 1px;
-      margin: 0;
-      opacity: 0.4;
-    }
+		hr {
+			background-color: oklch(0.42 0.01 296.81);
+			border: 0;
+			height: 1px;
+			margin: 0;
+			opacity: 0.4;
+		}
 
-    .decoration__text {
-      display: flex;
-      justify-content: space-between;
-      color: #555;
-      opacity: 0.4;
+		.decoration__text {
+			display: flex;
+			justify-content: space-between;
+			color: #555;
+			opacity: 0.4;
 
-      p {
-        text-transform: uppercase;
-        font-size: var(--fs-step-0);
-      }
-    }
+			p {
+				text-transform: uppercase;
+				font-size: var(--fs-step-0);
+			}
+		}
 
-    .decoration__text__end {
-      display: flex;
-      justify-content: flex-end;
-      color: #555;
-      opacity: 0.4;
+		.decoration__text__end {
+			display: flex;
+			justify-content: flex-end;
+			color: #555;
+			opacity: 0.4;
 
-      p {
-        text-transform: uppercase;
-        font-size: var(--fs-step-0);
-      }
-    }
+			p {
+				text-transform: uppercase;
+				font-size: var(--fs-step-0);
+			}
+		}
 
-    .decoration__text__start {
-      display: flex;
-      justify-content: flex-start;
-      color: #555;
-      opacity: 0.4;
+		.decoration__text__start {
+			display: flex;
+			justify-content: flex-start;
+			color: #555;
+			opacity: 0.4;
 
-      p {
-        text-transform: uppercase;
-        font-size: var(--fs-step-0);
-      }
-    }
-  }
+			p {
+				text-transform: uppercase;
+				font-size: var(--fs-step-0);
+			}
+		}
+	}
 }

@@ -7,16 +7,15 @@ import WorkGallery from '../components/astro/WorkGallery.astro';
 ---
 
 <Layout title='Studio Eien' description='Work'>
-	<main>
+	<main class='eien-pattern'>
 		<Navbar />
 		<section class='hero hero-content'>
 			<div class='container' data-type='wide'>
 				<header>
 					<div class='hero__title'>
-						<span class='text-accent'>エターニティー</span>
+						<span class='text-accent'>仕事と作品</span>
 						<h1>WORK</h1>
 					</div>
-
 					<p>
 						A selection of digital experiences shaped by strategy, restraint, and purpose. We design
 						and build systems that balance clarity and expression. Each project guided by the needs
@@ -35,9 +34,44 @@ import WorkGallery from '../components/astro/WorkGallery.astro';
 			</div>
 		</div>
 
-		<section class='work-statement'>
-			<div class='container flow' data-type='wide'>
+		<section class='work-statement work-content'>
+			<div class='container flow-large' style='--space:4rem;' data-type='wide'>
+				<header>
+					<div class='work__title'>
+						<span class='text-accent'>プロジェクト一覧</span>
+						<h2>PROJECT INDEX</h2>
+					</div>
+				</header>
 				<WorkGallery />
+			</div>
+		</section>
+
+		<section class='work-featured flow-large' style='--space:5rem;'>
+			<div class='container flow-large' data-type='wide' style='--space:4rem;'>
+				<header>
+					<div class='work-featured__title'>
+						<span class='text-accent'>プロジェクト一覧</span>
+						<h2>FEATURED STUDY</h2>
+					</div>
+					<div>01 — 06</div>
+				</header>
+				<div class='flow-large' '>
+					<h3>EXILIUM</h3>
+					<p>
+						A tactical RPG interface exploring how information, hierarchy, and atmosphere can
+						coexist without overwhelming the player.
+					</p>
+				</div>
+			</div>
+
+			<div class='container flow-large' data-type='full-bleed'>
+				<img src='/public/assets/img/test.jfif' />
+				<div class='work-featured__tags'>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class='work-featured__link'></div>
 			</div>
 		</section>
 
