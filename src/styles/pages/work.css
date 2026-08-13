@@ -33,6 +33,29 @@
 				font-style: normal;
 			}
 		}
+		.work-featured__tags{
+			display: flex;
+			justify-content: space-between;
+			color: oklab(44.952999999999996% 0 -0.00005);
+			opacity: 0.3;
+		}
+		.work-featured__link {
+			display: flex;
+			justify-content: center;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				text-decoration: none;
+				column-gap: 0.4rem;
+				font-size: var(--fs-step-3);
+				transition: all 0.5s ease;
+
+				&:hover{
+					border-bottom: 1px solid #2b2b2b;
+				}
+			}
+		}
 
 		img {
 			border-radius: 0.8em;
