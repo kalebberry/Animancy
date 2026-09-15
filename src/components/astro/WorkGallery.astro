@@ -10,97 +10,102 @@ type WorkItem = {
 
 const projects: WorkItem[] = [
 	{
-		label: '01',
-		client: 'Exilium',
-		service: 'Digital Experiences',
-		description: 'A tactical RPG interface design focusing on clarity and atmosphere.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056',
-		link: '/work/exilium',
+		label: "01",
+		client: "Exilium",
+		service: "Digital Experiences",
+		description:
+			"A tactical RPG interface design focusing on clarity and atmosphere.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056",
+		link: "/work/exilium",
 	},
 	{
-		label: '02',
-		client: 'Kitsune',
-		service: 'Interface Systems',
-		description: 'Modern aesthetics meeting traditional folklore in this character showcase.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457',
-		link: '/work/kitsune',
+		label: "02",
+		client: "Kitsune",
+		service: "Interface Systems",
+		description:
+			"Modern aesthetics meeting traditional folklore in this character showcase.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457",
+		link: "/work/kitsune",
 	},
 	{
-		label: '03',
-		client: 'Craft',
-		service: 'Interactive Motion',
-		description: 'Minimalist portfolio template designed for digital craftsmen.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_6_pl5KrIjUA.png?updatedAt=1708435691450',
-		link: '/work/craft',
+		label: "03",
+		client: "Craft",
+		service: "Interactive Motion",
+		description:
+			"Minimalist portfolio template designed for digital craftsmen.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_6_pl5KrIjUA.png?updatedAt=1708435691450",
+		link: "/work/craft",
 	},
 	{
-		label: '04',
-		client: 'Bunny',
-		service: 'Performance',
-		description: 'Playful mascot design and branding for a local cafe.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/manga_beautiful_7qMh10Vza.png?updatedAt=1708505549765',
-		link: '/work/bunny',
+		label: "04",
+		client: "Bunny",
+		service: "Performance",
+		description: "Playful mascot design and branding for a local cafe.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/manga_beautiful_7qMh10Vza.png?updatedAt=1708505549765",
+		link: "/work/bunny",
 	},
 	{
-		label: '05',
-		client: 'Ronin',
-		service: 'Content Architecture',
-		description: 'Forging a strong, silent visual identity for a security firm.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056',
-		link: '/work/ronin',
+		label: "05",
+		client: "Ronin",
+		service: "Content Architecture",
+		description:
+			"Forging a strong, silent visual identity for a security firm.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_5__kFkAQWP5U.png?updatedAt=1708435704056",
+		link: "/work/ronin",
 	},
 	{
-		label: '06',
-		client: 'Sakura',
-		service: 'CMS Integration',
-		description: 'Delicate, eco-friendly packaging design for organic teas.',
-		image:
-			'https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457',
-		link: '/work/sakura',
+		label: "06",
+		client: "Sakura",
+		service: "CMS Integration",
+		description:
+			"Delicate, eco-friendly packaging design for organic teas.",
+		image: "https://ik.imagekit.io/sorudev/Studio%20Eien/Backgrounds/magazine_cover_manga_aIgWKOCZh.png?updatedAt=1708435702457",
+		link: "/work/sakura",
 	},
 ];
 
 // Get unique categories for the filter
-const categories = ['All', ...new Set(projects.map((p) => p.service))];
+const categories = ["All", ...new Set(projects.map((p) => p.service))];
 ---
 
-<div class='gallery-wrapper'>
-	<div class='filter-bar'>
+<div class="gallery-wrapper">
+	<div class="filter-bar">
 		{
 			categories.map((cat, i) => (
 				<button
-					class={`filter-btn ${i === 0 ? 'active' : ''}`}
+					class={`filter-btn ${i === 0 ? "active" : ""}`}
 					data-filter={cat}
-					aria-label={`Filter by ${cat}`}>
+					aria-label={`Filter by ${cat}`}
+				>
 					{cat}
 				</button>
 			))
 		}
 	</div>
 
-	<div class='work-grid'>
+	<div class="work-grid">
 		{
 			projects.map((p) => (
-				<article class='work-card' data-category={p.service}>
-					<a href={p.link} class='work-card__link'>
-						<div class='work-card__bg' style={`background-image: url(${p.image})`} />
-						<div class='work-card__overlay' />
-						<div class='work-card__content'>
-							<div class='work-card__top'>
-								<span class='work-card__label'>{p.label}</span>
-								<span class='work-card__service'>{p.service}</span>
+				<article class="work-card" data-category={p.service}>
+					<a href={p.link} class="work-card__link">
+						<div
+							class="work-card__bg"
+							style={`background-image: url(${p.image})`}
+						/>
+						<div class="work-card__overlay" />
+						<div class="work-card__content">
+							<div class="work-card__top">
+								<span class="work-card__label">{p.label}</span>
+								<span class="work-card__service">
+									{p.service}
+								</span>
 							</div>
-							<div class='work-card__main'>
-								<h3 class='work-card__client'>{p.client}</h3>
-								<p class='work-card__desc'>{p.description}</p>
+							<div class="work-card__main">
+								<h3 class="work-card__client">{p.client}</h3>
+								<p class="work-card__desc">{p.description}</p>
 							</div>
-							<div class='work-card__action'>
-								<span class='btn-cta'>View Case Study</span>
+							<div class="work-card__action">
+								<span class="btn-cta">View Case Study</span>
 							</div>
 						</div>
 					</a>
@@ -111,24 +116,24 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 </div>
 
 <script>
-	const filterButtons = document.querySelectorAll('.filter-btn');
+	const filterButtons = document.querySelectorAll(".filter-btn");
 
 	// Filter Logic
 	filterButtons.forEach((btn) => {
-		btn.addEventListener('click', () => {
+		btn.addEventListener("click", () => {
 			// Update active button state
-			filterButtons.forEach((b) => b.classList.remove('active'));
-			btn.classList.add('active');
+			filterButtons.forEach((b) => b.classList.remove("active"));
+			btn.classList.add("active");
 
-			const filterValue = btn.getAttribute('data-filter');
-			const cards = document.querySelectorAll('.work-card');
+			const filterValue = btn.getAttribute("data-filter");
+			const cards = document.querySelectorAll(".work-card");
 
 			cards.forEach((card) => {
-				const category = card.getAttribute('data-category');
-				if (filterValue === 'All' || category === filterValue) {
-					card.classList.remove('hidden');
+				const category = card.getAttribute("data-category");
+				if (filterValue === "All" || category === filterValue) {
+					card.classList.remove("hidden");
 				} else {
-					card.classList.add('hidden');
+					card.classList.add("hidden");
 				}
 			});
 		});
@@ -154,9 +159,9 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 		border: 1px solid color-mix(in oklch, var(--text) 20%, transparent);
 		color: var(--text);
 		padding: 8px 16px;
-		border-radius: 100px;
+		border-radius: 5px;
 		cursor: pointer;
-		font-family: 'Familjen Grotesk', sans-serif;
+		font-family: "Familjen Grotesk", sans-serif;
 		font-size: 0.875rem;
 		transition: all 0.3s ease;
 
@@ -255,7 +260,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 	}
 
 	.work-card__label {
-		font-family: 'Familjen Grotesk', sans-serif;
+		font-family: "Familjen Grotesk", sans-serif;
 		font-weight: bold;
 		font-size: 1.25rem;
 		color: rgba(255, 255, 255, 0.9);
@@ -274,7 +279,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 	}
 
 	.work-card__client {
-		font-family: 'Familjen Grotesk', sans-serif;
+		font-family: "Familjen Grotesk", sans-serif;
 		font-size: 2rem;
 		font-weight: bold;
 		color: #fff;
@@ -291,7 +296,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.service))];
 		display: inline-block;
 		padding: 0.5rem 1rem;
 		border: 1px solid rgba(255, 255, 255, 0.3);
-		border-radius: 100px;
+		border-radius: 5px;
 		font-size: 0.875rem;
 		color: #fff;
 		transition: all 0.3s ease;
