@@ -10,8 +10,8 @@
 		"tokens": "node src/convert-tokens.js"
 	},
 	"dependencies": {
-		"@astrojs/vue": "^5.1.0",
-		"astro": "^5.13.2",
+		"@astrojs/vue": "^7.0.2",
+		"astro": "^7.3.2",
 		"gsap": "^3.13.0",
 		"pinia": "^3.0.3",
 		"vue": "^3.5.17"
