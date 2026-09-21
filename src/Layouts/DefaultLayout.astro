@@ -2,8 +2,8 @@
 import '../styles/main.css';
 
 export interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 const { title } = Astro.props;
 const { description } = Astro.props;
@@ -11,132 +11,132 @@ const { description } = Astro.props;
 
 <!doctype html>
 <html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
-		<meta name='description' content={description} />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fira+Sans:wght@300;400;500;700&family=PT+Serif:wght@400;700&family=Space+Grotesk:wght@300..700&family=WDXL+Lubrifont+JP+N&display=swap"
-			rel="stylesheet"
-		/>
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-	<script>
-		import gsap from 'gsap';
-		import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description} />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fira+Sans:wght@300;400;500;700&family=PT+Serif:wght@400;700&family=Space+Grotesk:wght@300..700&family=WDXL+Lubrifont+JP+N&display=swap'
+      rel='stylesheet'
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-		gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-		document.addEventListener('DOMContentLoaded', () => {
-			// --- 1. Hero Entrance Animation ---
-			const hero = document.querySelector('.hero');
-			if (hero) {
-				const heroTl = gsap.timeline({
-					// 'expo.out' provides a quick start and a long, elegant settle, typical of Japanese minimalism
-					defaults: { duration: 2.2, ease: 'expo.out' },
-				});
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- 1. Hero Entrance Animation ---
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const heroTl = gsap.timeline({
+          // 'expo.out' provides a quick start and a long, elegant settle, typical of Japanese minimalism
+          defaults: { duration: 2.2, ease: 'expo.out' },
+        });
 
-				const title = hero.querySelector('h1');
-				const subtitle = hero.querySelector('p');
-				const jpText = hero.querySelector('.text-accent');
-				const nav = document.querySelector('nav');
+        const title = hero.querySelector('h1');
+        const subtitle = hero.querySelector('p');
+        const jpText = hero.querySelector('.text-accent');
+        const nav = document.querySelector('nav');
 
-				// 1. Japanese Text: "Ink Blur" effect (fades in from blur)
-				if (jpText) {
-					heroTl.from(jpText, {
-						opacity: 0,
-						filter: 'blur(15px)', // Mimics ink spreading/focusing
-						y: -10,
-						duration: 2.5,
-						ease: 'power2.out',
-					});
-				}
+        // 1. Japanese Text: "Ink Blur" effect (fades in from blur)
+        if (jpText) {
+          heroTl.from(jpText, {
+            opacity: 0,
+            filter: 'blur(15px)', // Mimics ink spreading/focusing
+            y: -10,
+            duration: 2.5,
+            ease: 'power2.out',
+          });
+        }
 
-				// 2. Main Title: Rises up with a slight skew (Calligraphic stroke feel)
-				if (title) {
-					heroTl.from(
-						title,
-						{
-							y: 60,
-							opacity: 0,
-							skewY: 2,
-							transformOrigin: 'left bottom',
-						},
-						'-=2.2', // Significant overlap for fluid motion
-					);
-				}
+        // 2. Main Title: Rises up with a slight skew (Calligraphic stroke feel)
+        if (title) {
+          heroTl.from(
+            title,
+            {
+              y: 60,
+              opacity: 0,
+              skewY: 2,
+              transformOrigin: 'left bottom',
+            },
+            '-=2.2', // Significant overlap for fluid motion
+          );
+        }
 
-				// 3. Subtitle: Gentle rise
-				if (subtitle) {
-					heroTl.from(subtitle, { y: 30, opacity: 0 }, '-=1.8');
-				}
+        // 3. Subtitle: Gentle rise
+        if (subtitle) {
+          heroTl.from(subtitle, { y: 30, opacity: 0 }, '-=1.8');
+        }
 
-				// 4. Nav: Fades in softly from top
-				if (nav) {
-					heroTl.from(nav, { y: -20, opacity: 0, duration: 1.5 }, '-=2.0');
-				}
-			}
+        // 4. Nav: Fades in softly from top
+        if (nav) {
+          heroTl.from(nav, { y: -20, opacity: 0, duration: 1.5 }, '-=2.0');
+        }
+      }
 
-			// --- 2. Staggered Animation for All Main Content Sections on Scroll ---
-			const animatedSections = gsap.utils.toArray('main > section');
+      // --- 2. Staggered Animation for All Main Content Sections on Scroll ---
+      const animatedSections = gsap.utils.toArray<Element>('main > section');
 
-			animatedSections.forEach((section) => {
-				if (section.children.length === 0) return;
+      animatedSections.forEach((section) => {
+        if (section.children.length === 0) return;
 
-				gsap.from(section.children, {
-					y: 30,
-					opacity: 0,
-					duration: 1.2,
-					ease: 'power3.out',
-					stagger: 0.1,
-					scrollTrigger: {
-						trigger: section,
-						start: 'top 85%',
-						once: true,
-					},
-				});
-			});
+        gsap.from(section.children, {
+          y: 30,
+          opacity: 0,
+          duration: 1.2,
+          ease: 'power3.out',
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            once: true,
+          },
+        });
+      });
 
-			ScrollTrigger.refresh();
+      ScrollTrigger.refresh();
 
-			// --- 3. Subtle Parallax for Featured Images ---
-			const parallaxImages = gsap.utils.toArray('.featured-card__image img');
-			parallaxImages.forEach((img) => {
-				gsap.to(img, {
-					yPercent: 15, // Move image slightly within its container
-					ease: 'none',
-					scrollTrigger: {
-						trigger: img,
-						start: 'top bottom',
-						end: 'bottom top',
-						scrub: true,
-					},
-				});
-			});
+      // --- 3. Subtle Parallax for Featured Images ---
+      const parallaxImages = gsap.utils.toArray<Element>('.featured-card__image img');
+      parallaxImages.forEach((img) => {
+        gsap.to(img, {
+          yPercent: 15, // Move image slightly within its container
+          ease: 'none',
+          scrollTrigger: {
+            trigger: img,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        });
+      });
 
-			// --- 4. Architectural Line Drawing for Separators ---
-			const lines = gsap.utils.toArray('hr');
-			lines.forEach((line) => {
-				gsap.from(line, {
-					scaleX: 0,
-					opacity: 0,
-					transformOrigin: 'left center',
-					duration: 2.5,
-					ease: 'expo.out',
-					scrollTrigger: {
-						trigger: line,
-						start: 'top 90%',
-						once: true,
-					},
-				});
-			});
-		});
-	</script>
+      // --- 4. Architectural Line Drawing for Separators ---
+      const lines = gsap.utils.toArray<Element>('hr');
+      lines.forEach((line) => {
+        gsap.from(line, {
+          scaleX: 0,
+          opacity: 0,
+          transformOrigin: 'left center',
+          duration: 2.5,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: line,
+            start: 'top 90%',
+            once: true,
+          },
+        });
+      });
+    });
+  </script>
 </html>

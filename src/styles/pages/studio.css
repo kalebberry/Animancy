@@ -1,0 +1,65 @@
+@layer pages {
+	.philosophy {
+		padding-block: var(--space-stack-md, 2rem) var(--space-stack-lg, 4rem);
+
+		.philosophy__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-32, 2rem);
+
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
+	}
+
+	.work-featured {
+		padding-block: var(--space-stack-md, 2rem) var(--space-stack-lg, 4rem);
+
+		.work-featured__title {
+			max-width: max-content;
+			margin-block-end: var(--spacing-32, 2rem);
+
+			span {
+				display: flex;
+				justify-content: flex-end;
+				font-size: var(--fs-step-2);
+				font-family: 'WDXL Lubrifont JP N', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		}
+		.work-featured__tags{
+			display: flex;
+			justify-content: space-between;
+			color: oklab(44.952999999999996% 0 -0.00005);
+			opacity: 0.3;
+		}
+		.work-featured__link {
+			display: flex;
+			justify-content: center;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				text-decoration: none;
+				column-gap: 0.4rem;
+				font-size: var(--fs-step-3);
+				transition: all 0.5s ease;
+
+				&:hover{
+					border-bottom: 1px solid #2b2b2b;
+				}
+			}
+		}
+
+		img {
+			border-radius: 0.8em;
+			aspect-ratio: 16/9;
+		}
+	}
+}

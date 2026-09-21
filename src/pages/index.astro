@@ -1,5 +1,5 @@
 ---
-import Layout from '../Layouts/DefaultLayout.astro';
+import Layout from '../layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
 import Button from '@/components/astro/button.astro';
@@ -7,212 +7,210 @@ import ExpandingCard from '../components/astro/expandingCard.astro';
 ---
 
 <Layout title='Studio Eien' description='Welcome to Studio Eien'>
-	<main>
-		<Navbar />
-		<section class='hero hero-content'>
-			<div class='container' data-type='wide'>
-				<header>
-					<div class='hero__title'>
-						<span class='text-accent'>エターニティー</span>
-						<h1>STUDIO EIEN</h1>
-					</div>
-					<p>
-						We craft timeless digital experiences for businesses, content creators, and artists.
-						Studio Eien helps you take the first steps toward building an online presence that
-						embodies your vision. The presence that tells the world what you stand for.
-					</p>
-				</header>
-			</div>
-		</section>
+  <main>
+    <Navbar />
+    <section class='hero hero-content'>
+      <div class='container' data-type='wide'>
+        <header>
+          <div class='hero__title'>
+            <span class='text-accent'>エターニティー</span>
+            <h1>STUDIO EIEN</h1>
+          </div>
+          <p>
+            We craft timeless digital experiences for businesses, content creators, and artists. Studio Eien helps you
+            take the first steps toward building an online presence that embodies your vision. The presence that tells
+            the world what you stand for.
+          </p>
+        </header>
+      </div>
+    </section>
 
-		<div class='decoration'>
-			<div class='container' data-type='full-bleed'>
-				<hr />
-				<div class='decoration__text'>
-					<p>Grid System V.03</p>
-					<p>VERSION: 03.2025 ⟡ PLATFORM: DIGITAL EXPERIENCE</p>
-				</div>
-			</div>
-		</div>
+    <div class='decoration'>
+      <div class='container' data-type='full-bleed'>
+        <hr />
+        <div class='decoration__text'>
+          <p>Grid System V.03</p>
+          <p>VERSION: 03.2025 ⟡ PLATFORM: DIGITAL EXPERIENCE</p>
+        </div>
+      </div>
+    </div>
 
-		<section class='featured cq-card flow'>
-			<div class='container' data-type='wide'>
-				<header class='featured__title'>
-					<span class='text-accent'>注目プロジェクト</span>
-					<h2>Featured Projects</h2>
-				</header>
-			</div>
-			<ExpandingCard />
-		</section>
+    <section class='featured cq-card flow'>
+      <div class='container' data-type='wide'>
+        <header class='featured__title'>
+          <span class='text-accent'>注目プロジェクト</span>
+          <h2>Featured Projects</h2>
+        </header>
+      </div>
+      <ExpandingCard />
+    </section>
 
-		<section class='process'>
-			<div class='container' data-type='wide'>
-				<header>
-					<div class='process__title'>
-						<span class='text-accent'>プロセス</span>
-						<h2>PROCESS</h2>
-					</div>
-					<p>
-						Timeless digital experiences are built with care. Our approach is deliberate and
-						sequential, shaping ideas into structured, refined, and resilient outcomes.
-					</p>
-				</header>
+    <section class='process'>
+      <div class='container' data-type='wide'>
+        <header>
+          <div class='process__title'>
+            <span class='text-accent'>プロセス</span>
+            <h2>PROCESS</h2>
+          </div>
+          <p>
+            Timeless digital experiences are built with care. Our approach is deliberate and sequential, shaping ideas
+            into structured, refined, and resilient outcomes.
+          </p>
+        </header>
 
-				<div class='process__content'>
-					<article class='process__content__card'>
-						<div><h3 class='process__content__card__num'>01</h3></div>
-						<div>
-							<h3>Clarity</h3>
-							<p>Understanding shapes direction.</p>
-							<p>
-								We define goals, values, and audience before a single pixel is drawn. Through
-								focused conversation, we establish a clear foundation that guides every decision
-								that follows.
-							</p>
-						</div>
-					</article>
+        <div class='process__content'>
+          <article class='process__content__card'>
+            <div><h3 class='process__content__card__num'>01</h3></div>
+            <div>
+              <h3>Clarity</h3>
+              <p>Understanding shapes direction.</p>
+              <p>
+                We define goals, values, and audience before a single pixel is drawn. Through focused conversation, we
+                establish a clear foundation that guides every decision that follows.
+              </p>
+            </div>
+          </article>
 
-					<article class='process__content__card'>
-						<div><h3 class='process__content__card__num'>02</h3></div>
-						<div>
-							<h3>Expression</h3>
-							<p>Purpose guides beauty.</p>
-							<p>
-								We translate your vision into structured visual systems that speak your brand’s
-								language. Every layout, color, and interaction is intentional. Aligning aesthetics
-								with usability.
-							</p>
-						</div>
-					</article>
+          <article class='process__content__card'>
+            <div><h3 class='process__content__card__num'>02</h3></div>
+            <div>
+              <h3>Expression</h3>
+              <p>Purpose guides beauty.</p>
+              <p>
+                We translate your vision into structured visual systems that speak your brand’s language. Every layout,
+                color, and interaction is intentional. Aligning aesthetics with usability.
+              </p>
+            </div>
+          </article>
 
-					<article class='process__content__card'>
-						<div><h3 class='process__content__card__num'>03</h3></div>
-						<div>
-							<h3>Execution</h3>
-							<p>Precision becomes experience.</p>
-							<p>
-								We build scalable and accessible digital experiences using modern frameworks. Every
-								detail is refined with care, ensuring performance and longevity.
-							</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+          <article class='process__content__card'>
+            <div><h3 class='process__content__card__num'>03</h3></div>
+            <div>
+              <h3>Execution</h3>
+              <p>Precision becomes experience.</p>
+              <p>
+                We build scalable and accessible digital experiences using modern frameworks. Every detail is refined
+                with care, ensuring performance and longevity.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-		<div class='decoration' data-type='full-bleed'>
-			<div class='container' data-type='full-bleed'>
-				<hr />
-				<div class='decoration__text__end'>
-					<p>SECTION: PROCESS ⟡ METHOD SIGNATURE: V.01</p>
-				</div>
-			</div>
-		</div>
+    <div class='decoration' data-type='full-bleed'>
+      <div class='container' data-type='full-bleed'>
+        <hr />
+        <div class='decoration__text__end'>
+          <p>SECTION: PROCESS ⟡ METHOD SIGNATURE: V.01</p>
+        </div>
+      </div>
+    </div>
 
-		<section class='quote'>
-			<div class='container' data-type='full-bleed'>
-				<div class='quote__content'>
-					<h4><span class='jp-text'>永遠</span> Eternity</h4>
-					<p>
-						(Noun) — which may take the genitive case particle no, Na-adjective (keiyōdōshi).
-						Eternity; perpetuity; permanence; immortality.
-					</p>
-				</div>
-			</div>
-		</section>
+    <section class='quote'>
+      <div class='container' data-type='full-bleed'>
+        <div class='quote__content'>
+          <h4><span class='jp-text'>永遠</span> Eternity</h4>
+          <p>
+            (Noun) — which may take the genitive case particle no, Na-adjective (keiyōdōshi). Eternity; perpetuity;
+            permanence; immortality.
+          </p>
+        </div>
+      </div>
+    </section>
 
-		<section class='services'>
-			<div class='container' data-type='wide'>
-				<header>
-					<div class='services__title'>
-						<span>サービス</span>
-						<h2>SERVICES</h2>
-					</div>
-					<p>
-						Studio Eien creates digital experiences built to last and evolve with your business.
-						Every service is approached with intention, clarity, and care.
-					</p>
-				</header>
-				<article class='services__content'>
-					<div class='services__content__card'>
-						<div>
-							<h3 class='services__content__card__num'>01</h3>
-						</div>
-						<div>
-							<h3>Web Experience</h3>
-							<p>Design and development working as one cohesive system.</p>
-						</div>
-					</div>
-					<div class='services__content__card'>
-						<div>
-							<h3 class='services__content__card__num'>02</h3>
-						</div>
-						<div>
-							<h3>UX / UI Systems</h3>
-							<p>Structured interfaces built for clarity and usability.</p>
-						</div>
-					</div>
-					<div class='services__content__card'>
-						<div>
-							<h3 class='services__content__card__num'>03</h3>
-						</div>
-						<div>
-							<h3>Frontend Development</h3>
-							<p>Modern frameworks. Clean architecture. Scalable code.</p>
-						</div>
-					</div>
-					<div class='services__content__card'>
-						<div>
-							<h3 class='services__content__card__num'>04</h3>
-						</div>
-						<div>
-							<h3>Performance & Accessibility</h3>
-							<p>smooth, optimized, inclusive digital experiences.</p>
-						</div>
-					</div>
-					<div class='services__content__card'>
-						<div>
-							<h3 class='services__content__card__num'>05</h3>
-						</div>
-						<div>
-							<h3>CMS Integration</h3>
-							<p>Headless CMS setups with flexible content systems.</p>
-						</div>
-					</div>
-				</article>
-			</div>
-		</section>
-		<div class='decoration'>
-			<div class='container' data-type='full-bleed'>
-				<hr />
-				<div class='decoration__text__start'>
-					<p>SECTION: SERVICES ⟡ METHOD SIGNATURE: V.02</p>
-				</div>
-			</div>
-		</div>
+    <section class='services'>
+      <div class='container' data-type='wide'>
+        <header>
+          <div class='services__title'>
+            <span>サービス</span>
+            <h2>SERVICES</h2>
+          </div>
+          <p>
+            Studio Eien creates digital experiences built to last and evolve with your business. Every service is
+            approached with intention, clarity, and care.
+          </p>
+        </header>
+        <article class='services__content'>
+          <div class='services__content__card'>
+            <div>
+              <h3 class='services__content__card__num'>01</h3>
+            </div>
+            <div>
+              <h3>Web Experience</h3>
+              <p>Design and development working as one cohesive system.</p>
+            </div>
+          </div>
+          <div class='services__content__card'>
+            <div>
+              <h3 class='services__content__card__num'>02</h3>
+            </div>
+            <div>
+              <h3>UX / UI Systems</h3>
+              <p>Structured interfaces built for clarity and usability.</p>
+            </div>
+          </div>
+          <div class='services__content__card'>
+            <div>
+              <h3 class='services__content__card__num'>03</h3>
+            </div>
+            <div>
+              <h3>Frontend Development</h3>
+              <p>Modern frameworks. Clean architecture. Scalable code.</p>
+            </div>
+          </div>
+          <div class='services__content__card'>
+            <div>
+              <h3 class='services__content__card__num'>04</h3>
+            </div>
+            <div>
+              <h3>Performance & Accessibility</h3>
+              <p>smooth, optimized, inclusive digital experiences.</p>
+            </div>
+          </div>
+          <div class='services__content__card'>
+            <div>
+              <h3 class='services__content__card__num'>05</h3>
+            </div>
+            <div>
+              <h3>CMS Integration</h3>
+              <p>Headless CMS setups with flexible content systems.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class='decoration'>
+      <div class='container' data-type='full-bleed'>
+        <hr />
+        <div class='decoration__text__start'>
+          <p>SECTION: SERVICES ⟡ METHOD SIGNATURE: V.02</p>
+        </div>
+      </div>
+    </div>
 
-		<section class='conversion container' data-type='wide'>
-			<header class='flow'>
-				<div class='conversion__title'>
-					<span>サービス</span>
-					<h2>START YOUR STORY</h2>
-				</div>
-				<p>
-					Step into our creative process, where ideas become impact. Explore client case studies and
-					see how Studio Eien transforms visions into soulful, strategic web design.
-				</p>
-				<Button content='Lets Work Together' />
-			</header>
-		</section>
-		<div class='decoration'>
-			<div class='container' data-type='full-bleed'>
-				<hr />
-				<div class='decoration__text__end'>
-					<p>SECTION:YOUR STORY ⟡ METHOD SIGNATURE: V.03</p>
-				</div>
-			</div>
-		</div>
+    <section class='conversion container' data-type='wide'>
+      <header class='flow'>
+        <div class='conversion__title'>
+          <span>サービス</span>
+          <h2>START YOUR STORY</h2>
+        </div>
+        <p>
+          Step into our creative process, where ideas become impact. Explore client case studies and see how Studio Eien
+          transforms visions into soulful, strategic web design.
+        </p>
+        <Button content='Lets Work Together' />
+      </header>
+    </section>
+    <div class='decoration'>
+      <div class='container' data-type='full-bleed'>
+        <hr />
+        <div class='decoration__text__end'>
+          <p>SECTION:YOUR STORY ⟡ METHOD SIGNATURE: V.03</p>
+        </div>
+      </div>
+    </div>
 
-		<Footer />
-	</main>
+    <Footer />
+  </main>
 </Layout>

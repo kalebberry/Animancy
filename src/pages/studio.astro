@@ -1,56 +1,66 @@
 ---
-import Layout from '../Layouts/DefaultLayout.astro';
+import Layout from '../layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
-import WorkGallery from '../components/astro/WorkGallery.astro';
 ---
 
 <Layout title='Studio Eien' description='Studio'>
-	<main>
-		<Navbar />
-		<section class='hero hero-content'>
-			<div class='container' data-type='wide'>
-				<header>
-					<div class='hero__title'>
-						<span class='text-accent'>スタジオ</span>
-						<h1>Our Studio</h1>
-					</div>
+  <main>
+    <Navbar />
+    <section class='hero hero-content'>
+      <div class='container' data-type='wide'>
+        <header>
+          <div class='hero__title'>
+            <span class='text-accent'>スタジオ</span>
+            <h1>Our Studio</h1>
+          </div>
 
-					<p>
-						Studio Eien is a frontend-focused design practice dedicated to building thoughtful
-						digital experiences. We work with businesses, creators, and artists to transform ideas
-						into structured, scalable websites that feel intentional and refined.
-					</p>
-				</header>
-			</div>
-		</section>
+          <p>
+            Studio Eien is a frontend-focused design practice dedicated to building thoughtful digital experiences. We
+            work with businesses, creators, and artists to transform ideas into structured, scalable websites that feel
+            intentional and refined.
+          </p>
+        </header>
+      </div>
+    </section>
 
-		<section class='Philosophy'>
-			<div class='container flow' data-type='wide'>
-				<div class='process__title'>
-					<span>フィロソフィー</span>
-					<h2>PHILOSOPHY</h2>
-				</div>
-				<div>
-					<p>永遠 Eternity.</p>
-				</div>
-				<div class='flow'>
-					<p>Good design endures.</p>
-					<p>Not because it chases trends, but because it is built on structure.</p>
-				</div>
-				<div>
-					<p>Structure before style.</p>
-					<p>Systems over one-offs.</p>
-					<p>Performance as a foundation.</p>
-				</div>
-				<div class='flow'>
-					<p>
-						Design and development evolve together — forming digital architecture meant to last.
-					</p>
-				</div>
-			</div>
-		</section>
-	</main>
+    <section class='philosophy flow-large'>
+      <div class='container flow-large' data-type='wide'>
+        <header>
+          <div class='philosophy__title'>
+            <span class='text-accent'>理念</span>
+            <h2>Our Philosophy</h2>
+          </div>
+        </header>
 
-	<Footer />
+        <div class='grid gap-8' data-cols='2'>
+          <article class='philosophy__card flow-large'>
+            <h4>Clarity First</h4>
+            <p>
+              Every layout decision should reduce ambiguity, not add to it. If a user has to think about the interface,
+              we've failed.
+            </p>
+          </article>
+          <article class='philosophy__card flow-large'>
+            <h4>Structured Flexibility</h4>
+            <p>
+              We build systems that scale with content, not around it — grids and components that adapt instead of
+              breaking.
+            </p>
+          </article>
+          <article class='philosophy__card flow-large'>
+            <h4>Intentional Craft</h4>
+            <p>
+              Nothing ships by accident. Spacing, motion, and hierarchy are chosen deliberately, then refined until they
+              feel inevitable.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section></section>
+  </main>
+
+  <Footer />
 </Layout>
