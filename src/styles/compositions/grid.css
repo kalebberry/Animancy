@@ -22,6 +22,8 @@
   [data-span="10"] { grid-column: span 10; }
   [data-span="11"] { grid-column: span 11; }
   [data-span="12"] { grid-column: span 12; }
+  [data-span="13"] { grid-column: span 13; }
+  [data-span="14"] { grid-column: span 14; }
 
   [data-row-span="1"] { grid-row: span 1; }
   [data-row-span="2"] { grid-row: span 2; }
@@ -35,6 +37,8 @@
   [data-row-span="10"] { grid-row: span 10; }
   [data-row-span="11"] { grid-row: span 11; }
   [data-row-span="12"] { grid-row: span 12; }
+  [data-row-span="13"] { grid-row: span 13; }
+  [data-row-span="14"] { grid-row: span 14; }
 
   /* Grid Presets */
   :where(.grid) {
@@ -53,7 +57,7 @@
       --grid-placement: auto-fit;
     }
 
-    /* Fallback presets (16rem -> 6rem across 2-12 cols). Works in every browser. */
+    /* Fallback presets (16rem -> 4rem across 2-14 cols). Works in every browser. */
     &[data-cols="1"] { --grid-min-item-size: 100%; }
     &[data-cols="2"] { --grid-min-item-size: max(16rem, calc((100% - (var(--gutter, 1rem) * 1)) / 2)); }
     &[data-cols="3"] { --grid-min-item-size: max(15rem, calc((100% - (var(--gutter, 1rem) * 2)) / 3)); }
@@ -66,6 +70,8 @@
     &[data-cols="10"] { --grid-min-item-size: max(8rem, calc((100% - (var(--gutter, 1rem) * 9)) / 10)); }
     &[data-cols="11"] { --grid-min-item-size: max(7rem, calc((100% - (var(--gutter, 1rem) * 10)) / 11)); }
     &[data-cols="12"] { --grid-min-item-size: max(6rem, calc((100% - (var(--gutter, 1rem) * 11)) / 12)); }
+    &[data-cols="13"] { --grid-min-item-size: max(5rem, calc((100% - (var(--gutter, 1rem) * 12)) / 13)); }
+    &[data-cols="14"] { --grid-min-item-size: max(4rem, calc((100% - (var(--gutter, 1rem) * 13)) / 14)); }
 
     &.grid--dense {
       grid-auto-flow: dense;
@@ -80,7 +86,7 @@
   @supports (top: attr(data-cols type(<number>))) {
     .grid[data-cols] {
       --grid-min-item-size: max(
-        calc(6rem + (16rem - 6rem) * (12 - attr(data-cols type(<number>), 2)) / 10),
+        calc(4rem + (16rem - 4rem) * (14 - attr(data-cols type(<number>), 2)) / 12),
         calc((100% - (var(--gutter, 1rem) * (attr(data-cols type(<number>), 2) - 1))) / attr(data-cols type(<number>), 2))
       );
     }
@@ -157,7 +163,7 @@
       min-inline-size: 0;
     }
 
-    /* Fallback child-sizing presets, same 16rem -> 6rem scale as .grid */
+    /* Fallback child-sizing presets, same 16rem -> 4rem scale as .grid */
     &[data-cols="1"] > * { flex-basis: 100%; min-width: 100%; }
     &[data-cols="2"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 1)) / 2); min-width: 16rem; }
     &[data-cols="3"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 2)) / 3); min-width: 15rem; }
@@ -170,6 +176,8 @@
     &[data-cols="10"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 9)) / 10); min-width: 8rem; }
     &[data-cols="11"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 10)) / 11); min-width: 7rem; }
     &[data-cols="12"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 11)) / 12); min-width: 6rem; }
+    &[data-cols="13"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 12)) / 13); min-width: 5rem; }
+    &[data-cols="14"] > * { flex-basis: calc((100% - (var(--gutter, 1rem) * 13)) / 14); min-width: 4rem; }
 
     /* Span overrides: a [data-span="S"] child inside a [data-cols="N"] parent gets a proportional flex-basis */
     &[data-cols="2"] > [data-span="2"] { flex-basis: calc((100% / 2 * 2) - (var(--gutter, 1rem) * 0 / 2)); }
@@ -238,6 +246,31 @@
     &[data-cols="12"] > [data-span="10"] { flex-basis: calc((100% / 12 * 10) - (var(--gutter, 1rem) * 2 / 12)); }
     &[data-cols="12"] > [data-span="11"] { flex-basis: calc((100% / 12 * 11) - (var(--gutter, 1rem) * 1 / 12)); }
     &[data-cols="12"] > [data-span="12"] { flex-basis: calc((100% / 12 * 12) - (var(--gutter, 1rem) * 0 / 12)); }
+    &[data-cols="13"] > [data-span="2"] { flex-basis: calc((100% / 13 * 2) - (var(--gutter, 1rem) * 11 / 13)); }
+    &[data-cols="13"] > [data-span="3"] { flex-basis: calc((100% / 13 * 3) - (var(--gutter, 1rem) * 10 / 13)); }
+    &[data-cols="13"] > [data-span="4"] { flex-basis: calc((100% / 13 * 4) - (var(--gutter, 1rem) * 9 / 13)); }
+    &[data-cols="13"] > [data-span="5"] { flex-basis: calc((100% / 13 * 5) - (var(--gutter, 1rem) * 8 / 13)); }
+    &[data-cols="13"] > [data-span="6"] { flex-basis: calc((100% / 13 * 6) - (var(--gutter, 1rem) * 7 / 13)); }
+    &[data-cols="13"] > [data-span="7"] { flex-basis: calc((100% / 13 * 7) - (var(--gutter, 1rem) * 6 / 13)); }
+    &[data-cols="13"] > [data-span="8"] { flex-basis: calc((100% / 13 * 8) - (var(--gutter, 1rem) * 5 / 13)); }
+    &[data-cols="13"] > [data-span="9"] { flex-basis: calc((100% / 13 * 9) - (var(--gutter, 1rem) * 4 / 13)); }
+    &[data-cols="13"] > [data-span="10"] { flex-basis: calc((100% / 13 * 10) - (var(--gutter, 1rem) * 3 / 13)); }
+    &[data-cols="13"] > [data-span="11"] { flex-basis: calc((100% / 13 * 11) - (var(--gutter, 1rem) * 2 / 13)); }
+    &[data-cols="13"] > [data-span="12"] { flex-basis: calc((100% / 13 * 12) - (var(--gutter, 1rem) * 1 / 13)); }
+    &[data-cols="13"] > [data-span="13"] { flex-basis: calc((100% / 13 * 13) - (var(--gutter, 1rem) * 0 / 13)); }
+    &[data-cols="14"] > [data-span="2"] { flex-basis: calc((100% / 14 * 2) - (var(--gutter, 1rem) * 12 / 14)); }
+    &[data-cols="14"] > [data-span="3"] { flex-basis: calc((100% / 14 * 3) - (var(--gutter, 1rem) * 11 / 14)); }
+    &[data-cols="14"] > [data-span="4"] { flex-basis: calc((100% / 14 * 4) - (var(--gutter, 1rem) * 10 / 14)); }
+    &[data-cols="14"] > [data-span="5"] { flex-basis: calc((100% / 14 * 5) - (var(--gutter, 1rem) * 9 / 14)); }
+    &[data-cols="14"] > [data-span="6"] { flex-basis: calc((100% / 14 * 6) - (var(--gutter, 1rem) * 8 / 14)); }
+    &[data-cols="14"] > [data-span="7"] { flex-basis: calc((100% / 14 * 7) - (var(--gutter, 1rem) * 7 / 14)); }
+    &[data-cols="14"] > [data-span="8"] { flex-basis: calc((100% / 14 * 8) - (var(--gutter, 1rem) * 6 / 14)); }
+    &[data-cols="14"] > [data-span="9"] { flex-basis: calc((100% / 14 * 9) - (var(--gutter, 1rem) * 5 / 14)); }
+    &[data-cols="14"] > [data-span="10"] { flex-basis: calc((100% / 14 * 10) - (var(--gutter, 1rem) * 4 / 14)); }
+    &[data-cols="14"] > [data-span="11"] { flex-basis: calc((100% / 14 * 11) - (var(--gutter, 1rem) * 3 / 14)); }
+    &[data-cols="14"] > [data-span="12"] { flex-basis: calc((100% / 14 * 12) - (var(--gutter, 1rem) * 2 / 14)); }
+    &[data-cols="14"] > [data-span="13"] { flex-basis: calc((100% / 14 * 13) - (var(--gutter, 1rem) * 1 / 14)); }
+    &[data-cols="14"] > [data-span="14"] { flex-basis: calc((100% / 14 * 14) - (var(--gutter, 1rem) * 0 / 14)); }
 
     &.flex-grid--playground > * {
       min-width: var(--min-width, 16rem);
