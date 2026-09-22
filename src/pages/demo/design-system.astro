@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="/src/styles/main.css" />
-    <link rel="stylesheet" href="/src/styles/grid-demo.css" />
   </head>
   <body>
     <div class="wrap">
@@ -75,7 +74,7 @@
             <p>Core color tokens for light and dark themes. These are defined as CSS custom properties.</p>
           </header>
 
-          <section class="grid-container">
+          <section style="container-type: inline-size">
             <!-- Use grid with auto-fit via class and explicit min size -->
             <div class="grid grid--fit gap-4" style="--grid-min-item-size: 10rem">
               <div class="card">
@@ -105,7 +104,7 @@
             Spacing is managed via CSS custom properties (e.g., <code>--space-m</code>). These tokens are used for margins, padding, and gaps to ensure consistent rhythm.
           </p>
 
-          <section class="grid-container">
+          <section style="container-type: inline-size">
             <div class="grid grid--fit gap-4" style="--grid-min-item-size: 10rem">
               <div class="card">
                 <div style="width:100%;height:var(--space-2xs);background:var(--brand);"></div>
@@ -148,7 +147,7 @@
               Use <code>data-cols</code> for quick, breakpoint-free columns that adapt to space.
             </p>
 
-            <section class="grid-container">
+            <section style="container-type: inline-size">
               <div class="grid gap-4" data-cols="4">
                 <div class="card">4-col</div>
                 <div class="card">item</div>
@@ -162,7 +161,7 @@
               This grid uses <code>auto-fit</code> with a minimum item size of <code>12rem</code>. Items wrap and grow to fill available space.
             </p>
 
-            <section class="grid-container">
+            <section style="container-type: inline-size">
               <div class="grid grid--fit gap-4" style="--grid-min-item-size: 12rem">
                 <div class="card">Item A</div>
                 <div class="card">Item B</div>
@@ -177,7 +176,7 @@
               Use <code>.grid--dense</code> and item spans (e.g., <code>.grid__span-2</code>) to create masonry-style layouts that fill empty gaps.
             </p>
 
-            <section class="grid-container">
+            <section style="container-type: inline-size">
               <div class="grid grid--dense gap-4" data-cols="4">
                 <article class="card grid__span-2">
                   <h3>Wide Item</h3>

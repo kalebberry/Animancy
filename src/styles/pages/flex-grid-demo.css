@@ -1,0 +1,5 @@
+/* Demo-only: powers the interactive "Flexbox Playground" sliders in flex-grid-demo.astro. Not part of the shared grid.css utilities. */
+.flex-grid--playground > * {
+  min-width: var(--min-width, 16rem);
+  flex-basis: var(--flex-basis, 30%);
+}

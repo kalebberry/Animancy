@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <div class="demo-container grid-container" style="max-width: 1400px">
+    <div class="demo-container" style="max-width: 1400px; container-type: inline-size">
       <main class="flow-large">
         1) Auto-Grid Playground (uses placement + min track width)
         <section class="flow-large">
@@ -568,16 +568,16 @@
               data-cols="1"
               style="margin-bottom: 1rem"
             >
-              <div class="cq-card card">
-                <div class="cq-card__content">
+              <div class="demo-cq-card card">
+                <div class="demo-cq-card__content">
                   <h3 style="margin: 0">Narrow Container</h3>
                   <p style="margin: 0">My layout is vertical here.</p>
                 </div>
               </div>
             </div>
             <div class="grid gap-4" data-cols="2">
-              <div class="cq-card card">
-                <div class="cq-card__content">
+              <div class="demo-cq-card card">
+                <div class="demo-cq-card__content">
                   <h3 style="margin: 0">Wider Container</h3>
                   <p style="margin: 0">
                     Here, I have more room and switch to a horizontal layout.
@@ -595,6 +595,27 @@
       </main>
     </div>
   </div>
+  <style>
+    /* Demo-only container query example (not part of the grid.css design system) */
+    .demo-cq-card {
+      container-type: inline-size;
+      container-name: demo-card;
+    }
+
+    .demo-cq-card__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    @container demo-card (min-width: 25rem) {
+      .demo-cq-card__content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  </style>
   <script>
     // --- Theme toggle
     (function () {

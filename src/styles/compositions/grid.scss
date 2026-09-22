@@ -51,8 +51,7 @@ $__size-step: math.div($__size-range, $__col-range);
   gap: var(--gutter, 1rem);
   grid-auto-rows: minmax(min-content, auto);
 
-  &[data-cols],
-  &[data-layout] {
+  &[data-cols] {
     --grid-placement: auto-fit;
   }
 }
@@ -105,40 +104,18 @@ $__size-step: math.div($__size-range, $__col-range);
   grid-template-columns: subgrid;
 }
 
-.grid-container {
-  container-type: inline-size;
-
-  @container (max-width: 50rem) {
-    .grid {
-      --grid-min-item-size: 14rem;
-    }
-  }
-
-  @container (max-width: 30rem) {
-    .grid [data-span],
-    .grid [data-row-span] {
-      grid-column: span 1 !important;
-    }
+/* Responsive tuning: applies to any .grid nested inside a query container
+   (e.g. .container, which already sets container-type: inline-size). */
+@container (max-width: 50rem) {
+  .grid {
+    --grid-min-item-size: 14rem;
   }
 }
 
-/* --- Component-level Container Query Example --- */
-.cq-card {
-  container-type: inline-size;
-  container-name: card;
-}
-
-.cq-card__content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-@container card (min-width: 25rem) {
-  .cq-card__content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+@container (max-width: 30rem) {
+  .grid [data-span],
+  .grid [data-row-span] {
+    grid-column: span 1 !important;
   }
 }
 
@@ -172,11 +149,6 @@ $__size-step: math.div($__size-range, $__col-range);
   }
 
   @include emit-cols-presets("&", " > *");
-
-  &.flex-grid--playground > * {
-    min-width: var(--min-width, 16rem);
-    flex-basis: var(--flex-basis, 30%);
-  }
 
   // Generate span overrides for flexbox
   @for $cols from 2 through $grid-max-cols {

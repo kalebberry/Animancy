@@ -52,8 +52,7 @@
   }
 
   .grid {
-    &[data-cols],
-    &[data-layout] {
+    &[data-cols] {
       --grid-placement: auto-fit;
     }
 
@@ -97,40 +96,18 @@
     grid-template-columns: subgrid;
   }
 
-  .grid-container {
-    container-type: inline-size;
-
-    @container (max-width: 50rem) {
-      .grid {
-        --grid-min-item-size: 14rem;
-      }
-    }
-
-    @container (max-width: 30rem) {
-      .grid [data-span],
-      .grid [data-row-span] {
-        grid-column: span 1 !important;
-      }
+  /* Responsive tuning: applies to any .grid nested inside a query container
+     (e.g. .container, which already sets container-type: inline-size). */
+  @container (max-width: 50rem) {
+    .grid {
+      --grid-min-item-size: 14rem;
     }
   }
 
-  /* Component Container Query Card */
-  .cq-card {
-    container-type: inline-size;
-    container-name: card;
-  }
-
-  .cq-card__content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  @container card (min-width: 25rem) {
-    .cq-card__content {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+  @container (max-width: 30rem) {
+    .grid [data-span],
+    .grid [data-row-span] {
+      grid-column: span 1 !important;
     }
   }
 
@@ -272,10 +249,6 @@
     &[data-cols="14"] > [data-span="13"] { flex-basis: calc((100% / 14 * 13) - (var(--gutter, 1rem) * 1 / 14)); }
     &[data-cols="14"] > [data-span="14"] { flex-basis: calc((100% / 14 * 14) - (var(--gutter, 1rem) * 0 / 14)); }
 
-    &.flex-grid--playground > * {
-      min-width: var(--min-width, 16rem);
-      flex-basis: var(--flex-basis, 30%);
-    }
   }
 
   /* Masonry Grid */
