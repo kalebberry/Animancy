@@ -1,0 +1,521 @@
+/* INTERNAL FR */
+
+/* ---------------------------------------------------------------------
+   Mint Grid System — Modern CSS Edition
+   A build-free, plain-CSS port of _grid.scss. Same class/attribute API
+   (.mnt-grid, .mnt-flex-grid, mnt-cols, mnt-col-span, mnt-order,
+   mnt-offset, mnt-grow, etc.) so markup written against the Sass
+   version drops in unchanged. Uses native CSS nesting, custom
+   properties, and @container instead of Sass mixins/@for loops — the
+   1–12 range that Sass generated at build time is written out by hand
+   here, since plain CSS has no loop construct.
+   ------------------------------------------------------------------- */
+
+/* --- Page-Level Container ------------------------------------------- */
+:where(:root) {
+  --grid-container-offset: 1rem;
+  --container-max-width-narrow: var(--mnt-sys-size-desktop-sm, 48rem);
+  --container-max-width-default: var(--mnt-sys-size-desktop-lg, 75rem);
+  --container-max-width-wide: var(--mnt-sys-size-widescreen, 90rem);
+}
+
+/* --- Global Utilities ------------------------------------------------- */
+.mnt-gap-0 {
+  --mnt-gutter: 0;
+}
+.mnt-gap-2 {
+  --mnt-gutter: 0.5rem;
+}
+.mnt-gap-4 {
+  --mnt-gutter: 1rem;
+}
+.mnt-gap-6 {
+  --mnt-gutter: 1.5rem;
+}
+
+.mnt-grid--fill {
+  --mnt-grid-placement: auto-fill;
+}
+
+.mnt-grid--fit {
+  --mnt-grid-placement: auto-fit;
+}
+
+/* [mnt-col-span]/[mnt-row-span] apply in both grid and flex-grid
+   contexts by default (grid-column/grid-row); .mnt-flex-grid overrides
+   flex-basis/flex-grow for these same attributes further down. */
+[mnt-col-span='1'] {
+  grid-column: span 1;
+}
+[mnt-col-span='2'] {
+  grid-column: span 2;
+}
+[mnt-col-span='3'] {
+  grid-column: span 3;
+}
+[mnt-col-span='4'] {
+  grid-column: span 4;
+}
+[mnt-col-span='5'] {
+  grid-column: span 5;
+}
+[mnt-col-span='6'] {
+  grid-column: span 6;
+}
+[mnt-col-span='7'] {
+  grid-column: span 7;
+}
+[mnt-col-span='8'] {
+  grid-column: span 8;
+}
+[mnt-col-span='9'] {
+  grid-column: span 9;
+}
+[mnt-col-span='10'] {
+  grid-column: span 10;
+}
+[mnt-col-span='11'] {
+  grid-column: span 11;
+}
+[mnt-col-span='12'] {
+  grid-column: span 12;
+}
+
+[mnt-row-span='1'] {
+  grid-row: span 1;
+}
+[mnt-row-span='2'] {
+  grid-row: span 2;
+}
+[mnt-row-span='3'] {
+  grid-row: span 3;
+}
+[mnt-row-span='4'] {
+  grid-row: span 4;
+}
+
+[mnt-order] {
+  &[mnt-order='0'] {
+    order: 0;
+  }
+  &[mnt-order='1'] {
+    order: 1;
+  }
+  &[mnt-order='2'] {
+    order: 2;
+  }
+  &[mnt-order='3'] {
+    order: 3;
+  }
+  &[mnt-order='4'] {
+    order: 4;
+  }
+  &[mnt-order='-1'] {
+    order: -1;
+  }
+  &[mnt-order='-2'] {
+    order: -2;
+  }
+  &[mnt-order='-3'] {
+    order: -3;
+  }
+  &[mnt-order='-4'] {
+    order: -4;
+  }
+}
+
+/* --- Container Sizes ---------------------------------------------------- */
+.mnt-container {
+  --max-width: var(--container-max-width-default);
+  width: min(var(--max-width), 100% - var(--grid-container-offset));
+  margin-inline: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  @media (min-width: 30rem) {
+    --grid-container-offset: 1.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    --grid-container-offset: 2rem;
+  }
+
+  @media (min-width: 64rem) {
+    --grid-container-offset: 3.5rem;
+  }
+
+  &[container-type='narrow'] {
+    --max-width: var(--container-max-width-narrow);
+  }
+
+  &[container-type='wide'] {
+    --max-width: var(--container-max-width-wide);
+  }
+
+  &[container-type='full-bleed'] {
+    --max-width: 100%;
+    margin-inline: 0;
+    padding-inline: calc(var(--grid-container-offset) / 2);
+
+    .mnt-container__inner {
+      max-width: var(--container-max-width-default);
+      margin-inline: auto;
+    }
+  }
+}
+
+/* --- Container Query Context ---------------------------------------- */
+.mnt-cq {
+  container-type: var(--mnt-container-type, inline-size);
+  container-name: var(--mnt-container-name, mnt-cq);
+
+  @container mnt-cq (max-width: 50rem) {
+    :where(.mnt-grid) {
+      --mnt-grid-min-item-size: 14rem;
+    }
+  }
+
+  @container mnt-cq (max-width: 30rem) {
+    :where(.mnt-grid) [mnt-col-span] {
+      grid-column: span 1 !important;
+    }
+  }
+}
+
+.mnt-cq-card {
+  container-type: var(--mnt-container-type, inline-size);
+  container-name: var(--mnt-container-name, mnt-cq-card);
+}
+
+.mnt-cq-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@container mnt-cq-card (min-width: 25rem) {
+  .mnt-cq-card__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* --- Flow -------------------------------------------------------------- */
+.mnt-flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.mnt-flow--large > * + * {
+  margin-block-start: var(--flow-space, 2.5em);
+}
+
+/* --- Auto Grid (Every Layout style) --------------------------------- */
+:where(.mnt-grid) {
+  display: grid;
+  grid-template-columns: var(
+    --mnt-grid-cols,
+    repeat(var(--mnt-grid-placement, auto-fit), minmax(var(--mnt-grid-min-item-size, 16rem), 1fr))
+  );
+  gap: var(--mnt-gutter, 1rem);
+  grid-auto-rows: minmax(min-content, auto);
+
+  &[mnt-cols] {
+    --mnt-grid-placement: auto-fit;
+  }
+}
+
+.mnt-grid {
+  &[mnt-cols='1'] {
+    --mnt-grid-min-item-size: 100%;
+  }
+  &[mnt-cols='2'] {
+    --mnt-grid-cols: repeat(2, minmax(16rem, 1fr));
+  }
+  &[mnt-cols='3'] {
+    --mnt-grid-cols: repeat(3, minmax(15rem, 1fr));
+  }
+  &[mnt-cols='4'] {
+    --mnt-grid-cols: repeat(4, minmax(14rem, 1fr));
+  }
+  &[mnt-cols='5'] {
+    --mnt-grid-cols: repeat(5, minmax(13rem, 1fr));
+  }
+  &[mnt-cols='6'] {
+    --mnt-grid-cols: repeat(6, minmax(12rem, 1fr));
+  }
+  &[mnt-cols='7'] {
+    --mnt-grid-cols: repeat(7, minmax(11rem, 1fr));
+  }
+  &[mnt-cols='8'] {
+    --mnt-grid-cols: repeat(8, minmax(10rem, 1fr));
+  }
+  &[mnt-cols='9'] {
+    --mnt-grid-cols: repeat(9, minmax(9rem, 1fr));
+  }
+  &[mnt-cols='10'] {
+    --mnt-grid-cols: repeat(10, minmax(8rem, 1fr));
+  }
+  &[mnt-cols='11'] {
+    --mnt-grid-cols: repeat(11, minmax(7rem, 1fr));
+  }
+  &[mnt-cols='12'] {
+    --mnt-grid-cols: repeat(12, minmax(6rem, 1fr));
+  }
+
+  &--dense {
+    grid-auto-flow: dense;
+  }
+
+  &--subgrid-rows {
+    grid-template-rows: subgrid;
+  }
+}
+
+.mnt-subgrid-card {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+/* [mnt-offset] in a grid context: push an item's start line. */
+[mnt-offset='0'] {
+  grid-column-start: 1;
+}
+[mnt-offset='1'] {
+  grid-column-start: 2;
+}
+[mnt-offset='2'] {
+  grid-column-start: 3;
+}
+[mnt-offset='3'] {
+  grid-column-start: 4;
+}
+[mnt-offset='4'] {
+  grid-column-start: 5;
+}
+[mnt-offset='5'] {
+  grid-column-start: 6;
+}
+[mnt-offset='6'] {
+  grid-column-start: 7;
+}
+
+/* --- Flexbox Grid ---------------------------------------------------- */
+.mnt-flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--mnt-gutter, 1rem);
+
+  /* Default (no [mnt-cols]): mirrors .mnt-grid's auto-fit/minmax slicing —
+     items lay out at --mnt-grid-min-item-size, wrap once they no longer
+     fit, then grow to fill leftover row space. */
+  > * {
+    flex-grow: 1;
+    flex-basis: var(--mnt-grid-min-item-size, 16rem);
+    min-inline-size: 0;
+  }
+
+  /* --- Growth Control ---
+     Container-level opt-out for content-sized rows (e.g. button groups)
+     via [mnt-grow='0']. Per-item [mnt-grow] overrides either way. */
+  &[mnt-grow='0'] > * {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+  > [mnt-grow='0'] {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+  > [mnt-grow='1'] {
+    flex-grow: 1;
+  }
+
+  &[mnt-cols='1'] > * {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+  &[mnt-cols='2'] > * {
+    flex-basis: calc((100% - var(--mnt-gutter, 1rem)) / 2);
+    min-width: 16rem;
+  }
+  &[mnt-cols='3'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 2)) / 3);
+    min-width: 15rem;
+  }
+  &[mnt-cols='4'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 3)) / 4);
+    min-width: 14rem;
+  }
+  &[mnt-cols='5'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 4)) / 5);
+    min-width: 13rem;
+  }
+  &[mnt-cols='6'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 5)) / 6);
+    min-width: 12rem;
+  }
+  &[mnt-cols='7'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 6)) / 7);
+    min-width: 11rem;
+  }
+  &[mnt-cols='8'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 7)) / 8);
+    min-width: 10rem;
+  }
+  &[mnt-cols='9'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 8)) / 9);
+    min-width: 9rem;
+  }
+  &[mnt-cols='10'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 9)) / 10);
+    min-width: 8rem;
+  }
+  &[mnt-cols='11'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 10)) / 11);
+    min-width: 7rem;
+  }
+  &[mnt-cols='12'] > * {
+    flex-basis: calc((100% - (var(--mnt-gutter, 1rem) * 11)) / 12);
+    min-width: 6rem;
+  }
+
+  /* --- Flexbox Span (boundary-free) ---
+     mnt-col-span="N" claims N "shares" of the row: N times the base
+     min-item-size for its basis, N times the base flex-grow. No
+     [mnt-cols] required — the flex analogue of a grid item spanning N
+     auto-fit tracks. */
+  > [mnt-col-span='2'],
+  > .mnt-col-2 {
+    flex-grow: 2;
+    flex-basis: calc((var(--mnt-grid-min-item-size, 16rem) * 2) + var(--mnt-gutter, 1rem));
+  }
+  > [mnt-col-span='3'],
+  > .mnt-col-3 {
+    flex-grow: 3;
+    flex-basis: calc((var(--mnt-grid-min-item-size, 16rem) * 3) + (var(--mnt-gutter, 1rem) * 2));
+  }
+  > [mnt-col-span='4'],
+  > .mnt-col-4 {
+    flex-grow: 4;
+    flex-basis: calc((var(--mnt-grid-min-item-size, 16rem) * 4) + (var(--mnt-gutter, 1rem) * 3));
+  }
+
+  /* --- Flexbox Span (boundary-based, [mnt-cols] set) ---
+     Overrides the boundary-free basis above with an exact percentage
+     once the total column count is known. */
+  &[mnt-cols='3'] {
+    > [mnt-col-span='2'],
+    > .mnt-col-2 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 2)) / 3) * 2) + var(--mnt-gutter, 1rem));
+    }
+  }
+  &[mnt-cols='4'] {
+    > [mnt-col-span='2'],
+    > .mnt-col-2 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 3)) / 4) * 2) + var(--mnt-gutter, 1rem));
+    }
+    > [mnt-col-span='3'],
+    > .mnt-col-3 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 3)) / 4) * 3) + (var(--mnt-gutter, 1rem) * 2));
+    }
+  }
+  &[mnt-cols='6'] {
+    > [mnt-col-span='2'],
+    > .mnt-col-2 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 5)) / 6) * 2) + var(--mnt-gutter, 1rem));
+    }
+    > [mnt-col-span='3'],
+    > .mnt-col-3 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 5)) / 6) * 3) + (var(--mnt-gutter, 1rem) * 2));
+    }
+  }
+  &[mnt-cols='12'] {
+    > [mnt-col-span='2'],
+    > .mnt-col-2 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 11)) / 12) * 2) + var(--mnt-gutter, 1rem));
+    }
+    > [mnt-col-span='3'],
+    > .mnt-col-3 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 11)) / 12) * 3) + (var(--mnt-gutter, 1rem) * 2));
+    }
+    > [mnt-col-span='4'],
+    > .mnt-col-4 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 11)) / 12) * 4) + (var(--mnt-gutter, 1rem) * 3));
+    }
+    > [mnt-col-span='6'],
+    > .mnt-col-6 {
+      flex-basis: calc((((100% - (var(--mnt-gutter, 1rem) * 11)) / 12) * 6) + (var(--mnt-gutter, 1rem) * 5));
+    }
+  }
+
+  /* [mnt-offset] in a flex context: .mnt-flex-grid has no track
+     concept, so offset needs a margin once the column count is known. */
+  &[mnt-cols='3'] > [mnt-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--mnt-gutter, 1rem) * 2)) / 3) + var(--mnt-gutter, 1rem));
+  }
+  &[mnt-cols='4'] > [mnt-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--mnt-gutter, 1rem) * 3)) / 4) + var(--mnt-gutter, 1rem));
+  }
+  &[mnt-cols='4'] > [mnt-offset='2'] {
+    margin-inline-start: calc((((100% - (var(--mnt-gutter, 1rem) * 3)) / 4) * 2) + (var(--mnt-gutter, 1rem) * 2));
+  }
+  &[mnt-cols='6'] > [mnt-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--mnt-gutter, 1rem) * 5)) / 6) + var(--mnt-gutter, 1rem));
+  }
+  &[mnt-cols='12'] > [mnt-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--mnt-gutter, 1rem) * 11)) / 12) + var(--mnt-gutter, 1rem));
+  }
+}
+
+/* --- Sidebar Grid ---------------------------------------------------- */
+.mnt-sidebar-grid {
+  display: grid;
+  gap: var(--mnt-gutter, 1rem);
+  grid-template-columns: minmax(16rem, 3fr) minmax(12rem, 1fr);
+}
+
+.mnt-sidebar-grid__container {
+  container-type: var(--mnt-container-type, inline-size);
+  container-name: var(--mnt-container-name, mnt-sidebar);
+
+  @container mnt-sidebar (max-width: 48rem) {
+    .mnt-sidebar-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* --- Masonry Grid ---------------------------------------------------- */
+.mnt-masonry-grid {
+  column-count: var(--mnt-masonry-cols, 3);
+  column-gap: var(--mnt-gutter, 1rem);
+
+  > * {
+    break-inside: avoid;
+    margin-bottom: var(--mnt-gutter, 1rem);
+  }
+}
+
+.mnt-masonry__container {
+  container-type: var(--mnt-container-type, inline-size);
+  container-name: var(--mnt-container-name, mnt-masonry);
+
+  @container mnt-masonry (max-width: 40rem) {
+    .mnt-masonry-grid {
+      --mnt-masonry-cols: 1;
+    }
+  }
+  @container mnt-masonry (40.01rem <= width <= 70rem) {
+    .mnt-masonry-grid {
+      --mnt-masonry-cols: 2;
+    }
+  }
+  @container mnt-masonry (min-width: 70.01rem) {
+    .mnt-masonry-grid {
+      --mnt-masonry-cols: 3;
+    }
+  }
+}
