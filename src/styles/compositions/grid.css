@@ -1,10 +1,10 @@
 /* INTERNAL FR */
 
 /* ---------------------------------------------------------------------
-   Mint Grid System — Modern CSS Edition
+   Koshi 格子 Grid System — Modern CSS Edition
    A build-free, plain-CSS port of _grid.scss. Same class/attribute API
-   (.eien-grid, .eien-flex-grid, eien-cols, eien-col-span, eien-order,
-   eien-offset, eien-grow, etc.) so markup written against the Sass
+   (.kos-grid, .kos-flex-grid, kos-cols, kos-col-span, kos-order,
+   kos-offset, kos-grow, etc.) so markup written against the Sass
    version drops in unchanged. Uses native CSS nesting, custom
    properties, and @container instead of Sass mixins/@for loops — the
    1–12 range that Sass generated at build time is written out by hand
@@ -14,121 +14,121 @@
 /* --- Page-Level Container ------------------------------------------- */
 :where(:root) {
   --grid-container-offset: 1rem;
-  --container-max-width-narrow: var(--eien-sys-size-desktop-sm, 48rem);
-  --container-max-width-default: var(--eien-sys-size-desktop-lg, 75rem);
-  --container-max-width-wide: var(--eien-sys-size-widescreen, 90rem);
+  --container-max-width-narrow: var(--kos-sys-size-desktop-sm, 48rem);
+  --container-max-width-default: var(--kos-sys-size-desktop-lg, 75rem);
+  --container-max-width-wide: var(--kos-sys-size-widescreen, 90rem);
 }
 
 /* --- Global Utilities ------------------------------------------------- */
-.eien-gap-0 {
-  --eien-gutter: 0;
+.kos-gap-0 {
+  --kos-gutter: 0;
 }
-.eien-gap-2 {
-  --eien-gutter: 0.5rem;
+.kos-gap-2 {
+  --kos-gutter: 0.5rem;
 }
-.eien-gap-4 {
-  --eien-gutter: 1rem;
+.kos-gap-4 {
+  --kos-gutter: 1rem;
 }
-.eien-gap-6 {
-  --eien-gutter: 1.5rem;
+.kos-gap-6 {
+  --kos-gutter: 1.5rem;
 }
-.eien-gap-8 {
-  --eien-gutter: 2rem;
-}
-
-.eien-grid--fill {
-  --eien-grid-placement: auto-fill;
+.kos-gap-8 {
+  --kos-gutter: 2rem;
 }
 
-.eien-grid--fit {
-  --eien-grid-placement: auto-fit;
+.kos-grid--fill {
+  --kos-grid-placement: auto-fill;
 }
 
-/* [eien-col-span]/[eien-row-span] apply in both grid and flex-grid
-   contexts by default (grid-column/grid-row); .eien-flex-grid overrides
+.kos-grid--fit {
+  --kos-grid-placement: auto-fit;
+}
+
+/* [kos-col-span]/[kos-row-span] apply in both grid and flex-grid
+   contexts by default (grid-column/grid-row); .kos-flex-grid overrides
    flex-basis/flex-grow for these same attributes further down. */
-[eien-col-span='1'] {
+[kos-col-span='1'] {
   grid-column: span 1;
 }
-[eien-col-span='2'] {
+[kos-col-span='2'] {
   grid-column: span 2;
 }
-[eien-col-span='3'] {
+[kos-col-span='3'] {
   grid-column: span 3;
 }
-[eien-col-span='4'] {
+[kos-col-span='4'] {
   grid-column: span 4;
 }
-[eien-col-span='5'] {
+[kos-col-span='5'] {
   grid-column: span 5;
 }
-[eien-col-span='6'] {
+[kos-col-span='6'] {
   grid-column: span 6;
 }
-[eien-col-span='7'] {
+[kos-col-span='7'] {
   grid-column: span 7;
 }
-[eien-col-span='8'] {
+[kos-col-span='8'] {
   grid-column: span 8;
 }
-[eien-col-span='9'] {
+[kos-col-span='9'] {
   grid-column: span 9;
 }
-[eien-col-span='10'] {
+[kos-col-span='10'] {
   grid-column: span 10;
 }
-[eien-col-span='11'] {
+[kos-col-span='11'] {
   grid-column: span 11;
 }
-[eien-col-span='12'] {
+[kos-col-span='12'] {
   grid-column: span 12;
 }
 
-[eien-row-span='1'] {
+[kos-row-span='1'] {
   grid-row: span 1;
 }
-[eien-row-span='2'] {
+[kos-row-span='2'] {
   grid-row: span 2;
 }
-[eien-row-span='3'] {
+[kos-row-span='3'] {
   grid-row: span 3;
 }
-[eien-row-span='4'] {
+[kos-row-span='4'] {
   grid-row: span 4;
 }
 
-[eien-order] {
-  &[eien-order='0'] {
+[kos-order] {
+  &[kos-order='0'] {
     order: 0;
   }
-  &[eien-order='1'] {
+  &[kos-order='1'] {
     order: 1;
   }
-  &[eien-order='2'] {
+  &[kos-order='2'] {
     order: 2;
   }
-  &[eien-order='3'] {
+  &[kos-order='3'] {
     order: 3;
   }
-  &[eien-order='4'] {
+  &[kos-order='4'] {
     order: 4;
   }
-  &[eien-order='-1'] {
+  &[kos-order='-1'] {
     order: -1;
   }
-  &[eien-order='-2'] {
+  &[kos-order='-2'] {
     order: -2;
   }
-  &[eien-order='-3'] {
+  &[kos-order='-3'] {
     order: -3;
   }
-  &[eien-order='-4'] {
+  &[kos-order='-4'] {
     order: -4;
   }
 }
 
 /* --- Container Sizes ---------------------------------------------------- */
-.eien-container {
+.kos-container {
   --max-width: var(--container-max-width-default);
   width: min(var(--max-width), 100% - var(--grid-container-offset));
   margin-inline: auto;
@@ -160,7 +160,7 @@
     margin-inline: 0;
     padding-inline: calc(var(--grid-container-offset) / 2);
 
-    .eien-container__inner {
+    .kos-container__inner {
       max-width: var(--container-max-width-default);
       margin-inline: auto;
     }
@@ -168,36 +168,36 @@
 }
 
 /* --- Container Query Context ---------------------------------------- */
-.eien-cq {
-  container-type: var(--eien-container-type, inline-size);
-  container-name: var(--eien-container-name, eien-cq);
+.kos-cq {
+  container-type: var(--kos-container-type, inline-size);
+  container-name: var(--kos-container-name, kos-cq);
 
-  @container eien-cq (max-width: 50rem) {
-    :where(.eien-grid) {
-      --eien-grid-min-item-size: 14rem;
+  @container kos-cq (max-width: 50rem) {
+    :where(.kos-grid) {
+      --kos-grid-min-item-size: 14rem;
     }
   }
 
-  @container eien-cq (max-width: 30rem) {
-    :where(.eien-grid) [eien-col-span] {
+  @container kos-cq (max-width: 30rem) {
+    :where(.kos-grid) [kos-col-span] {
       grid-column: span 1 !important;
     }
   }
 }
 
-.eien-cq-card {
-  container-type: var(--eien-container-type, inline-size);
-  container-name: var(--eien-container-name, eien-cq-card);
+.kos-cq-card {
+  container-type: var(--kos-container-type, inline-size);
+  container-name: var(--kos-container-name, kos-cq-card);
 }
 
-.eien-cq-card__content {
+.kos-cq-card__content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-@container eien-cq-card (min-width: 25rem) {
-  .eien-cq-card__content {
+@container kos-cq-card (min-width: 25rem) {
+  .kos-cq-card__content {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -205,65 +205,65 @@
 }
 
 /* --- Flow -------------------------------------------------------------- */
-.eien-flow > * + * {
+.kos-flow > * + * {
   margin-block-start: var(--flow-space, 1em);
 }
 
-.eien-flow--large > * + * {
+.kos-flow--large > * + * {
   margin-block-start: var(--flow-space, 2.5em);
 }
 
 /* --- Auto Grid (Every Layout style) --------------------------------- */
-:where(.eien-grid) {
+:where(.kos-grid) {
   display: grid;
   grid-template-columns: var(
-    --eien-grid-cols,
-    repeat(var(--eien-grid-placement, auto-fit), minmax(var(--eien-grid-min-item-size, 16rem), 1fr))
+    --kos-grid-cols,
+    repeat(var(--kos-grid-placement, auto-fit), minmax(var(--kos-grid-min-item-size, 16rem), 1fr))
   );
-  gap: var(--eien-gutter, 1rem);
+  gap: var(--kos-gutter, 1rem);
   grid-auto-rows: minmax(min-content, auto);
 
-  &[eien-cols] {
-    --eien-grid-placement: auto-fit;
+  &[kos-cols] {
+    --kos-grid-placement: auto-fit;
   }
 }
 
-.eien-grid {
-  &[eien-cols='1'] {
-    --eien-grid-min-item-size: 100%;
+.kos-grid {
+  &[kos-cols='1'] {
+    --kos-grid-min-item-size: 100%;
   }
-  &[eien-cols='2'] {
-    --eien-grid-cols: repeat(2, minmax(16rem, 1fr));
+  &[kos-cols='2'] {
+    --kos-grid-cols: repeat(2, minmax(16rem, 1fr));
   }
-  &[eien-cols='3'] {
-    --eien-grid-cols: repeat(3, minmax(15rem, 1fr));
+  &[kos-cols='3'] {
+    --kos-grid-cols: repeat(3, minmax(15rem, 1fr));
   }
-  &[eien-cols='4'] {
-    --eien-grid-cols: repeat(4, minmax(14rem, 1fr));
+  &[kos-cols='4'] {
+    --kos-grid-cols: repeat(4, minmax(14rem, 1fr));
   }
-  &[eien-cols='5'] {
-    --eien-grid-cols: repeat(5, minmax(13rem, 1fr));
+  &[kos-cols='5'] {
+    --kos-grid-cols: repeat(5, minmax(13rem, 1fr));
   }
-  &[eien-cols='6'] {
-    --eien-grid-cols: repeat(6, minmax(12rem, 1fr));
+  &[kos-cols='6'] {
+    --kos-grid-cols: repeat(6, minmax(12rem, 1fr));
   }
-  &[eien-cols='7'] {
-    --eien-grid-cols: repeat(7, minmax(11rem, 1fr));
+  &[kos-cols='7'] {
+    --kos-grid-cols: repeat(7, minmax(11rem, 1fr));
   }
-  &[eien-cols='8'] {
-    --eien-grid-cols: repeat(8, minmax(10rem, 1fr));
+  &[kos-cols='8'] {
+    --kos-grid-cols: repeat(8, minmax(10rem, 1fr));
   }
-  &[eien-cols='9'] {
-    --eien-grid-cols: repeat(9, minmax(9rem, 1fr));
+  &[kos-cols='9'] {
+    --kos-grid-cols: repeat(9, minmax(9rem, 1fr));
   }
-  &[eien-cols='10'] {
-    --eien-grid-cols: repeat(10, minmax(8rem, 1fr));
+  &[kos-cols='10'] {
+    --kos-grid-cols: repeat(10, minmax(8rem, 1fr));
   }
-  &[eien-cols='11'] {
-    --eien-grid-cols: repeat(11, minmax(7rem, 1fr));
+  &[kos-cols='11'] {
+    --kos-grid-cols: repeat(11, minmax(7rem, 1fr));
   }
-  &[eien-cols='12'] {
-    --eien-grid-cols: repeat(12, minmax(6rem, 1fr));
+  &[kos-cols='12'] {
+    --kos-grid-cols: repeat(12, minmax(6rem, 1fr));
   }
 
   &--dense {
@@ -275,250 +275,250 @@
   }
 }
 
-.eien-subgrid-card {
+.kos-subgrid-card {
   display: grid;
   grid-template-columns: subgrid;
 }
 
-/* [eien-offset] in a grid context: push an item's start line. */
-[eien-offset='0'] {
+/* [kos-offset] in a grid context: push an item's start line. */
+[kos-offset='0'] {
   grid-column-start: 1;
 }
-[eien-offset='1'] {
+[kos-offset='1'] {
   grid-column-start: 2;
 }
-[eien-offset='2'] {
+[kos-offset='2'] {
   grid-column-start: 3;
 }
-[eien-offset='3'] {
+[kos-offset='3'] {
   grid-column-start: 4;
 }
-[eien-offset='4'] {
+[kos-offset='4'] {
   grid-column-start: 5;
 }
-[eien-offset='5'] {
+[kos-offset='5'] {
   grid-column-start: 6;
 }
-[eien-offset='6'] {
+[kos-offset='6'] {
   grid-column-start: 7;
 }
 
 /* --- Flexbox Grid ---------------------------------------------------- */
-.eien-flex-grid {
+.kos-flex-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: var(--eien-gutter, 1rem);
+  gap: var(--kos-gutter, 1rem);
 
-  /* Default (no [eien-cols]): mirrors .eien-grid's auto-fit/minmax slicing —
-     items lay out at --eien-grid-min-item-size, wrap once they no longer
+  /* Default (no [kos-cols]): mirrors .kos-grid's auto-fit/minmax slicing —
+     items lay out at --kos-grid-min-item-size, wrap once they no longer
      fit, then grow to fill leftover row space. */
   > * {
     flex-grow: 1;
-    flex-basis: var(--eien-grid-min-item-size, 16rem);
+    flex-basis: var(--kos-grid-min-item-size, 16rem);
     min-inline-size: 0;
   }
 
   /* --- Growth Control ---
      Container-level opt-out for content-sized rows (e.g. button groups)
-     via [eien-grow='0']. Per-item [eien-grow] overrides either way. */
-  &[eien-grow='0'] > * {
+     via [kos-grow='0']. Per-item [kos-grow] overrides either way. */
+  &[kos-grow='0'] > * {
     flex-grow: 0;
     flex-basis: auto;
   }
 
-  > [eien-grow='0'] {
+  > [kos-grow='0'] {
     flex-grow: 0;
     flex-basis: auto;
   }
 
-  > [eien-grow='1'] {
+  > [kos-grow='1'] {
     flex-grow: 1;
   }
 
-  &[eien-cols='1'] > * {
+  &[kos-cols='1'] > * {
     flex-basis: 100%;
     min-width: 100%;
   }
-  &[eien-cols='2'] > * {
-    flex-basis: calc((100% - var(--eien-gutter, 1rem)) / 2);
+  &[kos-cols='2'] > * {
+    flex-basis: calc((100% - var(--kos-gutter, 1rem)) / 2);
     min-width: 16rem;
   }
-  &[eien-cols='3'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 2)) / 3);
+  &[kos-cols='3'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 2)) / 3);
     min-width: 15rem;
   }
-  &[eien-cols='4'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 3)) / 4);
+  &[kos-cols='4'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 3)) / 4);
     min-width: 14rem;
   }
-  &[eien-cols='5'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 4)) / 5);
+  &[kos-cols='5'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 4)) / 5);
     min-width: 13rem;
   }
-  &[eien-cols='6'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 5)) / 6);
+  &[kos-cols='6'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 5)) / 6);
     min-width: 12rem;
   }
-  &[eien-cols='7'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 6)) / 7);
+  &[kos-cols='7'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 6)) / 7);
     min-width: 11rem;
   }
-  &[eien-cols='8'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 7)) / 8);
+  &[kos-cols='8'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 7)) / 8);
     min-width: 10rem;
   }
-  &[eien-cols='9'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 8)) / 9);
+  &[kos-cols='9'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 8)) / 9);
     min-width: 9rem;
   }
-  &[eien-cols='10'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 9)) / 10);
+  &[kos-cols='10'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 9)) / 10);
     min-width: 8rem;
   }
-  &[eien-cols='11'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 10)) / 11);
+  &[kos-cols='11'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 10)) / 11);
     min-width: 7rem;
   }
-  &[eien-cols='12'] > * {
-    flex-basis: calc((100% - (var(--eien-gutter, 1rem) * 11)) / 12);
+  &[kos-cols='12'] > * {
+    flex-basis: calc((100% - (var(--kos-gutter, 1rem) * 11)) / 12);
     min-width: 6rem;
   }
 
   /* --- Flexbox Span (boundary-free) ---
-     eien-col-span="N" claims N "shares" of the row: N times the base
+     kos-col-span="N" claims N "shares" of the row: N times the base
      min-item-size for its basis, N times the base flex-grow. No
-     [eien-cols] required — the flex analogue of a grid item spanning N
+     [kos-cols] required — the flex analogue of a grid item spanning N
      auto-fit tracks. */
-  > [eien-col-span='2'],
-  > .eien-col-2 {
+  > [kos-col-span='2'],
+  > .kos-col-2 {
     flex-grow: 2;
-    flex-basis: calc((var(--eien-grid-min-item-size, 16rem) * 2) + var(--eien-gutter, 1rem));
+    flex-basis: calc((var(--kos-grid-min-item-size, 16rem) * 2) + var(--kos-gutter, 1rem));
   }
-  > [eien-col-span='3'],
-  > .eien-col-3 {
+  > [kos-col-span='3'],
+  > .kos-col-3 {
     flex-grow: 3;
-    flex-basis: calc((var(--eien-grid-min-item-size, 16rem) * 3) + (var(--eien-gutter, 1rem) * 2));
+    flex-basis: calc((var(--kos-grid-min-item-size, 16rem) * 3) + (var(--kos-gutter, 1rem) * 2));
   }
-  > [eien-col-span='4'],
-  > .eien-col-4 {
+  > [kos-col-span='4'],
+  > .kos-col-4 {
     flex-grow: 4;
-    flex-basis: calc((var(--eien-grid-min-item-size, 16rem) * 4) + (var(--eien-gutter, 1rem) * 3));
+    flex-basis: calc((var(--kos-grid-min-item-size, 16rem) * 4) + (var(--kos-gutter, 1rem) * 3));
   }
 
-  /* --- Flexbox Span (boundary-based, [eien-cols] set) ---
+  /* --- Flexbox Span (boundary-based, [kos-cols] set) ---
      Overrides the boundary-free basis above with an exact percentage
      once the total column count is known. */
-  &[eien-cols='3'] {
-    > [eien-col-span='2'],
-    > .eien-col-2 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 2)) / 3) * 2) + var(--eien-gutter, 1rem));
+  &[kos-cols='3'] {
+    > [kos-col-span='2'],
+    > .kos-col-2 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 2)) / 3) * 2) + var(--kos-gutter, 1rem));
     }
   }
-  &[eien-cols='4'] {
-    > [eien-col-span='2'],
-    > .eien-col-2 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 3)) / 4) * 2) + var(--eien-gutter, 1rem));
+  &[kos-cols='4'] {
+    > [kos-col-span='2'],
+    > .kos-col-2 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 3)) / 4) * 2) + var(--kos-gutter, 1rem));
     }
-    > [eien-col-span='3'],
-    > .eien-col-3 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 3)) / 4) * 3) + (var(--eien-gutter, 1rem) * 2));
-    }
-  }
-  &[eien-cols='6'] {
-    > [eien-col-span='2'],
-    > .eien-col-2 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 5)) / 6) * 2) + var(--eien-gutter, 1rem));
-    }
-    > [eien-col-span='3'],
-    > .eien-col-3 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 5)) / 6) * 3) + (var(--eien-gutter, 1rem) * 2));
+    > [kos-col-span='3'],
+    > .kos-col-3 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 3)) / 4) * 3) + (var(--kos-gutter, 1rem) * 2));
     }
   }
-  &[eien-cols='12'] {
-    > [eien-col-span='2'],
-    > .eien-col-2 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 11)) / 12) * 2) + var(--eien-gutter, 1rem));
+  &[kos-cols='6'] {
+    > [kos-col-span='2'],
+    > .kos-col-2 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 5)) / 6) * 2) + var(--kos-gutter, 1rem));
     }
-    > [eien-col-span='3'],
-    > .eien-col-3 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 11)) / 12) * 3) + (var(--eien-gutter, 1rem) * 2));
+    > [kos-col-span='3'],
+    > .kos-col-3 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 5)) / 6) * 3) + (var(--kos-gutter, 1rem) * 2));
     }
-    > [eien-col-span='4'],
-    > .eien-col-4 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 11)) / 12) * 4) + (var(--eien-gutter, 1rem) * 3));
+  }
+  &[kos-cols='12'] {
+    > [kos-col-span='2'],
+    > .kos-col-2 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 11)) / 12) * 2) + var(--kos-gutter, 1rem));
     }
-    > [eien-col-span='6'],
-    > .eien-col-6 {
-      flex-basis: calc((((100% - (var(--eien-gutter, 1rem) * 11)) / 12) * 6) + (var(--eien-gutter, 1rem) * 5));
+    > [kos-col-span='3'],
+    > .kos-col-3 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 11)) / 12) * 3) + (var(--kos-gutter, 1rem) * 2));
+    }
+    > [kos-col-span='4'],
+    > .kos-col-4 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 11)) / 12) * 4) + (var(--kos-gutter, 1rem) * 3));
+    }
+    > [kos-col-span='6'],
+    > .kos-col-6 {
+      flex-basis: calc((((100% - (var(--kos-gutter, 1rem) * 11)) / 12) * 6) + (var(--kos-gutter, 1rem) * 5));
     }
   }
 
-  /* [eien-offset] in a flex context: .eien-flex-grid has no track
+  /* [kos-offset] in a flex context: .kos-flex-grid has no track
      concept, so offset needs a margin once the column count is known. */
-  &[eien-cols='3'] > [eien-offset='1'] {
-    margin-inline-start: calc(((100% - (var(--eien-gutter, 1rem) * 2)) / 3) + var(--eien-gutter, 1rem));
+  &[kos-cols='3'] > [kos-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--kos-gutter, 1rem) * 2)) / 3) + var(--kos-gutter, 1rem));
   }
-  &[eien-cols='4'] > [eien-offset='1'] {
-    margin-inline-start: calc(((100% - (var(--eien-gutter, 1rem) * 3)) / 4) + var(--eien-gutter, 1rem));
+  &[kos-cols='4'] > [kos-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--kos-gutter, 1rem) * 3)) / 4) + var(--kos-gutter, 1rem));
   }
-  &[eien-cols='4'] > [eien-offset='2'] {
-    margin-inline-start: calc((((100% - (var(--eien-gutter, 1rem) * 3)) / 4) * 2) + (var(--eien-gutter, 1rem) * 2));
+  &[kos-cols='4'] > [kos-offset='2'] {
+    margin-inline-start: calc((((100% - (var(--kos-gutter, 1rem) * 3)) / 4) * 2) + (var(--kos-gutter, 1rem) * 2));
   }
-  &[eien-cols='6'] > [eien-offset='1'] {
-    margin-inline-start: calc(((100% - (var(--eien-gutter, 1rem) * 5)) / 6) + var(--eien-gutter, 1rem));
+  &[kos-cols='6'] > [kos-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--kos-gutter, 1rem) * 5)) / 6) + var(--kos-gutter, 1rem));
   }
-  &[eien-cols='12'] > [eien-offset='1'] {
-    margin-inline-start: calc(((100% - (var(--eien-gutter, 1rem) * 11)) / 12) + var(--eien-gutter, 1rem));
+  &[kos-cols='12'] > [kos-offset='1'] {
+    margin-inline-start: calc(((100% - (var(--kos-gutter, 1rem) * 11)) / 12) + var(--kos-gutter, 1rem));
   }
 }
 
 /* --- Sidebar Grid ---------------------------------------------------- */
-.eien-sidebar-grid {
+.kos-sidebar-grid {
   display: grid;
-  gap: var(--eien-gutter, 1rem);
+  gap: var(--kos-gutter, 1rem);
   grid-template-columns: minmax(16rem, 3fr) minmax(12rem, 1fr);
 }
 
-.eien-sidebar-grid__container {
-  container-type: var(--eien-container-type, inline-size);
-  container-name: var(--eien-container-name, eien-sidebar);
+.kos-sidebar-grid__container {
+  container-type: var(--kos-container-type, inline-size);
+  container-name: var(--kos-container-name, kos-sidebar);
 
-  @container eien-sidebar (max-width: 48rem) {
-    .eien-sidebar-grid {
+  @container kos-sidebar (max-width: 48rem) {
+    .kos-sidebar-grid {
       grid-template-columns: 1fr;
     }
   }
 }
 
 /* --- Masonry Grid ---------------------------------------------------- */
-.eien-masonry-grid {
-  column-count: var(--eien-masonry-cols, 3);
-  column-gap: var(--eien-gutter, 1rem);
+.kos-masonry-grid {
+  column-count: var(--kos-masonry-cols, 3);
+  column-gap: var(--kos-gutter, 1rem);
 
   > * {
     break-inside: avoid;
-    margin-bottom: var(--eien-gutter, 1rem);
+    margin-bottom: var(--kos-gutter, 1rem);
   }
 }
 
-.eien-masonry__container {
-  container-type: var(--eien-container-type, inline-size);
-  container-name: var(--eien-container-name, eien-masonry);
+.kos-masonry__container {
+  container-type: var(--kos-container-type, inline-size);
+  container-name: var(--kos-container-name, kos-masonry);
 
-  @container eien-masonry (max-width: 40rem) {
-    .eien-masonry-grid {
-      --eien-masonry-cols: 1;
+  @container kos-masonry (max-width: 40rem) {
+    .kos-masonry-grid {
+      --kos-masonry-cols: 1;
     }
   }
-  @container eien-masonry (40.01rem <= width <= 70rem) {
-    .eien-masonry-grid {
-      --eien-masonry-cols: 2;
+  @container kos-masonry (40.01rem <= width <= 70rem) {
+    .kos-masonry-grid {
+      --kos-masonry-cols: 2;
     }
   }
-  @container eien-masonry (min-width: 70.01rem) {
-    .eien-masonry-grid {
-      --eien-masonry-cols: 3;
+  @container kos-masonry (min-width: 70.01rem) {
+    .kos-masonry-grid {
+      --kos-masonry-cols: 3;
     }
   }
 }
