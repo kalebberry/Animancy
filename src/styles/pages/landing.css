@@ -83,11 +83,6 @@
 					flex-direction: row;
 					gap: 2rem;
 				}
-
-				&:hover {
-					padding-inline: 2rem;
-				}
-
 				h3,
 				p {
 					padding-block-end: var(--spacing-32, 2rem);
@@ -166,10 +161,6 @@
 				@container (min-width: 40rem) {
 					flex-direction: row;
 					gap: 2rem;
-				}
-
-				&:hover {
-					padding-inline: 2rem;
 				}
 
 				h3,
