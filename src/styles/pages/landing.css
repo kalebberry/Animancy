@@ -142,8 +142,9 @@
 		}
 
 		.services__content {
-			--min: 65ch;
+			--min: 40ch;
 			--gap: 1rem;
+			display: flex;
 			flex-wrap: wrap;
 			gap: var(--gap);
 			container-type: inline-size;
@@ -158,12 +159,17 @@
 				border-radius: 0.5rem;
 				transition: padding-inline 0.3s ease;
 
+				img{
+					border-radius: 0.5rem;
+					max-width: 90%;
+				}
+
 				@container (min-width: 40rem) {
 					flex-direction: row;
 					gap: 2rem;
 				}
 
-				h3,
+				h4,
 				p {
 					padding-block-end: var(--spacing-32, 2rem);
 				}
