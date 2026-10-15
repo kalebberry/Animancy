@@ -79,5 +79,12 @@
 				font-style: normal;
 			}
 		}
+
+		.studio-story__picture {
+			margin-block: var(--spacing-48);
+			img{
+				border-radius: 0.5em;
+			}
+		}
 	}
 }

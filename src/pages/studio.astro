@@ -2,13 +2,14 @@
 import Layout from '../layouts/DefaultLayout.astro';
 import Navbar from '../components/astro/Navbar.astro';
 import Footer from '../components/astro/Footer.astro';
+import Button from '@/components/astro/button.astro';
 ---
 
 <Layout title='Studio Eien' description='Studio'>
   <main>
     <Navbar />
     <section class='hero hero-content'>
-      <div class='container' data-type='wide'>
+      <div class='container'>
         <header>
           <div class='hero__title'>
             <span class='text-accent'>スタジオ</span>
@@ -34,7 +35,7 @@ import Footer from '../components/astro/Footer.astro';
     </div>
 
     <section class='studio-story'>
-      <div class='container flow-large' data-type='wide'>
+      <div class='container flow-large'>
         <header>
           <div class='studio-story__title'>
             <span class='text-accent'>フィロソフィー</span>
@@ -52,6 +53,9 @@ import Footer from '../components/astro/Footer.astro';
             to build something that can evolve without losing what made it distinct in the first place.
           </p>
         </div>
+        <div class='container studio-story__picture' data-type='narrow'>
+          <img src='/src/assets/img/forest_shrine.jpg' />
+        </div>
       </div>
     </section>
 
@@ -64,8 +68,8 @@ import Footer from '../components/astro/Footer.astro';
       </div>
     </div>
 
-    <section class='philosophy flow-large'>
-      <div class='container flow-large' data-type='wide'>
+    <!-- <section class='philosophy flow-large'>
+      <div class='container flow-large'>
         <header>
           <div class='philosophy__title'>
             <span class='text-accent'>フィロソフィー</span>
@@ -97,18 +101,38 @@ import Footer from '../components/astro/Footer.astro';
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <div class='decoration' data-type='full-bleed'>
+    <!-- <div class='decoration' data-type='full-bleed'>
       <div class='container' data-type='full-bleed'>
         <hr />
         <div class='decoration__text__end'>
           <p>SECTION: PHILOSOPHY ⟡ METHOD SIGNATURE: V.03</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <section class='philosophy flow-large'></section>
+    <section class='conversion container'>
+      <header class='flow'>
+        <div class='conversion__title'>
+          <span>サービス</span>
+          <h2>START YOUR STORY</h2>
+        </div>
+        <p>
+          Step into our creative process, where ideas become impact. Explore client case studies and see how Studio Eien
+          transforms visions into soulful, strategic web design.
+        </p>
+        <Button content='Lets Work Together' />
+      </header>
+    </section>
+    <div class='decoration'>
+      <div class='container' data-type='full-bleed'>
+        <hr />
+        <div class='decoration__text__end'>
+          <p>SECTION: START YOUR STORY ⟡ METHOD SIGNATURE: V.03</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <Footer />
